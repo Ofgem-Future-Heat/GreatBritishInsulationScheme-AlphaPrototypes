@@ -1,0 +1,111 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Prorotypes home – {{serviceName}}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">{{ serviceName }}</h1>
+
+    <!-- #################### -->
+    <!-- Private Beta -->
+    <!-- #################### -->
+    <!-- <h2 class="govuk-heading-l">Private Beta</h2> -->
+
+    <!-- Archived prototypes -->
+    <!-- <h3 class="govuk-heading-m">Archived prototypes</h3> -->
+
+
+    <!-- ### -->
+    <!-- ### -->
+    <!-- ### -->
+    <!-- ### -->
+    <!-- ### -->
+    <!-- ### -->
+    <!-- ### -->
+    <!-- ### -->
+
+    
+    <!-- #################### -->
+    <!-- Alpha -->
+    <!-- #################### -->
+    <h2 class="govuk-heading-l">Alpha</h2>
+
+    <!-- Prototypes presented for the Alpha assessment -->
+    <!--
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Prototypes presented for the Alpha assessment</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-half">Date</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Rate for vehicles</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Rate for bicycles</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">First 6 weeks</th>
+          <td class="govuk-table__cell">£109.80 per week</td>
+          <td class="govuk-table__cell">£59.10 per week</td>
+        </tr>
+      </tbody>
+    </table>
+    -->
+    
+    <!-- Active prototypes -->
+    <!-- <h3 class="govuk-heading-m">Active prototypes</h3> -->
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Active prototypes</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Prototype</th>
+          <th scope="col" class="govuk-table__header">Details</th>
+          <th scope="col" class="govuk-table__header">User</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+
+        <!-- First time super user sign in -->
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Initial build &mdash; V 01.1</th>
+          <td class="govuk-table__cell">Accessing the service for the first time as a super user once account has been created &mdash; resetting password and authorise new accounts </td>
+          <td class="govuk-table__cell">First time <strong>super user</strong> &mdash; sign in</td>
+          <td class="govuk-table__cell"><a class="govuk-link" onclick="superUser()" target="_blank" href="/v01/">Open prototype</a></td>
+        </tr>
+
+        <!-- First time regular user sign up -->
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Initial build &mdash; V 01.2</th>
+          <td class="govuk-table__cell">Accessing the service for the first time as a normal user &mdash; setting your password and </td>
+          <td class="govuk-table__cell">First time <strong>normal user</strong> &mdash; sign up</td>
+          <td class="govuk-table__cell"><a class="govuk-link" onclick="newNormalUser()" target="_blank" href="/v01/user-management/create-password">Open prototype</a></td>
+        </tr>
+
+        <!-- Existing regular user sign in -->
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Initial build &mdash; V 01.3</th>
+          <td class="govuk-table__cell">Accessing the service as an existing user</td>
+          <td class="govuk-table__cell">Existing <strong>normal user</strong> &mdash; sign in</td>
+          <td class="govuk-table__cell"><a class="govuk-link" onclick="existingNormalUser()" target="_blank" href="/v01/">Open prototype</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+    <!-- Earlier prototypes -->
+    <h3 class="govuk-heading-m">Earlier prototypes</h3>
+    <p>These are earliest round of prototypes</p>
+
+
+    <!-- Archived prototypes (Alpha) -->
+    <!-- <h3 class="govuk-heading-m">Archived prototypes</h3> -->
+
+  </div>
+</div>
+
+{% endblock %}

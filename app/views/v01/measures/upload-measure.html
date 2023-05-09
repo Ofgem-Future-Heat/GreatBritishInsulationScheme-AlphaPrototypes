@@ -1,0 +1,51 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+    Upload Measure
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">
+            Upload Measure
+        </h1>
+
+        <p class="govuk-body">Any Measure you upload must be saved as a CSV file.</p>
+
+        <!-- https://www.passport.service.gov.uk/photo/upload -->
+        <h2 class="govuk-heading-l">The file must be:</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>under 900KB</li>
+            <li>a maximum number of 5,000 rows</li>
+        </ul>
+          
+        <div class="govuk-form-group">
+            <label class="govuk-button" id="measure-label" data-module="govuk-button" for="measure" role="button" tabindex="0">
+                Choose file
+            </label> 
+            <input  class="govuk-visually-hidden" 
+                    id="measure" 
+                    name="measure" 
+                    type="file" 
+                    accept=".csv" 
+                    aria-hidden="true" 
+                    tabindex="-1"
+                    onchange="return triggerValidation(this)"
+            />
+        </div>
+
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+        <h3 class="govuk-heading-l">Get help</h3>
+        <!-- <p class="govuk-body">A notification template can be downloaded to guide you through with the proper measure file</p> -->
+        <p class="govuk-body"><a href="../v01/guidance-for-the-service" target="_blank">How to upload a measure (opens in a new tab)</a></p>
+        <p class="govuk-body"><a href="../v01/what-you-will-need" target="_blank">What you will need to upload a Measure (opens in a new tab)</a></p>
+    </div>
+</div>
+
+{% endblock %}

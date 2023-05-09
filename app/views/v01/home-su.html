@@ -1,0 +1,131 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+    {{serviceName}}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">
+            Manage Measures
+        </h1>
+
+        <a href="measures/upload-measure" class="govuk-button" data-module="govuk-button">
+            Upload new Measure
+        </a>
+
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+        <!-- Important -->
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">Important</h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <p class="govuk-notification-banner__heading">Guidance for address formats has been updated. (March/2023)</p>
+                <p class="govuk-notification-banner__heading"></p><a class="govuk-notification-banner__link" target="_blank" href="/v01/guidance-for-the-service">View update (opens in new tab)</a></p>
+            </div>
+        </div>
+
+        <!-- Measure errors -->
+        <div class="govuk-notification-banner govuk-notification-banner--error" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">Measure errors</h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <h3 class="govuk-notification-banner__heading">The following files contains errors</h3>
+
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header app-custom-class">Date</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">Time</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">File name</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <th scope="row" class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">measure-12345678.csv</td>
+                            <td class="govuk-table__cell"><a href="errors/12345678">View error details</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <th scope="row" class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell"><a href="errors/09876543">View error details</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+        
+        <h2 class="govuk-heading-l">Manage your Measures</h2>
+        
+        <div class="govuk-grid-row">
+
+            <!-- Measures -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m"><a href="measures" class="govuk-link">Measures</a></h3>
+                    <p class="govuk-body">View previously uploaded measures, download status reports and view late extensions.</p>
+                </div>
+            </div>
+
+            <!-- Transfers -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m"><a href="transfers" class="govuk-link">Transfers</a></h3>
+                    <p class="govuk-body">Transfers request approval or manage approval requests.</p>
+                </div>
+            </div>
+
+            <!-- Errors -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m"><a href="errors" class="govuk-link">Errors</a></h3>
+                    <p class="govuk-body">View existing error files containing individual Measure errors.</p>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+        <h2 class="govuk-heading-l">Manage accounts</h2>
+        
+        <div class="govuk-grid-row">
+
+            <!-- Add a new user -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m"><a href="user-management/create-an-account" class="govuk-link">Add a new user</a></h3>
+                    <p class="govuk-body">Add a new user from within your organisation.</p>
+                </div>
+            </div>
+
+            <!-- Remove a user -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m"><a href="user-management/remove-a-user" class="govuk-link">Remove a user</a></h3>
+                    <p class="govuk-body">Create an account for someone in your organisation.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+        <h3 class="govuk-heading-l">Get help</h3>
+        <p><a href="../v01/guidance-for-the-service" target="_blank">How to upload a measure (opens in a new tab)</a></p>
+        <p><a href="../v01/what-you-will-need" target="_blank">What you will need to upload a Measure (opens in a new tab)</a></p>
+    </div>
+</div>
+
+{% endblock %}
