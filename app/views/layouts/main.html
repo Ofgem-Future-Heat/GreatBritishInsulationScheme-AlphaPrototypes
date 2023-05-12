@@ -4,3 +4,9 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 #}
 
 {% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/public/javascripts/step-by-step-navigation.js"></script>
+  <script src="/public/javascripts/step-by-step-polyfills.js"></script>
+{% endblock %}

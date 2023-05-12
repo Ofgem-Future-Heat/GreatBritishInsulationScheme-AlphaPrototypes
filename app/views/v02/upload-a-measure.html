@@ -1,0 +1,106 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Home – {{serviceName}}
+{% endblock %}
+
+{#% block header %}
+  <p>HELLO</p>
+{% endblock %#}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <!-- Table of Contents Navigation -->
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">{{ serviceName }}</h1>
+
+    <a class="govuk-skip-link govuk-!-display-none-print" data-module="govuk-skip-link" href="#guide-contents" data-govuk-skip-link-module-started="true">Skip contents of guide</a>
+
+    <nav class="" aria-label="pages in this guide" role="navigation">
+      <h2 class="govuk-heading-m">Contents</h2>
+      <ul class="govuk-list govuk-list--bullet govuk-list govuk-list--bullet-bullet eco-contents-list">
+        <li class="contents_list_item"><a href="/v01/">Overview</a></li>
+        <li class="contents_list_item"><a href="who-can-upload-a-measure">Who can upload a Measure</a></li>
+        <li class="contents_list_item"><a href="guidance-for-the-service">Guidance for the service</a></li>
+        <li class="contents_list_item"><a href="what-you-will-need">What you will need</a></li>
+        <li class="contents_list_item"><a href="requesting-for-an-account">Requesting for an account</a></li>
+        <li class="contents_list_item">Upload a Measure</li>
+      </ul>
+    </nav>
+  </div>
+  
+  <!-- Main content information -->
+  <div class="govuk-grid-column-two-thirds">
+    <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+    <!-- Upload a Measure -->
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-l" id="UploadAMeasure">Upload a Measure</h2>
+      <p class="govuk-body">You're now ready to upload your Measures. Use the 'Start now' button to begin uploading your Measures.</p>
+      
+      <div class="govuk-inset-text">
+        <p class="govuk-body">This service is for new and existing suppliers to upload a Measure only.</p>
+        <p class="govuk-body">If you are an Ofgem internal ECO register user, you can use ECO Register to monitor the progress of a Measure.</p>
+      </div>
+
+      <!-- Start now -->
+      <a id="startButton" href="user-management/sign-in" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+        Start now
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+        </svg>
+      </a>
+
+      <h3 class="govuk-heading-m">Other ways to upload a Measure</h3>
+      <p class="govuk-body">You can also upload Measures using the ECO Register service at: <a href="https://eco.ofgem.gov.uk/Logon/LogOn?ReturnUrl=%2f/">https://eco.ofgem.gov.uk/Logon/LogOn?ReturnUrl=%2f</a></p>
+    </div>
+    
+    <!-- Guidance navigation -->
+    <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="Pagination">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="requesting-for-an-account" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z">
+              </path>
+          </svg>
+          <span class="govuk-pagination__link-title">Previous</span>
+          <span class="govuk-visually-hidden">:</span>
+          <span class="govuk-pagination__link-label">Requesting for an account</span>
+        </a>
+      </div>
+    </nav>
+
+    <a href="/v01/guidance-print-version/print" class="govuk-link govuk-link--no-visited-state govuk-body">View a printable version of the whole guide</a>
+
+  </div>
+
+  <!-- Side panel -->
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-!-padding-bottom-6"></div>
+    <div class="app-step-nav-related app-step-nav-related--singular">
+      <h3 class="app-step-nav-related__heading govuk-heading-m">Related content</h3>
+      <p><a href="#">Some related content here</a></p>
+      <p><a href="#">Some more related content here</a></p>
+    </div>
+
+    <!-- Get help -->
+    <div class="govuk-!-margin-bottom-9">
+      <h3 class="govuk-heading-m" id="GettingHelp">Get help</h2>
+    
+      <p class="govuk-body"><a href="#">How to upload a measure</a></p>
+      <p class="govuk-body"><a href="#">Frequently asked questions</a></p>
+
+      <ul class="govuk-list">
+        <li>Email: <a class="govuk-link" href="mailto:measure.info.@ofgem.gov.uk">measure.info.@ofgem.gov.uk</a></li>
+        <li>Telephone: 0300 111 222 333</li>
+      </ul>
+
+      <p class="govuk-body">All services are available Monday to Friday, 9am to 5pm (except public holidays)</p>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
