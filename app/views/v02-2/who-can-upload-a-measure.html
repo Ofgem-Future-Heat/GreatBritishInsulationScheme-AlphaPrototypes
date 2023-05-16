@@ -1,0 +1,113 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Who can upload a Measure – {{serviceName}}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <!-- Table of Contents Navigation -->
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">{{ serviceName }}</h1>
+
+    <a class="govuk-skip-link govuk-!-display-none-print" data-module="govuk-skip-link" href="#guide-contents" data-govuk-skip-link-module-started="true">Skip contents of guide</a>
+
+    <nav class="" aria-label="pages in this guide" role="navigation">
+      <h2 class="govuk-heading-m">Contents</h2>
+      <ul class="govuk-list govuk-list--bullet govuk-list govuk-list--bullet-bullet eco-contents-list">
+        <li class="contents_list_item"><a href="/v01/">Overview</a></li>
+        <li class="contents_list_item">Who can upload a Measure</li>
+        <li class="contents_list_item"><a href="guidance-for-the-service">Guidance for the service</a></li>
+        <li class="contents_list_item"><a href="what-you-will-need">What you will need</a></li>
+        <li class="contents_list_item"><a href="requesting-for-an-account">Requesting for an account</a></li>
+        <li class="contents_list_item"><a href="upload-a-measure.html">Upload a Measure</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <!-- Main content information -->
+  <div class="govuk-grid-column-two-thirds">
+    <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+    <!-- Who can upload a Measure -->
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-l" id="WhoCanUploadAMeasure">Who can upload a Measure</h2>
+      <p class="govuk-body">Lorem ipsum</p>
+      <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      
+      <h3 class="govuk-heading-m">Main suppliers</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Ofgem</li>
+        <li>Eon</li>
+        <li>Etc.</li>
+      </ul>
+
+      <h3 class="govuk-heading-m">Other suppliers</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Ofgem</li>
+        <li>Eon</li>
+      </ul>
+    </div>
+
+    <!-- Guidance navigation -->
+    <nav class="govuk-pagination govuk-pagination--block" role="navigation" aria-label="Pagination">
+
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="/v01/" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z">
+              </path>
+          </svg>
+          <span class="govuk-pagination__link-title">Previous</span>
+          <span class="govuk-visually-hidden">:</span>
+          <span class="govuk-pagination__link-label">Overview</span>
+        </a>
+      </div>
+
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="guidance-for-the-service" rel="next">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
+              </path>
+          </svg>
+          <span class="govuk-pagination__link-title">Next</span>
+          <span class="govuk-visually-hidden">:</span>
+          <span class="govuk-pagination__link-label">Guidance for the service</span>
+        </a>
+      </div>
+    </nav>
+
+    <a href="/v01/guidance-print-version/print" class="govuk-link govuk-link--no-visited-state govuk-body">View a printable version of the whole guide</a>
+
+  </div>
+
+  <!-- Side panel -->
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-!-padding-bottom-6"></div>
+    <div class="app-step-nav-related app-step-nav-related--singular">
+      <h3 class="app-step-nav-related__heading govuk-heading-m">Related content</h3>
+      <p><a href="#">Some related content here</a></p>
+      <p><a href="#">Some more related content here</a></p>
+    </div>
+
+    <!-- Get help -->
+    <div class="govuk-!-margin-bottom-9">
+      <h3 class="govuk-heading-m" id="GettingHelp">Get help</h2>
+    
+      <p class="govuk-body"><a href="#">How to upload a measure</a></p>
+      <p class="govuk-body"><a href="#">Frequently asked questions</a></p>
+
+      <ul class="govuk-list">
+        <li>Email: <a class="govuk-link" href="mailto:measure.info.@ofgem.gov.uk">measure.info.@ofgem.gov.uk</a></li>
+        <li>Telephone: 0300 111 222 333</li>
+      </ul>
+
+      <p class="govuk-body">All services are available Monday to Friday, 9am to 5pm (except public holidays)</p>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

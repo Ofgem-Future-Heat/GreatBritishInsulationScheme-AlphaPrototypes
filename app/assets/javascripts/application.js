@@ -49,3 +49,21 @@ function triggerValidation(el) {
     window.location.pathname = "/v01/measures/success-file-upload";
   }
 }
+
+
+function triggerValidation21(el) {
+  if (!(regexForCSV.test(el.value.toLowerCase()))) {
+    el.value = '';
+    window.location.pathname = "/v02-1/measures/invalid-file-upload";
+  } else {
+    window.location.pathname = "/v02-1/measures/success-file-upload-no-core-check-errors";
+  }
+}
+function triggerValidation22(el) {
+  if (!(regexForCSV.test(el.value.toLowerCase()))) {
+    el.value = '';
+    window.location.pathname = "/v02-2/measures/invalid-file-upload";
+  } else {
+    window.location.pathname = "/v02-2/measures/success-file-upload-core-check-errors";
+  }
+}
