@@ -67,3 +67,11 @@ function triggerValidation22(el) {
     window.location.pathname = "/v02-2/measures/success-file-upload-core-check-errors";
   }
 }
+function triggerValidation23(el) {
+  if (!(regexForCSV.test(el.value.toLowerCase()))) {
+    el.value = '';
+    window.location.pathname = "/v02-3/measures/invalid-file-upload";
+  } else {
+    window.location.pathname = "/v02-3/measures/success-file-upload-core-check-errors";
+  }
+}

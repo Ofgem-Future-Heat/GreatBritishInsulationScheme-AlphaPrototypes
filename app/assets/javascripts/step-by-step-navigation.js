@@ -1,5 +1,9 @@
 console.log('Step by Step JS file loaded');
 
+// const pageUrl         =   window.location.pathname.split("/");
+// const domainPathUrl   =   pageUrl[pageUrl.length-2];
+// const currentUrl      =   pageUrl[pageUrl.length-1];
+// const pageUrlPath     =   window.location.pathname;
 
 // Toggle event listener
 const   steps           = document.querySelectorAll('#stepByStep .app-step-nav__step');
@@ -51,7 +55,12 @@ function toggleAllDetails() {
             stepDetailToggleChevron.classList.remove('app-step-nav__chevron--down');
         }
     }
-
+}
+// console.log('currentUrl', currentUrl);
+if (currentUrl === 'errors') {
+    // console.log('open all steps on load');
+    toggleAllDetails();
+    toggleAllDetails();
 }
 
 // function toggleAllDetails() {
