@@ -12,21 +12,11 @@
         <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
 
         <h1 class="govuk-heading-xl">
-            Upload Measure
+            Upload measures file
         </h1>
 
-        <!-- <p class="govuk-body">Any Measure you upload must be saved as a CSV file.</p> -->
-        <div class="govuk-inset-text">
-            Any Measure you upload must be saved as a CSV file.
-        </div>
-
-        <!-- https://www.passport.service.gov.uk/photo/upload -->
-        <!-- <h2 class="govuk-heading-l">The file must be:</h2>
-        <ul class="govuk-list govuk-list--bullet">
-            <li>under 900KB</li>
-            <li>a maximum number of 5,000 rows</li>
-        </ul> -->
-          
+        <p class="govuk-body">Any file containing measures you upload must be a CSV file.</p>
+                  
         <div class="govuk-form-group">
             <label class="govuk-button" id="measure-label" data-module="govuk-button" for="measure" role="button" tabindex="0">
                 Choose file
@@ -41,11 +31,6 @@
                     onchange="return triggerValidation21(this)"
             />
         </div>
-        <!-- <a href="success-file-upload-no-core-check-errors" class="govuk-button" data-module="govuk-button">
-            Choose file
-        </a> -->
-
-        <p class="govuk-body"><a href="#" class="govuk-link">Download an example template measure</a></p>
 
         <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
 

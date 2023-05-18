@@ -43,21 +43,21 @@ function toggleAllDetails() {
         
         if (toggleSteps) {
             stepDetail.classList.add('js-hidden');
-            controlDetailToggleText.innerHTML = "Show all steps";
-            controlDetailToggleChevron.classList.add('app-step-nav__chevron--down');
+            if (controlDetailToggleText) controlDetailToggleText.innerHTML = "Show all steps";
+            if (controlDetailToggleChevron) controlDetailToggleChevron.classList.add('app-step-nav__chevron--down');
             stepDetailToggleText.innerHTML = "Show";
             stepDetailToggleChevron.classList.add('app-step-nav__chevron--down');
         } else {
             stepDetail.classList.remove('js-hidden');
-            controlDetailToggleText.innerHTML = "Hide all steps";
-            controlDetailToggleChevron.classList.remove('app-step-nav__chevron--down');
+            if (controlDetailToggleText) controlDetailToggleText.innerHTML = "Hide all steps";
+            if (controlDetailToggleChevron) controlDetailToggleChevron.classList.remove('app-step-nav__chevron--down');
             stepDetailToggleText.innerHTML = "Hide";
             stepDetailToggleChevron.classList.remove('app-step-nav__chevron--down');
         }
     }
 }
 // console.log('currentUrl', currentUrl);
-if (currentUrl === 'errors') {
+if (currentUrl === 'errors' || currentUrl === 'success-file-upload-core-check-errors') {
     // console.log('open all steps on load');
     toggleAllDetails();
     toggleAllDetails();

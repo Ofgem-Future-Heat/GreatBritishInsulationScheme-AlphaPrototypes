@@ -49,8 +49,6 @@ function triggerValidation(el) {
     window.location.pathname = "/v01/measures/success-file-upload";
   }
 }
-
-
 function triggerValidation21(el) {
   if (!(regexForCSV.test(el.value.toLowerCase()))) {
     el.value = '';
