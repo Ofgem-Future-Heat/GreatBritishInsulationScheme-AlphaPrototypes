@@ -100,3 +100,19 @@ ul {
 }
 
 .margin-top-20 { margin-bottom: 20px; }
+
+.scrollable {
+    tbody {
+        display: block;
+        height: 400px;
+        overflow: auto;
+    }
+    thead, tbody tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;/* even columns width , fix width of table too*/
+    }
+    thead {
+        width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+    }
+}

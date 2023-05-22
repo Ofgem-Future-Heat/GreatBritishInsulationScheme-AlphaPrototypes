@@ -10,12 +10,12 @@
     <div class="govuk-grid-column-full">
 
         <h1 class="govuk-heading-xl">
-            Upload measure file
+            {{serviceName}}
         </h1>
         
         <div class="govuk-form-group">
             <label class="govuk-button" id="measure-label" data-module="govuk-button" for="measure" role="button" tabindex="0">
-            Upload a Measure
+            Upload a measure file
             </label> 
             <input  class="govuk-visually-hidden" 
                     id="measure" 
@@ -30,7 +30,7 @@
         <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
 
         <!-- Important -->
-        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <!-- <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
             <div class="govuk-notification-banner__header">
                 <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">Important</h2>
             </div>
@@ -38,7 +38,7 @@
                 <p class="govuk-notification-banner__heading">We've updated the guidance for address formats. (March/2023)</p>
                 <p class="govuk-notification-banner__heading"></p><a class="govuk-notification-banner__link" target="_blank" href="/v02-3/guidance-for-the-service">View update (opens in new tab)</a></p>
             </div>
-        </div>
+        </div> -->
 
         <!-- Measure errors -->
         <div class="govuk-notification-banner govuk-notification-banner--error" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
@@ -59,8 +59,8 @@
                     </thead>
                     <tbody class="govuk-table__body">
                         <tr class="govuk-table__row">
-                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
-                            <th scope="row" class="govuk-table__cell">2:35pm</th>
+                            <th class="govuk-table__cell">12/03/2023</th>
+                            <th class="govuk-table__cell">2:35pm</th>
                             <td class="govuk-table__cell">measure-12345678.csv</td>
                             <td class="govuk-table__cell"><a href="#">Download error report</a></td>
                         </tr>
