@@ -52,7 +52,8 @@ function triggerValidation(el) {
 function triggerValidation21(el) {
   if (!(regexForCSV.test(el.value.toLowerCase()))) {
     el.value = '';
-    window.location.pathname = "/v02-1/measures/invalid-file-upload";
+  //   window.location.pathname = "/v02-1/measures/invalid-file-upload";
+    window.location.pathname = "/v02-1/measures/success-file-upload-no-core-check-errors";
   } else {
     window.location.pathname = "/v02-1/measures/success-file-upload-no-core-check-errors";
   }
@@ -60,7 +61,8 @@ function triggerValidation21(el) {
 function triggerValidation22(el) {
   if (!(regexForCSV.test(el.value.toLowerCase()))) {
     el.value = '';
-    window.location.pathname = "/v02-2/measures/invalid-file-upload";
+    // window.location.pathname = "/v02-2/measures/invalid-file-upload";
+    window.location.pathname = "/v02-2/measures/success-file-upload-core-check-errors";
   } else {
     window.location.pathname = "/v02-2/measures/success-file-upload-core-check-errors";
   }
