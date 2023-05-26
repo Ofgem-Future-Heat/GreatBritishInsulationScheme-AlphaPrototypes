@@ -58,15 +58,22 @@ function triggerValidation21(el) {
     window.location.pathname = "/v02-1/measures/success-file-upload-no-core-check-errors";
   }
 }
-function triggerValidation22(el) {
-  if (!(regexForCSV.test(el.value.toLowerCase()))) {
-    el.value = '';
-    // window.location.pathname = "/v02-2/measures/invalid-file-upload";
-    window.location.pathname = "/v02-2/measures/success-file-upload-core-check-errors";
-  } else {
-    window.location.pathname = "/v02-2/measures/success-file-upload-core-check-errors";
+
+function fileSelection() {
+  
+  if(document.getElementById("file-upload").value != "") {
+    // you have a file
+    document.getElementById("uploadBtn").removeAttribute("disabled");
+    document.getElementById("uploadBtn").classList.remove('govuk-button--disabled');
+    document.getElementById("uploadBtn").setAttribute('aria-disabled', false);
+    console.log('file selected');
   }
 }
+
+function triggerValidation22() {
+    window.location.pathname = "/v02-2/measures/success-file-upload-core-check-errors";
+}
+
 function triggerValidation23(el) {
   if (!(regexForCSV.test(el.value.toLowerCase()))) {
     el.value = '';

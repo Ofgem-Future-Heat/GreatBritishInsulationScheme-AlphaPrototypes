@@ -12,21 +12,27 @@
         <h1 class="govuk-heading-xl">
             Manage measures
         </h1>
-        
-        <div class="govuk-form-group">
-            <label class="govuk-button" id="measure-label" data-module="govuk-button" for="measure" role="button" tabindex="0">
-            Upload a measure file
-            </label> 
-            <input  class="govuk-visually-hidden" 
-                    id="measure" 
-                    name="measure" 
-                    type="file" 
-                    accept=".csv" 
-                    aria-hidden="true" 
-                    tabindex="-1"
-                    onchange="return triggerValidation22(this)"
-            />
-        </div>
+
+        <form>
+            <div class="govuk-form-group">
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="icon-upload"></i> Choose file
+                </label>
+                <input  class="" 
+                        id="file-upload" 
+                        name="file-upload" 
+                        type="file" 
+                        accept=".csv" 
+                        tabindex="-1"
+                        title="file-upload"
+                        onchange="fileSelection()"
+                />
+            </div>
+
+            <button id="uploadBtn" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--disabled margin0" class="govuk-button"  onclick="triggerValidation22()" type="button">Upload a measure file</button>
+        </form>
+
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
         
         
         <div class="govuk-grid-row">

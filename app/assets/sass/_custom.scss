@@ -100,6 +100,7 @@ ul {
 }
 
 .margin-top-20 { margin-bottom: 20px; }
+.margin0 { margin: 0; }
 
 .scrollable {
     tbody {
@@ -114,5 +115,36 @@ ul {
     }
     thead {
         width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+    }
+}
+
+input[type="file"] {
+    display: inline-block;
+    height: 24px;
+    margin-right: 20px;
+    text-indent: -120px;
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+    color: #0b0c0c;
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+.custom-file-upload {
+    
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+    color: #0b0c0c;
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin: 0;
+    
+    &:before {
+        content: url('../images/icon-upload.svg');
+        position: relative;
+        top: 5px;
     }
 }

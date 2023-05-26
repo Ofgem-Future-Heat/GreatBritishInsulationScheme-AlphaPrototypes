@@ -96,23 +96,33 @@ File upload successful
     <p class="govuk-body">If you do not download it here, you'll be unable to access it afterwards and have to upload your file again to generate the error report.</p>
 
     <div class="govuk-button-group">
-        <button class="govuk-button" data-module="govuk-button">
-          Download error report
-        </button>
-
-        <label class="govuk-button govuk-button--secondary" id="measure-label" data-module="govuk-button" for="measure" role="button" tabindex="0">
-          Upload another measure file
-        </label> 
-        <input  class="govuk-visually-hidden" 
-                id="measure" 
-                name="measure" 
-                type="file" 
-                accept=".csv" 
-                aria-hidden="true" 
-                tabindex="-1"
-                onchange="return triggerValidation22(this)"
-          />
+      <button class="govuk-button" data-module="govuk-button">
+        Download error report
+      </button>
     </div>
+    
+    <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+    
+    <h3 class="govuk-heading-m">Upload another measure file</h3>
+
+    <form>
+        <div class="govuk-form-group">
+            <label for="file-upload" class="custom-file-upload">
+                <i class="icon-upload"></i> Choose file
+            </label>
+            <input  class="" 
+                    id="file-upload" 
+                    name="file-upload" 
+                    type="file" 
+                    accept=".csv" 
+                    tabindex="-1"
+                    title="file-upload"
+                    onchange="fileSelection()"
+            />
+        </div>
+        <button id="uploadBtn" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--secondary govuk-button--disabled" onclick="triggerValidation22()" type="button">Upload file</button>
+    </form>
+
 
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
