@@ -1,0 +1,67 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+    Upload Measure
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+        <div class="govuk-error-summary" data-module="govuk-error-summary">
+            <div role="alert">
+                <h2 class="govuk-error-summary__title">
+                    There is a problem
+                </h2>
+                <div class="govuk-error-summary__body">
+                    <ul class="govuk-list govuk-error-summary__list">
+                        <li>
+                            <a href="#file-upload-input">The selected file must be a CSV</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+        <h1 class="govuk-heading-xl">
+            Upload measures file
+        </h1>
+
+        <p class="govuk-body">Any file containing measures you upload must be a CSV file.</p>
+
+        <form>
+            <div class="govuk-form-group govuk-form-group--error">
+                <label for="file-upload-input" class="custom-file-upload">
+                    <i class="icon-upload"></i> Choose file
+                </label>
+                <p id="csv-input-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> The selected file must be a CSV
+                </p>
+                <input  class="" 
+                        id="file-upload-input" 
+                        name="file-upload-input" 
+                        type="file" 
+                        accept=".csv" 
+                        tabindex="-1"
+                        title="file-upload"
+                        onchange="fileSelection()"
+                />
+            </div>
+
+            <button id="uploadBtn" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--disabled margin0" class="govuk-button" type="button">Upload a measure file</button>
+        </form>
+
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+
+        <h3 class="govuk-heading-l">Get help</h3>
+        <!-- <p class="govuk-body">A notification template can be downloaded to guide you through with the proper measure file</p> -->
+        <p class="govuk-body"><a href="#">How to upload a measure (opens in a new tab)</a></p>
+        <p class="govuk-body"><a href="#">What you will need to upload a Measure (opens in a new tab)</a></p>
+    </div>
+</div>
+
+{% endblock %}
