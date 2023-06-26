@@ -1,0 +1,50 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+    Upload Measure
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        
+        <h1 class="govuk-heading-xl">
+            Upload measures file
+        </h1>
+
+        <p class="govuk-body">Any file containing measures you upload must be a CSV file.</p>
+
+        <form>
+            <div class="govuk-form-group">
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="icon-upload"></i> Choose file
+                </label>
+                <input  class="" 
+                        id="file-upload" 
+                        name="file-upload" 
+                        type="file" 
+                        accept=".csv" 
+                        tabindex="-1"
+                        title="file-upload"
+                        onchange="fileSelection()"
+                    />
+            </div>
+
+            <button id="uploadBtn" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--disabled margin0" class="govuk-button"  onclick="triggerValidation41()" type="button">Upload a measure file</button>
+        </form>
+
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+
+        <h3 class="govuk-heading-l">Get help</h3>
+        <!-- <p class="govuk-body">A notification template can be downloaded to guide you through with the proper measure file</p> -->
+        <p class="govuk-body"><a href="../v04-1/guidance-for-the-service" target="_blank">How to upload a measure (opens in a new tab)</a></p>
+        <p class="govuk-body"><a href="../v04-1/what-you-will-need" target="_blank">What you will need to upload a Measure (opens in a new tab)</a></p>
+    </div>
+</div>
+
+{% endblock %}

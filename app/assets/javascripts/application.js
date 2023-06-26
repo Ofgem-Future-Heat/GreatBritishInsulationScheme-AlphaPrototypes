@@ -82,3 +82,7 @@ function triggerValidation23(el) {
     window.location.pathname = "/v02-3/measures/success-file-upload-core-check-errors";
   }
 }
+
+function triggerValidation41() {
+    window.location.pathname = "/v04-1/measures/success-file-upload-core-check-errors";
+}

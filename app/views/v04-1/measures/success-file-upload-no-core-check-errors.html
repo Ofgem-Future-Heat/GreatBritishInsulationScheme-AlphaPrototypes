@@ -1,0 +1,33 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+File upload successful
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        File uploaded
+      </h1>
+    </div>
+    
+    <p class="govuk-body">The core checks found no errors with this file.</p>
+    
+    <h2 class="govuk-heading-l">What happens next?</h2>
+    
+    <p class="govuk-body">The file will now go through additional checks. We'll take a closer look at the file to check if there are any errors with the details provided in the file.</p>
+    <p class="govuk-body">If the measures in the file <strong>have no errors</strong>, they will be added to the register.</p>
+    <p class="govuk-body">If they <strong>do have errors</strong>, we'll let you know about this by email. You'll be able to access any error reports relating to the file on the <a href="../home">homepage</a>.</p>
+
+    <h2 class="govuk-heading-l">Have more than one file to upload?</h2>
+   
+    <p class="govuk-body"><a href="upload-measure.html">Upload another measure</a></p>
+    <p class="govuk-body"><a href="../home">Return to homepage</a></p>
+  </div>
+</div>
+
+{% endblock %}

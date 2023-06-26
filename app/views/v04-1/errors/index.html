@@ -1,0 +1,555 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+    Errors
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Existing error reports</h1>
+
+        <p class="govuk-body">All existing error reports are listed here by what stage they're at in the process of validation.</p>
+        <p class="govuk-body">You should download any relevant error report then <strong>follow the next steps</strong>.</p>
+        <p class="govuk-body">Stage 1 errors are not listed here. We do not store these errors after validating the file.</p>
+        <!-- <p class="govuk-body">Stage 2 error reports also include all <strong>Address errors</strong>.</p> -->
+        <div class="govuk-inset-text">
+            Stage 2 error reports also include all <strong>Address errors</strong>.
+        </div>
+
+        <!-- Errors tabs -->
+        <div class="govuk-tabs" data-module="govuk-tabs">
+            <h2 class="govuk-tabs__title">
+              Contents
+            </h2>
+
+            <ul class="govuk-tabs__list">
+                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                    <a class="govuk-tabs__tab" href="#stage1">
+                        Stage 1
+                    </a>
+                </li>
+                <li class="govuk-tabs__list-item ">
+                  <a class="govuk-tabs__tab" href="#stage2">
+                        Stage 2
+                  </a>
+                </li>
+                <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="#address">
+                        Address
+                    </a>
+                </li>
+                <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="#trustmark">
+                        TrustMark 
+                    </a>
+                </li>
+                <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="#stage3">
+                        Stage 3
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Stage 2 error reports -->
+            <div class="govuk-tabs__panel" id="stage1">
+              <h2 class="govuk-heading-l">Stage 1 error reports</h2>
+              <div class="scrollable">
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header app-custom-class">Date</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">Time</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">File name</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">measure-12345678.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">measure-12345678.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">measure-12345678.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">measure-12345678.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">measure-12345678.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Stage 2 error reports -->
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="stage2">
+              <h2 class="govuk-heading-l">Stage 2 error reports</h2>
+              <div class="scrollable">
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header app-custom-class">Date</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">Time</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">File name</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">measure-12345678.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">measure-12345678.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">measure-12345678.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">measure-12345678.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">measure-12345678.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+
+            <!-- Address error reports -->
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="address">
+              <h2 class="govuk-heading-l">Address error reports</h2>
+              <div class="scrollable">
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header app-custom-class">Date</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">Time</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">File name</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">measure-12345678.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">measure-12345678.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">measure-12345678.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">measure-12345678.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- TrustMark error reports -->
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="trustmark">
+              <h2 class="govuk-heading-l">TrustMark error reports</h2>
+              <div class="scrollable">
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header app-custom-class">Date</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">Time</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">File name</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">gbis-measure-TrustMark-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">gbis-measure-TrustMark-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">gbis-measure-TrustMark-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">gbis-measure-TrustMark-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">gbis-measure-TrustMark-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">gbis-measure-TrustMark-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">gbis-measure-TrustMark-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">gbis-measure-TrustMark-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">gbis-measure-TrustMark-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">gbis-measure-TrustMark-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">gbis-measure-TrustMark-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">gbis-measure-TrustMark-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>  
+            </div>
+
+            <!-- Stage 3 error reports -->
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="stage3">
+              <h2 class="govuk-heading-l">Stage 3 error reports</h2>
+              <div class="scrollable">
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header app-custom-class">Date</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">Time</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">File name</th>
+                        <th scope="col" class="govuk-table__header app-custom-class">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">gbis-measure-stage-3-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">gbis-measure-stage-3-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">gbis-measure-stage-3-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">gbis-measure-stage-3-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">gbis-measure-stage-3-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">gbis-measure-stage-3-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">gbis-measure-stage-3-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">12/03/2023</th>
+                            <td class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">gbis-measure-stage-3-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <td class="govuk-table__cell">9:29am</th>
+                            <td class="govuk-table__cell">gbis-measure-stage-3-errors.csv</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        <!-- Errors abs -->
+
+        <p class="govuk-body"><a href="home">Return to homepage</a></p>
+        
+        <h3 class="govuk-heading-l">Get help</h3>
+        <p><a href="../v02-4/guidance-for-the-service" target="_blank">How to upload a measure (opens in a new tab)</a></p>
+        <p><a href="../v02-4/what-you-will-need" target="_blank">What you will need to upload a Measure (opens in a new tab)</a></p>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-m">Next steps</h2>
+    
+        <div data-module="appstepnav" id="step-by-step-navigation" class="app-step-nav govuk-!-display-none-print app-step-nav--active" data-show-text="Show" data-hide-text="Hide" data-show-all-text="Show all steps" data-hide-all-text="Hide all steps">
+            <div class="app-step-nav__controls govuk-!-display-none-print">
+                <button onclick="toggleAllDetails()" aria-expanded="false" class="app-step-nav__button app-step-nav__button--controls js-step-controls-button" aria-controls="step-panel-check-you-re-allowed-to-drive-1">
+                    <span class="app-step-nav__chevron app-step-nav__chevron--down js-step-controls-button-icon"></span>
+                    <span class="app-step-nav__button-text app-step-nav__button-text--all js-step-controls-button-text">Show all steps</span>
+                </button>
+            </div>
+            <ol class="app-step-nav__steps" id="stepByStep">
+                <li class="app-step-nav__step js-step app-step-nav__step--active" aria-current="step" id="">
+                    <div class="app-step-nav__header js-toggle-panel" data-position="1">
+                        <h3 class="app-step-nav__title">
+                        <span class="app-step-nav__circle app-step-nav__circle--number">
+                            <span class="app-step-nav__circle-inner">
+                            <span class="app-step-nav__circle-background">
+                                <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 1<span class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                            </span>
+                            </span>
+                        </span>
+            
+                        <span class="js-step-title"><button class="app-step-nav__button app-step-nav__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-check-you-re-allowed-to-drive-1"><span class="app-step-nav____title-text-focus"><span class="app-step-nav__title-text js-step-title-text">
+                            Download error report
+                        </span><span class="govuk-visually-hidden app-step-nav__section-heading-divider">, </span></span><span class="app-step-nav__toggle-link js-toggle-link govuk-!-display-none-print"><span class="app-step-nav__toggle-link-focus"><span class="app-step-nav__chevron js-toggle-link-icon app-step-nav__chevron--down"></span><span class="app-step-nav__button-text js-toggle-link-text">Show</span></span><span class="govuk-visually-hidden"> this section</span></span></button></span>
+                        </h3>
+                    </div>
+            
+                    <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-check-you-re-allowed-to-drive-1">
+                        <p class="app-step-nav__paragraph">Download the error report.</p>
+                    </div>
+                </li>
+                <li class="app-step-nav__step js-step" id="get-a-provisional-licence" >
+                    <div class="app-step-nav__header js-toggle-panel" data-position="2">
+                        <h3 class="app-step-nav__title">
+                        <span class="app-step-nav__circle app-step-nav__circle--number">
+                            <span class="app-step-nav__circle-inner">
+                            <span class="app-step-nav__circle-background">
+                                <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 2<span class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                            </span>
+                            </span>
+                        </span>
+            
+                        <span class="js-step-title"><button class="app-step-nav__button app-step-nav__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-get-a-provisional-licence-2"><span class="app-step-nav____title-text-focus"><span class="app-step-nav__title-text js-step-title-text">
+                            Fix outstanding errors
+                        </span><span class="govuk-visually-hidden app-step-nav__section-heading-divider">, </span></span><span class="app-step-nav__toggle-link js-toggle-link govuk-!-display-none-print"><span class="app-step-nav__toggle-link-focus"><span class="app-step-nav__chevron js-toggle-link-icon app-step-nav__chevron--down"></span><span class="app-step-nav__button-text js-toggle-link-text">Show</span></span><span class="govuk-visually-hidden"> this section</span></span></button></span>
+                        </h3>
+                    </div>
+            
+                    <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-get-a-provisional-licence-2">
+                        <p class="app-step-nav__paragraph">Take the necessary steps to fix any errors with the measures. The errors and how you fix them will be detailed in the report.</p>
+                    </div>
+        
+                </li>
+                <li class="app-step-nav__step js-step" id="driving-lessons-and-practice" >
+                    <div class="app-step-nav__header js-toggle-panel" data-position="3">
+                        <h3 class="app-step-nav__title">
+                        <span class="app-step-nav__circle app-step-nav__circle--number">
+                            <span class="app-step-nav__circle-inner">
+                            <span class="app-step-nav__circle-background">
+                                <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 3<span class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                            </span>
+                            </span>
+                        </span>
+            
+                        <span class="js-step-title"><button class="app-step-nav__button app-step-nav__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-driving-lessons-and-practice-3"><span class="app-step-nav____title-text-focus"><span class="app-step-nav__title-text js-step-title-text">
+                            Upload updated measure file
+                        </span><span class="govuk-visually-hidden app-step-nav__section-heading-divider">, </span></span><span class="app-step-nav__toggle-link js-toggle-link govuk-!-display-none-print"><span class="app-step-nav__toggle-link-focus"><span class="app-step-nav__chevron js-toggle-link-icon app-step-nav__chevron--down"></span><span class="app-step-nav__button-text js-toggle-link-text">Show</span></span><span class="govuk-visually-hidden"> this section</span></span></button></span>
+                        </h3>
+                    </div>
+            
+                    <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-driving-lessons-and-practice-3">
+                        <p class="app-step-nav__paragraph">After fixing the errors in the report, you should save the document as a CSV file.</p>
+                        <p class="app-step-nav__paragraph">Then, you should return to the <a href="home">Homepage</a> and upload the updated CSV file.</p>
+            
+                        <ol class="app-step-nav__list " data-length="4">
+                            <li class="app-step-nav__list-item js-list-item ">
+                                <a data-position="3.1" class="app-step-nav__link js-link" href="/v04-1/measures/upload-measure">Upload a Measure</a>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
