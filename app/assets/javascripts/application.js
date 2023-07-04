@@ -8,6 +8,10 @@ const domainPathUrl   =   pageUrl[pageUrl.length-2];
 const currentUrl      =   pageUrl[pageUrl.length-1];
 const pageUrlPath     =   window.location.pathname;
 
+// console.log('domainPathUrl=', domainPathUrl);
+console.log('pageUrlPath=', pageUrlPath);
+// console.log('currentUrl=', currentUrl);
+
 window.GOVUKPrototypeKit.documentReady(() => {
   // Add JavaScript here
     console.log('application.js is loaded');
@@ -85,4 +89,16 @@ function triggerValidation23(el) {
 
 function triggerValidation41() {
     window.location.pathname = "/v04-1/measures/success-file-upload-core-check-errors";
+}
+
+
+
+// #############################################
+// Internal Users ##############################
+// #############################################
+
+
+if (pageUrlPath === '/internal/') {
+  console.log('LOADED');
+  document.getElementById("secondaryNav").style.display = 'none';
 }
