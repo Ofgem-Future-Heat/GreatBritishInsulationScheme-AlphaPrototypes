@@ -93,10 +93,10 @@ function triggerValidation41() {
 
 
 
-// #############################################
-// Internal Users ##############################
-// #############################################
-if (pageUrlPath === '/internal/') {
+// ############################################
+// ############## Internal Users ##############
+// ############################################
+if (document.getElementById("secondaryNav") && pageUrlPath === '/internal/') {
   console.log('LOADED');
   document.getElementById("secondaryNav").style.display = 'none';
 }
