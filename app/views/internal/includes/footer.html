@@ -1,0 +1,9 @@
+{#% block footer %}Footer{% endblock %#}
+{% block footer %}
+  {{ govukFooter({
+    meta: {
+      items: footerItems,
+      visuallyHiddenTitle: "Footer links"
+    }
+  }) }}
+{% endblock %}

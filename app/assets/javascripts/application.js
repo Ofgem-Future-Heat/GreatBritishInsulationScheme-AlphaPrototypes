@@ -96,8 +96,6 @@ function triggerValidation41() {
 // #############################################
 // Internal Users ##############################
 // #############################################
-
-
 if (pageUrlPath === '/internal/') {
   console.log('LOADED');
   document.getElementById("secondaryNav").style.display = 'none';
