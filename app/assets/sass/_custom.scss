@@ -148,3 +148,17 @@ input[type="file"] {
         top: 5px;
     }
 }
+
+.password-reset-on-next-logon-text { width: 40px; }
+.password-reset-on-next-logon-switch { margin-left: 20px; }
+.flex {
+   display: flex;
+   flex-direction: row;
+}
+
+.magnifying-glass {
+    font-size: 28px;
+    padding: 0px 8px;
+    background: #cccccc;
+    border: 1px solid #000;
+}

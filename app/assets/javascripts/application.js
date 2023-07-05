@@ -100,3 +100,75 @@ if (document.getElementById("secondaryNav") && pageUrlPath === '/internal/') {
   console.log('LOADED');
   document.getElementById("secondaryNav").style.display = 'none';
 }
+
+const username = "Cainan Able";
+
+if (document.getElementById('headerUsername')) document.getElementById('headerUsername').innerText = username;
+if (document.getElementById('welcomeUsernameMessage')) document.getElementById('welcomeUsernameMessage').innerText = username;
+
+// Get External user details
+function viewExternalUserDetails(accountName, username, title, firstname, middlename, lastname, jobTitle, emailAddress, telephoneNumber, userType) {
+  localStorage.setItem('ext_accountName', accountName);
+  localStorage.setItem('ext_username', username);
+  localStorage.setItem('ext_title', title);
+  localStorage.setItem('ext_firstname', firstname);
+  localStorage.setItem('ext_middlename', middlename);
+  localStorage.setItem('ext_lastname', lastname);
+  localStorage.setItem('ext_jobTitle', jobTitle);
+  localStorage.setItem('ext_emailAddress', emailAddress);
+  localStorage.setItem('ext_telephoneNumber', telephoneNumber);
+  localStorage.setItem('ext_userType', userType);
+}
+
+// Set External user details
+if (pageUrlPath === '/internal/v01-1/external-users/view-external-details') {
+  document.getElementById('accountName').innerText = localStorage.getItem('ext_accountName');
+  document.getElementById('username').innerText = localStorage.getItem('ext_username');
+  document.getElementById('title').innerText = localStorage.getItem('ext_title');
+  document.getElementById('firstname').innerText = localStorage.getItem('ext_firstname');
+  document.getElementById('middlename').innerText = localStorage.getItem('ext_middlename');
+  document.getElementById('lastname').innerText = localStorage.getItem('ext_lastname');
+  document.getElementById('jobTitle').innerText = localStorage.getItem('ext_jobTitle');
+  document.getElementById('emailAddress').innerText = localStorage.getItem('ext_emailAddress');
+  document.getElementById('telephoneNumber').innerText = localStorage.getItem('ext_telephoneNumber');
+  document.getElementById('userType').innerText = localStorage.getItem('ext_userType');
+}
+
+// Switch changePasswordAtNextLogon
+function changePasswordAtNextLogon() {
+  const x = document.getElementById("changePasswordAtNextLogon");
+  if (x.innerHTML === "No") {
+    x.innerHTML = "Yes";
+  } else {
+    x.innerHTML = "No";
+  }
+}
+
+
+
+
+// Get Internal user details
+function viewInternalUserDetails(username, title, firstname, middlename, lastname, jobTitle, emailAddress, telephoneNumber, userType) {
+  localStorage.setItem('int_username', username);
+  localStorage.setItem('int_title', title);
+  localStorage.setItem('int_firstname', firstname);
+  localStorage.setItem('int_middlename', middlename);
+  localStorage.setItem('int_lastname', lastname);
+  localStorage.setItem('int_jobTitle', jobTitle);
+  localStorage.setItem('int_emailAddress', emailAddress);
+  localStorage.setItem('int_telephoneNumber', telephoneNumber);
+  localStorage.setItem('int_userType', userType);
+}
+
+// Set Internal user details
+if (pageUrlPath === '/internal/v01-1/internal-users/view-internal-details') {
+  document.getElementById('username').innerText = localStorage.getItem('int_username');
+  document.getElementById('title').innerText = localStorage.getItem('int_title');
+  document.getElementById('firstname').innerText = localStorage.getItem('int_firstname');
+  document.getElementById('middlename').innerText = localStorage.getItem('int_middlename');
+  document.getElementById('lastname').innerText = localStorage.getItem('int_lastname');
+  document.getElementById('jobTitle').innerText = localStorage.getItem('int_jobTitle');
+  document.getElementById('emailAddress').innerText = localStorage.getItem('int_emailAddress');
+  document.getElementById('telephoneNumber').innerText = localStorage.getItem('int_telephoneNumber');
+  document.getElementById('userType').innerText = localStorage.getItem('int_userType');
+}

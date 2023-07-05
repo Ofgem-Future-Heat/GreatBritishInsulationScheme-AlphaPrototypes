@@ -8,9 +8,141 @@ External users
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
+    <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
 
     <h1 class="govuk-heading-xl">External users</h1>
+
+    <a class="govuk-link" href="create-new-external-user">Create a new external user</a>
     
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    
+    <!-- Search -->
+    <div class="govuk-form-group">
+        <label class="govuk-label" for="searchUsers">
+            Search external users
+        </label>
+        <div class="flex">
+          <input placeholder="Search users..." name="searchUsers" type="text" class="govuk-input" value="" />
+          <button type="submit" class="magnifying-glass">&#x1F50E;&#xFE0E;</button>
+        </div>
+    </div>
+    
+    <!-- Show list of existing externa users here -->
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Miss Jean Kelly Gray</h2>
+        <a  class="govuk-link" 
+            href="view-external-details" 
+            onclick="viewExternalUserDetails('BGT', 'jeangray', 'Miss', 'Jean', 'Kelly', 'Gray', 'Quality assurance tester', 'jeangray@marvelcomics.com', '01700234567', 'AuthorisedSignatoryRole')">
+            View
+        </a>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Account name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span>BGT</span>
+            </dd>
+          </div>
+          
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Username
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span>jeangray</span>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Job title
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span>Quality assurance tester</span>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Email address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span>jeangray@marvelcomics.com</span>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Telephone number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span>01700234567</span>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              User type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span>AuthorisedSignatoryRole</span>
+            </dd>
+            <!-- <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> working situation</span>
+              </a>
+            </dd> -->
+          </div>
+
+
+        </dl>
+      </div>
+    </div>
+
+    
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Existing external users</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Account name</th>
+          <!-- <th scope="col" class="govuk-table__header">Username</th> -->
+          <!-- <th scope="col" class="govuk-table__header">Title</th> -->
+          <th scope="col" class="govuk-table__header">First name</th>
+          <!-- <th scope="col" class="govuk-table__header">Middle name</th> -->
+          <th scope="col" class="govuk-table__header">Last name</th>
+          <!-- <th scope="col" class="govuk-table__header">Job title</th> -->
+          <th scope="col" class="govuk-table__header">Email address</th>
+          <!-- <th scope="col" class="govuk-table__header">Telephone number</th> -->
+          <th scope="col" class="govuk-table__header">User type</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">BGT</td>
+          <!-- <th scope="row" class="govuk-table__header">jeangray</th> -->
+          <!-- <td class="govuk-table__cell">Miss</td> -->
+          <td class="govuk-table__cell">Jean</td>
+          <!-- <td class="govuk-table__cell">Kelly</td> -->
+          <td class="govuk-table__cell">Gray</td>
+          <!-- <td class="govuk-table__cell">Quality assurance tester</td> -->
+          <td scope="row" class="govuk-table__header">jeangray@marvelcomics.com</td>
+          <!-- <td class="govuk-table__cell">01700234567</td> -->
+          <td class="govuk-table__cell">AuthorisedSignatoryRole</td>
+          <td class="govuk-table__cell">
+            <a  class="govuk-link" 
+                href="view-external-details" 
+                onclick="viewExternalUserDetails('BGT', 'jeangray', 'Miss', 'Jean', 'Kelly', 'Gray', 'Quality assurance tester', 'jeangray@marvelcomics.com', '01700234567', 'AuthorisedSignatoryRole')">
+                View
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 

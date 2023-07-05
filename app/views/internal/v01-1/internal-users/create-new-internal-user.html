@@ -1,0 +1,110 @@
+{% extends "layouts/internal-main.html" %}
+
+{% block pageTitle %}
+    Create a new internal user
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+    <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Create a new internal user
+          </h1>
+        </legend>
+
+        <!-- Username -->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="Username">
+            Username
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="Username" name="Username" type="text" autocomplete="Username">
+        </div>
+
+        <!-- Title -->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="Title">
+            Title
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="Title" name="Title" type="text" autocomplete="Title">
+        </div>
+
+        <!-- First name -->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="first-name">
+            First name
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="first-name" name="first-name" type="text" autocomplete="first-name">
+        </div>
+
+        <!-- Last name -->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="last-name">
+            Last name
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="last-name" name="last-name" type="text" autocomplete="last-name">
+        </div>
+
+        <!-- Middle initials -->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="middle-initials">
+            Middle initials
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="middle-initials" name="middle-initials" type="text" autocomplete="middle-initials">
+        </div>
+
+        <!-- Job title -->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="job-title">
+            Job title
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="job-title" name="job-title" type="text" autocomplete="job-title">
+        </div>
+
+        <!-- Email address -->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="email-address">
+            Email address
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="email-address" name="email-address" type="text" autocomplete="email-address">
+        </div>
+
+        <!-- Telephone number -->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="telephone-number">
+            Telephone number
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="telephone-number" name="telephone-number" type="text" autocomplete="telephone-number">
+        </div>
+
+        <!-- User type -->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="user-type">
+            User type
+          </label>
+          <select class="govuk-select govuk-!-width-full" id="user-type" name="user-type">
+            <option value="" selected disabled hidden>Select a user type</option>
+            <option value="InternalAdmin">InternalAdmin</option>
+            <option value="ECOStandardRole">ECOStandardRole</option>
+            <option value="ECOBasicRole">ECOBasicRole</option>
+            <option value="ECOAdvancedRole">ECOAdvancedRole</option>
+          </select>
+        </div>
+
+        <div class="govuk-button-group">
+            <a class="govuk-button" data-module="govuk-button" href="check-your-answers">
+                Create
+            </a>
+            <a class="govuk-link" href="index">Cancel</a>
+          </div>
+
+    </fieldset>
+
+  </div>
+</div>
+
+{% endblock %}
