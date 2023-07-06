@@ -1,0 +1,101 @@
+{% extends "layouts/internal-main.html" %}
+
+{% block pageTitle %}
+    Create a new internal user
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
+        
+        <h2 class="govuk-heading-m">Personal details</h2>
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Username
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <span>jeangray</span>
+                    </dd>
+            </div>
+            
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Full name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>Miss</span>&nbsp;
+                    <span>Jean</span>&nbsp;
+                    <span>Kelly</span>&nbsp;
+                    <span>Gray</span>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Email address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>jeangray@marvelcomics.com</span>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Telephone number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>01700234567</span>
+                </dd>
+            </div>
+        </dl>
+
+        <h2 class="govuk-heading-m">Other details</h2>
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Account name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>BGT</span>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Job title
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>Quality assurance tester</span>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    User type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>AuthorisedSignatoryRole</span>
+                </dd>
+            </div>
+        </dl>
+        
+        <div class="govuk-button-group">
+            <a href="edit-internal-user" class="govuk-link govuk-link--no-visited-state">Edit details</a>
+        </div>
+
+        <div class="govuk-button-group">
+            <form action="success-internal-user-updated" method="post" novalidate>
+                <input type="hidden" name="answers-checked" value="true">
+                <button class="govuk-button" data-module="govuk-button">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -14,7 +14,7 @@
 
     <a class="govuk-link" href="create-new-internal-user">Create a new internal user</a>
     
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
    
     <!-- Search -->
     <div class="govuk-form-group">
@@ -27,73 +27,8 @@
         </div>
     </div>
     
-    <!-- Show list of existing externa users here -->
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title">Miss Jean Kelly Gray</h2>
-        <a  class="govuk-link" 
-            href="view-internal-details" 
-            onclick="viewInternalUserDetails('CORP/jeangray', 'Miss', 'Jean', 'Kelly', 'Gray', 'Quality assurance tester', 'jeangray@marvelcomics.com', '01700234567', 'AuthorisedSignatoryRole')">
-            View
-        </a>
-      </div>
-      <div class="govuk-summary-card__content">
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Username
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <span>CORP\Abrahama</span>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Job title
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <span>Quality assurance tester</span>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Email address
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <span>jeangray@marvelcomics.com</span>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Telephone number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <span>01700234567</span>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              User type
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <span>AuthorisedSignatoryRole</span>
-            </dd>
-            <!-- <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> working situation</span>
-              </a>
-            </dd> -->
-          </div>
-
-
-        </dl>
-      </div>
-    </div>
-
+    <!-- Show list of existing internal users here -->
+    <div id="intUsers"></div>
   </div>
 </div>
 

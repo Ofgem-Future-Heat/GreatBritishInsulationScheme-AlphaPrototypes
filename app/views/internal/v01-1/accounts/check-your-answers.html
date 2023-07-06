@@ -1,0 +1,83 @@
+{% extends "layouts/internal-main.html" %}
+
+{% block pageTitle %}
+    Create a new external user
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
+        
+        <!-- <h2 class="govuk-heading-m">Personal details</h2> -->
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                        Account name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                        <span>BGT</span>
+                    </dd>
+            </div>
+            
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Address line
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <div>123 Any Lane</div>
+                    <div>Rookery</div>
+                    <div>This Town</div>
+                    <div>That County</div>
+                    <div>PO5 COD</div>
+                    <div>Wales</div>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Telephone number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>01700234567</span>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Fax number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>01700234567</span>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Email address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>admin@bgt.com</span>
+                </dd>
+            </div>
+        </dl>
+
+        <div class="govuk-button-group">
+            <a href="edit-account" class="govuk-link govuk-link--no-visited-state">Edit details</a>
+        </div>
+
+        <div class="govuk-button-group">
+            <form action="success-account-created" method="post" novalidate>
+                <input type="hidden" name="answers-checked" value="true">
+                <button class="govuk-button" data-module="govuk-button">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -172,3 +172,188 @@ if (pageUrlPath === '/internal/v01-1/internal-users/view-internal-details') {
   document.getElementById('telephoneNumber').innerText = localStorage.getItem('int_telephoneNumber');
   document.getElementById('userType').innerText = localStorage.getItem('int_userType');
 }
+
+const numberOfUsers = 10;
+if (pageUrlPath === '/internal/v01-1/external-users/'){
+  Array(numberOfUsers).fill(0).forEach((x, numberOfUsers) => {
+    document.getElementById('extUsers').innerHTML += `
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Firstname${numberOfUsers + 1} Surname${numberOfUsers + 1}</h2>
+        <a  class="govuk-link" 
+            href="view-external-details" 
+            onclick="viewExternalUserDetails('BGT', 'user${numberOfUsers + 1}', 'Miss', 'Firstname${numberOfUsers + 1}', 'Middlename${numberOfUsers + 1}', 'Surname${numberOfUsers + 1}', 'Quality assurance tester', 'user${numberOfUsers + 1}@marvelcomics.com', '01700${numberOfUsers + 1}${numberOfUsers + 1}${numberOfUsers + 1}${numberOfUsers + 1}${numberOfUsers + 1}${numberOfUsers + 1}', 'AuthorisedSignatoryRole')">
+            View
+        </a>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Account name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span>BGT</span>
+            </dd>
+          </div>
+          
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Username
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span>user${numberOfUsers + 1}</span>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Job title
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span>Quality assurance tester</span>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Email address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span>user${numberOfUsers + 1}@marvelcomics.com</span>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Telephone number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span>01700${numberOfUsers + 1}1234${numberOfUsers + 1}</span>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              User type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span>AuthorisedSignatoryRole</span>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    `;
+  });
+}
+
+
+if (pageUrlPath === '/internal/v01-1/external-users/'){
+  Array(numberOfUsers).fill(0).forEach((x, numberOfUsers) => {
+    document.getElementById('extUsers2').innerHTML += `
+    <tr class="govuk-table__row" >
+      <td class="govuk-table__cell">BGT</td>
+      <!-- <th scope="row" class="govuk-table__header">user${numberOfUsers + 1}</th> -->
+      <!-- <td class="govuk-table__cell">Miss</td> -->
+      <td class="govuk-table__cell">Firstname${numberOfUsers + 1}</td>
+      <!-- <td class="govuk-table__cell">Middlename${numberOfUsers + 1}</td> -->
+      <td class="govuk-table__cell">Surname${numberOfUsers + 1}</td>
+      <!-- <td class="govuk-table__cell">Quality assurance tester</td> -->
+      <td scope="row" class="govuk-table__header">user${numberOfUsers + 1}@marvelcomics.com</td>
+      <!-- <td class="govuk-table__cell">01700${numberOfUsers + 1}1234${numberOfUsers + 1}</td> -->
+      <td class="govuk-table__cell">AuthorisedSignatoryRole</td>
+      <td class="govuk-table__cell">
+        <a  class="govuk-link" 
+            href="view-external-details" 
+            onclick="viewExternalUserDetails('BGT', 'user${numberOfUsers + 1}', 'Miss', 'Firstname${numberOfUsers + 1}', 'Middlename${numberOfUsers + 1}', 'Surname${numberOfUsers + 1}', 'Quality assurance tester', 'user${numberOfUsers + 1}@marvelcomics.com', '01700${numberOfUsers + 1}1234${numberOfUsers + 1}', 'AuthorisedSignatoryRole')">
+            View
+        </a>
+      </td>
+    </tr>
+    `;
+  });
+}
+
+
+if (pageUrlPath === '/internal/v01-1/internal-users/'){
+  Array(numberOfUsers).fill(0).forEach((x, numberOfUsers) => {
+    document.getElementById('intUsers').innerHTML += `
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Miss Jean Kelly Gray</h2>
+        <a  class="govuk-link" 
+            href="view-internal-details" 
+            onclick="viewInternalUserDetails('CORP/jeangray', 'Miss', 'Jean', 'Kelly', 'Gray', 'Address errors experts', 'user${numberOfUsers + 1}@marvelcomics.com', '01700${numberOfUsers + 1}3456${numberOfUsers + 1}', 'AuthorisedSignatoryRole')">
+            View
+        </a>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Username
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span>CORP\Abrahama</span>
+            </dd>
+          </div>
+
+          <!-- <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Job title
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span>Address errors expert</span>
+            </dd>
+          </div> -->
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Email address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span>user${numberOfUsers + 1}@marvelcomics.com</span>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Telephone number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span>01700${numberOfUsers + 1}3456${numberOfUsers + 1}</span>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              User type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <span>AuthorisedSignatoryRole</span>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>`;
+  });
+}
+
+
+
+// Get account details
+function viewAccountDetails(accountName, addressLine1, addressLine2, addressLine3, town, county, postcode, country, telephoneNumber, faxNumber, emailAddress) {
+  localStorage.setItem('accountName', accountName);
+  localStorage.setItem('addressLine1', addressLine1);
+  localStorage.setItem('addressLine2', addressLine2);
+  localStorage.setItem('addressLine3', addressLine3);
+  localStorage.setItem('town', town);
+  localStorage.setItem('county', county);
+  localStorage.setItem('postcode', postcode);
+  localStorage.setItem('country', country);
+  localStorage.setItem('telephoneNumber', telephoneNumber);
+  localStorage.setItem('faxNumber', faxNumber);
+  localStorage.setItem('emailAddress', emailAddress);
+
+}
