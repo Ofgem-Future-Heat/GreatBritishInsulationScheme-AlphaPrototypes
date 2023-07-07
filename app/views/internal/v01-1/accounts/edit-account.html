@@ -13,28 +13,30 @@
     <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
           <h1 class="govuk-fieldset__heading">
-            Edit account
+            Edit supplier account
           </h1>
         </legend>
 
-        <!-- accountName -->
-          <!-- Change to supplier account -->
+        <!-- supplier name -->
         <div class="govuk-form-group">
-          <label class="govuk-label" for="accountName">
+          <label class="govuk-label" for="supplierName">
             Supplier name
           </label>
-          <input class="govuk-input govuk-!-width-full" id="accountName" name="accountName" type="text" autocomplete="accountName" value="BGT">
+          <input class="govuk-input govuk-!-width-full" id="supplierName" name="supplierName" type="text" autocomplete="supplierName" value="OVO">
         </div>
 
         <!-- Licence number number-->
         <div class="govuk-form-group">
-          <label class="govuk-label" for="email-address">
-            Supplier number
+          <label class="govuk-label" for="supplierLicenceNumber">
+            Supplier licence number
           </label>
-          <input class="govuk-input govuk-!-width-full" id="email-address" name="email-address" type="text" autocomplete="email-address" value="admin@bgt.com">
-          <span>Remove</span>
+          <input class="govuk-input govuk-!-width-full" id="supplierLicenceNumber" name="supplierLicenceNumber" type="text" autocomplete="supplierLicenceNumber" value="9876543618">
+          <div id="additionalLicenceNumbers" class="additional-licence-numbers"></div>
         </div>
-        <a>Add another supplier account</a>
+        
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="addAnotherSupplierLicence()">
+          Add another supplier licence number
+        </button>
 
         <div class="govuk-button-group">
           <a class="govuk-button" data-module="govuk-button" href="check-your-updated-answers">

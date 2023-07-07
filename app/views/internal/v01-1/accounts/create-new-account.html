@@ -24,25 +24,26 @@
           </label>
           <input class="govuk-input govuk-!-width-full" id="supplierName" name="supplierName" type="text" autocomplete="supplierName">
         </div>
-        
-        
+
         <!-- Licence number number-->
         <div class="govuk-form-group">
-          <label class="govuk-label" for="supplierNumber">
-            Supplier number
+          <label class="govuk-label" for="supplierLicenceNumber">
+            Supplier licence number
           </label>
-          <input class="govuk-input govuk-!-width-full" id="supplierNumber" name="supplierNumber" type="text" autocomplete="supplierNumber" value="BGT">
-          <span>Remove this supplier number</span>
+          <input class="govuk-input govuk-!-width-full" id="supplierLicenceNumber" name="supplierLicenceNumber" type="text" autocomplete="supplierLicenceNumber">
+          <div id="additionalLicenceNumbers" class="additional-licence-numbers"></div>
         </div>
-
-        <a class="govuk-link">Add another supplier account</a>
+        
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="addAnotherSupplierLicence()">
+          Add another supplier licence number
+        </button>
 
         <div class="govuk-button-group">
-            <a class="govuk-button" data-module="govuk-button" href="check-your-answers">
-                Create
-            </a>
-            <a class="govuk-link" href="./">Cancel</a>
-          </div>
+          <a class="govuk-button" data-module="govuk-button" href="check-your-answers">
+              Create
+          </a>
+          <a class="govuk-link" href="./">Cancel</a>
+        </div>
 
     </fieldset>
 

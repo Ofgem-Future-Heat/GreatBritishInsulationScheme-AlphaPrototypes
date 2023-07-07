@@ -394,3 +394,22 @@ if (pageUrlPath === '/internal/v01-1/accounts/view-account-details') {
   document.getElementById('supplierName').innerText = localStorage.getItem('supplierName');
   document.getElementById('supplierLicenceNumber').innerText = localStorage.getItem('supplierLicenceNumber');
 }
+
+let num = 0;
+// add another supplier licence
+function addAnotherSupplierLicence() {
+  if (document.getElementById('additionalLicenceNumbers')) {
+    document.getElementById('additionalLicenceNumbers').innerHTML += `
+    <div id="licenceNumber${num+1}">
+      <input class="govuk-input govuk-!-width-full remove-button-supplement" id="supplierLicenceNumber${num+1}" name="supplierLicenceNumber${num+1}" type="text" autocomplete="supplierLicenceNumber${num+1}">
+      <button class="govuk-button govuk-button--secondary remove-button" id="${num+1}" data-module="govuk-button" onclick="removeSupplierLicenceNumber(id)">X</button>
+    </div>
+    `;
+  }
+  num++;
+}
+
+function removeSupplierLicenceNumber(id) {
+  const element = document.getElementById("licenceNumber"+id);
+  element.remove();
+}
