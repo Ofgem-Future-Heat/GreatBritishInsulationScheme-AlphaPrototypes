@@ -344,46 +344,6 @@ if (pageUrlPath === '/internal/v01-1/internal-users/view-internal-details') {
 
 // Accounts ############
 // #####################
-
-// var accounts = [
-//   "ECO",
-//   "EON",
-//   "EDF",
-//   "SPW",
-//   "SSE",
-//   "BGT",
-//   "NPW",
-//   "FUL",
-//   "UTW",
-//   "COP",
-//   "OVO",
-//   "UTA",
-//   "XEN",
-//   "SPK",
-//   "EEN",
-//   "FLO",
-//   "HUD",
-//   "BLB",
-//   "OCT",
-//   "GNE",
-//   "EGE",
-//   "AVR",
-//   "SHL",
-//   "SOE",
-//   "RHE",
-//   "TNK",
-//   "PLA",
-//   "ISP",
-//   "UPL",
-//   "ECY",
-//   "BRI",
-//   "ESB",
-//   "IGL",
-//   "TOE",
-//   "FOX",
-//   "PES",
-// ]
-
 const accounts = [
   {
     "supplierName":           "ECO",
@@ -397,6 +357,12 @@ const accounts = [
 // Build accounts list
 if (pageUrlPath === '/internal/v01-1/accounts/'){
   for (let i = 0; i < accounts.length; i++) {
+    
+    for (let j = 0; j < accounts[i].supplierLicenceNumber.length; j++) {
+      console.log('licenceNumber(s):',i, accounts[i].supplierLicenceNumber[j]);
+      // accounts[i].supplierLicenceNumber.length > 1 ? `<span>` + accounts[i].supplierLicenceNumber[j] + `</span>
+    };
+    
     if (document.getElementById('accountsList')) {
       document.getElementById('accountsList').innerHTML += `
         <tr class="govuk-table__row">
@@ -426,5 +392,5 @@ function viewAccountDetails(supplierName, supplierLicenceNumber) {
 // Set account details
 if (pageUrlPath === '/internal/v01-1/accounts/view-account-details') {
   document.getElementById('supplierName').innerText = localStorage.getItem('supplierName');
-  ocument.getElementById('supplierLicenceNumber').innerText = localStorage.getItem('supplierLicenceNumber');
+  document.getElementById('supplierLicenceNumber').innerText = localStorage.getItem('supplierLicenceNumber');
 }
