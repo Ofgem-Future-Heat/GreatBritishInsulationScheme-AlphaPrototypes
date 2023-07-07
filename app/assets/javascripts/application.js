@@ -93,45 +93,128 @@ function triggerValidation41() {
 
 
 
-// ############################################
-// ############## Internal Users ##############
-// ############################################
+// ######################################################
+// ############## Internal user management ##############
+// ######################################################
 if (document.getElementById("secondaryNav") && pageUrlPath === '/internal/') {
   console.log('LOADED');
   document.getElementById("secondaryNav").style.display = 'none';
 }
 
-const username = "Cainan Able";
+const loggedInUsername = "Cainan Able";
 
-if (document.getElementById('headerUsername')) document.getElementById('headerUsername').innerText = username;
-if (document.getElementById('welcomeUsernameMessage')) document.getElementById('welcomeUsernameMessage').innerText = username;
+if (document.getElementById('headerUsername')) document.getElementById('headerUsername').innerText = loggedInUsername;
+if (document.getElementById('welcomeUsernameMessage')) document.getElementById('welcomeUsernameMessage').innerText = loggedInUsername;
+
+// External User #######
+// #####################
+const externalUsers = [
+  {
+    "username": "danielbloggs",
+    "title": "Mr",
+    "firstName": "Daniel",
+    "middleName": "Craig",
+    "lastName": "Bloggs",
+    "emailAddress": "daniel.bloggs@orgmail.com",
+    "telephoneNumber": "07899674534",
+    "supplierName": "BGT",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Deputy manager"
+  }, {
+    "username": "ellyfranklin",
+    "title": "Miss",
+    "firstName": "Elly",
+    "middleName": "Mary",
+    "lastName": "Franklin",
+    "emailAddress": "elly.franklin@orgmail.com",
+    "telephoneNumber": "07187654333",
+    "supplierName": "OVO",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Supervisor"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "SHL",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }
+];
+
+// Build external user list
+if (pageUrlPath === '/internal/v01-1/external-users/'){
+  for (let i = 0; i < externalUsers.length; i++) {
+    if (document.getElementById('extUsers')) {
+      document.getElementById('extUsers').innerHTML += `
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">` + externalUsers[i].supplierName + `</td>
+          <td class="govuk-table__cell">` + externalUsers[i].firstName + `</td>
+          <td class="govuk-table__cell">` + externalUsers[i].lastName + `</td>
+          <td scope="row" class="govuk-table__header">` + externalUsers[i].emailAddress + `</td>
+          <td class="govuk-table__cell">` + externalUsers[i].userType + `</td>
+          <td class="govuk-table__cell">
+            <a  class="govuk-link" 
+                href="view-external-details" 
+                onclick="viewExternalUserDetails(
+                  '` + externalUsers[i].username + `',
+                  '` + externalUsers[i].supplierName + `',
+                  '` + externalUsers[i].title + `',
+                  '` + externalUsers[i].firstName + `',
+                  '` + externalUsers[i].middleName + `',
+                  '` + externalUsers[i].lastName + `',
+                  '` + externalUsers[i].emailAddress + `',
+                  '` + externalUsers[i].telephoneNumber + `',
+                  '` + externalUsers[i].userType + `',
+                  '` + externalUsers[i].jobTitle + `'
+                )">View
+            </a>
+          </td>
+        </tr>
+      `;
+    }
+  }
+}
 
 // Get External user details
-function viewExternalUserDetails(accountName, username, title, firstname, middlename, lastname, jobTitle, emailAddress, telephoneNumber, userType) {
-  localStorage.setItem('ext_accountName', accountName);
+function viewExternalUserDetails(
+    username, 
+    title, 
+    firstName, 
+    middleName, 
+    lastName, 
+    emailAddress, 
+    telephoneNumber, 
+    supplierName, 
+    userType, 
+    jobTitle) {
   localStorage.setItem('ext_username', username);
   localStorage.setItem('ext_title', title);
-  localStorage.setItem('ext_firstname', firstname);
-  localStorage.setItem('ext_middlename', middlename);
-  localStorage.setItem('ext_lastname', lastname);
-  localStorage.setItem('ext_jobTitle', jobTitle);
+  localStorage.setItem('ext_firstName', firstName);
+  localStorage.setItem('ext_middleName', middleName);
+  localStorage.setItem('ext_lastName', lastName);
   localStorage.setItem('ext_emailAddress', emailAddress);
   localStorage.setItem('ext_telephoneNumber', telephoneNumber);
+  localStorage.setItem('ext_supplierName', supplierName);
   localStorage.setItem('ext_userType', userType);
+  localStorage.setItem('ext_jobTitle', jobTitle);
 }
 
 // Set External user details
 if (pageUrlPath === '/internal/v01-1/external-users/view-external-details') {
-  document.getElementById('accountName').innerText = localStorage.getItem('ext_accountName');
   document.getElementById('username').innerText = localStorage.getItem('ext_username');
   document.getElementById('title').innerText = localStorage.getItem('ext_title');
-  document.getElementById('firstname').innerText = localStorage.getItem('ext_firstname');
-  document.getElementById('middlename').innerText = localStorage.getItem('ext_middlename');
-  document.getElementById('lastname').innerText = localStorage.getItem('ext_lastname');
-  document.getElementById('jobTitle').innerText = localStorage.getItem('ext_jobTitle');
+  document.getElementById('firstName').innerText = localStorage.getItem('ext_firstName');
+  document.getElementById('middleName').innerText = localStorage.getItem('ext_middleName');
+  document.getElementById('lastName').innerText = localStorage.getItem('ext_lastName');
   document.getElementById('emailAddress').innerText = localStorage.getItem('ext_emailAddress');
   document.getElementById('telephoneNumber').innerText = localStorage.getItem('ext_telephoneNumber');
+  document.getElementById('supplierName').innerText = localStorage.getItem('ext_supplierName');
   document.getElementById('userType').innerText = localStorage.getItem('ext_userType');
+  document.getElementById('jobTitle').innerText = localStorage.getItem('ext_jobTitle');
 }
 
 // Switch changePasswordAtNextLogon
@@ -144,16 +227,101 @@ function changePasswordAtNextLogon() {
   }
 }
 
+// Internal User #######
+// #####################
+const internalUsers = [
+  {
+    "username": "danielbloggs",
+    "title": "Mr",
+    "firstName": "Daniel",
+    "middleName": "Craig",
+    "lastName": "Bloggs",
+    "jobTitle": "Deputy manager",
+    "emailAddress": "daniel.bloggs@orgmail.com",
+    "telephoneNumber": "07899674534",
+    "userType": "Basic role"
+  }, {
+    "username": "russeltaylor",
+    "title": "Mr",
+    "firstName": "Russel",
+    "middleName": "",
+    "lastName": "Taylor",
+    "jobTitle": "Supervisor",
+    "emailAddress": "russel.taylor@orgmail.com",
+    "telephoneNumber": "07187774333",
+    "userType": "Standard role"
+  }, {
+    "username": "lorainejanekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "jobTitle": "Quality Assurance",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "userType": "Advanced role"
+  }, {
+    "username": "andrewjohnstone",
+    "title": "Mr",
+    "firstName": "Andrew",
+    "middleName": "Jonathan",
+    "lastName": "Johnstone",
+    "jobTitle": "Quality Assurance",
+    "emailAddress": "andrew.johnstone@orgmail.com",
+    "telephoneNumber": "07115552333",
+    "userType": "Internal admin"
+  }
+];
 
-
+// Build internal user list
+if (pageUrlPath === '/internal/v01-1/internal-users/'){
+  for (let i = 0; i < internalUsers.length; i++) {
+    if (document.getElementById('intUsers')) {
+      document.getElementById('intUsers').innerHTML += `
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">` + internalUsers[i].username + `</td>
+          <td class="govuk-table__cell">` + internalUsers[i].firstName + `</td>
+          <td class="govuk-table__cell">` + internalUsers[i].lastName + `</td>
+          <td scope="row" class="govuk-table__header">` + internalUsers[i].emailAddress + `</td>
+          <td class="govuk-table__cell">` + internalUsers[i].userType + `</td>
+          <td class="govuk-table__cell">
+            <a  class="govuk-link" 
+                href="view-internal-details" 
+                onclick="viewInternalUserDetails(
+                  '` + internalUsers[i].username + `',
+                  '` + internalUsers[i].title + `',
+                  '` + internalUsers[i].firstName + `',
+                  '` + internalUsers[i].middleName + `',
+                  '` + internalUsers[i].lastName + `',
+                  '` + internalUsers[i].emailAddress + `',
+                  '` + internalUsers[i].telephoneNumber + `',
+                  '` + internalUsers[i].userType + `',
+                  '` + internalUsers[i].jobTitle + `'
+                )">View
+            </a>
+          </td>
+        </tr>
+      `;
+    }
+  }
+}
 
 // Get Internal user details
-function viewInternalUserDetails(username, title, firstname, middlename, lastname, jobTitle, emailAddress, telephoneNumber, userType) {
+function viewInternalUserDetails(
+    username, 
+    title, 
+    firstName, 
+    middleName, 
+    lastName, 
+    jobTitle, 
+    emailAddress, 
+    telephoneNumber,
+    userType) {
   localStorage.setItem('int_username', username);
   localStorage.setItem('int_title', title);
-  localStorage.setItem('int_firstname', firstname);
-  localStorage.setItem('int_middlename', middlename);
-  localStorage.setItem('int_lastname', lastname);
+  localStorage.setItem('int_firstName', firstName);
+  localStorage.setItem('int_middleName', middleName);
+  localStorage.setItem('int_lastName', lastName);
   localStorage.setItem('int_jobTitle', jobTitle);
   localStorage.setItem('int_emailAddress', emailAddress);
   localStorage.setItem('int_telephoneNumber', telephoneNumber);
@@ -164,196 +332,99 @@ function viewInternalUserDetails(username, title, firstname, middlename, lastnam
 if (pageUrlPath === '/internal/v01-1/internal-users/view-internal-details') {
   document.getElementById('username').innerText = localStorage.getItem('int_username');
   document.getElementById('title').innerText = localStorage.getItem('int_title');
-  document.getElementById('firstname').innerText = localStorage.getItem('int_firstname');
-  document.getElementById('middlename').innerText = localStorage.getItem('int_middlename');
-  document.getElementById('lastname').innerText = localStorage.getItem('int_lastname');
+  document.getElementById('firstName').innerText = localStorage.getItem('int_firstName');
+  document.getElementById('middleName').innerText = localStorage.getItem('int_middleName');
+  document.getElementById('lastName').innerText = localStorage.getItem('int_lastName');
   document.getElementById('jobTitle').innerText = localStorage.getItem('int_jobTitle');
   document.getElementById('emailAddress').innerText = localStorage.getItem('int_emailAddress');
   document.getElementById('telephoneNumber').innerText = localStorage.getItem('int_telephoneNumber');
   document.getElementById('userType').innerText = localStorage.getItem('int_userType');
 }
 
-const numberOfUsers = 10;
-if (pageUrlPath === '/internal/v01-1/external-users/'){
-  Array(numberOfUsers).fill(0).forEach((x, numberOfUsers) => {
-    document.getElementById('extUsers').innerHTML += `
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title">Firstname${numberOfUsers + 1} Surname${numberOfUsers + 1}</h2>
-        <a  class="govuk-link" 
-            href="view-external-details" 
-            onclick="viewExternalUserDetails('BGT', 'user${numberOfUsers + 1}', 'Miss', 'Firstname${numberOfUsers + 1}', 'Middlename${numberOfUsers + 1}', 'Surname${numberOfUsers + 1}', 'Quality assurance tester', 'user${numberOfUsers + 1}@marvelcomics.com', '01700${numberOfUsers + 1}${numberOfUsers + 1}${numberOfUsers + 1}${numberOfUsers + 1}${numberOfUsers + 1}${numberOfUsers + 1}', 'AuthorisedSignatoryRole')">
-            View
-        </a>
-      </div>
-      <div class="govuk-summary-card__content">
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Account name
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <span>BGT</span>
-            </dd>
-          </div>
-          
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Username
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <span>user${numberOfUsers + 1}</span>
-            </dd>
-          </div>
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Job title
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <span>Quality assurance tester</span>
-            </dd>
-          </div>
+// Accounts ############
+// #####################
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Email address
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <span>user${numberOfUsers + 1}@marvelcomics.com</span>
-            </dd>
-          </div>
+// var accounts = [
+//   "ECO",
+//   "EON",
+//   "EDF",
+//   "SPW",
+//   "SSE",
+//   "BGT",
+//   "NPW",
+//   "FUL",
+//   "UTW",
+//   "COP",
+//   "OVO",
+//   "UTA",
+//   "XEN",
+//   "SPK",
+//   "EEN",
+//   "FLO",
+//   "HUD",
+//   "BLB",
+//   "OCT",
+//   "GNE",
+//   "EGE",
+//   "AVR",
+//   "SHL",
+//   "SOE",
+//   "RHE",
+//   "TNK",
+//   "PLA",
+//   "ISP",
+//   "UPL",
+//   "ECY",
+//   "BRI",
+//   "ESB",
+//   "IGL",
+//   "TOE",
+//   "FOX",
+//   "PES",
+// ]
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Telephone number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <span>01700${numberOfUsers + 1}1234${numberOfUsers + 1}</span>
-            </dd>
-          </div>
+const accounts = [
+  {
+    "supplierName":           "ECO",
+    "supplierLicenceNumber":  ["1234567890", "65748390120"]
+  },{
+    "supplierName":           "EON",
+    "supplierLicenceNumber":  ["9876543618"]
+  }
+];
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              User type
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <span>AuthorisedSignatoryRole</span>
-            </dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-    `;
-  });
+// Build accounts list
+if (pageUrlPath === '/internal/v01-1/accounts/'){
+  for (let i = 0; i < accounts.length; i++) {
+    if (document.getElementById('accountsList')) {
+      document.getElementById('accountsList').innerHTML += `
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">` + accounts[i].supplierName + `</td>
+          <td class="govuk-table__cell">` + accounts[i].supplierLicenceNumber + `</td>
+          <td class="govuk-table__cell">
+            <a  class="govuk-link" 
+                href="view-account-details" 
+                onclick="viewAccountDetails(
+                  '` + accounts[i].supplierName + `',
+                  '` + accounts[i].supplierLicenceNumber + `'
+                )">View
+            </a>
+          </td>
+        </tr>
+      `;
+    }
+  }
 }
-
-
-if (pageUrlPath === '/internal/v01-1/external-users/'){
-  Array(numberOfUsers).fill(0).forEach((x, numberOfUsers) => {
-    document.getElementById('extUsers2').innerHTML += `
-    <tr class="govuk-table__row" >
-      <td class="govuk-table__cell">BGT</td>
-      <!-- <th scope="row" class="govuk-table__header">user${numberOfUsers + 1}</th> -->
-      <!-- <td class="govuk-table__cell">Miss</td> -->
-      <td class="govuk-table__cell">Firstname${numberOfUsers + 1}</td>
-      <!-- <td class="govuk-table__cell">Middlename${numberOfUsers + 1}</td> -->
-      <td class="govuk-table__cell">Surname${numberOfUsers + 1}</td>
-      <!-- <td class="govuk-table__cell">Quality assurance tester</td> -->
-      <td scope="row" class="govuk-table__header">user${numberOfUsers + 1}@marvelcomics.com</td>
-      <!-- <td class="govuk-table__cell">01700${numberOfUsers + 1}1234${numberOfUsers + 1}</td> -->
-      <td class="govuk-table__cell">AuthorisedSignatoryRole</td>
-      <td class="govuk-table__cell">
-        <a  class="govuk-link" 
-            href="view-external-details" 
-            onclick="viewExternalUserDetails('BGT', 'user${numberOfUsers + 1}', 'Miss', 'Firstname${numberOfUsers + 1}', 'Middlename${numberOfUsers + 1}', 'Surname${numberOfUsers + 1}', 'Quality assurance tester', 'user${numberOfUsers + 1}@marvelcomics.com', '01700${numberOfUsers + 1}1234${numberOfUsers + 1}', 'AuthorisedSignatoryRole')">
-            View
-        </a>
-      </td>
-    </tr>
-    `;
-  });
-}
-
-
-if (pageUrlPath === '/internal/v01-1/internal-users/'){
-  Array(numberOfUsers).fill(0).forEach((x, numberOfUsers) => {
-    document.getElementById('intUsers').innerHTML += `
-    <div class="govuk-summary-card">
-      <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title">Miss Jean Kelly Gray</h2>
-        <a  class="govuk-link" 
-            href="view-internal-details" 
-            onclick="viewInternalUserDetails('CORP/jeangray', 'Miss', 'Jean', 'Kelly', 'Gray', 'Address errors experts', 'user${numberOfUsers + 1}@marvelcomics.com', '01700${numberOfUsers + 1}3456${numberOfUsers + 1}', 'AuthorisedSignatoryRole')">
-            View
-        </a>
-      </div>
-      <div class="govuk-summary-card__content">
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Username
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <span>CORP\Abrahama</span>
-            </dd>
-          </div>
-
-          <!-- <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Job title
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <span>Address errors expert</span>
-            </dd>
-          </div> -->
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Email address
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <span>user${numberOfUsers + 1}@marvelcomics.com</span>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Telephone number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <span>01700${numberOfUsers + 1}3456${numberOfUsers + 1}</span>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              User type
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <span>AuthorisedSignatoryRole</span>
-            </dd>
-          </div>
-        </dl>
-      </div>
-    </div>`;
-  });
-}
-
-
 
 // Get account details
-function viewAccountDetails(accountName, addressLine1, addressLine2, addressLine3, town, county, postcode, country, telephoneNumber, faxNumber, emailAddress) {
-  localStorage.setItem('accountName', accountName);
-  localStorage.setItem('addressLine1', addressLine1);
-  localStorage.setItem('addressLine2', addressLine2);
-  localStorage.setItem('addressLine3', addressLine3);
-  localStorage.setItem('town', town);
-  localStorage.setItem('county', county);
-  localStorage.setItem('postcode', postcode);
-  localStorage.setItem('country', country);
-  localStorage.setItem('telephoneNumber', telephoneNumber);
-  localStorage.setItem('faxNumber', faxNumber);
-  localStorage.setItem('emailAddress', emailAddress);
+function viewAccountDetails(supplierName, supplierLicenceNumber) {
+  localStorage.setItem('supplierName', supplierName);
+  localStorage.setItem('supplierLicenceNumber', supplierLicenceNumber);
+}
 
+// Set account details
+if (pageUrlPath === '/internal/v01-1/accounts/view-account-details') {
+  document.getElementById('supplierName').innerText = localStorage.getItem('supplierName');
+  ocument.getElementById('supplierLicenceNumber').innerText = localStorage.getItem('supplierLicenceNumber');
 }

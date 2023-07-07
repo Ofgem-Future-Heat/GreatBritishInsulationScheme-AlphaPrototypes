@@ -1,0 +1,13 @@
+{
+	"externalUsers": [{
+		"title": "Mr",
+		"firstName": "Daniel",
+		"surname": "Bloggs",
+		"supplierName": "BGT"
+	}, {
+		"title": "Miss",
+		"firstName": "Elly",
+		"surname": "Franklin",
+		"supplierName": "OVO"
+	}]
+}
