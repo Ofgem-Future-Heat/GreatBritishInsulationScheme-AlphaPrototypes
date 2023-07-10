@@ -346,53 +346,195 @@ if (pageUrlPath === '/internal/v01-1/internal-users/view-internal-details') {
 // #####################
 const accounts = [
   {
-    "supplierName":           "ECO",
-    "supplierLicenceNumber":  ["1234567890", "65748390120"]
+    "supplierName": "ECO",
+    "supplierLicenceNumbers":  [
+      {"num": "2032730917"}, 
+      {"num": "4532255801"}
+    ]
   },{
-    "supplierName":           "EON",
-    "supplierLicenceNumber":  ["9876543618"]
+    "supplierName": "EON",
+    "supplierLicenceNumbers":  [{"num": "8040802094"}]
+  },{
+    "supplierName":           "EDF",
+    "supplierLicenceNumbers":  [{"num": "7613419896"}]
+  },{
+    "supplierName":           "SPW",
+    "supplierLicenceNumbers":  [{"num": "3965106337"}]
+  },{
+    "supplierName":           "SSE",
+    "supplierLicenceNumbers":  [{"num": "5398614341"}]
+  },{
+    "supplierName":           "BGT",
+    "supplierLicenceNumbers":  [{"num": "7295747130"}]
+  },{
+    "supplierName":           "NPW",
+    "supplierLicenceNumbers":  [{"num": "6260109504"}]
+  },{
+    "supplierName":           "FUL",
+    "supplierLicenceNumbers":  [{"num": "2536532454"}]
+  },{
+    "supplierName":           "UTW",
+    "supplierLicenceNumbers":  [
+      {"num": "9164061349"}, 
+      {"num": "8831585682"}, 
+      {"num": "3226666958"}
+    ]
+  },{
+    "supplierName":           "OVO",
+    "supplierLicenceNumbers":  [{"num": "8236422027"}]
+  },{
+    "supplierName":           "COP",
+    "supplierLicenceNumbers":  [{"num": "3229798609"}]
+  },{
+    "supplierName":           "UTA",
+    "supplierLicenceNumbers":  [{"num": "3021678478"}]
+  },{
+    "supplierName":           "XEN",
+    "supplierLicenceNumbers":  [{"num": "9420110476"}]
+  },{
+    "supplierName":           "SPK",
+    "supplierLicenceNumbers":  [{"num": "7742538649"}]
+  },{
+    "supplierName":           "EEN",
+    "supplierLicenceNumbers":  [
+      {"num": "1702525369"}, 
+      {"num": "1191480679"}
+  ]
+  },{
+    "supplierName":           "FLO",
+    "supplierLicenceNumbers":  [
+      {"num": "1239741187"}, 
+      {"num": "4563855235"}, 
+      {"num": "8495358982"}
+    ]
+  },{
+    "supplierName":           "HUD",
+    "supplierLicenceNumbers":  [{"num": "8836403907"}]
+  },{
+    "supplierName":           "BLB",
+    "supplierLicenceNumbers":  [{"num": "5889934374"}]
+  },{
+    "supplierName":           "OCT",
+    "supplierLicenceNumbers":  [{"num": "9101359309"}]
+  },{
+    "supplierName":           "GNE",
+    "supplierLicenceNumbers":  [{"num": "4931433166"}]
+  },{
+    "supplierName":           "EGE",
+    "supplierLicenceNumbers":  [{"num": "8103350106"}]
+  },{
+    "supplierName":           "AVR",
+    "supplierLicenceNumbers":  [{"num": "3447741998"}]
+  },{
+    "supplierName":           "SHL",
+    "supplierLicenceNumbers":  [
+      {"num": "3524346584"},
+      {"num": "9417697483"}
+    ]
+  },{
+    "supplierName":           "SOE",
+    "supplierLicenceNumbers":  [{"num": "4387301283"}]
+  },{
+    "supplierName":           "SOE",
+    "supplierLicenceNumbers":  [{"num": "8506168000"}]
+  },{
+    "supplierName":           "RHE",
+    "supplierLicenceNumbers":  [{"num": "4360397807"}]
+  },{
+    "supplierName":           "TNK",
+    "supplierLicenceNumbers":  [{"num": "2590743361"}]
+  },{
+    "supplierName":           "PLA",
+    "supplierLicenceNumbers":  [{"num": "9310737247"}]
+  },{
+    "supplierName":           "ISP",
+    "supplierLicenceNumbers":  [{"num": "7278568162"}]
+  },{
+    "supplierName":           "UPL",
+    "supplierLicenceNumbers":  [{"num": "4552853449"}]
+  },{
+    "supplierName":           "ECY",
+    "supplierLicenceNumbers":  [{"num": "2133451612"}]
+  },{
+    "supplierName":           "BRI",
+    "supplierLicenceNumbers":  [{"num": "6457047720"}]
+  },{
+    "supplierName":           "ESB",
+    "supplierLicenceNumbers":  [{"num": "4272907057"}]
+  },{
+    "supplierName":           "IGL",
+    "supplierLicenceNumbers":  [{"num": "8348357459"}]
+  },{
+    "supplierName":           "TOE",
+    "supplierLicenceNumbers":  [
+      {"num": "1520654638"}, 
+      {"num": "8052658944"}, 
+      {"num": "1080608811"}
+    ]
+  },{
+    "supplierName":           "FOX",
+    "supplierLicenceNumbers":  [{"num": "1333459999"}]
+  },{
+    "supplierName":           "PES",
+    "supplierLicenceNumbers":  [{"num": "9640874558"}]
   }
 ];
 
+const htmlAccountsList = '';
 // Build accounts list
 if (pageUrlPath === '/internal/v01-1/accounts/'){
+  let accountItem = '';
   for (let i = 0; i < accounts.length; i++) {
-    
-    for (let j = 0; j < accounts[i].supplierLicenceNumber.length; j++) {
-      console.log('licenceNumber(s):',i, accounts[i].supplierLicenceNumber[j]);
-      // accounts[i].supplierLicenceNumber.length > 1 ? `<span>` + accounts[i].supplierLicenceNumber[j] + `</span>
-    };
-    
-    if (document.getElementById('accountsList')) {
-      document.getElementById('accountsList').innerHTML += `
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">` + accounts[i].supplierName + `</td>
-          <td class="govuk-table__cell">` + accounts[i].supplierLicenceNumber + `</td>
-          <td class="govuk-table__cell">
-            <a  class="govuk-link" 
-                href="view-account-details" 
-                onclick="viewAccountDetails(
-                  '` + accounts[i].supplierName + `',
-                  '` + accounts[i].supplierLicenceNumber + `'
-                )">View
-            </a>
-          </td>
-        </tr>
-      `;
+    accountItem +=
+    `<tr class="govuk-table__row">
+      <td class="govuk-table__cell">` + accounts[i].supplierName + `</td>
+      <td class="govuk-table__cell">`;
+
+    for (let j = 0; j < accounts[i].supplierLicenceNumbers.length; j++) {
+      accountItem += `<div>` + accounts[i].supplierLicenceNumbers[j].num + `</div>`;
     }
+    accountItem += `
+        <td class="govuk-table__cell">
+          <a class="govuk-link" 
+              href="view-account-details" 
+              onclick='viewAccountDetails(` + JSON.stringify(accounts[i].supplierName) + `, ` + JSON.stringify(accounts[i].supplierLicenceNumbers) + `)'>
+            View
+          </a>
+        </td>
+      </tr>`;
   }
+
+  document.getElementById('accountsList').innerHTML = accountItem;
+
 }
 
 // Get account details
+// let supplierDetails = '';
 function viewAccountDetails(supplierName, supplierLicenceNumber) {
-  localStorage.setItem('supplierName', supplierName);
-  localStorage.setItem('supplierLicenceNumber', supplierLicenceNumber);
+  // console.log('supplierDetails', supplierDetails);
+
+  localStorage.setItem('supplierName', JSON.stringify(supplierName));
+  localStorage.setItem('supplierLicenceNumber', JSON.stringify(supplierLicenceNumber));
 }
 
 // Set account details
 if (pageUrlPath === '/internal/v01-1/accounts/view-account-details') {
-  document.getElementById('supplierName').innerText = localStorage.getItem('supplierName');
-  document.getElementById('supplierLicenceNumber').innerText = localStorage.getItem('supplierLicenceNumber');
+  // console.log('supplierDetails', supplierDetails);
+  if (localStorage.getItem('supplierName')) document.getElementById('supplierName').innerHTML = JSON.parse(localStorage.getItem('supplierName'));
+
+  // console.log('num', JSON.parse(localStorage.getItem('supplierLicenceNumber')));
+
+  let sNumbers = '';
+  let supplierNumbers = JSON.parse(localStorage.getItem('supplierLicenceNumber'));
+  
+  if (localStorage.getItem('supplierLicenceNumber')) {
+    for (i = 0; i < supplierNumbers.length; i++) {
+      console.log('num', supplierNumbers[i].num);
+      sNumbers += `<div>` + supplierNumbers[i].num + `</div>`;
+    }
+  }
+
+  document.getElementById('supplierLicenceNumber').innerHTML += sNumbers;
 }
 
 let num = 0;
