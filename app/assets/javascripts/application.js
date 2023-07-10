@@ -509,21 +509,15 @@ if (pageUrlPath === '/internal/v01-1/accounts/'){
 }
 
 // Get account details
-// let supplierDetails = '';
 function viewAccountDetails(supplierName, supplierLicenceNumber) {
-  // console.log('supplierDetails', supplierDetails);
-
   localStorage.setItem('supplierName', JSON.stringify(supplierName));
   localStorage.setItem('supplierLicenceNumber', JSON.stringify(supplierLicenceNumber));
 }
 
 // Set account details
 if (pageUrlPath === '/internal/v01-1/accounts/view-account-details') {
-  // console.log('supplierDetails', supplierDetails);
   if (localStorage.getItem('supplierName')) document.getElementById('supplierName').innerHTML = JSON.parse(localStorage.getItem('supplierName'));
-
-  // console.log('num', JSON.parse(localStorage.getItem('supplierLicenceNumber')));
-
+  
   let sNumbers = '';
   let supplierNumbers = JSON.parse(localStorage.getItem('supplierLicenceNumber'));
   
