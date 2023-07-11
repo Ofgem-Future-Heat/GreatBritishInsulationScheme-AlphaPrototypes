@@ -157,10 +157,13 @@ input[type="file"] {
 }
 
 .magnifying-glass {
+    cursor: pointer;
     font-size: 28px;
     padding: 0px 8px;
-    background: #cccccc;
+    background: #f2f2f2;
     border: 1px solid #000;
+
+    &:hover { background: #AAAAAA;}
 }
 
 .remove-button-supplement {
@@ -171,3 +174,36 @@ input[type="file"] {
 .additional-licence-numbers {
     margin-top: 32px;
 }
+
+.supplier-num {
+    margin-bottom: 10px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.govuk-table__header:last-child, .govuk-table__cell:last-child {
+    text-align: right;
+}
+
+.found-users {
+    background: #f3f2f1;
+    ul {
+        border: 0;
+        list-style-type: none;
+        margin: 0;
+        padding: 0 20px;
+
+        li {
+            padding: 10px 0;
+            p.found-user {
+                margin: 0;
+                padding: 10px;
+                cursor: pointer;
+                &:hover { background: #FFFFFF;}
+            }
+        }
+    }
+}
+
+.hide { display: none; }

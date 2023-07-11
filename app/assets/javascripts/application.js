@@ -1,7 +1,5 @@
-//
 // For guidance on how to add JavaScript see:
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
-//
 
 const pageUrl         =   window.location.pathname.split("/");
 const domainPathUrl   =   pageUrl[pageUrl.length-2];
@@ -53,6 +51,7 @@ function triggerValidation(el) {
     window.location.pathname = "/v01/measures/success-file-upload";
   }
 }
+
 function triggerValidation21(el) {
   if (!(regexForCSV.test(el.value.toLowerCase()))) {
     el.value = '';
@@ -142,32 +141,467 @@ const externalUsers = [
     "supplierName": "SHL",
     "userType": "AuthorisedSignatoryRole",
     "jobTitle": "Quality Assurance"
+  }, {
+    "username": "cristalgallagher",
+    "title": "Ms",
+    "firstName": "Cristal",
+    "middleName": "Jane",
+    "lastName": "Gallagher",
+    "emailAddress": "cristal.gallagher@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "EDF",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "pierceroberts",
+    "title": "Mr",
+    "firstName": "Pierce",
+    "middleName": "Peter",
+    "lastName": "Roberts",
+    "emailAddress": "pierce.roberts@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "SPW",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "makenablanchard",
+    "title": "Miss",
+    "firstName": "Makena",
+    "middleName": "",
+    "lastName": "Blanchard",
+    "emailAddress": "makena.blanchard@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "SSE",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "brayanmcgee",
+    "title": "Miss",
+    "firstName": "Brayan",
+    "middleName": "",
+    "lastName": "Mcgee",
+    "emailAddress": "brayan.mcgee@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "BGT",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "lilliannaestrada",
+    "title": "Miss",
+    "firstName": "Lillianna ",
+    "middleName": "Jane",
+    "lastName": "Estrada",
+    "emailAddress": "lillianna.estrada@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "NPW",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "shelbyfreeman",
+    "title": "Miss",
+    "firstName": "Shelby",
+    "middleName": "",
+    "lastName": "Freeman",
+    "emailAddress": "shelby.freeman@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "FUL",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "beatricehart",
+    "title": "Miss",
+    "firstName": "Beatrice",
+    "middleName": "Pat",
+    "lastName": "Hart",
+    "emailAddress": "beatrice.hart@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "UTW",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "kistinamurillo",
+    "title": "Ms",
+    "firstName": "Kristina",
+    "middleName": "",
+    "lastName": "Murillo",
+    "emailAddress": "kristina.murillo@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "OVO",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "grantscott",
+    "title": "Mr",
+    "firstName": "Grant",
+    "middleName": "",
+    "lastName": "Scott",
+    "emailAddress": "grant.scott@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "COP",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "bernardhawkins",
+    "title": "Mr",
+    "firstName": "Bernard",
+    "middleName": "Terry",
+    "lastName": "Hawkins",
+    "emailAddress": "bernard.hawkins@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "UTA",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "saracox",
+    "title": "Miss",
+    "firstName": "Sara",
+    "middleName": "",
+    "lastName": "Cox",
+    "emailAddress": "sara.cox@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "XEN",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "aliviaward",
+    "title": "Ms",
+    "firstName": "Alivia",
+    "middleName": "",
+    "lastName": "Ward",
+    "emailAddress": "alivi.award@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "SPK",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "jasminschwartz",
+    "title": "Miss",
+    "firstName": "Jasmin",
+    "middleName": "Mari",
+    "lastName": "Schwartz",
+    "emailAddress": "jasmin.schwartz@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "EEN",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "adrielparks",
+    "title": "Mr",
+    "firstName": "Adriel",
+    "middleName": "Anton",
+    "lastName": "Parks",
+    "emailAddress": "adriel.parks@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "FLO",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "dereonpennington",
+    "title": "Mr",
+    "firstName": "Dereon",
+    "middleName": "",
+    "lastName": "Pennington",
+    "emailAddress": "dereon.pennington@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "HUD",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "masonholt",
+    "title": "Mr",
+    "firstName": "Mason",
+    "middleName": "",
+    "lastName": "Holt",
+    "emailAddress": "mason.holt@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "BLB",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "libbyellis",
+    "title": "Miss",
+    "firstName": "Libby",
+    "middleName": "",
+    "lastName": "Ellis",
+    "emailAddress": "libby.ellis@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "OCT",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "azulchan",
+    "title": "Ms",
+    "firstName": "Azul",
+    "middleName": "",
+    "lastName": "Chan",
+    "emailAddress": "azul.chan@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "GNE",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Compliance Officer"
+  }, {
+
+
+
+
+  
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "EGE",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "AVR",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Compliance Officer"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "SHL",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Compliance Officer"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "SOE",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "RHE",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Compliance Officer"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "TNK",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Compliance Officer"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "PLA",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Compliance Officer"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "ISP",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "UPL",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Compliance Officer"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "ECY",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Compliance Officer"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "BRI",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Compliance Officer"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "ESB",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "IGL",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "TOE",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Compliance Officer"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "FOX",
+    "userType": "AuthorisedSignatoryRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "PES",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Compliance Officer"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "IGL",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "FUL",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Compliance Officer"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "OVO",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Compliance Officer"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "SPK",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Quality Assurance"
+  }, {
+    "username": "lorainekelly",
+    "title": "Ms",
+    "firstName": "Loraine",
+    "middleName": "Jane",
+    "lastName": "Kelly",
+    "emailAddress": "loraine.kelly@orgmail.com",
+    "telephoneNumber": "07111222333",
+    "supplierName": "BRI",
+    "userType": "AdditionalUserRole",
+    "jobTitle": "Compliance Officer"
   }
 ];
 
 // Build external user list
 if (pageUrlPath === '/internal/v01-1/external-users/'){
+  console.log('externalUsers.length', externalUsers.length);
   for (let i = 0; i < externalUsers.length; i++) {
     if (document.getElementById('extUsers')) {
       document.getElementById('extUsers').innerHTML += `
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">` + externalUsers[i].supplierName + `</td>
+          <td scope="row" class="govuk-table__header">` + externalUsers[i].supplierName + `</td>
           <td class="govuk-table__cell">` + externalUsers[i].firstName + `</td>
           <td class="govuk-table__cell">` + externalUsers[i].lastName + `</td>
-          <td scope="row" class="govuk-table__header">` + externalUsers[i].emailAddress + `</td>
+          <td class="govuk-table__cell">` + externalUsers[i].emailAddress + `</td>
           <td class="govuk-table__cell">` + externalUsers[i].userType + `</td>
           <td class="govuk-table__cell">
             <a  class="govuk-link" 
                 href="view-external-details" 
                 onclick="viewExternalUserDetails(
                   '` + externalUsers[i].username + `',
-                  '` + externalUsers[i].supplierName + `',
                   '` + externalUsers[i].title + `',
                   '` + externalUsers[i].firstName + `',
                   '` + externalUsers[i].middleName + `',
                   '` + externalUsers[i].lastName + `',
                   '` + externalUsers[i].emailAddress + `',
                   '` + externalUsers[i].telephoneNumber + `',
+                  '` + externalUsers[i].supplierName + `',
                   '` + externalUsers[i].userType + `',
                   '` + externalUsers[i].jobTitle + `'
                 )">View
@@ -241,6 +675,16 @@ const internalUsers = [
     "telephoneNumber": "07899674534",
     "userType": "Basic role"
   }, {
+    "username": "manuelturizo",
+    "title": "Mr",
+    "firstName": "Manuel",
+    "middleName": "Sosa",
+    "lastName": "Turizo",
+    "jobTitle": "Systems Analyst",
+    "emailAddress": "manuel.turizo@orgmail.com",
+    "telephoneNumber": "07118352353",
+    "userType": "Internal admin"
+  }, {
     "username": "russeltaylor",
     "title": "Mr",
     "firstName": "Russel",
@@ -250,6 +694,46 @@ const internalUsers = [
     "emailAddress": "russel.taylor@orgmail.com",
     "telephoneNumber": "07187774333",
     "userType": "Standard role"
+  }, {
+    "username": "bruceleroy",
+    "title": "Mr",
+    "firstName": "Bruce",
+    "middleName": "Dragon",
+    "lastName": "Lreoy",
+    "jobTitle": "Systems Analyst",
+    "emailAddress": "bruce.reloy@orgmail.com",
+    "telephoneNumber": "07118352353",
+    "userType": "Internal admin"
+  }, {
+    "username": "rauwalejandro",
+    "title": "Mr",
+    "firstName": "Rauw",
+    "middleName": "Jose",
+    "lastName": "Alejandro",
+    "jobTitle": "Systems Analyst",
+    "emailAddress": "rauw.alejandro@orgmail.com",
+    "telephoneNumber": "07118352353",
+    "userType": "Internal admin"
+  }, {
+    "username": "leonidascarpenter",
+    "title": "Mr",
+    "firstName": "Leonidas",
+    "middleName": "Ian",
+    "lastName": "Carpenter",
+    "jobTitle": "Systems Analyst",
+    "emailAddress": "leonidas.carpenter@orgmail.com",
+    "telephoneNumber": "07118352353",
+    "userType": "Internal admin"
+  }, {
+    "username": "Loukang",
+    "title": "Mr",
+    "firstName": "Lou",
+    "middleName": "",
+    "lastName": "Kang",
+    "jobTitle": "Systems Analyst",
+    "emailAddress": "Lou.kang@orgmail.com",
+    "telephoneNumber": "07118352353",
+    "userType": "Internal admin"
   }, {
     "username": "lorainejanekelly",
     "title": "Ms",
@@ -266,9 +750,89 @@ const internalUsers = [
     "firstName": "Andrew",
     "middleName": "Jonathan",
     "lastName": "Johnstone",
-    "jobTitle": "Quality Assurance",
+    "jobTitle": "Marketing Manager",
     "emailAddress": "andrew.johnstone@orgmail.com",
-    "telephoneNumber": "07115552333",
+    "telephoneNumber": "07105523433",
+    "userType": "Internal admin"
+  }, {
+    "username": "jaliyahjames",
+    "title": "Ms",
+    "firstName": "Jaliyah ",
+    "middleName": "",
+    "lastName": "James",
+    "jobTitle": "Mechanical Engineer",
+    "emailAddress": "jaliyah.james@orgmail.com",
+    "telephoneNumber": "07990352333",
+    "userType": "Internal admin"
+  }, {
+    "username": "wilsonday",
+    "title": "Mr",
+    "firstName": "Wilson",
+    "middleName": "Eric",
+    "lastName": "Day",
+    "jobTitle": "IT Manager",
+    "emailAddress": "wilson.day@orgmail.com",
+    "telephoneNumber": "07222352333",
+    "userType": "Internal admin"
+  }, {
+    "username": "zionmcmillan",
+    "title": "Mr",
+    "firstName": "Zion",
+    "middleName": "Joshua",
+    "lastName": "Mcmillan",
+    "jobTitle": "Systems Analyst",
+    "emailAddress": "zion.mcmillan@orgmail.com",
+    "telephoneNumber": "07166352333",
+    "userType": "Internal admin"
+  }, {
+    "username": "titusanthony",
+    "title": "Mr",
+    "firstName": "Titus",
+    "middleName": "",
+    "lastName": "Anthony",
+    "jobTitle": "Systems Analyst",
+    "emailAddress": "titus.anthony@orgmail.com",
+    "telephoneNumber": "07234352333",
+    "userType": "Internal admin"
+  }, {
+    "username": "zachariahbarr",
+    "title": "Mr",
+    "firstName": "Zachariah",
+    "middleName": "",
+    "lastName": "Barr",
+    "jobTitle": "Systems Analyst",
+    "emailAddress": "zachariah.barr@orgmail.com",
+    "telephoneNumber": "07118352353",
+    "userType": "Internal admin"
+  }, {
+    "username": "antwangaines",
+    "title": "Mr",
+    "firstName": "Antwan",
+    "middleName": "",
+    "lastName": "Gaines",
+    "jobTitle": "Systems Analyst",
+    "emailAddress": "antwan.gaines@orgmail.com",
+    "telephoneNumber": "07118352353",
+    "userType": "Internal admin"
+  }, {
+    "username": "trinitymelton",
+    "title": "Mr",
+    "firstName": "Trinity",
+    "middleName": "",
+    "lastName": "Melton",
+    "jobTitle": "Systems Analyst",
+    "emailAddress": "trinity.melton@orgmail.com",
+    "telephoneNumber": "07118352353",
+    "userType": "Internal admin"
+  }, {
+    "username": "henrynovak",
+    "title": "Mr",
+    "firstName": "Henry",
+    "middleName": "",
+    "lastName": "Novak",
+    "jobTitle": "Systems Analyst",
+    "emailAddress": "henry.novak@orgmail.com",
+    "telephoneNumber": "07118352353",
     "userType": "Internal admin"
   }
 ];
@@ -279,10 +843,10 @@ if (pageUrlPath === '/internal/v01-1/internal-users/'){
     if (document.getElementById('intUsers')) {
       document.getElementById('intUsers').innerHTML += `
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">` + internalUsers[i].username + `</td>
+          <td scope="row" class="govuk-table__header">` + internalUsers[i].username + `</td>
           <td class="govuk-table__cell">` + internalUsers[i].firstName + `</td>
           <td class="govuk-table__cell">` + internalUsers[i].lastName + `</td>
-          <td scope="row" class="govuk-table__header">` + internalUsers[i].emailAddress + `</td>
+          <td class="govuk-table__cell">` + internalUsers[i].emailAddress + `</td>
           <td class="govuk-table__cell">` + internalUsers[i].userType + `</td>
           <td class="govuk-table__cell">
             <a  class="govuk-link" 
@@ -313,19 +877,19 @@ function viewInternalUserDetails(
     firstName, 
     middleName, 
     lastName, 
-    jobTitle, 
     emailAddress, 
     telephoneNumber,
-    userType) {
+    userType, 
+    jobTitle) {
   localStorage.setItem('int_username', username);
   localStorage.setItem('int_title', title);
   localStorage.setItem('int_firstName', firstName);
   localStorage.setItem('int_middleName', middleName);
   localStorage.setItem('int_lastName', lastName);
-  localStorage.setItem('int_jobTitle', jobTitle);
   localStorage.setItem('int_emailAddress', emailAddress);
   localStorage.setItem('int_telephoneNumber', telephoneNumber);
   localStorage.setItem('int_userType', userType);
+  localStorage.setItem('int_jobTitle', jobTitle);
 }
 
 // Set Internal user details
@@ -335,10 +899,22 @@ if (pageUrlPath === '/internal/v01-1/internal-users/view-internal-details') {
   document.getElementById('firstName').innerText = localStorage.getItem('int_firstName');
   document.getElementById('middleName').innerText = localStorage.getItem('int_middleName');
   document.getElementById('lastName').innerText = localStorage.getItem('int_lastName');
-  document.getElementById('jobTitle').innerText = localStorage.getItem('int_jobTitle');
   document.getElementById('emailAddress').innerText = localStorage.getItem('int_emailAddress');
   document.getElementById('telephoneNumber').innerText = localStorage.getItem('int_telephoneNumber');
+  document.getElementById('jobTitle').innerText = localStorage.getItem('int_jobTitle');
   document.getElementById('userType').innerText = localStorage.getItem('int_userType');
+}
+
+function findUser() {
+  document.getElementById('foundUsers').style.display = 'block';
+}
+
+function addUser1() {
+  window.location.pathname = "/internal/v01-1/internal-users/added-new-internal-user1";
+}
+
+function addUser2() {
+  window.location.pathname = "/internal/v01-1/internal-users/added-new-internal-user2";
 }
 
 
@@ -491,7 +1067,7 @@ if (pageUrlPath === '/internal/v01-1/accounts/'){
       <td class="govuk-table__cell">`;
 
     for (let j = 0; j < accounts[i].supplierLicenceNumbers.length; j++) {
-      accountItem += `<div>` + accounts[i].supplierLicenceNumbers[j].num + `</div>`;
+      accountItem += `<div class='supplier-num'>` + accounts[i].supplierLicenceNumbers[j].num + `</div>`;
     }
     accountItem += `
         <td class="govuk-table__cell">
@@ -524,7 +1100,7 @@ if (pageUrlPath === '/internal/v01-1/accounts/view-account-details') {
   if (localStorage.getItem('supplierLicenceNumber')) {
     for (i = 0; i < supplierNumbers.length; i++) {
       console.log('num', supplierNumbers[i].num);
-      sNumbers += `<div>` + supplierNumbers[i].num + `</div>`;
+      sNumbers += `<div class='supplier-num'>` + supplierNumbers[i].num + `</div>`;
     }
   }
 

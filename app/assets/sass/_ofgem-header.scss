@@ -101,7 +101,7 @@
     display: block;
   }
   
-  .dropdown-container .dropdown-content a:hover {background-color: #FEFEFE;}
+  .dropdown-container .dropdown-content a:hover { background-color: #FEFEFE; }
   
   .dropdown:hover .dropdown-container { display: block; }
   
@@ -226,6 +226,7 @@
 }
 
 .username-style {
+    height: 45px;
     margin: 0;
     padding: 10px 0;
     text-align: right;
