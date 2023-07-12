@@ -1112,9 +1112,27 @@ let num = 0;
 function addAnotherSupplierLicence() {
   if (document.getElementById('additionalLicenceNumbers')) {
     document.getElementById('additionalLicenceNumbers').innerHTML += `
-    <div id="licenceNumber${num+1}">
-      <input class="govuk-input govuk-!-width-full remove-button-supplement" id="supplierLicenceNumber${num+1}" name="supplierLicenceNumber${num+1}" type="text" autocomplete="supplierLicenceNumber${num+1}">
-      <button class="govuk-button govuk-button--secondary remove-button" id="${num+1}" data-module="govuk-button" onclick="removeSupplierLicenceNumber(id)">X</button>
+    <div class="licence-number-container" id="licenceNumber${num+1}">
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" />
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <label class="govuk-label" for="supplierLicenceNumber${num+1}">
+            Supplier licence number
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="supplierLicenceNumber${num+1}" name="supplierLicenceNumber${num+1}" type="text" autocomplete="supplierLicenceNumber${num+1}">
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <label class="govuk-label" for="licence-id">
+            Associated supplier licence ID
+          </label>
+          <select class="govuk-select govuk-!-width-one-full remove-button-supplement" id="licence-id" name="licence-id">
+            <option value="" selected disabled hidden>Select a licence ID</option>
+            <option value="LMNOPQ67890">LMNOPQ67890</option>
+            <option value="QWERTY08642">QWERTY08642</option>
+          </select>
+          <button class="govuk-button govuk-button--secondary remove-button" id="${num+1}" data-module="govuk-button" onclick="removeSupplierLicenceNumber(${num+1})">X</button>
+        </div>
+      </div>
     </div>
     `;
   }

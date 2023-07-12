@@ -170,7 +170,9 @@ input[type="file"] {
     margin-right: 8px;
     width: calc(100% - 50px)!important;
 }
-// .remove-button {}
+.remove-button {
+    margin-bottom: 0;
+}
 .additional-licence-numbers {
     margin-top: 32px;
 }
@@ -204,6 +206,10 @@ input[type="file"] {
             }
         }
     }
+}
+
+.licence-number-container {
+    margin-bottom: 20px;
 }
 
 .hide { display: none; }

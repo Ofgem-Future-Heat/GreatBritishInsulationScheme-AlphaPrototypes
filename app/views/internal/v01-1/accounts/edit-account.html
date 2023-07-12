@@ -31,9 +31,34 @@
             Supplier licence number
           </label>
           <input class="govuk-input govuk-!-width-full" id="supplierLicenceNumber" name="supplierLicenceNumber" type="text" autocomplete="supplierLicenceNumber" value="9876543618">
-          <div id="additionalLicenceNumbers" class="additional-licence-numbers"></div>
         </div>
+                    
+        <div class="licence-number-container" id="licenceNumber001">
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" />
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+              <label class="govuk-label" for="supplierLicenceNumber001">
+                Supplier licence number
+              </label>
+              <input class="govuk-input govuk-!-width-full" id="supplierLicenceNumber001" name="supplierLicenceNumber001" type="text" autocomplete="supplierLicenceNumber001" value="4934620507">
+            </div>
+            <div class="govuk-grid-column-one-half">
+              <label class="govuk-label" for="licence-id">
+                Associated supplier licence ID
+              </label>
+              <select class="govuk-select govuk-!-width-one-full remove-button-supplement" id="licence-id" name="licence-id">
+                <option value="" disabled hidden>Select a licence ID</option>
+                <option value="LMNOPQ67890" selected>LMNOPQ67890</option>
+                <option value="QWERTY08642">QWERTY08642</option>
+              </select>
+              <button class="govuk-button govuk-button--secondary remove-button" id="001" data-module="govuk-button" onclick="removeSupplierLicenceNumber('001')">X</button>
+            </div>
+          </div>
+        </div>
+          
+        <div id="additionalLicenceNumbers" class="additional-licence-numbers"></div>
         
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" />
         <button class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="addAnotherSupplierLicence()">
           Add another supplier licence number
         </button>
