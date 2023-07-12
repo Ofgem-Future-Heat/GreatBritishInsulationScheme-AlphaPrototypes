@@ -22,15 +22,29 @@
           <label class="govuk-label" for="supplierName">
             Supplier name
           </label>
-          <input class="govuk-input govuk-!-width-full" id="supplierName" name="supplierName" type="text" autocomplete="supplierName" value="OVO">
+          <input class="govuk-input govuk-!-width-full" id="supplierName" name="supplierName" type="text" autocomplete="supplierName" value="NPW">
         </div>
 
-        <!-- Licence number number-->
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="supplierLicenceNumber">
-            Supplier licence number
-          </label>
-          <input class="govuk-input govuk-!-width-full" id="supplierLicenceNumber" name="supplierLicenceNumber" type="text" autocomplete="supplierLicenceNumber" value="9876543618">
+        <!-- Licence number number -->
+        <div class="govuk-grid-row">
+          <div class="govuk-form-group">
+            <div class="govuk-grid-column-one-half">
+              <label class="govuk-label" for="supplierLicenceNumber">
+                Supplier licence number
+              </label>
+              <input class="govuk-input govuk-!-width-full" id="supplierLicenceNumber" name="supplierLicenceNumber" type="text" autocomplete="supplierLicenceNumber" value="03653277">
+            </div>
+            <div class="govuk-grid-column-one-half">
+              <label class="govuk-label" for="licence-id">
+                Supplier licence reference
+              </label>
+              <select class="govuk-select govuk-!-width-full" id="licence-id" name="licence-id">
+                <option value="" disabled hidden>Select a licence reference</option>
+                <option value="NPW03782443G">NPW03782443G</option>
+                <option value="NPW02999919G" selected>NPW02999919G</option>
+              </select>
+            </div>
+          </div>
         </div>
                     
         <div class="licence-number-container" id="licenceNumber001">
@@ -40,16 +54,16 @@
               <label class="govuk-label" for="supplierLicenceNumber001">
                 Supplier licence number
               </label>
-              <input class="govuk-input govuk-!-width-full" id="supplierLicenceNumber001" name="supplierLicenceNumber001" type="text" autocomplete="supplierLicenceNumber001" value="4934620507">
+              <input class="govuk-input govuk-!-width-full" id="supplierLicenceNumber001" name="supplierLicenceNumber001" type="text" autocomplete="supplierLicenceNumber001" value="02845740">
             </div>
             <div class="govuk-grid-column-one-half">
               <label class="govuk-label" for="licence-id">
-                Associated supplier licence ID
+                Supplier licence reference
               </label>
               <select class="govuk-select govuk-!-width-one-full remove-button-supplement" id="licence-id" name="licence-id">
-                <option value="" disabled hidden>Select a licence ID</option>
-                <option value="LMNOPQ67890" selected>LMNOPQ67890</option>
-                <option value="QWERTY08642">QWERTY08642</option>
+                <option value="" disabled hidden>Select a licence reference</option>
+                <option value="NPW03782443G" selected>NPW03782443G</option>
+                <option value="NPW02999919G">NPW02999919G</option>
               </select>
               <button class="govuk-button govuk-button--secondary remove-button" id="001" data-module="govuk-button" onclick="removeSupplierLicenceNumber('001')">X</button>
             </div>

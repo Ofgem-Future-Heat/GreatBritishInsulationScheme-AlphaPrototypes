@@ -118,7 +118,8 @@ const externalUsers = [
     "telephoneNumber": "07899674534",
     "supplierName": "BGT",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Deputy manager"
+    "jobTitle": "Deputy manager",
+    "userStatus": "Active"
   }, {
     "username": "ellyfranklin",
     "title": "Miss",
@@ -129,7 +130,8 @@ const externalUsers = [
     "telephoneNumber": "07187654333",
     "supplierName": "OVO",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Supervisor"
+    "jobTitle": "Supervisor",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -140,7 +142,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "SHL",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Inactive"
   }, {
     "username": "cristalgallagher",
     "title": "Ms",
@@ -151,7 +154,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "EDF",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "pierceroberts",
     "title": "Mr",
@@ -162,7 +166,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "SPW",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "makenablanchard",
     "title": "Miss",
@@ -173,7 +178,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "SSE",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "brayanmcgee",
     "title": "Miss",
@@ -184,7 +190,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "BGT",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "lilliannaestrada",
     "title": "Miss",
@@ -195,7 +202,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "NPW",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Inactive"
   }, {
     "username": "shelbyfreeman",
     "title": "Miss",
@@ -206,7 +214,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "FUL",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Inactive"
   }, {
     "username": "beatricehart",
     "title": "Miss",
@@ -217,7 +226,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "UTW",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "kistinamurillo",
     "title": "Ms",
@@ -228,7 +238,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "OVO",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "grantscott",
     "title": "Mr",
@@ -239,7 +250,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "COP",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "bernardhawkins",
     "title": "Mr",
@@ -250,7 +262,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "UTA",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "saracox",
     "title": "Miss",
@@ -261,7 +274,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "XEN",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "aliviaward",
     "title": "Ms",
@@ -272,7 +286,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "SPK",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Inactive"
   }, {
     "username": "jasminschwartz",
     "title": "Miss",
@@ -283,7 +298,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "EEN",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "adrielparks",
     "title": "Mr",
@@ -294,7 +310,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "FLO",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "dereonpennington",
     "title": "Mr",
@@ -305,7 +322,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "HUD",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "masonholt",
     "title": "Mr",
@@ -316,7 +334,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "BLB",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "libbyellis",
     "title": "Miss",
@@ -327,7 +346,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "OCT",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "azulchan",
     "title": "Ms",
@@ -338,13 +358,9 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "GNE",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer"
+    "jobTitle": "Compliance Officer",
+    "userStatus": "Active"
   }, {
-
-
-
-
-  
     "username": "lorainekelly",
     "title": "Ms",
     "firstName": "Loraine",
@@ -354,7 +370,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "EGE",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -365,7 +382,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "AVR",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer"
+    "jobTitle": "Compliance Officer",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -376,7 +394,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "SHL",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer"
+    "jobTitle": "Compliance Officer",
+    "userStatus": "Inactive"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -387,7 +406,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "SOE",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -398,7 +418,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "RHE",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer"
+    "jobTitle": "Compliance Officer",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -409,7 +430,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "TNK",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer"
+    "jobTitle": "Compliance Officer",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -420,7 +442,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "PLA",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer"
+    "jobTitle": "Compliance Officer",
+    "userStatus": "Inactive"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -431,7 +454,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "ISP",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -442,7 +466,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "UPL",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer"
+    "jobTitle": "Compliance Officer",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -453,7 +478,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "ECY",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer"
+    "jobTitle": "Compliance Officer",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -464,7 +490,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "BRI",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer"
+    "jobTitle": "Compliance Officer",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -475,7 +502,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "ESB",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -486,7 +514,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "IGL",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -497,7 +526,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "TOE",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Compliance Officer"
+    "jobTitle": "Compliance Officer",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -508,7 +538,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "FOX",
     "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -519,7 +550,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "PES",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer"
+    "jobTitle": "Compliance Officer",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -530,7 +562,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "IGL",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -541,7 +574,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "FUL",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer"
+    "jobTitle": "Compliance Officer",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -552,7 +586,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "OVO",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer"
+    "jobTitle": "Compliance Officer",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -563,7 +598,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "SPK",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Quality Assurance"
+    "jobTitle": "Quality Assurance",
+    "userStatus": "Active"
   }, {
     "username": "lorainekelly",
     "title": "Ms",
@@ -574,7 +610,8 @@ const externalUsers = [
     "telephoneNumber": "07111222333",
     "supplierName": "BRI",
     "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer"
+    "jobTitle": "Compliance Officer",
+    "userStatus": "Active"
   }
 ];
 
@@ -585,24 +622,26 @@ if (pageUrlPath === '/internal/v01-1/external-users/'){
     if (document.getElementById('extUsers')) {
       document.getElementById('extUsers').innerHTML += `
         <tr class="govuk-table__row">
-          <td scope="row" class="govuk-table__header">` + externalUsers[i].supplierName + `</td>
+          <td scope="row" class="govuk-table__header">` + externalUsers[i].emailAddress + `</td>
           <td class="govuk-table__cell">` + externalUsers[i].firstName + `</td>
           <td class="govuk-table__cell">` + externalUsers[i].lastName + `</td>
-          <td class="govuk-table__cell">` + externalUsers[i].emailAddress + `</td>
-          <td class="govuk-table__cell">` + externalUsers[i].userType + `</td>
+          <td class="govuk-table__cell">` + externalUsers[i].supplierName + `</td>
+          <!-- <td class="govuk-table__cell">` + externalUsers[i].userType + `</td> -->
+          <td class="govuk-table__cell">` + externalUsers[i].userStatus + `</td>
           <td class="govuk-table__cell">
             <a  class="govuk-link" 
                 href="view-external-details" 
                 onclick="viewExternalUserDetails(
+                  '` + externalUsers[i].emailAddress + `',
                   '` + externalUsers[i].username + `',
                   '` + externalUsers[i].title + `',
                   '` + externalUsers[i].firstName + `',
                   '` + externalUsers[i].middleName + `',
                   '` + externalUsers[i].lastName + `',
-                  '` + externalUsers[i].emailAddress + `',
                   '` + externalUsers[i].telephoneNumber + `',
                   '` + externalUsers[i].supplierName + `',
                   '` + externalUsers[i].userType + `',
+                  '` + externalUsers[i].userStatus + `',
                   '` + externalUsers[i].jobTitle + `'
                 )">View
             </a>
@@ -673,7 +712,8 @@ const internalUsers = [
     "jobTitle": "Deputy manager",
     "emailAddress": "daniel.bloggs@orgmail.com",
     "telephoneNumber": "07899674534",
-    "userType": "Basic role"
+    "userType": "Basic role",
+    "userStatus": "Active"
   }, {
     "username": "manuelturizo",
     "title": "Mr",
@@ -683,7 +723,8 @@ const internalUsers = [
     "jobTitle": "Systems Analyst",
     "emailAddress": "manuel.turizo@orgmail.com",
     "telephoneNumber": "07118352353",
-    "userType": "Internal admin"
+    "userType": "Internal admin",
+    "userStatus": "Active"
   }, {
     "username": "russeltaylor",
     "title": "Mr",
@@ -691,9 +732,11 @@ const internalUsers = [
     "middleName": "",
     "lastName": "Taylor",
     "jobTitle": "Supervisor",
+    "userStatus": "Active",
     "emailAddress": "russel.taylor@orgmail.com",
     "telephoneNumber": "07187774333",
-    "userType": "Standard role"
+    "userType": "Standard role",
+    "userStatus": "Active"
   }, {
     "username": "bruceleroy",
     "title": "Mr",
@@ -703,7 +746,8 @@ const internalUsers = [
     "jobTitle": "Systems Analyst",
     "emailAddress": "bruce.reloy@orgmail.com",
     "telephoneNumber": "07118352353",
-    "userType": "Internal admin"
+    "userType": "Internal admin",
+    "userStatus": "Active"
   }, {
     "username": "rauwalejandro",
     "title": "Mr",
@@ -713,7 +757,8 @@ const internalUsers = [
     "jobTitle": "Systems Analyst",
     "emailAddress": "rauw.alejandro@orgmail.com",
     "telephoneNumber": "07118352353",
-    "userType": "Internal admin"
+    "userType": "Internal admin",
+    "userStatus": "Active"
   }, {
     "username": "leonidascarpenter",
     "title": "Mr",
@@ -723,7 +768,8 @@ const internalUsers = [
     "jobTitle": "Systems Analyst",
     "emailAddress": "leonidas.carpenter@orgmail.com",
     "telephoneNumber": "07118352353",
-    "userType": "Internal admin"
+    "userType": "Internal admin",
+    "userStatus": "Inactive"
   }, {
     "username": "Loukang",
     "title": "Mr",
@@ -733,7 +779,8 @@ const internalUsers = [
     "jobTitle": "Systems Analyst",
     "emailAddress": "Lou.kang@orgmail.com",
     "telephoneNumber": "07118352353",
-    "userType": "Internal admin"
+    "userType": "Internal admin",
+    "userStatus": "Active"
   }, {
     "username": "lorainejanekelly",
     "title": "Ms",
@@ -741,6 +788,7 @@ const internalUsers = [
     "middleName": "Jane",
     "lastName": "Kelly",
     "jobTitle": "Quality Assurance",
+    "userStatus": "Active",
     "emailAddress": "loraine.kelly@orgmail.com",
     "telephoneNumber": "07111222333",
     "userType": "Advanced role"
@@ -753,7 +801,8 @@ const internalUsers = [
     "jobTitle": "Marketing Manager",
     "emailAddress": "andrew.johnstone@orgmail.com",
     "telephoneNumber": "07105523433",
-    "userType": "Internal admin"
+    "userType": "Internal admin",
+    "userStatus": "Active"
   }, {
     "username": "jaliyahjames",
     "title": "Ms",
@@ -763,7 +812,8 @@ const internalUsers = [
     "jobTitle": "Mechanical Engineer",
     "emailAddress": "jaliyah.james@orgmail.com",
     "telephoneNumber": "07990352333",
-    "userType": "Internal admin"
+    "userType": "Internal admin",
+    "userStatus": "Active"
   }, {
     "username": "wilsonday",
     "title": "Mr",
@@ -773,7 +823,8 @@ const internalUsers = [
     "jobTitle": "IT Manager",
     "emailAddress": "wilson.day@orgmail.com",
     "telephoneNumber": "07222352333",
-    "userType": "Internal admin"
+    "userType": "Internal admin",
+    "userStatus": "Active"
   }, {
     "username": "zionmcmillan",
     "title": "Mr",
@@ -783,7 +834,8 @@ const internalUsers = [
     "jobTitle": "Systems Analyst",
     "emailAddress": "zion.mcmillan@orgmail.com",
     "telephoneNumber": "07166352333",
-    "userType": "Internal admin"
+    "userType": "Internal admin",
+    "userStatus": "Active"
   }, {
     "username": "titusanthony",
     "title": "Mr",
@@ -793,7 +845,8 @@ const internalUsers = [
     "jobTitle": "Systems Analyst",
     "emailAddress": "titus.anthony@orgmail.com",
     "telephoneNumber": "07234352333",
-    "userType": "Internal admin"
+    "userType": "Internal admin",
+    "userStatus": "Active"
   }, {
     "username": "zachariahbarr",
     "title": "Mr",
@@ -803,7 +856,8 @@ const internalUsers = [
     "jobTitle": "Systems Analyst",
     "emailAddress": "zachariah.barr@orgmail.com",
     "telephoneNumber": "07118352353",
-    "userType": "Internal admin"
+    "userType": "Internal admin",
+    "userStatus": "Inactive"
   }, {
     "username": "antwangaines",
     "title": "Mr",
@@ -813,7 +867,8 @@ const internalUsers = [
     "jobTitle": "Systems Analyst",
     "emailAddress": "antwan.gaines@orgmail.com",
     "telephoneNumber": "07118352353",
-    "userType": "Internal admin"
+    "userType": "Internal admin",
+    "userStatus": "Active"
   }, {
     "username": "trinitymelton",
     "title": "Mr",
@@ -823,7 +878,8 @@ const internalUsers = [
     "jobTitle": "Systems Analyst",
     "emailAddress": "trinity.melton@orgmail.com",
     "telephoneNumber": "07118352353",
-    "userType": "Internal admin"
+    "userType": "Internal admin",
+    "userStatus": "Active"
   }, {
     "username": "henrynovak",
     "title": "Mr",
@@ -833,7 +889,8 @@ const internalUsers = [
     "jobTitle": "Systems Analyst",
     "emailAddress": "henry.novak@orgmail.com",
     "telephoneNumber": "07118352353",
-    "userType": "Internal admin"
+    "userType": "Internal admin",
+    "userStatus": "Active"
   }
 ];
 
@@ -843,11 +900,12 @@ if (pageUrlPath === '/internal/v01-1/internal-users/'){
     if (document.getElementById('intUsers')) {
       document.getElementById('intUsers').innerHTML += `
         <tr class="govuk-table__row">
-          <td scope="row" class="govuk-table__header">` + internalUsers[i].username + `</td>
+          <td scope="row" class="govuk-table__header">` + internalUsers[i].emailAddress + `</td>
+          <td class="govuk-table__cell">` + internalUsers[i].username + `</td>
           <td class="govuk-table__cell">` + internalUsers[i].firstName + `</td>
           <td class="govuk-table__cell">` + internalUsers[i].lastName + `</td>
-          <td class="govuk-table__cell">` + internalUsers[i].emailAddress + `</td>
-          <td class="govuk-table__cell">` + internalUsers[i].userType + `</td>
+          <!-- <td class="govuk-table__cell">` + internalUsers[i].userType + `</td> -->
+          <td class="govuk-table__cell">` + internalUsers[i].userStatus + `</td>
           <td class="govuk-table__cell">
             <a  class="govuk-link" 
                 href="view-internal-details" 
@@ -860,6 +918,7 @@ if (pageUrlPath === '/internal/v01-1/internal-users/'){
                   '` + internalUsers[i].emailAddress + `',
                   '` + internalUsers[i].telephoneNumber + `',
                   '` + internalUsers[i].userType + `',
+                  '` + internalUsers[i].userStatus + `',
                   '` + internalUsers[i].jobTitle + `'
                 )">View
             </a>

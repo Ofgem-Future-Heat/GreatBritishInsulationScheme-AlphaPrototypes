@@ -1,7 +1,7 @@
 {% extends "layouts/internal-main.html" %}
 
 {% block pageTitle %}
-    Create a new account
+  Add a new supplier account
 {% endblock %}
 
 {% block content %}
@@ -13,7 +13,7 @@
     <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
           <h1 class="govuk-fieldset__heading">
-            Create a new supplier account
+            Add a new supplier account
           </h1>
         </legend>
 
@@ -25,16 +25,31 @@
           <input class="govuk-input govuk-!-width-full" id="supplierName" name="supplierName" type="text" autocomplete="supplierName">
         </div>
 
-        <!-- Licence number number-->
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="supplierLicenceNumber">
-            Supplier licence number
-          </label>
-          <input class="govuk-input govuk-!-width-full" id="supplierLicenceNumber" name="supplierLicenceNumber" type="text" autocomplete="supplierLicenceNumber">
+        <!-- Licence number number -->
+        <div class="govuk-grid-row">
+          <div class="govuk-form-group">
+            <div class="govuk-grid-column-one-half">
+              <label class="govuk-label" for="supplierLicenceNumber">
+                Supplier licence number
+              </label>
+              <input class="govuk-input govuk-!-width-full" id="supplierLicenceNumber" name="supplierLicenceNumber" type="text" autocomplete="supplierLicenceNumber" value="03653277">
+            </div>
+            <div class="govuk-grid-column-one-half">
+              <label class="govuk-label" for="licence-id">
+                Supplier licence reference
+              </label>
+              <select class="govuk-select govuk-!-width-full" id="licence-id" name="licence-id">
+                <option value="" disabled hidden>Select a licence reference</option>
+                <option value="NPW03782443G">NPW03782443G</option>
+                <option value="NPW02999919G" selected>NPW02999919G</option>
+              </select>
+            </div>
+          </div>
         </div>
-
+        
         <div id="additionalLicenceNumbers" class="additional-licence-numbers"></div>
         
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" />
         <button class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="addAnotherSupplierLicence()">
           Add another supplier licence number
         </button>
