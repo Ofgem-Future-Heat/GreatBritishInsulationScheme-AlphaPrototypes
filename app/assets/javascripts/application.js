@@ -632,16 +632,16 @@ if (pageUrlPath === '/internal/v01-1/external-users/'){
             <a  class="govuk-link" 
                 href="view-external-details" 
                 onclick="viewExternalUserDetails(
-                  '` + externalUsers[i].emailAddress + `',
                   '` + externalUsers[i].username + `',
                   '` + externalUsers[i].title + `',
                   '` + externalUsers[i].firstName + `',
                   '` + externalUsers[i].middleName + `',
                   '` + externalUsers[i].lastName + `',
+                  '` + externalUsers[i].emailAddress + `',
                   '` + externalUsers[i].telephoneNumber + `',
                   '` + externalUsers[i].supplierName + `',
-                  '` + externalUsers[i].userType + `',
                   '` + externalUsers[i].userStatus + `',
+                  '` + externalUsers[i].userType + `',
                   '` + externalUsers[i].jobTitle + `'
                 )">View
             </a>
@@ -661,7 +661,8 @@ function viewExternalUserDetails(
     lastName, 
     emailAddress, 
     telephoneNumber, 
-    supplierName, 
+    supplierName,
+    userStatus,
     userType, 
     jobTitle) {
   localStorage.setItem('ext_username', username);
@@ -672,6 +673,7 @@ function viewExternalUserDetails(
   localStorage.setItem('ext_emailAddress', emailAddress);
   localStorage.setItem('ext_telephoneNumber', telephoneNumber);
   localStorage.setItem('ext_supplierName', supplierName);
+  localStorage.setItem('ext_userStatus', userStatus);
   localStorage.setItem('ext_userType', userType);
   localStorage.setItem('ext_jobTitle', jobTitle);
 }
@@ -686,6 +688,7 @@ if (pageUrlPath === '/internal/v01-1/external-users/view-external-details') {
   document.getElementById('emailAddress').innerText = localStorage.getItem('ext_emailAddress');
   document.getElementById('telephoneNumber').innerText = localStorage.getItem('ext_telephoneNumber');
   document.getElementById('supplierName').innerText = localStorage.getItem('ext_supplierName');
+  document.getElementById('userType').innerText = localStorage.getItem('ext_userStatus');
   document.getElementById('userType').innerText = localStorage.getItem('ext_userType');
   document.getElementById('jobTitle').innerText = localStorage.getItem('ext_jobTitle');
 }
