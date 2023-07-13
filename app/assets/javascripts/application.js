@@ -622,10 +622,10 @@ if (pageUrlPath === '/internal/v01-1/external-users/'){
     if (document.getElementById('extUsers')) {
       document.getElementById('extUsers').innerHTML += `
         <tr class="govuk-table__row">
-          <td scope="row" class="govuk-table__header">` + externalUsers[i].emailAddress + `</td>
+          <td class="govuk-table__cell">` + externalUsers[i].supplierName + `</td>
           <td class="govuk-table__cell">` + externalUsers[i].firstName + `</td>
           <td class="govuk-table__cell">` + externalUsers[i].lastName + `</td>
-          <td class="govuk-table__cell">` + externalUsers[i].supplierName + `</td>
+          <td scope="row" class="govuk-table__header">` + externalUsers[i].emailAddress + `</td>
           <!-- <td class="govuk-table__cell">` + externalUsers[i].userType + `</td> -->
           <td class="govuk-table__cell">` + externalUsers[i].userStatus + `</td>
           <td class="govuk-table__cell">
@@ -654,7 +654,7 @@ if (pageUrlPath === '/internal/v01-1/external-users/'){
 
 // Get External user details
 function viewExternalUserDetails(
-    username, 
+    // username, 
     title, 
     firstName, 
     middleName, 
@@ -665,7 +665,7 @@ function viewExternalUserDetails(
     userStatus,
     userType, 
     jobTitle) {
-  localStorage.setItem('ext_username', username);
+  // localStorage.setItem('ext_username', username);
   localStorage.setItem('ext_title', title);
   localStorage.setItem('ext_firstName', firstName);
   localStorage.setItem('ext_middleName', middleName);
@@ -680,7 +680,7 @@ function viewExternalUserDetails(
 
 // Set External user details
 if (pageUrlPath === '/internal/v01-1/external-users/view-external-details') {
-  document.getElementById('username').innerText = localStorage.getItem('ext_username');
+  // document.getElementById('username').innerText = localStorage.getItem('ext_username');
   document.getElementById('title').innerText = localStorage.getItem('ext_title');
   document.getElementById('firstName').innerText = localStorage.getItem('ext_firstName');
   document.getElementById('middleName').innerText = localStorage.getItem('ext_middleName');
