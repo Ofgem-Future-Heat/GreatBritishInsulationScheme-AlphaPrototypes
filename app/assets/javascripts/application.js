@@ -622,10 +622,10 @@ if (pageUrlPath === '/internal/v01-1/external-users/'){
     if (document.getElementById('extUsers')) {
       document.getElementById('extUsers').innerHTML += `
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">` + externalUsers[i].supplierName + `</td>
+          <td scope="row" class="govuk-table__header">` + externalUsers[i].supplierName + `</td>
           <td class="govuk-table__cell">` + externalUsers[i].firstName + `</td>
           <td class="govuk-table__cell">` + externalUsers[i].lastName + `</td>
-          <td scope="row" class="govuk-table__header">` + externalUsers[i].emailAddress + `</td>
+          <td class="govuk-table__cell">` + externalUsers[i].emailAddress + `</td>
           <!-- <td class="govuk-table__cell">` + externalUsers[i].userType + `</td> -->
           <td class="govuk-table__cell">` + externalUsers[i].userStatus + `</td>
           <td class="govuk-table__cell">
