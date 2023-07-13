@@ -622,10 +622,10 @@ if (pageUrlPath === '/internal/v01-1/external-users/'){
     if (document.getElementById('extUsers')) {
       document.getElementById('extUsers').innerHTML += `
         <tr class="govuk-table__row">
-          <td scope="row" class="govuk-table__header">` + externalUsers[i].supplierName + `</td>
+          <td class="govuk-table__cell">` + externalUsers[i].supplierName + `</td>
           <td class="govuk-table__cell">` + externalUsers[i].firstName + `</td>
           <td class="govuk-table__cell">` + externalUsers[i].lastName + `</td>
-          <td class="govuk-table__cell">` + externalUsers[i].emailAddress + `</td>
+          <td scope="row" class="govuk-table__header">` + externalUsers[i].emailAddress + `</td>
           <!-- <td class="govuk-table__cell">` + externalUsers[i].userType + `</td> -->
           <td class="govuk-table__cell">` + externalUsers[i].userStatus + `</td>
           <td class="govuk-table__cell">
@@ -654,7 +654,7 @@ if (pageUrlPath === '/internal/v01-1/external-users/'){
 
 // Get External user details
 function viewExternalUserDetails(
-    // username, 
+    username, 
     title, 
     firstName, 
     middleName, 
@@ -665,7 +665,7 @@ function viewExternalUserDetails(
     userStatus,
     userType, 
     jobTitle) {
-  // localStorage.setItem('ext_username', username);
+  localStorage.setItem('ext_username', username);
   localStorage.setItem('ext_title', title);
   localStorage.setItem('ext_firstName', firstName);
   localStorage.setItem('ext_middleName', middleName);
@@ -681,16 +681,16 @@ function viewExternalUserDetails(
 // Set External user details
 if (pageUrlPath === '/internal/v01-1/external-users/view-external-details') {
   // document.getElementById('username').innerText = localStorage.getItem('ext_username');
-  document.getElementById('title').innerText = localStorage.getItem('ext_title');
+  // document.getElementById('title').innerText = localStorage.getItem('ext_title');
   document.getElementById('firstName').innerText = localStorage.getItem('ext_firstName');
-  document.getElementById('middleName').innerText = localStorage.getItem('ext_middleName');
+  // document.getElementById('middleName').innerText = localStorage.getItem('ext_middleName');
   document.getElementById('lastName').innerText = localStorage.getItem('ext_lastName');
   document.getElementById('emailAddress').innerText = localStorage.getItem('ext_emailAddress');
-  document.getElementById('telephoneNumber').innerText = localStorage.getItem('ext_telephoneNumber');
+  // document.getElementById('telephoneNumber').innerText = localStorage.getItem('ext_telephoneNumber');
   document.getElementById('supplierName').innerText = localStorage.getItem('ext_supplierName');
   document.getElementById('userType').innerText = localStorage.getItem('ext_userStatus');
   document.getElementById('userType').innerText = localStorage.getItem('ext_userType');
-  document.getElementById('jobTitle').innerText = localStorage.getItem('ext_jobTitle');
+  // document.getElementById('jobTitle').innerText = localStorage.getItem('ext_jobTitle');
 }
 
 // Switch changePasswordAtNextLogon
