@@ -1,0 +1,84 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+    Sign-in to the {{serviceName}} service
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+    <h1 class="govuk-heading-xl">
+        Sign-in to the {{serviceName}} service
+    </h1>
+
+    <p class="govuk-body">Your account manager would have provided you with your account details consisting of:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>username (this will be your email address)</li>
+      <li>password</li>
+    </ul>
+
+    <form action="../home-su" method="post" novalidate>
+      <!-- Username -->
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="username">
+          Username
+        </label>
+        <div id="username-hint" class="govuk-hint">
+          For example, yourname@your-organisation.com
+        </div>
+        <input class="govuk-input govuk-!-width-three-quarters" id="username" name="username" type="text" aria-describedby="username-hint">
+      </div>
+
+      <!-- Password -->
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="password">
+          Password
+        </label>
+        <input class="govuk-input govuk-!-width-three-quarters" id="password" name="password" type="password">
+        <p class="govuk-body"><a href="forgotten-password">Forgotten password</a></p>
+      </div>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Sign in
+        </button>
+      </div>
+    </form>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <!-- If you do not have an account -->
+    <h2 class="govuk-heading-m">If you do not have an account</h2>
+    <p>All users must request for an account to be created before they can access the service.</p>
+
+    <h3 class="govuk-heading-s">Requesting for a standard account</h3>
+    <p>If you're not a an authorised supplier user, you will need to request an account to be created on your behalf by an authorised supplier user.</p>
+    
+    <h3 class="govuk-heading-s">Requesting for an authorised user account</h3>
+    <p>If you are an authorised supplier user, you will need to request an account to be created by downloading the <a href="#">authorised user account form (PDF, 2MB)</a>. You will beed to complete and return the form to <a href="mailto:superuser.request@ofgem.gov.uk">superuser.request@ofgem.gov.uk</a>.</p>
+
+    <!-- <div class="govuk-form-group">
+      <label class="govuk-label" for="one-half">
+        One-half width
+      </label>
+      <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text">
+    </div> -->
+
+    <!--
+    <p>Show the following:</p>
+    <ul>
+        <li>username (or email address) label and input box</li>
+        <li>password label and input box</li>
+        <li>link for 'forgotten password'</li>
+        <li>Link to 'create an account' if user does not yet have an account</li>
+    </ul>
+    -->
+
+  </div>
+</div>
+
+{% endblock %}

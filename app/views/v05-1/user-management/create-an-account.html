@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   Creation an account
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+        Creation an account
+    </h1>
+
+    <p class="govuk-body">As a authorised account holder, you can create accounts for other members of your organisation.</p>
+
+    <p class="govuk-body">Complete the form below once you have receive a request for an account from your colleagues. They will have limited access areas of this service. They will opnly be able to uplaod Measures, view existing Measures and view errors in existing Measures.</p>
+
+    <!-- User account form cretion here -->
+    <form action="create-an-account-confirmation" method="post" novalidate>
+        <!-- First name -->
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--m" for="first-name">
+            First name
+          </label>
+          <input class="govuk-input govuk-!-width-three-quarters" id="first-name" name="first-name" type="text" aria-describedby="first-name-hint">
+        </div>
+
+        <!-- Surname -->
+        <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="Surname">
+                Surname
+            </label>
+            <input class="govuk-input govuk-!-width-three-quarters" id="Surname" name="Surname" type="text" aria-describedby="Surname-hint">
+        </div>
+
+        <!-- Email address -->
+        <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="email-address">
+                Email address
+            </label>
+            <div id="email-address-hint" class="govuk-hint">
+                For example, yourname@your-organisation.com
+            </div>
+            <input class="govuk-input govuk-!-width-three-quarters" id="email-address" name="email-address" type="text" aria-describedby="email-address-hint">
+        </div>
+
+        <p>Etc. (other required form fields)</p>
+  
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Create account
+          </button>
+        </div>
+      </form>
+    
+    
+  </div>
+</div>
+
+{% endblock %}

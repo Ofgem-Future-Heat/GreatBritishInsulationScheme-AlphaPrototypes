@@ -61,7 +61,7 @@ function triggerValidation21(el) {
     window.location.pathname = "/v02-1/measures/success-file-upload-no-core-check-errors";
   }
 }
-
+let filename = "";
 function fileSelection() {
   
   if(document.getElementById("file-upload").value != "") {
@@ -69,7 +69,8 @@ function fileSelection() {
     document.getElementById("uploadBtn").removeAttribute("disabled");
     document.getElementById("uploadBtn").classList.remove('govuk-button--disabled');
     document.getElementById("uploadBtn").setAttribute('aria-disabled', false);
-    console.log('file selected');
+    filename = document.getElementById("file-upload").value;
+    console.log('file selected', filename);
   }
 }
 
@@ -88,6 +89,24 @@ function triggerValidation23(el) {
 
 function triggerValidation41() {
     window.location.pathname = "/v04-1/measures/success-file-upload-core-check-errors";
+}
+
+function triggerMrnFileValidation() {
+  // return console.log('file type', filename.split('.').pop());
+
+  if (filename.split('.').pop() === 'csv') {
+    console.log('show valid file upload confirmation');
+    document.getElementById('measureReferenceFile').classList.add('govuk-form-group--success');
+    document.getElementById('measureReferenceFile').classList.remove('govuk-form-group--error');
+    document.getElementById('validFileUploaded').classList.remove('hide');
+    document.getElementById('invalidFileUploaded').classList.add('hide');
+  } else {
+    console.log('show ERROR or invalid file upload confirmation');
+    document.getElementById('measureReferenceFile').classList.add('govuk-form-group--error');
+    document.getElementById('measureReferenceFile').classList.remove('govuk-form-group--success');
+    document.getElementById('invalidFileUploaded').classList.remove('hide');
+    document.getElementById('validFileUploaded').classList.add('hide');
+  }
 }
 
 
@@ -1204,4 +1223,275 @@ function addAnotherSupplierLicence() {
 function removeSupplierLicenceNumber(id) {
   const element = document.getElementById("licenceNumber"+id);
   element.remove();
+}
+
+// if (pageUrlPath === "/v05-1/measures/search-measures") {
+  let options = [];
+  let select = '';
+  let checkboxOptions = [];
+  let statusSelect = document.getElementById("measure-status");
+  let typeSelect = document.getElementById("measure-type");
+  let measureStatusOptions = document.getElementById("cboxesMeasureStatus");
+  let measureTypeOptions = document.getElementById("cboxesMeasureType");
+  let notificationOptions = document.getElementById("cboxesNotificationPeriod");
+  let actionSelect = document.getElementById("action");
+  
+  if (measureStatusOptions) {
+    // select = statusSelect;
+    cbDiv = measureStatusOptions;
+    checkboxOptions = [
+      "Failed Notification",
+      "Notified Incomplete",
+      "Measure Awaiting Verification",
+      "Notified Pending ",
+      "On Hold",
+      "Being Assessed",
+      "With Supplier",
+      "Internal Query",
+      "Approved",
+      "Rejected"
+    ];
+    // buildSelectOptions(options, select);
+    buildCheckboxes(checkboxOptions, cbDiv);
+  }
+  
+  if (measureTypeOptions) {
+    // select = typeSelect;
+    cbDiv = measureTypeOptions;
+    checkboxOptions = [
+      "CWI_0.027",
+      "CWI_0.033",
+      "CWI_0.040",
+      "CWI_partial_fill",
+      "PWI_Cavity",
+      "EWI_cavity_0.45_0.21",
+      "EWI_cavity_0.6_0.24",
+      "EWI_cavity_0.6_0.3",
+      "EWI_cavity_1.0_0.3",
+      "EWI_cavity_1.0_0.45",
+      "EWI_cavity_1.0_0.6",
+      "EWI_cavity_1.7_0.23",
+      "EWI_cavity_1.7_0.3",
+      "EWI_cavity_1.7_0.55",
+      "EWI_cavity_1.7_0.6",
+      "EWI_cavity_2.0_0.25",
+      "EWI_cavity_2.0_0.3",
+      "EWI_cavity_2.0_0.35",
+      "EWI_cavity_2.0_0.6",
+      "EWI_solid_0.45_0.21",
+      "EWI_solid_0.6_0.24",
+      "EWI_solid_0.6_0.3",
+      "EWI_solid_1.0_0.3",
+      "EWI_solid_1.0_0.45",
+      "EWI_solid_1.0_0.6",
+      "EWI_solid_1.7_0.23",
+      "EWI_solid_1.7_0.3",
+      "EWI_solid_1.7_0.55",
+      "EWI_solid_1.7_0.6",
+      "EWI_solid_2.0_0.25",
+      "EWI_solid_2.0_0.3",
+      "EWI_solid_2.0_0.35",
+      "EWI_solid_2.0_0.6",
+      "HWI_cavity_0.45_0.21",
+      "HWI_cavity_0.6_0.24",
+      "HWI_cavity_0.6_0.3",
+      "HWI_cavity_1.0_0.3",
+      "HWI_cavity_1.0_0.45",
+      "HWI_cavity_1.0_0.6",
+      "HWI_cavity_1.7_0.23",
+      "HWI_cavity_1.7_0.3",
+      "HWI_cavity_1.7_0.55",
+      "HWI_cavity_1.7_0.6",
+      "HWI_cavity_2.0_0.25",
+      "HWI_cavity_2.0_0.3",
+      "HWI_cavity_2.0_0.35",
+      "HWI_cavity_2.0_0.6",
+      "HWI_solid_0.45_0.21",
+      "HWI_solid_0.6_0.24",
+      "HWI_solid_0.6_0.3",
+      "HWI_solid_1.0_0.3",
+      "HWI_solid_1.0_0.45",
+      "HWI_solid_1.0_0.6",
+      "HWI_solid_1.7_0.23",
+      "HWI_solid_1.7_0.3",
+      "HWI_solid_1.7_0.55",
+      "HWI_solid_1.7_0.6",
+      "HWI_solid_2.0_0.25",
+      "HWI_solid_2.0_0.3",
+      "HWI_solid_2.0_0.35",
+      "HWI_solid_2.0_0.6",
+      "IWI_cavity_0.45_0.21",
+      "IWI_cavity_0.6_0.24",
+      "IWI_cavity_0.6_0.3",
+      "IWI_cavity_1.0_0.3",
+      "IWI_cavity_1.0_0.45",
+      "IWI_cavity_1.0_0.6",
+      "IWI_cavity_1.7_0.23",
+      "IWI_cavity_1.7_0.3",
+      "IWI_cavity_1.7_0.55",
+      "IWI_cavity_1.7_0.6",
+      "IWI_cavity_2.0_0.25",
+      "IWI_cavity_2.0_0.3",
+      "IWI_cavity_2.0_0.35",
+      "IWI_cavity_2.0_0.6",
+      "IWI_solid_0.45_0.21",
+      "IWI_solid_0.6_0.24",
+      "IWI_solid_0.6_0.3",
+      "IWI_solid_1.0_0.3",
+      "IWI_solid_1.0_0.45",
+      "IWI_solid_1.0_0.6",
+      "IWI_solid_1.7_0.23",
+      "IWI_solid_1.7_0.3",
+      "IWI_solid_1.7_0.55",
+      "IWI_solid_1.7_0.6",
+      "IWI_solid_2.0_0.25",
+      "IWI_solid_2.0_0.3",
+      "IWI_solid_2.0_0.35",
+      "IWI_solid_2.0_0.6",
+      "LI_greater100",
+      "LI_lessequal100",
+      "FRI",
+      "PHI",
+      "PRI",
+      "RIRI_res_in",
+      "RIRI_res_unin",
+      "SFI",
+      "UFI"
+    ];
+    // buildSelectOptions(options, select);
+    buildCheckboxes(checkboxOptions, cbDiv);
+  }
+  
+  if (actionSelect) {
+    select = actionSelect;
+    options = [
+      "Approved",
+      "Being Assessed",
+      "Internal Query",
+      "On Hold",
+      "Rejected",
+      "With Supplier",
+      "Notified Incomplete",
+      "Notified Pending Project",
+      "Measure Awaiting Verification",
+      "Notified Pending",
+      "Rejected - Admin",
+      "Rejected - In Practice",
+      "Choose Remediation Date",
+      "Installation Extension Awarded - Yes",
+      "Installation Extension Awarded - No",
+      "No Recommendation",
+      "Recommended Approval",
+      "Recommended Being Assessed",
+      "Recommended Internal Query",
+      "Recommended On Hold",
+      "Recommended Reject",
+      "Recommended With Supplier",
+      "Own",
+      "Disown",
+      "No Category ",
+      "Audit ",
+      "Duplicate ",
+      "Investigation - Fraud",
+      "Late Measure",
+      "Measure Change",
+      "Monitoring - Escalation",
+      "Monitoring Fail",
+      "Notification Error",
+      "Process Later",
+      "Rejection",
+      "Validating"
+    ];
+    buildSelectOptions(options, select);
+  }
+
+  if (notificationOptions) {
+    cbDiv = notificationOptions;
+    checkboxOptions = [
+      "April 2022",
+      "May 2022",
+      "June 2022",
+      "July 2022",
+      "August 2022",
+      "September 2022",
+      "October 2022",
+      "November 2022",
+      "December 2022",
+      "January 2023",
+      "February 2023",
+      "March 2023",
+      "April 2023",
+      "May 2023",
+      "June 2023",
+      "July 2023",
+      "August 2023",
+      "September 2023",
+      "October 2023",
+      "November 2023",
+      "December 2023",
+      "January 2024",
+      "February 2024",
+      "March 2024",
+      "April 2024",
+      "May 2024",
+      "June 2024",
+      "July 2024",
+      "August 2024",
+      "September 2024",
+      "October 2024",
+      "November 2024",
+      "December 2024",
+      "January 2025",
+      "February 2025",
+      "March 2025",
+      "April 2025",
+      "May 2025",
+      "June 2025",
+      "July 2025",
+      "August 2025",
+      "September 2025",
+      "October 2025",
+      "November 2025",
+      "December 2025",
+      "January 2026",
+      "February 2026",
+      "March 2026"
+    ];
+    buildCheckboxes(checkboxOptions, cbDiv);
+  }
+// }
+
+// Select with options
+function buildSelectOptions(options, select) {
+  for (let i = 0; i < options.length; i++) {
+      var opt = options[i];
+      var el = document.createElement("option");
+      el.textContent = opt;
+      el.value = opt;
+      select.appendChild(el);
+  }
+}
+
+// Checkboxes
+function buildCheckboxes(checkboxOptions, cbDiv) {
+  let cb = '';
+  let checkBox = '';
+  // console.log('checkboxOptions', checkboxOptions);
+  for (var i = 0; i < checkboxOptions.length; i++) {
+    checkBox = checkboxOptions[i];
+    cb += `
+      <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="` + checkBox + `" name="cboxes" type="checkbox" value="` + checkBox + `">
+          <label class="govuk-label govuk-checkboxes__label" for="` + checkBox + `">` + checkBox + `</label>
+      </div>
+    `;
+  }
+  cbDiv.innerHTML += cb;
+}
+
+function checkAllCboxes(source) {
+  let checkboxes = document.getElementsByName('cboxes');
+  for(let i = 0, n = checkboxes.length; i < n; i++) {
+    checkboxes[i].checked = source.checked;
+  }
 }

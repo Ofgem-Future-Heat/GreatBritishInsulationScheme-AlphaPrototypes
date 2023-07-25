@@ -1,0 +1,32 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+    Search measure
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Search measures</h1>
+
+        <p class="gov-body">You can search the completed measures to check:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>what status a measure is at in the service</li>
+            <li>if the measure uploaded is within the notification deadline</li>
+            <li>what errors are associated with a measure and for measures by error type</li>
+        </ul>
+
+        <p class="gov-body">On the following screens, set the appropriate filters and select the relevant options to search the existing measures.</p>
+
+        <!-- Continue -->
+        <div class="govuk-button-group">
+            <a href="/v05-2/measures/search-measures/measure-reference-number" class="govuk-button" data-module="govuk-button">Continue</a>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

@@ -140,7 +140,7 @@ input[type="file"] {
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;
-    margin: 0;
+    margin: 0 0 20px;
 
     svg {
         position: relative;
@@ -212,3 +212,27 @@ input[type="file"] {
 }
 
 .hide { display: none; }
+
+.govuk-form-group--success {
+    padding-left: 15px;
+    border-left: 5px solid #00703c;
+}
+.govuk-success-message {
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 1.1875rem;
+    line-height: 1.3157894737;
+    margin-top: 0;
+    margin-bottom: 15px;
+    clear: both;
+    color: #00703c;
+}
+.govuk-checkboxes {
+    margin: 0 0 10px;
+}
+
+.govuk-checkboxes__item {
+    margin-top: 10px;
+}

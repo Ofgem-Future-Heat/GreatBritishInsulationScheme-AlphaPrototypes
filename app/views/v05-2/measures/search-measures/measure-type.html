@@ -1,0 +1,67 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+    Search measure
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Search measures</h1>
+        <span class="govuk-caption-xl">3 of 5</span>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <form>
+                    
+                    <!-- Measure type -->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-type-hint">
+                            <legend class="govuk-fieldset__legend">
+                                <h2 class="govuk-heading-l">What is the measure type?</h2>
+                            </legend>
+
+                            <p class="gov-body">You must select at least one measure type option in order to continue to search the measures.</p>
+
+                            <!-- <label class="govuk-label" for="measure-type">
+                                <strong>Measure type</strong>
+                            </label>
+
+                            <select class="govuk-select govuk-!-width-full" id="measure-type" name="measure-type">
+                                <option value="" selected disabled hidden>Select a measure type</option>
+                            </select> -->
+
+                            <div id="submission-date-hint" class="govuk-hint">
+                                Select all relevant measure types. You can select more than one.
+                            </div>
+
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" type="checkbox" onclick="checkAllCboxes(this)">
+                                    <label class="govuk-label govuk-checkboxes__label" for="">Check all</label>
+                                </div>
+                            </div>
+
+                            <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+                            <div id="cboxesMeasureType" class="govuk-checkboxes" data-module="govuk-checkboxes"></div>
+                        </fieldset>
+                    </div>
+                    
+                    <!-- Continue -->
+                    <div class="govuk-button-group">
+                        <a href="/v05-2/measures/search-measures/submission-date" class="govuk-button" data-module="govuk-button">
+                            Continue
+                        </a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
