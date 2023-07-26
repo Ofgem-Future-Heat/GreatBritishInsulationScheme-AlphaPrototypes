@@ -1479,12 +1479,11 @@ function buildCheckboxes(checkboxOptions, cbDiv) {
   // console.log('checkboxOptions', checkboxOptions);
   for (var i = 0; i < checkboxOptions.length; i++) {
     checkBox = checkboxOptions[i];
-    cb += `
-      <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="` + checkBox + `" name="cboxes" type="checkbox" value="` + checkBox + `">
-          <label class="govuk-label govuk-checkboxes__label" for="` + checkBox + `">` + checkBox + `</label>
-      </div>
-    `;
+    cb +=
+    `<div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="` + checkBox + `" name="cboxes" type="checkbox" value="` + checkBox + `">
+        <label class="govuk-label govuk-checkboxes__label" for="` + checkBox + `">` + checkBox + `</label>
+    </div>`;
   }
   cbDiv.innerHTML += cb;
 }
@@ -1494,4 +1493,8 @@ function checkAllCboxes(source) {
   for(let i = 0, n = checkboxes.length; i < n; i++) {
     checkboxes[i].checked = source.checked;
   }
+}
+
+function deleteUser() {
+  console.log('delete this user');
 }

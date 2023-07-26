@@ -15,74 +15,32 @@
         <dl class="govuk-summary-list">
             <!-- Supplier name -->
             <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Supplier name
-                </dt>
+                <dt class="govuk-summary-list__key">Supplier name</dt>
                 <dd class="govuk-summary-list__value">
                     <span id="supplierName"></span>
                 </dd>
             </div>
 
-            <!-- Username -->
-            <!-- <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Username
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <span id="username"></span>
-                </dd>
-            </div> -->
-
             <!-- Name -->
             <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Name
-                </dt>
+                <dt class="govuk-summary-list__key">Name</dt>
                 <dd class="govuk-summary-list__value">
-                    <!-- <span id="title"></span>&nbsp; -->
                     <span id="firstName"></span>&nbsp;
-                    <!-- <span id="middleName"></span>&nbsp; -->
                     <span id="lastName"></span>
                 </dd>
             </div>
-
-            <!-- Job title -->
-            <!-- REMOVE -->
-            <!-- <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Job title
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <span id="jobTitle"></span>
-                </dd>
-            </div> -->
             
             <!-- Email address -->
             <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Email address
-                </dt>
+                <dt class="govuk-summary-list__key">Email address</dt>
                 <dd class="govuk-summary-list__value">
                     <span id="emailAddress"></span>
                 </dd>
             </div>
             
-            <!-- Telephone Number -->
-            <!-- REMOVE -->
-            <!-- <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Telephone Number
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <span id="telephoneNumber"></span>
-                </dd>
-            </div> -->
-            
             <!-- User type -->
             <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    User type
-                </dt>
+                <dt class="govuk-summary-list__key">User type</dt>
                 <dd class="govuk-summary-list__value">
                     <span id="userType"></span>
                 </dd>
@@ -90,41 +48,17 @@
             
             <!-- User status -->
             <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    User status
-                </dt>
+                <dt class="govuk-summary-list__key">User status</dt>
                 <dd class="govuk-summary-list__value">
                     <span id="userStatus">Active</span>
                 </dd>
             </div>
-            
-            <!-- Change password at next logon -->
-            <!-- THIS IS NO LONGER VALID -->
-            <!-- 
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Change password at next logon?
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <div class="govuk-button-group">
-                        <p class="password-reset-on-next-logon-text" id="changePasswordAtNextLogon">No</p>
-                        <button class="govuk-button govuk-button--secondary password-reset-on-next-logon-switch" data-module="govuk-button" onclick="changePasswordAtNextLogon()">
-                            Change
-                        </button>
-                    </div>
-                </dd>
-            </div> 
-            -->
         </dl>
 
         <div class="govuk-button-group">
-            <a href="edit-external-user" class="govuk-button" data-module="govuk-button">
-                Edit account
-            </a>
-            <button class="govuk-button govuk-button--warning" data-module="govuk-button">
-                Delete account
-            </button>
-            <!-- This is still valid -->
+            <a href="edit-external-user" class="govuk-button" data-module="govuk-button">Edit account</a>
+            <a href="confirm-delete-user" class="govuk-button govuk-button--warning" data-module="govuk-button">Delete user</a>
+            <!-- <button class="govuk-button govuk-button--warning" data-module="govuk-button" onclick="deleteUser()">Delete account</button> -->
         </div>
 
     </div>

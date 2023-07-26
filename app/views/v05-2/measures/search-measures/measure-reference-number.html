@@ -7,7 +7,7 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds">
         
         <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
         <h1 class="govuk-heading-xl">Search measures</h1>
@@ -50,7 +50,7 @@
                                 accept=".csv" 
                                 tabindex="-1"
                                 title="file-upload"
-                                onchange="fileSelection()"/>
+                                onchange="fileSelection()" />
                         
                         <p id="invalidFileUploaded" class="govuk-error-message hide"><span class="govuk-visually-hidden">Error:</span>The selected file is invalid</p>
                         <p id="validFileUploaded" class="govuk-success-message hide"><span class="govuk-visually-hidden"></span>File uploaded</p>
