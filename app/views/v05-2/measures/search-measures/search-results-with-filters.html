@@ -15,11 +15,260 @@
         
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-one-third">
-                Filters
+                <h2 class="govuk-heading-m">Filters</h2>
+
+                <!-- <form class="scrollable-div filters-section"> -->
+                <form class="">
+                    
+                    <!-- Measure reference number -->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint">
+                            <legend class="govuk-fieldset__legend">
+                                <h2 class="govuk-heading-s">What is the measure reference number?</h2>
+                            </legend>
+                            <!-- <div class="govuk-inset-text">
+                                You can either search with a single reference number below or upload a file containing a series of measure reference numbers using the file upload below.
+                            </div> -->
+                            <div class="govuk-form-group">
+                                <label class="govuk-label" for="measure-reference-number">
+                                    Measure reference number
+                                </label>
+                                <input class="govuk-input" id="measure-reference-number" name="measure-reference-number" type="text">
+                            </div>
+
+                            <div class="or-class"><p class="govuk-body">Or</div>
+                            
+                            <div id="measureReferenceFile" class="govuk-form-group">
+                                <span class="govuk-label" for="measure-reference-file">
+                                    Measure reference file
+                                </span>
+                                <label for="file-upload" class="custom-file-upload">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M11 14.9861C11 15.5384 11.4477 15.9861 12 15.9861C12.5523 15.9861 13 15.5384 13 14.9861V7.82831L16.2428 11.0711L17.657 9.65685L12.0001 4L6.34326 9.65685L7.75748 11.0711L11 7.82854V14.9861Z" fill="currentColor"/>
+                                        <path d="M4 14H6V18H18V14H20V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V14Z" fill="currentColor"/>
+                                    </svg> Choose file
+                                </label>
+                                <input  class="" 
+                                        id="file-upload" 
+                                        name="file-upload" 
+                                        type="file" 
+                                        accept=".csv" 
+                                        tabindex="-1"
+                                        title="file-upload"
+                                        onchange="fileSelection()"/>
+                                
+                                <p id="invalidFileUploaded" class="govuk-error-message hide"><span class="govuk-visually-hidden">Error:</span>The selected file is invalid</p>
+                                <p id="validFileUploaded" class="govuk-success-message hide"><span class="govuk-visually-hidden"></span>File uploaded</p>
+                                
+                                <button id="uploadBtn" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--secondary govuk-button--disabled margin0" class="govuk-button"  onclick="triggerMrnFileValidation()" type="button">Upload reference measure file</button>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Status -->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
+                            <legend class="govuk-fieldset__legend">
+                                <h2 class="govuk-heading-s">What is the measure status?</h2>
+                            </legend>
+
+                            <!-- <p class="gov-body">You must select at least one measure status option in order to continue to search the measures.</p> -->
+
+                            <div id="submission-date-hint" class="govuk-hint">
+                                Select all relevant measure statuses. You can select more than one.
+                            </div>
+
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" type="checkbox" onclick="checkAllCboxes(this)">
+                                    <label class="govuk-label govuk-checkboxes__label" for="">Check all</label>
+                                </div>
+                            </div>
+
+                            <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+                            <div id="cboxesMeasureStatus" class="govuk-checkboxes scrollable-div small" data-module="govuk-checkboxes"></div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Measure type -->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-type-hint">
+                            <legend class="govuk-fieldset__legend">
+                                <h2 class="govuk-heading-s">What is the measure type?</h2>
+                            </legend>
+
+                            <!-- <p class="gov-body">You must select at least one measure type option in order to continue to search the measures.</p> -->
+
+                            <div id="submission-date-hint" class="govuk-hint">
+                                Select all relevant measure types. You can select more than one.
+                            </div>
+
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" type="checkbox" onclick="checkAllCboxes(this)">
+                                    <label class="govuk-label govuk-checkboxes__label" for="">Check all</label>
+                                </div>
+                            </div>
+
+                            <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+                            <div id="cboxesMeasureType" class="govuk-checkboxes scrollable-div small" data-module="govuk-checkboxes"></div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Submission date -->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint">
+                            <legend class="govuk-fieldset__legend">
+                                <h2 class="govuk-heading-s">What is the submission date?</h2>
+                            </legend>
+
+                            <div id="submission-date-hint" class="govuk-hint">
+                                For example, 27 3 2007
+                            </div>
+
+                            <div class="govuk-date-input" id="submission-date">
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="submission-date-day">
+                                            Day
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="submission-date-day" name="submission-date-day" type="text" inputmode="numeric">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="submission-date-month">
+                                            Month
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="submission-date-month" name="submission-date-month" type="text" inputmode="numeric">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="submission-date-year">
+                                            Year
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="submission-date-year" name="submission-date-year" type="text" inputmode="numeric">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint">
+                            <legend class="govuk-fieldset__legend">
+                                <label class="govuk-heading-s">What is the notification period?</label>
+                            </legend>
+
+                            <div id="submission-date-hint" class="govuk-hint">
+                                Select all relevant notification periods. You can select more than one.
+                            </div>
+
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" type="checkbox" onclick="checkAllCboxes(this)">
+                                    <label class="govuk-label govuk-checkboxes__label" for="">Check all</label>
+                                </div>
+                            </div>
+
+                            <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+                            <div id="cboxesNotificationPeriod" class="govuk-checkboxes scrollable-div small" data-module="govuk-checkboxes"></div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Search -->
+                    <div class="govuk-button-group">
+                        <a href="search-results-with-filters" class="govuk-button" data-module="govuk-button">
+                            Search
+                        </a>
+                        <a class="govuk-link" href="/v05-1/measures/">Cancel</a>
+                    </div>
+
+                </form>
+
+
             </div>
 
             <div class="govuk-grid-column-two-thirds">
-                Results
+                <h2 class="govuk-heading-m">Results</h2>
+                <p class="govuk-body">Showing <strong><span id="resultsLength">1903</span></strong> measure<span id="singularPlural"></span>.</p>
+                <div id="resultItems">
+                    <!-- <div class="result-item">
+                        <dl class="govuk-summary-list govuk-summary-list--no-border">
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Measure Reference Number
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <a href="">#############</a>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Measure Type
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    #############
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Status
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    #############
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Submission date
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <p class="govuk-body">#############</p>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Notification Period
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <p class="govuk-body">#############</p>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Purpose of notification
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <p class="govuk-body">#############</p>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Supplier reference
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <p class="govuk-body">#############</p>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Address fields
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    <p class="govuk-body">#############</p>
+                                    <p class="govuk-body">#############</p>
+                                    <p class="govuk-body">#############</p>
+                                    <p class="govuk-body">#############</p>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div> -->
+                </div>
             </div>
         </div>
 

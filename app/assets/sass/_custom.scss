@@ -236,3 +236,21 @@ input[type="file"] {
 .govuk-checkboxes__item {
     margin-top: 10px;
 }
+
+.scrollable-div {
+    overflow-y: auto;
+    height: 400px;
+    &.small {
+        height: 200px;
+    }
+    &.filters-section {
+        height: 70vh;
+        min-height: 600px;
+        overflow-x: hidden;
+    }
+}
+
+.result-item {
+    border-bottom: 1px solid #b1b4b6;
+    margin-bottom: 30px;
+}

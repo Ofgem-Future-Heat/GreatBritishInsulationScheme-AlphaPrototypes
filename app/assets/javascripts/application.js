@@ -1489,12 +1489,161 @@ function buildCheckboxes(checkboxOptions, cbDiv) {
 }
 
 function checkAllCboxes(source) {
+  // console.log('source', source);
   let checkboxes = document.getElementsByName('cboxes');
   for(let i = 0, n = checkboxes.length; i < n; i++) {
     checkboxes[i].checked = source.checked;
   }
 }
 
+// function checkAllSTATUSCboxes(source) {
+//   let checkboxes = document.getElementsByName('cboxes');
+
+//   console.log('this', this.className);
+//   console.log('source', source);
+//   // if (source === checkboxes.parentElement.id) {
+//     for(let i = 0, n = checkboxes.length; i < n; i++) {
+//       console.log(checkboxes[i].className);
+//       checkboxes[i].checked = source.checked;
+//     }
+//   // }
+// }
+
 function deleteUser() {
   console.log('delete this user');
+}
+
+// #########################
+// REUSLT ITEMS
+// #########################
+
+let resultItems = document.getElementById("resultItems"); 
+let resultsLength = document.getElementById("resultsLength");
+let singularPlural = document.getElementById("singularPlural");
+let searchResults = [];
+// Result items array
+if (resultItems) {
+  searchResults = [
+    {
+      "measureReferenceNumber": "BGT7801767",
+      "measureType": "Solar_PV",
+      "measureStatus": "Notified Incomplete",
+      "submissionDate": "05/09/2022",
+      "notificationPeriod": "July 2022",
+      "purposeOfNotification": "New Notification",
+      "supplierReference": "?",
+      "addressFields": {
+        "addressLine1": "Address line 1?",
+        "addressLine2": "Address line 2?",
+        "addressLine3": "Address line 3?",
+        "postCode": "Post code",
+        "country": "Country?"
+      }
+    },
+    {
+      "measureReferenceNumber": "BGT1234567",
+      "measureType": "Solar_PV",
+      "measureStatus": "Notified Incomplete",
+      "submissionDate": "05/10/2022",
+      "notificationPeriod": "August 2022",
+      "purposeOfNotification": "New Notification",
+      "supplierReference": "?",
+      "addressFields": {
+        "addressLine1": "Address line 1?",
+        "addressLine2": "Address line 2?",
+        "addressLine3": "Address line 3?",
+        "postCode": "Post code",
+        "country": "Country?"
+      }
+    }
+  ];
+  resultItemsFunct(searchResults, resultItems);
+  resultsLength.innerHTML = searchResults.length;
+  if (singularPlural) searchResults.length > 1 ? singularPlural.innerHTML = "s" : singularPlural.innerHTML = "";
+}
+
+// resultItems lists
+function resultItemsFunct(searchResults) {
+  let result = '';
+  let searchResult = '';
+  // console.log('searchResults', searchResults);
+  for (var i = 0; i < searchResults.length; i++) {
+    searchResult = searchResults[i];
+    result +=
+    `
+    <div class="result-item">
+      <dl class="govuk-summary-list govuk-summary-list--no-border">
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Measure Reference Number
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  <a href="">`+ searchResults[i].measureReferenceNumber +`</a>
+              </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Measure Type
+              </dt>
+              <dd class="govuk-summary-list__value">
+              `+ searchResults[i].measureType +`
+              </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Status
+              </dt>
+              <dd class="govuk-summary-list__value">
+              `+ searchResults[i].measureStatus +`
+              </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Submission date
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">`+ searchResults[i].submissionDate +`</p>
+              </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Notification Period
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">`+ searchResults[i].notificationPeriod +`</p>
+              </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Purpose of notification
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">`+ searchResults[i].purposeOfNotification +`</p>
+              </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Supplier reference
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">`+ searchResults[i].supplierReference +`</p>
+              </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                  Address fields
+              </dt>
+              <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">`+ searchResults[i].addressFields.addressLine1 +`</p>
+                  <p class="govuk-body">`+ searchResults[i].addressFields.addressLine2 +`</p>
+                  <p class="govuk-body">`+ searchResults[i].addressFields.addressLine3 +`</p>
+                  <p class="govuk-body">`+ searchResults[i].addressFields.postCode +`</p>
+                  <p class="govuk-body">`+ searchResults[i].addressFields.country +`</p>
+              </dd>
+          </div>
+      </dl>
+    </div>
+    `;
+  }
+  resultItems.innerHTML += result;
 }
