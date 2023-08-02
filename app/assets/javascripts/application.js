@@ -1533,11 +1533,12 @@ if (resultItems) {
       "purposeOfNotification": "New Notification",
       "supplierReference": "?",
       "addressFields": {
-        "addressLine1": "Address line 1?",
-        "addressLine2": "Address line 2?",
-        "addressLine3": "Address line 3?",
-        "postCode": "Post code",
-        "country": "Country?"
+        "buildingNumber": "123",
+        "buildingName": "Mansion House",
+        "flatNameOrNumber": "Flat 3",
+        "streetName": "Any Street",
+        "town": "Thattown",
+        "postCode": "P05 TCD"
       }
     },
     {
@@ -1549,11 +1550,12 @@ if (resultItems) {
       "purposeOfNotification": "New Notification",
       "supplierReference": "?",
       "addressFields": {
-        "addressLine1": "Address line 1?",
-        "addressLine2": "Address line 2?",
-        "addressLine3": "Address line 3?",
-        "postCode": "Post code",
-        "country": "Country?"
+        "buildingNumber": "198",
+        "buildingName": "Blake House",
+        "flatNameOrNumber": "Flat 19",
+        "streetName": "Blake Mews",
+        "town": "Blakeland",
+        "postCode": "B1 4KE"
       }
     }
   ];
@@ -1631,14 +1633,15 @@ function resultItemsFunct(searchResults) {
           </div>
           <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                  Address fields
+                  Address
               </dt>
               <dd class="govuk-summary-list__value">
-                  <p class="govuk-body">`+ searchResults[i].addressFields.addressLine1 +`</p>
-                  <p class="govuk-body">`+ searchResults[i].addressFields.addressLine2 +`</p>
-                  <p class="govuk-body">`+ searchResults[i].addressFields.addressLine3 +`</p>
+                  <p class="govuk-body">`+ searchResults[i].addressFields.buildingNumber +`</p>
+                  <p class="govuk-body">`+ searchResults[i].addressFields.buildingName +`</p>
+                  <p class="govuk-body">`+ searchResults[i].addressFields.flatNameOrNumber +`</p>
+                  <p class="govuk-body">`+ searchResults[i].addressFields.streetName +`</p>
+                  <p class="govuk-body">`+ searchResults[i].addressFields.town +`</p>
                   <p class="govuk-body">`+ searchResults[i].addressFields.postCode +`</p>
-                  <p class="govuk-body">`+ searchResults[i].addressFields.country +`</p>
               </dd>
           </div>
       </dl>
