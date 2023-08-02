@@ -1517,48 +1517,65 @@ function deleteUser() {
 // REUSLT ITEMS
 // #########################
 
-let resultItems = document.getElementById("resultItems"); 
+let resultItems = document.getElementById("resultItems");
+let resultsList = document.getElementById("resultsList");
 let resultsLength = document.getElementById("resultsLength");
 let singularPlural = document.getElementById("singularPlural");
-let searchResults = [];
+const searchResults = [
+  {
+    "measureReferenceNumber": "BGT7801767",
+    "measureType": "Solar_PV",
+    "measureStatus": "Notified Incomplete",
+    "submissionDate": "05/09/2022",
+    "notificationPeriod": "July 2022",
+    "purposeOfNotification": "New Notification",
+    "supplierReference": "BGT05070887G",
+    "addressFields": {
+      "buildingNumber": "123",
+      "buildingName": "Mansion House",
+      "flatNameOrNumber": "Flat 3",
+      "streetName": "Any Street",
+      "town": "Thattown",
+      "postCode": "P05 TCD"
+    }
+  },
+  {
+    "measureReferenceNumber": "BGT1234567",
+    "measureType": "Solar_PV",
+    "measureStatus": "Notified Incomplete",
+    "submissionDate": "05/10/2022",
+    "notificationPeriod": "August 2022",
+    "purposeOfNotification": "New Notification",
+    "supplierReference": "BGT05070887E",
+    "addressFields": {
+      "buildingNumber": "198",
+      "buildingName": "Blake House",
+      "flatNameOrNumber": "Flat 19",
+      "streetName": "Blake Mews",
+      "town": "Blakeland",
+      "postCode": "B1 4KE"
+    }
+  },
+  {
+    "measureReferenceNumber": "BGT1234567",
+    "measureType": "Solar_PV",
+    "measureStatus": "Notified Incomplete",
+    "submissionDate": "05/09/2022",
+    "notificationPeriod": "July 2022",
+    "purposeOfNotification": "New Notification",
+    "supplierReference": "BGT05070887E",
+    "addressFields": {
+      "buildingNumber": "198",
+      "buildingName": "Canterbury Buildings",
+      "flatNameOrNumber": "91",
+      "streetName": "Hill Mews",
+      "town": "Hilltown",
+      "postCode": "H1 4TE"
+    }
+  }
+];
 // Result items array
 if (resultItems) {
-  searchResults = [
-    {
-      "measureReferenceNumber": "BGT7801767",
-      "measureType": "Solar_PV",
-      "measureStatus": "Notified Incomplete",
-      "submissionDate": "05/09/2022",
-      "notificationPeriod": "July 2022",
-      "purposeOfNotification": "New Notification",
-      "supplierReference": "?",
-      "addressFields": {
-        "buildingNumber": "123",
-        "buildingName": "Mansion House",
-        "flatNameOrNumber": "Flat 3",
-        "streetName": "Any Street",
-        "town": "Thattown",
-        "postCode": "P05 TCD"
-      }
-    },
-    {
-      "measureReferenceNumber": "BGT1234567",
-      "measureType": "Solar_PV",
-      "measureStatus": "Notified Incomplete",
-      "submissionDate": "05/10/2022",
-      "notificationPeriod": "August 2022",
-      "purposeOfNotification": "New Notification",
-      "supplierReference": "?",
-      "addressFields": {
-        "buildingNumber": "198",
-        "buildingName": "Blake House",
-        "flatNameOrNumber": "Flat 19",
-        "streetName": "Blake Mews",
-        "town": "Blakeland",
-        "postCode": "B1 4KE"
-      }
-    }
-  ];
   resultItemsFunct(searchResults, resultItems);
   resultsLength.innerHTML = searchResults.length;
   if (singularPlural) searchResults.length > 1 ? singularPlural.innerHTML = "s" : singularPlural.innerHTML = "";
@@ -1649,4 +1666,41 @@ function resultItemsFunct(searchResults) {
     `;
   }
   resultItems.innerHTML += result;
+}
+
+if (resultsList) {
+  resultsListFunct(searchResults, resultsList);
+  resultsLength.innerHTML = searchResults.length;
+  if (singularPlural) searchResults.length > 1 ? singularPlural.innerHTML = "s" : singularPlural.innerHTML = "";
+}
+// resultsList lists
+function resultsListFunct(searchResults) {
+  let result = '';
+  let searchResult = '';
+  for (var i = 0; i < searchResults.length; i++) {
+    searchResult = searchResults[i];
+    result +=
+    `
+    <tr>
+      <td>
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">                                
+          <div class="govuk-checkboxes__item">
+            <input  name="search-results"
+                    type="checkbox" 
+                    id="Id_SelectAll_InternalMeasuresGrid" 
+                    data-test-id="" 
+                    class="govuk-checkboxes__input">
+            <label for="" class="govuk-label govuk-checkboxes__label"></label>
+          </div>
+        </div>
+      </td>                    
+      <td><p class="govuk-body">` + searchResults[i].measureReferenceNumber + `</p></td>
+      <td><p class="govuk-body">` + searchResults[i].measureType + `</p></td>
+      <td><p class="govuk-body">` + searchResults[i].measureStatus + `</p></td>
+      <td><p class="govuk-body">` + searchResults[i].submissionDate + `</p></td>
+      <td><p class="govuk-body"><a href="#">View details</a></p></td>
+    </tr>
+    `;
+  }
+  resultsList.innerHTML += result;
 }
