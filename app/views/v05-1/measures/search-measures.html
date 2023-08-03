@@ -80,25 +80,28 @@
                     </div>
 
                     <!-- Status -->
-                    <!-- 
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
                             <legend class="govuk-fieldset__legend">
                                 <h2 class="govuk-heading-m">What is the measure status?</h2>
                             </legend>
+                            
+                            <div id="measure-status-hint" class="govuk-hint">
+                                You must select one or more items in the list.
+                            </div>
 
-                            <label class="govuk-label" for="measure-status">
+                            <!-- <label class="govuk-label" for="measure-status">
                                 measure status
-                            </label>
+                            </label> -->
 
-                            <select class="govuk-select govuk-!-width-full" id="measure-status" name="measure-status">
+                            <select class="govuk-select govuk-!-width-full" id="measure-status" name="measure-status" size="5" multiple="multiple">
                                 <option value="" selected disabled hidden>Select a measure status</option>
                             </select>
                         </fieldset>
                     </div>
-                    -->
+                   
                     
-                    <div class="govuk-form-group">
+                    <!-- <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
                             <legend class="govuk-fieldset__legend">
                                 <h2 class="govuk-heading-l">What is the measure status?</h2>
@@ -121,28 +124,30 @@
 
                             <div id="cboxesMeasureStatus" class="govuk-checkboxes scrollable-div" data-module="govuk-checkboxes"></div>
                         </fieldset>
-                    </div>
+                    </div> -->
 
                     <!-- Measure type -->
-                    
-                    <!--                     
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-type-hint">
                             <legend class="govuk-fieldset__legend">
                                 <h2 class="govuk-heading-m">What is the measure type?</h2>
                             </legend>
+                            
+                            <div id="measure-type-hint" class="govuk-hint">
+                                You can select one or more items in the list.
+                            </div>
 
-                            <label class="govuk-label" for="measure-type">
+                            <!-- <label class="govuk-label" for="measure-type">
                                 measure type
-                            </label>
+                            </label> -->
 
-                            <select class="govuk-select govuk-!-width-full" id="measure-type" name="measure-type">
+                            <select class="govuk-select govuk-!-width-full" id="measure-type" name="measure-type" size="5" multiple="multiple">
                                 <option value="" selected disabled hidden>Select a measure type</option>
                             </select>
                         </fieldset>
                     </div>
-                    -->
-                    
+                   
+                    <!-- 
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-type-hint">
                             <legend class="govuk-fieldset__legend">
@@ -150,14 +155,6 @@
                             </legend>
 
                             <p class="gov-body">You must select at least one measure type option in order to continue to search the measures.</p>
-
-                            <!-- <label class="govuk-label" for="measure-type">
-                                <strong>Measure type</strong>
-                            </label>
-
-                            <select class="govuk-select govuk-!-width-full" id="measure-type" name="measure-type">
-                                <option value="" selected disabled hidden>Select a measure type</option>
-                            </select> -->
 
                             <div id="submission-date-hint" class="govuk-hint">
                                 Select all relevant measure types. You can select more than one.
@@ -175,6 +172,7 @@
                             <div id="cboxesMeasureType" class="govuk-checkboxes scrollable-div" data-module="govuk-checkboxes"></div>
                         </fieldset>
                     </div>
+                    -->
 
                     <!-- Submission date -->
                     <div class="govuk-form-group">
@@ -217,6 +215,25 @@
                     </div>
 
                     <!-- Notification period -->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
+                            <legend class="govuk-fieldset__legend">
+                                <h2 class="govuk-heading-m">What is the measure status?</h2>
+                            </legend>
+                            
+                            <div id="measure-status-hint" class="govuk-hint">
+                                You can select one or more items in the list.
+                            </div>
+
+                            <!-- <label class="govuk-label" for="measure-status">
+                                measure status
+                            </label> -->
+
+                            <select class="govuk-select govuk-!-width-full" id="notification-period" name="notification-period" size="5" multiple="multiple">
+                                <option value="" selected disabled hidden>Select a notification period</option>
+                            </select>
+                        </fieldset>
+                    </div>
                     <!--
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint">
@@ -241,6 +258,8 @@
                         </fieldset>
                     </div>
                     -->
+                    
+                    <!--
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint">
                             <legend class="govuk-fieldset__legend">
@@ -263,13 +282,14 @@
                             <div id="cboxesNotificationPeriod" class="govuk-checkboxes scrollable-div" data-module="govuk-checkboxes"></div>
                         </fieldset>
                     </div>
+                    -->
 
                     <!-- Search -->
                     <div class="govuk-button-group">
                         <a href="./search-results" class="govuk-button" data-module="govuk-button">
-                            Search
+                            Update search
                         </a>
-                        <a class="govuk-link" href="/v05-1/measures/">Cancel</a>
+                        <!-- <a class="govuk-link" href="/v05-1/measures/">Cancel</a> -->
                     </div>
 
                 </form>

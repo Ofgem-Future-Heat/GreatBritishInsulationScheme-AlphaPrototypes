@@ -1231,183 +1231,156 @@ function removeSupplierLicenceNumber(id) {
   let checkboxOptions = [];
   let statusSelect = document.getElementById("measure-status");
   let typeSelect = document.getElementById("measure-type");
+  let notificationdSelect = document.getElementById("notification-period");
   let measureStatusOptions = document.getElementById("cboxesMeasureStatus");
   let measureTypeOptions = document.getElementById("cboxesMeasureType");
   let notificationOptions = document.getElementById("cboxesNotificationPeriod");
   let actionSelect = document.getElementById("action");
   
+  // StatusOptionsList
+  const measureStatusOptionsList = [
+    "Failed Notification",
+    "Notified Incomplete",
+    "Measure Awaiting Verification",
+    "Notified Pending ",
+    "On Hold",
+    "Being Assessed",
+    "With Supplier",
+    "Internal Query",
+    "Approved",
+    "Rejected"
+  ];
+
   if (measureStatusOptions) {
-    // select = statusSelect;
     cbDiv = measureStatusOptions;
-    checkboxOptions = [
-      "Failed Notification",
-      "Notified Incomplete",
-      "Measure Awaiting Verification",
-      "Notified Pending ",
-      "On Hold",
-      "Being Assessed",
-      "With Supplier",
-      "Internal Query",
-      "Approved",
-      "Rejected"
-    ];
-    // buildSelectOptions(options, select);
+    checkboxOptions = measureStatusOptionsList;
     buildCheckboxes(checkboxOptions, cbDiv);
   }
   
+  if (statusSelect) {
+    select = statusSelect;
+    options = measureStatusOptionsList;
+    buildSelectOptions(options, select);
+  }
+  
+
+  // TypeOptionsList
+  const measureTypeOptionsList = [
+    "CWI_0.027",
+    "CWI_0.033",
+    "CWI_0.040",
+    "CWI_partial_fill",
+    "PWI_Cavity",
+    "EWI_cavity_0.45_0.21",
+    "EWI_cavity_0.6_0.24",
+    "EWI_cavity_0.6_0.3",
+    "EWI_cavity_1.0_0.3",
+    "EWI_cavity_1.0_0.45",
+    "EWI_cavity_1.0_0.6",
+    "EWI_cavity_1.7_0.23",
+    "EWI_cavity_1.7_0.3",
+    "EWI_cavity_1.7_0.55",
+    "EWI_cavity_1.7_0.6",
+    "EWI_cavity_2.0_0.25",
+    "EWI_cavity_2.0_0.3",
+    "EWI_cavity_2.0_0.35",
+    "EWI_cavity_2.0_0.6",
+    "EWI_solid_0.45_0.21",
+    "EWI_solid_0.6_0.24",
+    "EWI_solid_0.6_0.3",
+    "EWI_solid_1.0_0.3",
+    "EWI_solid_1.0_0.45",
+    "EWI_solid_1.0_0.6",
+    "EWI_solid_1.7_0.23",
+    "EWI_solid_1.7_0.3",
+    "EWI_solid_1.7_0.55",
+    "EWI_solid_1.7_0.6",
+    "EWI_solid_2.0_0.25",
+    "EWI_solid_2.0_0.3",
+    "EWI_solid_2.0_0.35",
+    "EWI_solid_2.0_0.6",
+    "HWI_cavity_0.45_0.21",
+    "HWI_cavity_0.6_0.24",
+    "HWI_cavity_0.6_0.3",
+    "HWI_cavity_1.0_0.3",
+    "HWI_cavity_1.0_0.45",
+    "HWI_cavity_1.0_0.6",
+    "HWI_cavity_1.7_0.23",
+    "HWI_cavity_1.7_0.3",
+    "HWI_cavity_1.7_0.55",
+    "HWI_cavity_1.7_0.6",
+    "HWI_cavity_2.0_0.25",
+    "HWI_cavity_2.0_0.3",
+    "HWI_cavity_2.0_0.35",
+    "HWI_cavity_2.0_0.6",
+    "HWI_solid_0.45_0.21",
+    "HWI_solid_0.6_0.24",
+    "HWI_solid_0.6_0.3",
+    "HWI_solid_1.0_0.3",
+    "HWI_solid_1.0_0.45",
+    "HWI_solid_1.0_0.6",
+    "HWI_solid_1.7_0.23",
+    "HWI_solid_1.7_0.3",
+    "HWI_solid_1.7_0.55",
+    "HWI_solid_1.7_0.6",
+    "HWI_solid_2.0_0.25",
+    "HWI_solid_2.0_0.3",
+    "HWI_solid_2.0_0.35",
+    "HWI_solid_2.0_0.6",
+    "IWI_cavity_0.45_0.21",
+    "IWI_cavity_0.6_0.24",
+    "IWI_cavity_0.6_0.3",
+    "IWI_cavity_1.0_0.3",
+    "IWI_cavity_1.0_0.45",
+    "IWI_cavity_1.0_0.6",
+    "IWI_cavity_1.7_0.23",
+    "IWI_cavity_1.7_0.3",
+    "IWI_cavity_1.7_0.55",
+    "IWI_cavity_1.7_0.6",
+    "IWI_cavity_2.0_0.25",
+    "IWI_cavity_2.0_0.3",
+    "IWI_cavity_2.0_0.35",
+    "IWI_cavity_2.0_0.6",
+    "IWI_solid_0.45_0.21",
+    "IWI_solid_0.6_0.24",
+    "IWI_solid_0.6_0.3",
+    "IWI_solid_1.0_0.3",
+    "IWI_solid_1.0_0.45",
+    "IWI_solid_1.0_0.6",
+    "IWI_solid_1.7_0.23",
+    "IWI_solid_1.7_0.3",
+    "IWI_solid_1.7_0.55",
+    "IWI_solid_1.7_0.6",
+    "IWI_solid_2.0_0.25",
+    "IWI_solid_2.0_0.3",
+    "IWI_solid_2.0_0.35",
+    "IWI_solid_2.0_0.6",
+    "LI_greater100",
+    "LI_lessequal100",
+    "FRI",
+    "PHI",
+    "PRI",
+    "RIRI_res_in",
+    "RIRI_res_unin",
+    "SFI",
+    "UFI"
+  ];
+
   if (measureTypeOptions) {
-    // select = typeSelect;
     cbDiv = measureTypeOptions;
-    checkboxOptions = [
-      "CWI_0.027",
-      "CWI_0.033",
-      "CWI_0.040",
-      "CWI_partial_fill",
-      "PWI_Cavity",
-      "EWI_cavity_0.45_0.21",
-      "EWI_cavity_0.6_0.24",
-      "EWI_cavity_0.6_0.3",
-      "EWI_cavity_1.0_0.3",
-      "EWI_cavity_1.0_0.45",
-      "EWI_cavity_1.0_0.6",
-      "EWI_cavity_1.7_0.23",
-      "EWI_cavity_1.7_0.3",
-      "EWI_cavity_1.7_0.55",
-      "EWI_cavity_1.7_0.6",
-      "EWI_cavity_2.0_0.25",
-      "EWI_cavity_2.0_0.3",
-      "EWI_cavity_2.0_0.35",
-      "EWI_cavity_2.0_0.6",
-      "EWI_solid_0.45_0.21",
-      "EWI_solid_0.6_0.24",
-      "EWI_solid_0.6_0.3",
-      "EWI_solid_1.0_0.3",
-      "EWI_solid_1.0_0.45",
-      "EWI_solid_1.0_0.6",
-      "EWI_solid_1.7_0.23",
-      "EWI_solid_1.7_0.3",
-      "EWI_solid_1.7_0.55",
-      "EWI_solid_1.7_0.6",
-      "EWI_solid_2.0_0.25",
-      "EWI_solid_2.0_0.3",
-      "EWI_solid_2.0_0.35",
-      "EWI_solid_2.0_0.6",
-      "HWI_cavity_0.45_0.21",
-      "HWI_cavity_0.6_0.24",
-      "HWI_cavity_0.6_0.3",
-      "HWI_cavity_1.0_0.3",
-      "HWI_cavity_1.0_0.45",
-      "HWI_cavity_1.0_0.6",
-      "HWI_cavity_1.7_0.23",
-      "HWI_cavity_1.7_0.3",
-      "HWI_cavity_1.7_0.55",
-      "HWI_cavity_1.7_0.6",
-      "HWI_cavity_2.0_0.25",
-      "HWI_cavity_2.0_0.3",
-      "HWI_cavity_2.0_0.35",
-      "HWI_cavity_2.0_0.6",
-      "HWI_solid_0.45_0.21",
-      "HWI_solid_0.6_0.24",
-      "HWI_solid_0.6_0.3",
-      "HWI_solid_1.0_0.3",
-      "HWI_solid_1.0_0.45",
-      "HWI_solid_1.0_0.6",
-      "HWI_solid_1.7_0.23",
-      "HWI_solid_1.7_0.3",
-      "HWI_solid_1.7_0.55",
-      "HWI_solid_1.7_0.6",
-      "HWI_solid_2.0_0.25",
-      "HWI_solid_2.0_0.3",
-      "HWI_solid_2.0_0.35",
-      "HWI_solid_2.0_0.6",
-      "IWI_cavity_0.45_0.21",
-      "IWI_cavity_0.6_0.24",
-      "IWI_cavity_0.6_0.3",
-      "IWI_cavity_1.0_0.3",
-      "IWI_cavity_1.0_0.45",
-      "IWI_cavity_1.0_0.6",
-      "IWI_cavity_1.7_0.23",
-      "IWI_cavity_1.7_0.3",
-      "IWI_cavity_1.7_0.55",
-      "IWI_cavity_1.7_0.6",
-      "IWI_cavity_2.0_0.25",
-      "IWI_cavity_2.0_0.3",
-      "IWI_cavity_2.0_0.35",
-      "IWI_cavity_2.0_0.6",
-      "IWI_solid_0.45_0.21",
-      "IWI_solid_0.6_0.24",
-      "IWI_solid_0.6_0.3",
-      "IWI_solid_1.0_0.3",
-      "IWI_solid_1.0_0.45",
-      "IWI_solid_1.0_0.6",
-      "IWI_solid_1.7_0.23",
-      "IWI_solid_1.7_0.3",
-      "IWI_solid_1.7_0.55",
-      "IWI_solid_1.7_0.6",
-      "IWI_solid_2.0_0.25",
-      "IWI_solid_2.0_0.3",
-      "IWI_solid_2.0_0.35",
-      "IWI_solid_2.0_0.6",
-      "LI_greater100",
-      "LI_lessequal100",
-      "FRI",
-      "PHI",
-      "PRI",
-      "RIRI_res_in",
-      "RIRI_res_unin",
-      "SFI",
-      "UFI"
-    ];
-    // buildSelectOptions(options, select);
+    checkboxOptions = measureTypeOptionsList;
     buildCheckboxes(checkboxOptions, cbDiv);
   }
   
-  if (actionSelect) {
-    select = actionSelect;
-    options = [
-      "Approved",
-      "Being Assessed",
-      "Internal Query",
-      "On Hold",
-      "Rejected",
-      "With Supplier",
-      "Notified Incomplete",
-      "Notified Pending Project",
-      "Measure Awaiting Verification",
-      "Notified Pending",
-      "Rejected - Admin",
-      "Rejected - In Practice",
-      "Choose Remediation Date",
-      "Installation Extension Awarded - Yes",
-      "Installation Extension Awarded - No",
-      "No Recommendation",
-      "Recommended Approval",
-      "Recommended Being Assessed",
-      "Recommended Internal Query",
-      "Recommended On Hold",
-      "Recommended Reject",
-      "Recommended With Supplier",
-      "Own",
-      "Disown",
-      "No Category ",
-      "Audit ",
-      "Duplicate ",
-      "Investigation - Fraud",
-      "Late Measure",
-      "Measure Change",
-      "Monitoring - Escalation",
-      "Monitoring Fail",
-      "Notification Error",
-      "Process Later",
-      "Rejection",
-      "Validating"
-    ];
+  if (typeSelect) {
+    select = typeSelect;
+    options = measureTypeOptionsList;
     buildSelectOptions(options, select);
   }
 
-  if (notificationOptions) {
-    cbDiv = notificationOptions;
-    checkboxOptions = [
+
+  // NotificationPeriod
+  const notificationPerionOptionsList = [
       "April 2022",
       "May 2022",
       "June 2022",
@@ -1456,8 +1429,62 @@ function removeSupplierLicenceNumber(id) {
       "January 2026",
       "February 2026",
       "March 2026"
-    ];
+  ];
+  
+  if (notificationOptions) {
+    cbDiv = notificationOptions;
+    checkboxOptions = notificationPerionOptionsList;
     buildCheckboxes(checkboxOptions, cbDiv);
+  }
+  
+  if (notificationdSelect) {
+    select = notificationdSelect;
+    options = measureTypeOptionsList;
+    buildSelectOptions(options, select);
+  }
+
+  // Actions
+  if (actionSelect) {
+    select = actionSelect;
+    options = [
+      "Approved",
+      "Being Assessed",
+      "Internal Query",
+      "On Hold",
+      "Rejected",
+      "With Supplier",
+      "Notified Incomplete",
+      "Notified Pending Project",
+      "Measure Awaiting Verification",
+      "Notified Pending",
+      "Rejected - Admin",
+      "Rejected - In Practice",
+      "Choose Remediation Date",
+      "Installation Extension Awarded - Yes",
+      "Installation Extension Awarded - No",
+      "No Recommendation",
+      "Recommended Approval",
+      "Recommended Being Assessed",
+      "Recommended Internal Query",
+      "Recommended On Hold",
+      "Recommended Reject",
+      "Recommended With Supplier",
+      "Own",
+      "Disown",
+      "No Category ",
+      "Audit ",
+      "Duplicate ",
+      "Investigation - Fraud",
+      "Late Measure",
+      "Measure Change",
+      "Monitoring - Escalation",
+      "Monitoring Fail",
+      "Notification Error",
+      "Process Later",
+      "Rejection",
+      "Validating"
+    ];
+    buildSelectOptions(options, select);
   }
 // }
 
@@ -1557,13 +1584,13 @@ const searchResults = [
     }
   },
   {
-    "measureReferenceNumber": "BGT1234567",
+    "measureReferenceNumber": "OVO1234567",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "05/09/2022",
     "notificationPeriod": "July 2022",
     "purposeOfNotification": "New Notification",
-    "supplierReference": "BGT05070887E",
+    "supplierReference": "OVO05458887E",
     "addressFields": {
       "buildingNumber": "198",
       "buildingName": "Canterbury Buildings",
