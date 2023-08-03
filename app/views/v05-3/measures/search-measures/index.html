@@ -1,0 +1,175 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+    Search measure results
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Search measure results</h1>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+                <h2 class="govuk-heading-l">Filters</h2>
+
+                <form>
+                    
+                    <!-- Measure reference number -->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint">
+                            <legend class="govuk-fieldset__legend">
+                                <h2 class="govuk-heading-m">What is the measure reference number?</h2>
+                            </legend>
+                            <div class="govuk-inset-text">
+                                You can either search with a single reference number below or upload a file containing a series of measure reference numbers using the file upload below.
+                            </div>
+                            <div class="govuk-form-group">
+                                <label class="govuk-label" for="measure-reference-number">
+                                    Measure reference number
+                                </label>
+                                <input class="govuk-input" id="measure-reference-number" name="measure-reference-number" type="text">
+                            </div>
+
+                            <div class="or-class"><p class="govuk-body">Or</div>
+                            
+                            <div id="measureReferenceFile" class="govuk-form-group">
+                                <span class="govuk-label" for="measure-reference-file">
+                                    Measure reference file
+                                </span>
+                                <label for="file-upload" class="custom-file-upload">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M11 14.9861C11 15.5384 11.4477 15.9861 12 15.9861C12.5523 15.9861 13 15.5384 13 14.9861V7.82831L16.2428 11.0711L17.657 9.65685L12.0001 4L6.34326 9.65685L7.75748 11.0711L11 7.82854V14.9861Z" fill="currentColor"/>
+                                        <path d="M4 14H6V18H18V14H20V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V14Z" fill="currentColor"/>
+                                    </svg> Choose file
+                                </label>
+                                <input  class="" 
+                                        id="file-upload" 
+                                        name="file-upload" 
+                                        type="file" 
+                                        accept=".csv" 
+                                        tabindex="-1"
+                                        title="file-upload"
+                                        onchange="fileSelection()"/>
+                                
+                                <p id="invalidFileUploaded" class="govuk-error-message hide"><span class="govuk-visually-hidden">Error:</span>The selected file is invalid</p>
+                                <p id="validFileUploaded" class="govuk-success-message hide"><span class="govuk-visually-hidden"></span>File uploaded</p>
+                                
+                                <button id="uploadBtn" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--secondary govuk-button--disabled margin0" class="govuk-button"  onclick="triggerMrnFileValidation()" type="button">Upload reference measure file</button>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Status -->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
+                            <legend class="govuk-fieldset__legend">
+                                <h2 class="govuk-heading-m">What is the measure status?</h2>
+                            </legend>
+                            
+                            <div id="measure-status-hint" class="govuk-hint">
+                                You can select one or more items in the list.
+                            </div>
+
+                            <select class="govuk-select govuk-!-width-full" id="measure-status" name="measure-status" size="5" multiple="multiple">
+                                <option value="" selected disabled hidden>Select a measure status</option>
+                            </select>
+                        </fieldset>
+                    </div>
+
+                    <!-- Measure type -->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-type-hint">
+                            <legend class="govuk-fieldset__legend">
+                                <h2 class="govuk-heading-m">What is the measure type?</h2>
+                            </legend>
+                            
+                            <div id="measure-type-hint" class="govuk-hint">
+                                You can select one or more items in the list.
+                            </div>
+
+                            <select class="govuk-select govuk-!-width-full" id="measure-type" name="measure-type" size="5" multiple="multiple">
+                                <option value="" selected disabled hidden>Select a measure type</option>
+                            </select>
+                        </fieldset>
+                    </div>
+
+                    <!-- Submission date -->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint">
+                            <legend class="govuk-fieldset__legend">
+                                <h2 class="govuk-heading-m">What is the submission date?</h2>
+                            </legend>
+
+                            <div id="submission-date-hint" class="govuk-hint">
+                                For example, 27 3 2007
+                            </div>
+
+                            <div class="govuk-date-input" id="submission-date">
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="submission-date-day">
+                                            Day
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="submission-date-day" name="submission-date-day" type="text" inputmode="numeric">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="submission-date-month">
+                                            Month
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="submission-date-month" name="submission-date-month" type="text" inputmode="numeric">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="submission-date-year">
+                                            Year
+                                        </label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="submission-date-year" name="submission-date-year" type="text" inputmode="numeric">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!-- Notification period -->
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
+                            <legend class="govuk-fieldset__legend">
+                                <h2 class="govuk-heading-m">What is the measure status?</h2>
+                            </legend>
+                            
+                            <div id="measure-status-hint" class="govuk-hint">
+                                You can select one or more items in the list.
+                            </div>
+
+                            <select class="govuk-select govuk-!-width-full" id="notification-period" name="notification-period" size="5" multiple="multiple">
+                                <option value="" selected disabled hidden>Select a notification period</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                    <!-- Search -->
+                    <div class="govuk-button-group">
+                        <a href="./search-results" class="govuk-button" data-module="govuk-button">
+                            Update search
+                        </a>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="govuk-grid-column-two-thirds">
+                <h2 class="govuk-heading-l">Results</h2>
+                <p class="govuk-body">Adjust filters on the left to search for the desired measures.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
