@@ -258,3 +258,9 @@ input[type="file"] {
 .govuk-select {
     height: auto;
 }
+
+#resultsList {
+    display: block;
+    height: 600px;
+    overflow: auto;
+}
