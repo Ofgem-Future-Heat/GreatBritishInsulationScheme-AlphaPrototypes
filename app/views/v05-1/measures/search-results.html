@@ -298,38 +298,39 @@
 
                 <p class="govuk-body">Showing <strong><span id="resultsLength">1903</span></strong> measure<span id="singularPlural"></span>.</p>
                 
-                <div id="resulsList"></div>
-                
-
-
-                <table class="govuk-table">
-                    <thead class="govuk-table__head">
-                            <tr class="govuk-table__row">
-                                <th scope="col" class="govuk-table__header">Select All<br>
-                                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">                                
-                                        <div class="govuk-checkboxes__item">
-                                            <input  name="search-results"
-                                                    type="checkbox" 
-                                                    id="Id_SelectAll_InternalMeasuresGrid" 
-                                                    data-test-id="Id_SelectAll_InternalMeasuresGrid" 
-                                                    class="govuk-checkboxes__input"
-                                                    onclick="checkAllCboxes(this)"
-                                            >
-                                            <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                <div class="scrollable more-height">
+                    <table class="govuk-table">
+                        <thead class="govuk-table__head">
+                                <tr class="govuk-table__row">
+                                <!--    
+                                    <th scope="col" class="govuk-table__header">Select All<br>
+                                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">                                
+                                            <div class="govuk-checkboxes__item">
+                                                <input  name="search-results"
+                                                        type="checkbox" 
+                                                        id="Id_SelectAll_InternalMeasuresGrid" 
+                                                        data-test-id="Id_SelectAll_InternalMeasuresGrid" 
+                                                        class="govuk-checkboxes__input"
+                                                        onclick="checkAllCboxes(this)"
+                                                >
+                                                <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                            </div>
                                         </div>
-                                    </div>
-                                </th>
-                                <th scope="col" class="govuk-table__header">Measure Reference Number</th>
-                                <th scope="col" class="govuk-table__header">Measure Type</th>
-                                <th scope="col" class="govuk-table__header">Status</th>
-                                <th scope="col" class="govuk-table__header">Submission date</th>
-                                <th scope="col" class="govuk-table__header">Action</th>
-                            </tr>
-                    </thead>
+                                    </th>
+                                -->
+                                    <th scope="col" class="govuk-table__header">Measure Reference Number</th>
+                                    <th scope="col" class="govuk-table__header">Measure Type</th>
+                                    <th scope="col" class="govuk-table__header">Status</th>
+                                    <th scope="col" class="govuk-table__header">Submission date</th>
+                                    <th scope="col" class="govuk-table__header">Action</th>
+                                </tr>
+                        </thead>
 
-                    <tbody id="resultsList">
-                    </tbody>
-                </table>
+                        <tbody id="resultsList">
+                        </tbody>
+                    </table>
+                </div>
+                    
 
                 <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
 

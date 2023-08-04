@@ -1439,7 +1439,7 @@ function removeSupplierLicenceNumber(id) {
   
   if (notificationdSelect) {
     select = notificationdSelect;
-    options = measureTypeOptionsList;
+    options = notificationPerionOptionsList;
     buildSelectOptions(options, select);
   }
 
@@ -1541,7 +1541,7 @@ function deleteUser() {
 }
 
 // #########################
-// REUSLT ITEMS
+// RESULTS ITEMS
 // #########################
 
 let resultItems = document.getElementById("resultItems");
@@ -1709,7 +1709,8 @@ function resultsListFunct(searchResults) {
     result +=
     `
     <tr>
-      <td>
+    <!--  
+    <td>
         <div class="govuk-checkboxes" data-module="govuk-checkboxes">                                
           <div class="govuk-checkboxes__item">
             <input  name="search-results"
@@ -1720,7 +1721,7 @@ function resultsListFunct(searchResults) {
             <label for="" class="govuk-label govuk-checkboxes__label"></label>
           </div>
         </div>
-      </td>                    
+      </td> -->                   
       <td><p class="govuk-body">` + searchResults[i].measureReferenceNumber + `</p></td>
       <td><p class="govuk-body">` + searchResults[i].measureType + `</p></td>
       <td><p class="govuk-body">` + searchResults[i].measureStatus + `</p></td>

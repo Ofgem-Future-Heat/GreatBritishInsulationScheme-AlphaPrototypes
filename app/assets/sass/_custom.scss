@@ -117,6 +117,11 @@ ul {
     thead {
         width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
     }
+    &.more-height {
+        tbody {
+            height: 400px;
+        }
+    }
 }
 
 input[type="file"] {
@@ -259,8 +264,8 @@ input[type="file"] {
     height: auto;
 }
 
-#resultsList {
-    display: block;
-    height: 600px;
-    overflow: auto;
-}
+// #resultsList {
+//     display: block;
+//     height: 600px;
+//     overflow: auto;
+// }
