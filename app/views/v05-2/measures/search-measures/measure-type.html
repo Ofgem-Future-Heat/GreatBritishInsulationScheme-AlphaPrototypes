@@ -22,12 +22,16 @@
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-type-hint">
                             <legend class="govuk-fieldset__legend">
-                                <h2 class="govuk-heading-l">What is the measure type?</h2>
+                                <h2 class="govuk-heading-m">What is the measure type?</h2>
                             </legend>
-                            
+<!--                             
                             <div id="measure-type-hint" class="govuk-hint">
                                 You can select one or more items in the list.
-                            </div>
+                            </div> -->
+
+                            <label class="govuk-label" for="measure-type">
+                                Select all that apply.
+                            </label>
 
                             <select class="govuk-select govuk-!-width-full" id="measure-type" name="measure-type" size="5" multiple="multiple">
                                 <option value="" selected disabled hidden>Select a measure type</option>

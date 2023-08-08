@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-    Search measure
+    Search measure register
 {% endblock %}
 
 {% block content %}
@@ -11,22 +11,27 @@
         
         <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
 
-        <h1 class="govuk-heading-xl">Search measures</h1>
+        <h1 class="govuk-heading-xl">Search measure register</h1>
 
-        <p class="gov-body">You can search the completed measures to check:</p>
+        <p class="gov-body">You can search complete measures to check the:</p>
         <ul class="govuk-list govuk-list--bullet">
-            <li>what status a measure is at in the service</li>
-            <li>if the measure uploaded is within the notification deadline</li>
-            <li>what errors are associated with a measure and for measures by error type</li>
+            <li>stage a measure is at in the validation process</li>
+            <li>measure you uploaded is within the notification deadline</li>
+            <li>errors linked to measures</li>
+            <li>measures by different error types </li>
         </ul>
 
-        <p class="gov-body">Set the appropriate filters and select the relevant options to search the existing measures. You must select at least one filter in order to search the measures.</p>
+        <p class="gov-body">Select options to search for existing measures in the Great British Insulation Scheme register. You must select at least one option to search the measures.</p>
+
+        <h2 class="govuk-heading-m">Different ways to search for measures</h2>
+
+        <p class="gov-body">You can search measures using a single reference number. Or, search by uploading a measure reference file that has multiple measure reference numbers.</p>
 
         <div class="govuk-warning-text">
             <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
             <strong class="govuk-warning-text__text">
               <span class="govuk-warning-text__assistive">Warning</span>
-              The results may take some time to load depending on the search criteria.
+              Measures may take time to show based on the volume of search results.
             </strong>
         </div>
 
@@ -40,17 +45,22 @@
                             <legend class="govuk-fieldset__legend">
                                 <h2 class="govuk-heading-m">What is the measure reference number?</h2>
                             </legend>
-                            <div class="govuk-inset-text">
-                                You can either search with a single reference number below or upload a file containing a series of measure reference numbers using the file upload below.
-                            </div>
                             <div class="govuk-form-group">
-                                <label class="govuk-label" for="measure-reference-number">
-                                    Measure reference number
-                                </label>
                                 <input class="govuk-input" id="measure-reference-number" name="measure-reference-number" type="text">
                             </div>
 
-                            <div class="or-class"><p class="govuk-body">Or</div>
+                            <h2 class="govuk-heading-m">Search measures using a reference file</h2>
+
+                            <p class="govuk-body">To search for measures using a measure reference file, you must:</p>
+
+                            <ol class="govuk-list govuk-list--number">
+                                <li>Create a CSV file.</li>
+                                <li>Include a column with only the measure reference numbers you want to search for.</li>
+                                <li>Save the CSV file.</li>
+                                <li>Select 'Choose file' and select the CSV file you created. </li>
+                                <li>Select 'Upload measure reference file' to search for the measures.</li>
+                            </ol>
+                            
                             
                             <div id="measureReferenceFile" class="govuk-form-group">
                                 <span class="govuk-label" for="measure-reference-file">
@@ -74,7 +84,7 @@
                                 <p id="invalidFileUploaded" class="govuk-error-message hide"><span class="govuk-visually-hidden">Error:</span>The selected file is invalid</p>
                                 <p id="validFileUploaded" class="govuk-success-message hide"><span class="govuk-visually-hidden"></span>File uploaded</p>
                                 
-                                <button id="uploadBtn" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--secondary govuk-button--disabled margin0" class="govuk-button"  onclick="triggerMrnFileValidation()" type="button">Upload reference measure file</button>
+                                <button id="uploadBtn" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--secondary govuk-button--disabled margin0" class="govuk-button"  onclick="triggerMrnFileValidation()" type="button">Upload measure reference file</button>
                             </div>
                         </fieldset>
                     </div>
@@ -87,12 +97,12 @@
                             </legend>
                             
                             <div id="measure-status-hint" class="govuk-hint">
-                                You must select one or more items in the list.
+                                You must select at least one item to search.
                             </div>
 
-                            <!-- <label class="govuk-label" for="measure-status">
-                                measure status
-                            </label> -->
+                            <label class="govuk-label" for="measure-type">
+                                Select all that apply.
+                            </label>
 
                             <select class="govuk-select govuk-!-width-full" id="measure-status" name="measure-status" size="5" multiple="multiple">
                                 <option value="" selected disabled hidden>Select a measure status</option>
@@ -133,13 +143,9 @@
                                 <h2 class="govuk-heading-m">What is the measure type?</h2>
                             </legend>
                             
-                            <div id="measure-type-hint" class="govuk-hint">
-                                You can select one or more items in the list.
-                            </div>
-
-                            <!-- <label class="govuk-label" for="measure-type">
-                                measure type
-                            </label> -->
+                            <label class="govuk-label" for="measure-type">
+                                Select all that apply.
+                            </label>
 
                             <select class="govuk-select govuk-!-width-full" id="measure-type" name="measure-type" size="5" multiple="multiple">
                                 <option value="" selected disabled hidden>Select a measure type</option>
@@ -178,7 +184,7 @@
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint">
                             <legend class="govuk-fieldset__legend">
-                                <h2 class="govuk-heading-m">What is the submission date?</h2>
+                                <h2 class="govuk-heading-m">What was the measure submission date?</h2>
                             </legend>
 
                             <div id="submission-date-hint" class="govuk-hint">
@@ -221,13 +227,9 @@
                                 <h2 class="govuk-heading-m">What is the notification period?</h2>
                             </legend>
                             
-                            <div id="measure-status-hint" class="govuk-hint">
-                                You can select one or more items in the list.
-                            </div>
-
-                            <!-- <label class="govuk-label" for="measure-status">
-                                measure status
-                            </label> -->
+                            <label class="govuk-label" for="measure-type">
+                                Select all that apply.
+                            </label>
 
                             <select class="govuk-select govuk-!-width-full" id="notification-period" name="notification-period" size="5" multiple="multiple">
                                 <option value="" selected disabled hidden>Select a notification period</option>

@@ -17,10 +17,7 @@
             <div class="govuk-grid-column-one-third">
                 <h2 class="govuk-heading-l">Filters</h2>
 
-                <!-- <form class="scrollable-div filters-section"> -->
-
                 <form>
-                    
                     <!-- Measure reference number -->
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint">
@@ -28,7 +25,7 @@
                                 <h2 class="govuk-heading-m">What is the measure reference number?</h2>
                             </legend>
                             <div class="govuk-inset-text">
-                                You can either search with a single reference number below or upload a file containing a series of measure reference numbers using the file upload below.
+                                You can search measures using a single reference number. Or, search by uploading a measure reference file that has multiple measure reference numbers.
                             </div>
                             <div class="govuk-form-group">
                                 <label class="govuk-label" for="measure-reference-number">
@@ -74,44 +71,18 @@
                             </legend>
                             
                             <div id="measure-status-hint" class="govuk-hint">
-                                You can select one or more items in the list.
+                                You must select at least one item to search.
                             </div>
 
-                            <!-- <label class="govuk-label" for="measure-status">
-                                measure status
-                            </label> -->
+                            <label class="govuk-label" for="measure-type">
+                                Select all that apply.
+                            </label>
 
                             <select class="govuk-select govuk-!-width-full" id="measure-status" name="measure-status" size="5" multiple="multiple">
                                 <option value="" selected disabled hidden>Select a measure status</option>
                             </select>
                         </fieldset>
                     </div>
-                   
-                    
-                    <!-- <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
-                            <legend class="govuk-fieldset__legend">
-                                <h2 class="govuk-heading-l">What is the measure status?</h2>
-                            </legend>
-
-                            <p class="gov-body">You must select at least one measure status option in order to continue to search the measures.</p>
-
-                            <div id="submission-date-hint" class="govuk-hint">
-                                Select all relevant measure statuses. You can select more than one.
-                            </div>
-
-                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                                <div class="govuk-checkboxes__item">
-                                    <input class="govuk-checkboxes__input" type="checkbox" onclick="checkAllCboxes(this)">
-                                    <label class="govuk-label govuk-checkboxes__label" for="">Check all</label>
-                                </div>
-                            </div>
-
-                            <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
-
-                            <div id="cboxesMeasureStatus" class="govuk-checkboxes scrollable-div" data-module="govuk-checkboxes"></div>
-                        </fieldset>
-                    </div> -->
 
                     <!-- Measure type -->
                     <div class="govuk-form-group">
@@ -119,53 +90,22 @@
                             <legend class="govuk-fieldset__legend">
                                 <h2 class="govuk-heading-m">What is the measure type?</h2>
                             </legend>
-                            
-                            <div id="measure-type-hint" class="govuk-hint">
-                                You can select one or more items in the list.
-                            </div>
 
-                            <!-- <label class="govuk-label" for="measure-type">
-                                measure type
-                            </label> -->
+                            <label class="govuk-label" for="measure-type">
+                                Select all that apply.
+                            </label>
 
                             <select class="govuk-select govuk-!-width-full" id="measure-type" name="measure-type" size="5" multiple="multiple">
                                 <option value="" selected disabled hidden>Select a measure type</option>
                             </select>
                         </fieldset>
                     </div>
-                   
-                    <!-- 
-                    <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-type-hint">
-                            <legend class="govuk-fieldset__legend">
-                                <h2 class="govuk-heading-l">What is the measure type?</h2>
-                            </legend>
-
-                            <p class="gov-body">You must select at least one measure type option in order to continue to search the measures.</p>
-
-                            <div id="submission-date-hint" class="govuk-hint">
-                                Select all relevant measure types. You can select more than one.
-                            </div>
-
-                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                                <div class="govuk-checkboxes__item">
-                                    <input class="govuk-checkboxes__input" type="checkbox" onclick="checkAllCboxes(this)">
-                                    <label class="govuk-label govuk-checkboxes__label" for="">Check all</label>
-                                </div>
-                            </div>
-
-                            <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
-
-                            <div id="cboxesMeasureType" class="govuk-checkboxes scrollable-div" data-module="govuk-checkboxes"></div>
-                        </fieldset>
-                    </div>
-                    -->
 
                     <!-- Submission date -->
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint">
                             <legend class="govuk-fieldset__legend">
-                                <h2 class="govuk-heading-m">What is the submission date?</h2>
+                                <h2 class="govuk-heading-m">What was the measure submission date?</h2>
                             </legend>
 
                             <div id="submission-date-hint" class="govuk-hint">
@@ -205,81 +145,28 @@
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
                             <legend class="govuk-fieldset__legend">
-                                <h2 class="govuk-heading-m">What is the measure status?</h2>
+                                <h2 class="govuk-heading-m">What is the notification period?</h2>
                             </legend>
-                            
-                            <div id="measure-status-hint" class="govuk-hint">
-                                You can select one or more items in the list.
-                            </div>
 
-                            <!-- <label class="govuk-label" for="measure-status">
-                                measure status
-                            </label> -->
+                            <label class="govuk-label" for="measure-type">
+                                Select all that apply.
+                            </label>
 
                             <select class="govuk-select govuk-!-width-full" id="notification-period" name="notification-period" size="5" multiple="multiple">
                                 <option value="" selected disabled hidden>Select a notification period</option>
                             </select>
                         </fieldset>
                     </div>
-                    <!--
-                    <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint">
-                            <legend class="govuk-fieldset__legend">
-                                <h2 class="govuk-heading-m">What is the notification period?</h2>
-                            </legend>
-
-                            <div id="submission-date-hint" class="govuk-hint">
-                                Select all relevant notification periods. You can select more than one.
-                            </div>
-
-                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                                <div class="govuk-checkboxes__item">
-                                    <input class="govuk-checkboxes__input" type="checkbox" onclick="checkAllNotifications(this)">
-                                    <label class="govuk-label govuk-checkboxes__label" for="">Check all</label>
-                                </div>
-                            </div>
-
-                            <hr />
-
-                            <div id="cboxes" class="govuk-checkboxes" data-module="govuk-checkboxes"></div>
-                        </fieldset>
-                    </div>
-                    -->
-                    
-                    <!--
-                    <div class="govuk-form-group">
-                        <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint">
-                            <legend class="govuk-fieldset__legend">
-                                <h2 class="govuk-heading-l">What is the notification period?</h2>
-                            </legend>
-
-                            <div id="submission-date-hint" class="govuk-hint">
-                                Select all relevant notification periods. You can select more than one.
-                            </div>
-
-                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                                <div class="govuk-checkboxes__item">
-                                    <input class="govuk-checkboxes__input" type="checkbox" onclick="checkAllCboxes(this)">
-                                    <label class="govuk-label govuk-checkboxes__label" for="">Check all</label>
-                                </div>
-                            </div>
-
-                            <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
-
-                            <div id="cboxesNotificationPeriod" class="govuk-checkboxes scrollable-div" data-module="govuk-checkboxes"></div>
-                        </fieldset>
-                    </div>
-                    -->
 
                     <!-- Search -->
                     <div class="govuk-button-group">
                         <a href="./search-results" class="govuk-button" data-module="govuk-button">
                             Update search
                         </a>
-                        <!-- <a class="govuk-link" href="/v05-1/measures/">Cancel</a> -->
                     </div>
 
                 </form>
+
             </div>
 
             <div class="govuk-grid-column-two-thirds">
