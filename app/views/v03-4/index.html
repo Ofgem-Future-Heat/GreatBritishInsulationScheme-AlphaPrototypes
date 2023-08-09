@@ -1,0 +1,133 @@
+{% extends "govuk/template.njk" %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{% block head %}
+  {% block meta %}{% endblock %}
+  {% block stylesheets %}
+    {% include "govuk-prototype-kit/includes/stylesheets.html" %}
+  {% endblock %}
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+  }) }}
+  
+  <!-- ################### PHASE BANNER START ################## -->
+  <div class="govuk-width-container">
+    <div class="govuk-phase-banner">
+      <p class="govuk-phase-banner__content">
+          <strong class="govuk-tag govuk-phase-banner__content__tag">
+              Beta
+          </strong>
+          <span class="govuk-phase-banner__text">
+              This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+          </span>
+      </p>
+    </div>
+  </div>
+  <!-- ################### PHASE BANNER END #################### -->
+  
+{% endblock %}
+
+{% block pageTitle %}
+    {{serviceName}}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">{{serviceName}}</h1>
+    
+        <div data-module="appstepnav" id="step-by-step-navigation" class="app-step-nav govuk-!-display-none-print app-step-nav--active" data-show-text="Show" data-hide-text="Hide" data-show-all-text="Show all steps" data-hide-all-text="Hide all steps">
+            
+            <ol class="app-step-nav__steps" id="stepByStep">
+                <li class="app-step-nav__step js-step app-step-nav__step--active" aria-current="step" id="">
+                    <div class="app-step-nav__header js-toggle-panel" data-position="1">
+                        <h3 class="app-step-nav__title">
+                            <span class="app-step-nav__circle app-step-nav__circle--number">
+                                <span class="app-step-nav__circle-inner">
+                                    <span class="app-step-nav__circle-background">
+                                        <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 1<span class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                                    </span>
+                                </span>
+                            </span>
+                            <span class="js-step-title">
+                                <button class="app-step-nav__button app-step-nav__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-check-you-re-allowed-to-drive-1">
+                                    <span class="app-step-nav____title-text-focus">
+                                        <span class="app-step-nav__title-text js-step-title-text">
+                                            Download error report
+                                        </span>
+                                        <span class="govuk-visually-hidden app-step-nav__section-heading-divider">, </span>
+                                    </span>
+                                </button>
+                            </span>
+                        </h3>
+                    </div>
+                    <div class="app-step-nav__panel js-panel" id="step-panel-check-you-re-allowed-to-drive-1">
+                        <p class="app-step-nav__paragraph">Download the error report.</p>
+                    </div>
+                </li>
+
+                <li class="app-step-nav__step js-step" id="get-a-provisional-licence" >
+                    <div class="app-step-nav__header js-toggle-panel" data-position="2">
+                        <h3 class="app-step-nav__title">
+                            <span class="app-step-nav__circle app-step-nav__circle--number">
+                                <span class="app-step-nav__circle-inner">
+                                <span class="app-step-nav__circle-background">
+                                    <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 2<span class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                                </span>
+                                </span>
+                            </span>
+                            <span class="js-step-title"><button class="app-step-nav__button app-step-nav__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-get-a-provisional-licence-2"><span class="app-step-nav____title-text-focus"><span class="app-step-nav__title-text js-step-title-text">
+                                        Fix outstanding errors
+                                    </span>
+                                    <span class="govuk-visually-hidden app-step-nav__section-heading-divider">, </span></span>
+                                </button>
+                            </span>
+                        </h3>
+                    </div>
+                    <div class="app-step-nav__panel js-panel" id="step-panel-get-a-provisional-licence-2">
+                        <p class="app-step-nav__paragraph">Take the necessary steps to fix any errors with the measures. The errors and how you fix them will be detailed in the report.</p>
+                    </div>
+                </li>
+
+                <li class="app-step-nav__step js-step" id="driving-lessons-and-practice" >
+                    <div class="app-step-nav__header js-toggle-panel" data-position="3">
+                        <h3 class="app-step-nav__title">
+                            <span class="app-step-nav__circle app-step-nav__circle--number">
+                                <span class="app-step-nav__circle-inner">
+                                <span class="app-step-nav__circle-background">
+                                    <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 3<span class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
+                                </span>
+                                </span>
+                            </span>
+                            <span class="js-step-title"><button class="app-step-nav__button app-step-nav__button--title js-step-title-button" aria-expanded="false" aria-controls="step-panel-driving-lessons-and-practice-3"><span class="app-step-nav____title-text-focus"><span class="app-step-nav__title-text js-step-title-text">
+                                        Upload updated measure file
+                                    </span><span class="govuk-visually-hidden app-step-nav__section-heading-divider">, </span></span>
+                                </button>
+                            </span>
+                        </h3>
+                    </div>
+                    <div class="app-step-nav__panel js-panel" id="step-panel-driving-lessons-and-practice-3">
+                        <p class="app-step-nav__paragraph">After fixing the errors in the report, you should save the document as a CSV file.</p>
+                        <p class="app-step-nav__paragraph">Then, you should return to the <a href="#">Homepage</a> and upload the updated CSV file.</p>
+                        <ol class="app-step-nav__list " data-length="4">
+                            <li class="app-step-nav__list-item js-list-item ">
+                                <a data-position="3.1" class="app-step-nav__link js-link" href="#">Upload a Measure</a>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+
+            </ol>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
