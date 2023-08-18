@@ -264,8 +264,16 @@ input[type="file"] {
     height: auto;
 }
 
-// #resultsList {
-//     display: block;
-//     height: 600px;
-//     overflow: auto;
-// }
+.list-row {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+
+    .list-key, .list-value {
+        display: block;
+        width: 100%;
+    }
+    .list-key {
+        padding: 0;
+    }
+ }

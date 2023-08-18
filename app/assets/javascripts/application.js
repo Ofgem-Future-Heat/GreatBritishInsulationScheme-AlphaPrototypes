@@ -1557,6 +1557,7 @@ const searchResults = [
     "notificationPeriod": "July 2022",
     "purposeOfNotification": "New Notification",
     "supplierReference": "BGT05070887G",
+    "dateOfCompletedInstallation": "12/04/2023",
     "addressFields": {
       "buildingNumber": "123",
       "buildingName": "Mansion House",
@@ -1564,7 +1565,38 @@ const searchResults = [
       "streetName": "Any Street",
       "town": "Thattown",
       "postCode": "P05 TCD"
-    }
+    },
+    "UniquePropertyReferenceNumber": "133568892345",
+    "startingSAPRating": "1234567890",
+    "floorArea": "2345",
+    "rural": "No",
+    "offGas": "Yes",
+    "privateDomesticPremises": "Yes",
+    "tenureType": "Owner Occupied",
+    "property": "Flat",
+    "eligibilityType": "LI - Social Housing",
+    "verificationMethod": "ECO Eligible Referral",
+    "dwpReferenceNumber": "ABC_AB123456",
+    "councilTaxBand": "C",
+
+    "prsSAPBandException": "Yes",
+    "associatedInsulationMRNforHeatingMeasures": "ABC1234",
+    "associatedInfillMeasure1": "ABC1234567",
+    "associatedInfillMeasure2": "ABC1234567",
+    "associatedInfillMeasure3": "ABC1234567",
+    "flexReferralRoute": "Route 2 Council Tax Reduction",
+    "laDeclarationReferenceNumber": "A12345678-12345",
+    "dateOfHouseholderEligibility": "23/09/22",
+    "percentageOfPropertyTreated": "50%",
+    "heatingSource": "N/A",
+    "installerName": "Max character length of 150 characters",
+    "innovationMeasureNumber": "123",
+
+    "trustmarkBusinessLicenceNumber": "123456789012",
+    "trustmarkUniqueMeasureReference": "ABC123DEF456GHIJ7890",
+    "trustmarkLodgedCertificateID": "A1234567-1",
+    "trustmarkProjectReferenceNumber": "T12345",
+    "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
     "measureReferenceNumber": "BGT1234567",
@@ -1574,6 +1606,7 @@ const searchResults = [
     "notificationPeriod": "August 2022",
     "purposeOfNotification": "New Notification",
     "supplierReference": "BGT05070887E",
+    "dateOfCompletedInstallation": "04/02/2023",
     "addressFields": {
       "buildingNumber": "198",
       "buildingName": "Blake House",
@@ -1581,7 +1614,38 @@ const searchResults = [
       "streetName": "Blake Mews",
       "town": "Blakeland",
       "postCode": "B1 4KE"
-    }
+    },
+    "UniquePropertyReferenceNumber": "123456789012",
+    "startingSAPRating": "1234567890",
+    "floorArea": "2345",
+    "rural": "No",
+    "offGas": "Yes",
+    "privateDomesticPremises": "Yes",
+    "tenureType": "Owner Occupied",
+    "property": "Flat",
+    "eligibilityType": "LI - Social Housing",
+    "verificationMethod": "ECO Eligible Referral",
+    "dwpReferenceNumber": "ABC_AB123456",
+    "councilTaxBand": "C",
+
+    "prsSAPBandException": "Yes",
+    "associatedInsulationMRNforHeatingMeasures": "ABC1234",
+    "associatedInfillMeasure1": "ABC1234567",
+    "associatedInfillMeasure2": "ABC1234567",
+    "associatedInfillMeasure3": "ABC1234567",
+    "flexReferralRoute": "Route 2 Council Tax Reduction",
+    "laDeclarationReferenceNumber": "A12345678-12345",
+    "dateOfHouseholderEligibility": "23/09/22",
+    "percentageOfPropertyTreated": "67+",
+    "heatingSource": "N/A",
+    "installerName": "Max character length of 150 characters",
+    "innovationMeasureNumber": "123",
+
+    "trustmarkBusinessLicenceNumber": "123456789012",
+    "trustmarkUniqueMeasureReference": "ABC123DEF456GHIJ7890",
+    "trustmarkLodgedCertificateID": "A1234567-1",
+    "trustmarkProjectReferenceNumber": "T12345",
+    "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
     "measureReferenceNumber": "OVO1234567",
@@ -1591,6 +1655,8 @@ const searchResults = [
     "notificationPeriod": "July 2022",
     "purposeOfNotification": "New Notification",
     "supplierReference": "OVO05458887E",
+    "dateOfCompletedInstallation": "12/12/2022",
+
     "addressFields": {
       "buildingNumber": "198",
       "buildingName": "Canterbury Buildings",
@@ -1598,9 +1664,42 @@ const searchResults = [
       "streetName": "Hill Mews",
       "town": "Hilltown",
       "postCode": "H1 4TE"
-    }
+    },
+
+    "UniquePropertyReferenceNumber": "210987654321",
+    "startingSAPRating": "1234567890",
+    "floorArea": "2345",
+    "rural": "No",
+    "offGas": "Yes",
+    "privateDomesticPremises": "Yes",
+    "tenureType": "Owner Occupied",
+    "property": "Flat",
+    "eligibilityType": "LI - Social Housing",
+    "verificationMethod": "ECO Eligible Referral",
+    "dwpReferenceNumber": "ABC_AB123456",
+    "councilTaxBand": "C",
+
+    "prsSAPBandException": "Yes",
+    "associatedInsulationMRNforHeatingMeasures": "ABC1234",
+    "associatedInfillMeasure1": "ABC1234567",
+    "associatedInfillMeasure2": "ABC1234567",
+    "associatedInfillMeasure3": "ABC1234567",
+    "flexReferralRoute": "Route 2 Council Tax Reduction",
+    "laDeclarationReferenceNumber": "A12345678-12345",
+    "dateOfHouseholderEligibility": "23/09/22",
+    "percentageOfPropertyTreated": "67+",
+    "heatingSource": "N/A",
+    "installerName": "Max character length of 150 characters",
+    "innovationMeasureNumber": "123",
+
+    "trustmarkBusinessLicenceNumber": "123456789012",
+    "trustmarkUniqueMeasureReference": "ABC123DEF456GHIJ7890",
+    "trustmarkLodgedCertificateID": "A1234567-1",
+    "trustmarkProjectReferenceNumber": "T12345",
+    "trustMarkCompletedProjectCertID": "A1234567-A"
   }
 ];
+
 // Result items array
 if (resultItems) {
   resultItemsFunct(searchResults, resultItems);
@@ -1726,9 +1825,303 @@ function resultsListFunct(searchResults) {
       <td><p class="govuk-body">` + searchResults[i].measureType + `</p></td>
       <td><p class="govuk-body">` + searchResults[i].measureStatus + `</p></td>
       <td><p class="govuk-body">` + searchResults[i].submissionDate + `</p></td>
-      <td><p class="govuk-body"><a href="#">View details</a></p></td>
+      <td><p class="govuk-body"><a href="#" class="govuk-link" onclick="measureDetails('`+searchResults[i].measureReferenceNumber+`')">View details</a></p></td>
     </tr>
     `;
   }
   resultsList.innerHTML += result;
+}
+
+function measureDetails(measureRef) {
+  window.location.pathname = "/v06-1/measure-details";
+  localStorage.setItem("measureRefNumber", measureRef);
+}
+
+if (pageUrlPath === "/v06-1/measure-details") {
+  let measureRefNumber = localStorage.getItem("measureRefNumber");
+  let measureDetailsDiv = document.getElementById('measureDetails');
+  let detail = '';
+
+  if (measureRefNumber) {
+    console.log('measureRefNumber >>> ', measureRefNumber);
+    for (let i = 0; i < searchResults.length; i++) {
+      let searchResult = searchResults[i];
+
+      console.log('searchResult', searchResult);
+
+      if (measureRefNumber === searchResult.measureReferenceNumber) {
+        detail +=
+          `
+          <!-- Left half -->
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-half">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row list-row">
+                  <dt class="govuk-summary-list__key list-key">Measure reference number</dt>
+                  <dd class="govuk-summary-list__value list-value">`+searchResult.measureReferenceNumber+`</dd>
+                </div>
+
+                <div class="govuk-summary-list__row list-row">
+                  <dt class="govuk-summary-list__key list-key">Measure type</dt>
+                  <dd class="govuk-summary-list__value list-value">`+searchResult.measureType+`</dd>
+                </div>
+              </dl>
+            </div>
+
+            <!-- Right half -->
+            <div class="govuk-grid-column-one-half">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row list-row">
+                  <dt class="govuk-summary-list__key list-key">Status</dt>
+                  <dd class="govuk-summary-list__value list-value">`+searchResult.measureStatus+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row list-row">
+                  <dt class="govuk-summary-list__key list-key">Submission date</dt>
+                  <dd class="govuk-summary-list__value list-value">`+searchResult.submissionDate+`</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          
+          <!-- General measure details card -->
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">General measure details</h2>
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Supplier reference</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.supplierReference+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Notification period</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.notificationPeriod+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Purpose of notification</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.purposeOfNotification+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Date of completed installation</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.dateOfCompletedInstallation+`</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          
+          <!-- Property ddress card -->
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">Property address</h2>
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Building name</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.addressFields.buildingName+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Building number</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.addressFields.buildingNumber+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">flat name or number</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.addressFields.flatNameOrNumber+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Street name</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.addressFields.streetName+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Town</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.addressFields.town+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Postcode</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.addressFields.postCode+`</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          
+          <!-- Property details card -->
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">Property details</h2>
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Unique property reference number (UPRN)</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.UniquePropertyReferenceNumber+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Starting SAP rating</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.startingSAPRating+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Floor area</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.floorArea+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Rural</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.rural+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Off gas</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.offGas+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Private domestic premises</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.privateDomesticPremises+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Tenure type</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.tenureType+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Property</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.property+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Eligibility type</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.eligibilityType+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Verification method</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.verificationMethod+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">DWP reference number</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.dwpReferenceNumber+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Council Tax band</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.councilTaxBand+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">PRS SAP band exception</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.prsSAPBandException+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Associated insulation MRN for heating measures</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.associatedInsulationMRNforHeatingMeasures+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Associated in-fill measure 1</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.associatedInfillMeasure1+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Associated in-fill measure 2</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.associatedInfillMeasure2+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Associated in-fill measure 3</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.associatedInfillMeasure3+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Flex referral route</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.flexReferralRoute+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">LA declaration reference number</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.laDeclarationReferenceNumber+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Date of householder eligibility</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.dateOfHouseholderEligibility+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Percentage of property treated</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.percentageOfPropertyTreated+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Heating source</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.heatingSource+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Installer name</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.installerName+`</dd>
+                </div>
+                
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Innovation measure number</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.innovationMeasureNumber+`</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- TrustMark card -->
+          <div class="govuk-summary-card">
+            <div class="govuk-summary-card__title-wrapper">
+              <h2 class="govuk-summary-card__title">TrustMark details</h2>
+            </div>
+            <div class="govuk-summary-card__content">
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Trustmark business licence number</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.trustmarkBusinessLicenceNumber+`</dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Trustmark unique measure reference</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.trustmarkUniqueMeasureReference+`</dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Trustmark lodged certificate ID</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.trustmarkLodgedCertificateID+`</dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">Trustmark project reference number</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.trustmarkProjectReferenceNumber+`</dd>
+                </div>
+
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">TrustMark completed project cert ID</dt>
+                  <dd class="govuk-summary-list__value">`+searchResult.trustMarkCompletedProjectCertID+`</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          `
+        ;
+      }
+    }
+    measureDetailsDiv.innerHTML += detail;
+  }
 }

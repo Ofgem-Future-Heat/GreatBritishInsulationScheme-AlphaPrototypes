@@ -1,0 +1,26 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Measure details
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Measure details</h1>
+        <div id="measureDetails"></div>
+
+        <!-- 
+        <button data-prevent-double-click="true" class="govuk-button" data-module="govuk-button">
+            Download measure details
+        </button>
+        -->
+
+        <p class="govuk-body"><a class="govuk-link" href="index.html">Return to search results</a></p>
+    </div>
+</div>
+{% endblock %}
