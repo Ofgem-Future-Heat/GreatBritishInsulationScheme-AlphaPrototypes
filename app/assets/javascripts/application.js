@@ -91,6 +91,10 @@ function triggerValidation41() {
     window.location.pathname = "/v04-1/measures/success-file-upload-core-check-errors";
 }
 
+function triggerValidation42() {
+    window.location.pathname = "/v04-2/measures/success-file-upload-core-check-errors";
+}
+
 function triggerMrnFileValidation() {
   // return console.log('file type', filename.split('.').pop());
 

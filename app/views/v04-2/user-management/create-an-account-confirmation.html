@@ -1,0 +1,29 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Account creation completed
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        Account creation completed
+      </h1>
+    </div>
+
+    <p>We have sent an email to the email you have provided.</p>
+    <div class="govuk-inset-text">
+        Ask them to check their spam and junk folders in case they have not yet received the email.
+    </div>
+    <p>The user must Follow the instructions in that email in order to access their new account.</p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <p class="govuk-body"><a href="../home-su">Go to the home page</a></p>
+  </div>
+</div>
+
+{% endblock %}
