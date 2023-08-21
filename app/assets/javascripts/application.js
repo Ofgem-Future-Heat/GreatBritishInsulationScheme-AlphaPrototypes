@@ -1697,6 +1697,57 @@ const searchResults = [
     "trustmarkLodgedCertificateID": "A1234567-1",
     "trustmarkProjectReferenceNumber": "T12345",
     "trustMarkCompletedProjectCertID": "A1234567-A"
+  },
+  {
+    "measureReferenceNumber": "OVO7890123",
+    "measureType": "Solar_PV",
+    "measureStatus": "Notified Incomplete",
+    "submissionDate": "08/10/2022",
+    "notificationPeriod": "April 2022",
+    "purposeOfNotification": "New Notification",
+    "supplierReference": "OVO05458887E",
+    "dateOfCompletedInstallation": "07/11/2022",
+
+    "addressFields": {
+      "buildingNumber": "154",
+      "buildingName": "Canterbury Buildings",
+      "flatNameOrNumber": "2",
+      "streetName": "Locust Hill",
+      "town": "Hilltown",
+      "postCode": "H2 9RE"
+    },
+
+    "UniquePropertyReferenceNumber": "560987554321",
+    "startingSAPRating": "1234567890",
+    "floorArea": "2345",
+    "rural": "No",
+    "offGas": "Yes",
+    "privateDomesticPremises": "Yes",
+    "tenureType": "Owner Occupied",
+    "property": "Flat",
+    "eligibilityType": "LI - Social Housing",
+    "verificationMethod": "ECO Eligible Referral",
+    "dwpReferenceNumber": "ABC_AB123456",
+    "councilTaxBand": "C",
+
+    "prsSAPBandException": "No",
+    "associatedInsulationMRNforHeatingMeasures": "ABC1234",
+    "associatedInfillMeasure1": "ABC1234567",
+    "associatedInfillMeasure2": "ABC1234567",
+    "associatedInfillMeasure3": "ABC1234567",
+    "flexReferralRoute": "Route 2 Council Tax Reduction",
+    "laDeclarationReferenceNumber": "A12345678-12345",
+    "dateOfHouseholderEligibility": "23/09/22",
+    "percentageOfPropertyTreated": "43%",
+    "heatingSource": "N/A",
+    "installerName": "Max character length of 150 characters",
+    "innovationMeasureNumber": "123",
+
+    "trustmarkBusinessLicenceNumber": "123456789012",
+    "trustmarkUniqueMeasureReference": "ABC123DEF456GHIJ7890",
+    "trustmarkLodgedCertificateID": "A1234567-1",
+    "trustmarkProjectReferenceNumber": "T12345",
+    "trustMarkCompletedProjectCertID": "A1234567-A"
   }
 ];
 

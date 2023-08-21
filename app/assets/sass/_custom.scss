@@ -266,7 +266,7 @@ input[type="file"] {
 
 .list-row {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
     width: 100%;
 
     .list-key, .list-value {
@@ -275,5 +275,8 @@ input[type="file"] {
     }
     .list-key {
         padding: 0;
+    }
+    .list-value {
+        padding-top: 0;
     }
  }
