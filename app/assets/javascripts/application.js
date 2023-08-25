@@ -1234,10 +1234,24 @@ function removeSupplierLicenceNumber(id) {
   let select = '';
   let checkboxOptions = [];
   let statusSelect = document.getElementById("measure-status");
+  let statusSelectNone = document.getElementById("measure-status-none");
+  let statusSelectAll = document.getElementById("measure-status-all");
+
   let typeSelect = document.getElementById("measure-type");
-  let notificationdSelect = document.getElementById("notification-period");
+  // let typeSelectNone = document.getElementById("measure-type-none");
+  // let typeSelectAll = document.getElementById("measure-type-all");
+  
+  let typeCategorySelect = document.getElementById("measure-type-category");
+  let typeCategorySelectNone = document.getElementById("measure-type-category-none");
+  let typeCategorySelectAll = document.getElementById("measure-type-category-all");
+  
+  let notificationSelect = document.getElementById("notification-period");
+  let notificationSelectNone = document.getElementById("notification-period-none");
+  let notificationSelectAll = document.getElementById("notification-period-all");
+  
   let measureStatusOptions = document.getElementById("cboxesMeasureStatus");
   let measureTypeOptions = document.getElementById("cboxesMeasureType");
+  let measureTypeOptionsCategory = document.getElementById("cboxesMeasureTypeCategory");
   let notificationOptions = document.getElementById("cboxesNotificationPeriod");
   let actionSelect = document.getElementById("action");
   
@@ -1266,6 +1280,44 @@ function removeSupplierLicenceNumber(id) {
     options = measureStatusOptionsList;
     buildSelectOptions(options, select);
   }
+
+
+  let toggleSelectStatus = false;
+  function toggleSelectStatusFn() {
+    let spanText = document.getElementById('allOrNoneStatus');
+    toggleSelectStatus = !toggleSelectStatus;
+    if (toggleSelectStatus){
+      spanText.innerHTML = "none";
+      document.getElementById('measure-status-all').classList.remove('hide');
+      document.getElementById('measure-status-none').classList.add('hide');
+    } else {
+      spanText.innerHTML = "all";
+      document.getElementById('measure-status-all').classList.add('hide');
+      document.getElementById('measure-status-none').classList.remove('hide');
+    }
+  }
+  if (statusSelectNone) {
+    select = statusSelectNone;
+    options = measureStatusOptionsList;
+    buildSelectOptionsNone(options, select, toggleSelectStatus);
+  }
+  
+  if (statusSelectAll) {
+    select = statusSelectAll;
+    options = measureStatusOptionsList;
+    buildSelectOptionsAll(options, select, toggleSelectStatus);
+  }
+
+
+
+
+
+
+
+
+
+
+
   
 
   // TypeOptionsList
@@ -1382,6 +1434,53 @@ function removeSupplierLicenceNumber(id) {
     buildSelectOptions(options, select);
   }
 
+  const measureTypeCategoryList = [
+    "Cavity wall insulation",
+    "External/Internal Wall Insulation",
+    "Loft Insulation",
+    "Other Insulation",
+    "Other heating"
+  ]
+
+  if (measureTypeOptionsCategory) {
+    cbDiv = measureTypeOptionsCategory;
+    checkboxOptions = measureTypeCategoryList;
+    buildCheckboxes(checkboxOptions, cbDiv);
+  }
+  
+  if (typeCategorySelect) {
+    select = typeCategorySelect;
+    options = measureTypeCategoryList;
+    buildSelectOptions(options, select);
+  }
+  
+  
+  let toggleSelectCategoryType = false;
+  function toggleSelectCategoryTypeFn() {
+    let spanText = document.getElementById('allOrNoneCategory');
+    toggleSelectCategoryType = !toggleSelectCategoryType;
+    if (toggleSelectCategoryType){
+      spanText.innerHTML = "none";
+      document.getElementById('measure-type-category-all').classList.remove('hide');
+      document.getElementById('measure-type-category-none').classList.add('hide');
+    } else {
+      spanText.innerHTML = "all";
+      document.getElementById('measure-type-category-all').classList.add('hide');
+      document.getElementById('measure-type-category-none').classList.remove('hide');
+    }
+  }
+  if (typeCategorySelectNone) {
+    select = typeCategorySelectNone;
+    options = measureTypeCategoryList;
+    buildSelectOptionsNone(options, select, toggleSelectCategoryType);
+  }
+  
+  if (typeCategorySelectAll) {
+    select = typeCategorySelectAll;
+    options = measureTypeCategoryList;
+    buildSelectOptionsAll(options, select, toggleSelectCategoryType);
+  }
+
 
   // NotificationPeriod
   const notificationPerionOptionsList = [
@@ -1441,8 +1540,36 @@ function removeSupplierLicenceNumber(id) {
     buildCheckboxes(checkboxOptions, cbDiv);
   }
   
-  if (notificationdSelect) {
-    select = notificationdSelect;
+
+
+  let toggleSelectNotificationPeriod = false;
+  function toggleSelectNotificationPeriodFn() {
+    let spanText = document.getElementById('allOrNoneNotification');
+    toggleSelectNotificationPeriod = !toggleSelectNotificationPeriod;
+    if (toggleSelectNotificationPeriod){
+      spanText.innerHTML = "none";
+      document.getElementById('notification-period-all').classList.remove('hide');
+      document.getElementById('notification-period-none').classList.add('hide');
+    } else {
+      spanText.innerHTML = "all";
+      document.getElementById('notification-period-all').classList.add('hide');
+      document.getElementById('notification-period-none').classList.remove('hide');
+    }
+  }
+
+  if (notificationSelectNone) {
+    select = notificationSelectNone;
+    options = notificationPerionOptionsList;
+    buildSelectOptionsNone(options, select, toggleSelectNotificationPeriod);
+  }
+  if (notificationSelectAll) {
+    select = notificationSelectAll;
+    options = notificationPerionOptionsList;
+    buildSelectOptionsAll(options, select, toggleSelectNotificationPeriod);
+  }
+  
+  if (notificationSelect) {
+    select = notificationSelect;
     options = notificationPerionOptionsList;
     buildSelectOptions(options, select);
   }
@@ -1488,17 +1615,43 @@ function removeSupplierLicenceNumber(id) {
       "Rejection",
       "Validating"
     ];
-    buildSelectOptions(options, select);
+    // buildSelectOptions(options, select);
   }
 // }
 
 // Select with options
+// function buildSelectOptions(options, select) {
 function buildSelectOptions(options, select) {
   for (let i = 0; i < options.length; i++) {
       var opt = options[i];
       var el = document.createElement("option");
       el.textContent = opt;
       el.value = opt;
+      select.appendChild(el);
+  }
+}
+
+
+function buildSelectOptionsNone(options, select, toggleSelect) {
+  console.log('toggleSelect ==>', toggleSelect);
+  for (let i = 0; i < options.length; i++) {
+      var opt = options[i];
+      var el = document.createElement("option");
+      el.textContent = opt;
+      el.value = opt;
+      el.removeAttribute('selected');
+      select.appendChild(el);
+  }
+}
+
+function buildSelectOptionsAll(options, select, toggleSelect) {
+  console.log('toggleSelect ==>', toggleSelect);
+  for (let i = 0; i < options.length; i++) {
+      var opt = options[i];
+      var el = document.createElement("option");
+      el.textContent = opt;
+      el.value = opt;
+      el.setAttribute('selected', 'selected');
       select.appendChild(el);
   }
 }
@@ -1888,11 +2041,25 @@ function resultsListFunct(searchResults) {
 }
 
 function measureDetails(measureRef) {
-  window.location.pathname = "/v06-1/measure-details";
+  // window.location.pathname = "/v06-1/measure-details";
+
+  
+  if (pageUrlPath === "/v05-4/measures/search-measures/search-results") {
+    window.location.pathname = "/v05-4/measures/search-measures/measure-details";
+  } else {
+    window.location.pathname = "/v06-1/measure-details";
+  }
+  
+
   localStorage.setItem("measureRefNumber", measureRef);
 }
 
-if (pageUrlPath === "/v06-1/measure-details") {
+// function measureDetailsNew(measureRef) {
+//   window.location.pathname = "/v05-4/measures/search-measures/measure-details";
+//   localStorage.setItem("measureRefNumber", measureRef);
+// }
+
+if (pageUrlPath === "/v06-1/measure-details" || pageUrlPath === "/v05-4/measures/search-measures/measure-details") {
   let measureRefNumber = localStorage.getItem("measureRefNumber");
   let measureDetailsDiv = document.getElementById('measureDetails');
   let detail = '';

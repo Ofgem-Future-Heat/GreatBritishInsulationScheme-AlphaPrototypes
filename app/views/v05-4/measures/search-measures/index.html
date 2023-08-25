@@ -1,0 +1,56 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+    Search measure
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Search measures</h1>
+
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-two-thirds">
+                <p class="govuk-body">Lorem ipsum search start page.</p>
+
+                <p class="gov-body">You can search complete measures to check the:</p>
+                
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>stage a measure is at in the validation process</li>
+                    <li>measure you uploaded is within the notification deadline</li>
+                    <li>errors linked to measures</li>
+                    <li>measures by different error types </li>
+                </ul>
+
+                <p class="gov-body">Select options to search for existing measures in the Great British Insulation Scheme register. You must select at least one option to search the measures.</p>
+
+                <h2 class="govuk-heading-m">Different ways to search for measures</h2>
+
+                <p class="gov-body">You can search measures using a single reference number. Or, search by uploading a measure reference file that has multiple measure reference numbers.</p>
+
+                <div class="govuk-warning-text">
+                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                    <strong class="govuk-warning-text__text">
+                    <span class="govuk-warning-text__assistive">Warning</span>
+                        Measures may take time to show based on the volume of search results.
+                    </strong>
+                </div>
+
+                <!-- Start -->
+                <a href="./search-filters" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+                    Start search
+                    <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                    </svg>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

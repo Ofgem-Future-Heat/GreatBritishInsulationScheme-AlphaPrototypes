@@ -1,0 +1,65 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+    Measures
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">
+            Measures
+        </h1>
+
+        <p class="govuk-body">View previously uploaded measures, download status reports and view late extensions.</p>
+
+        <div class="govuk-grid-row">
+
+            <!-- Upload measures -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m"><a href="#" class="govuk-link">Upload measures</a></h3>
+                    <p class="govuk-body">click here to pload a measure.</p>
+                </div>
+            </div>
+            
+            <!-- Search measures -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m"><a href="search-measures/" class="govuk-link">Search measures</a></h3>
+                    <p class="govuk-body">Search all measures by the Measure reference number, by status, by measure type, submission date and notification period.</p>
+                </div>
+            </div>
+            
+            <!-- Download status reports -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m"><a href="#" class="govuk-link">Status reports</a></h3>
+                    <p class="govuk-body">Blah blah download status reports.</p>
+                </div>
+            </div>
+
+            <!-- Upload measures -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m"><a href="#" class="govuk-link">Extensions</a></h3>
+                    <p class="govuk-body">view late extensions</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="govuk-body"><a href="../home">Return to homepage</a></p>
+
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+        <h3 class="govuk-heading-l">Get help</h3>
+        <p><a href="../v05-2/guidance-for-the-service" target="_blank">How to upload a measure (opens in a new tab)</a></p>
+        <p><a href="../v05-2/what-you-will-need" target="_blank">What you will need to upload a Measure (opens in a new tab)</a></p>
+    </div>
+</div>
+
+{% endblock %}

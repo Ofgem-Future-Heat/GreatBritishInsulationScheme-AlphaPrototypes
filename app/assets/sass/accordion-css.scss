@@ -1,0 +1,110 @@
+// accordion tabs
+.tabs {
+    border-radius: 8px;
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    // font-size: 1rem;
+    font-size: 1.1875rem;
+    
+    overflow: hidden;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+}
+  
+.tab {
+    width: 100%;
+    color: white;
+    overflow: hidden;
+}
+.tab-label {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    padding: 1em;
+    background: #1d70b8;
+    font-weight: bold;
+    cursor: pointer;
+    /* Icon */
+}
+.tab-label:hover {
+    background: #0a2843;
+}
+.tab-label::after {
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    -webkit-transition: all .35s;
+    transition: all .35s;
+}
+
+// transition 
+.tab-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: #2c3e50;
+    background: white;
+    -webkit-transition: all .35s;
+    transition: all .35s;
+}
+
+// Close all
+.tab-close {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: #2c3e50;
+    cursor: pointer;
+}
+.tab-close:hover {
+    background: #1a252f;
+}
+
+// .tab-close ~ #cube { background-color: yellow; }
+
+#closeAllAccordions:checked:has(>) {
+    border: 1px red solid;
+    margin: 60px;
+}
+
+// input checked to functionalities the accordion
+input:checked + .tab-label {
+    background: #1a252f;
+}
+    input:checked + .tab-label::after {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
+input:checked ~ .tab-content {
+    max-height: 100vh;
+    padding: 1em;
+}
+
+// HTML input element
+.hide-accordion-checkboxes {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+/*
+*, p, .govuk-body, .govuk-body-m {
+  color: #0b0c0c;
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+*/
