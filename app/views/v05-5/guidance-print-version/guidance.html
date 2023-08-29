@@ -1,0 +1,170 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Home – {{serviceName}}
+{% endblock %}
+
+{#% block header %}
+  <p>HELLO</p>
+{% endblock %#}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <!-- Table of Contents Navigation -->
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">{{ serviceName }}</h1>
+
+    <a class="govuk-skip-link govuk-!-display-none-print" data-module="govuk-skip-link" href="#guide-contents" data-govuk-skip-link-module-started="true">Skip contents of guide</a>
+
+    <nav class="" aria-label="pages in this guide" role="navigation">
+      <h2 class="govuk-heading-m">Contents</h2>
+      <ul class="govuk-list govuk-list--bullet govuk-list govuk-list--bullet-bullet eco-contents-list">
+        <li class="contents_list_item"><a href="#Overview">Overview</a></li>
+        <li class="contents_list_item"><a href="#WhoCanUploadAMeasure">Who can upload a Measure</a></li>
+        <li class="contents_list_item"><a href="#GuidanceForTheService">Guidance for the service</a></li>
+        <li class="contents_list_item"><a href="#WhatYouWillNeed">What you will need</a></li>
+        <li class="contents_list_item"><a href="#RequestingForAnAccount">Requesting for an account</a></li>
+        <li class="contents_list_item"><a href="#UploadAMeasure">Upload a Measure</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <!-- Main content information -->
+  <div class="govuk-grid-column-two-thirds">
+    <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+    
+    <!-- Overview -->
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-l" id="Overview">Overview</h2>
+      <p class="govuk-body">Lorem ipsum</p>
+      <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <!-- Who can upload a Measure -->
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-l" id="WhoCanUploadAMeasure">Who can upload a Measure</h2>
+      <p class="govuk-body">Lorem ipsum</p>
+      <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      
+      <h3 class="govuk-heading-m">Main suppliers</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Ofgem</li>
+        <li>Eon</li>
+        <li>Etc.</li>
+      </ul>
+
+      <h3 class="govuk-heading-m">Other suppliers</h3>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Ofgem</li>
+        <li>Eon</li>
+      </ul>
+    </div>
+
+    <!-- Guidance for the service -->
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-l" id="GuidanceForTheService">Guidance for the service</h2>
+      <p class="govuk-body">Lorem ipsum</p>
+      <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      
+      <h3 class="govuk-heading-m">Get the latest information and guidance</h3>
+      <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p class="govuk-body"><a href="#" class="govuk-link">Lorem ipsum dolor sit amet</a></p>
+
+      <!-- How to upload a Measure -->
+      <h3 class="govuk-heading-m">How to upload a Measure</h3>
+      <p class="govuk-body">Lorem ipsum</p>
+      <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <!-- What you will need -->
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-l" id="WhatYouWillNeed">What you will need</h2>
+      <p class="govuk-body">In order to upload a Measure, you will need:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>a comma separated values (or csv) file with the correct file format (filename.csv). This cannot be a Microsoft Excel document with the file extension .xls, or .xlsx</li>
+        <li>to ensure the .csv file is of size xxx megabites or less</li>
+        <li>to ensure the file must contain the proper columns and fields (see guidance)</li>
+        <li>something else here</li>
+        <li>and here</li>
+      </ul>
+    </div>
+
+    <!-- Requesting for an account -->
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-l" id="RequestingForAnAccount">Requesting for an account</h2>
+      <p class="govuk-body">If you want to create an account on the ECO Plus service, you can request for an account to be created in the following ways:</p>
+      
+      <h3 class="govuk-heading-m">Request for an account as an authorised user</h3>
+      <p class="govuk-body">In order to request an account, you will need to be authorised. As an authorised user, once your account has been created and validated, you will be able to add additional users.</p>
+      <p class="govuk-body">The requirements to become an authorised user are as follows:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Complete the authorised user request form</li>
+        <li>Provide additional mandatory information</li>
+        <li>Send the completed form and additional mandatory inform to <a href="mailto:request@eco-plus-accounts.gov.uk">request@eco-plus-accounts.gov.uk</a></li>
+      </ul>
+      <p class="govuk-body"><a href="#" class="govuk-link">Lorem ipsum dolor sit amet</a></p>
+
+      <!-- How to upload a Measure -->
+      <h3 class="govuk-heading-m">How to upload a Measure</h3>
+      <p class="govuk-body">Lorem ipsum</p>
+      <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <!-- Upload a Measure -->
+    <div class="govuk-!-margin-bottom-9">
+      <h2 class="govuk-heading-l" id="UploadAMeasure">Upload a Measure</h2>
+      <p class="govuk-body">Lorem ipsum</p>
+      <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      
+      <div class="govuk-inset-text">
+        <p class="govuk-body">This service is for new and existing suppliers to upload a Measure only.</p>
+        <p class="govuk-body">If you are an Ofgem internal ECO register user, you can use ECO Register to monitor the progress of a Measure.</p>
+      </div>
+
+      <!-- Start now -->
+      <a href="user-management/sign-in" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+        Start now
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+        </svg>
+      </a>
+
+      <h3 class="govuk-heading-m">Other ways to upload a Measure</h3>
+      <p class="govuk-body">You can upload a Measure using the ECO Register service</p>
+      <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    
+    <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+    <!-- Get help -->
+    <div class="govuk-!-margin-bottom-9">
+      <h3 class="govuk-heading-m" id="GettingHelp">Get help</h2>
+      <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+      <p class="govuk-body"><a href="#">How to upload a measure</a></p>
+      <p class="govuk-body"><a href="#">Frequently asked questions</a></p>
+
+      <ul class="govuk-list">
+        <li>Email: <a class="govuk-link" href="mailto:measure.info.@ofgem.gov.uk">measure.info.@ofgem.gov.uk</a></li>
+        <li>Telephone: 0300 111 222 333</li>
+      </ul>
+
+      <p class="govuk-body">All services are available Monday to Friday, 9am to 5pm (except public holidays)</p>
+    </div>
+  </div>
+
+  <!-- Side panel -->
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-!-padding-bottom-6"></div>
+    <div class="app-step-nav-related app-step-nav-related--singular">
+      <h2 class="app-step-nav-related__heading govuk-heading-m">Related content</h2>
+      <p><a href="#">Some related content here</a></p>
+      <p><a href="#">Some more related content here</a></p>
+    </div>
+    
+  </div>
+</div>
+
+{% endblock %}
