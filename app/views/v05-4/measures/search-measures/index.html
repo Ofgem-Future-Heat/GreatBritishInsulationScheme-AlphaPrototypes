@@ -53,6 +53,22 @@
                     <li>Select the "Search" button.</li>
                 </ul>
 
+                <!-- See this page again? -->
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="hide-start-page-hint">
+                      
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="hide-start-page" name="hide-start-page" type="checkbox" value="Hide page" onchange="hideStartPage()">
+                            <label class="govuk-label govuk-checkboxes__label" for="hide-start-page">
+                                I do not wish to see this page again.
+                            </label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+
+
                 <!-- Start -->
                 <a href="./search-filters" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
                     Start

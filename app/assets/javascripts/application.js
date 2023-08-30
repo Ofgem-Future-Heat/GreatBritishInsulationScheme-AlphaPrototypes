@@ -1633,7 +1633,7 @@ function buildSelectOptions(options, select) {
 
 
 function buildSelectOptionsNone(options, select, toggleSelect) {
-  console.log('toggleSelect ==>', toggleSelect);
+  // console.log('toggleSelect ==>', toggleSelect);
   for (let i = 0; i < options.length; i++) {
       var opt = options[i];
       var el = document.createElement("option");
@@ -1645,7 +1645,7 @@ function buildSelectOptionsNone(options, select, toggleSelect) {
 }
 
 function buildSelectOptionsAll(options, select, toggleSelect) {
-  console.log('toggleSelect ==>', toggleSelect);
+  // console.log('toggleSelect ==>', toggleSelect);
   for (let i = 0; i < options.length; i++) {
       var opt = options[i];
       var el = document.createElement("option");
@@ -5107,5 +5107,27 @@ if ( pageUrlPath === "/v06-1/measure-details"
       }
     }
     measureDetailsDiv.innerHTML += detail;
+  }
+}
+
+// Hide the Start page
+function hideStartPage() {
+  // localStorage.setItem("hideStartPage", true);
+  const hideStartPageCb = document.getElementById("hide-start-page");
+  if (hideStartPageCb.checked) {
+    // alert("checked");
+    localStorage.setItem("hideStartPage", true);
+  } else {
+    // alert("You didn't check it! Let me check it for you.");
+    localStorage.removeItem("hideStartPage");
+  }
+}
+
+if (pageUrlPath === "/v05-4/measures/") {
+  const hrefRedirect = document.getElementById('setPathOfV05Point4');
+  if (localStorage.getItem("hideStartPage")) {
+    hrefRedirect.href = "/v05-4/measures/search-measures/search-filters";
+  } else {
+    hrefRedirect.href = "/v05-4/measures/search-measures/";
   }
 }
