@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-    Search measure
+    Searching the measure register
 {% endblock %}
 
 {% block content %}
@@ -20,26 +20,25 @@
 
                 <h2 class="govuk-heading-m">Different ways to search for measures</h2>
 
-                <p class="gov-body">You can search for measures in two ways:</p>
+                <p class="gov-body">You can search for measures using:</p>
                 
-                <ul class="govuk-list govuk-list--number indent40">
-                    <li>Using a single measure reference number.</li>
-                    <li>Uploading a file with multiple measure reference numbers.</li>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>single measure reference numbers</li>
+                    <li>a file containing multiple measure reference numbers</li>
+                    <li>other filters</li>
                 </ul>
 
                 <p class="govuk-body"><strong>Single measure reference numbers</strong></p>
-
-                <P class="govuk-body">You can search for individual measures using a single measure reference number.</P>
-                <P class="govuk-body">To do so:</P>
+                <P class="govuk-body">To search for individual measures using a single reference number:</P>
                     
                 <ul class="govuk-list govuk-list--number indent40">
-                    <li>Find the measure reference number from the original project notification file you uploaded.</li>
-                    <li>Copy the measure reference number.</li>
+                    <li>Find the measure reference number in the original project notification file you uploaded.</li>
+                    <li>Copy the measure reference number you want to search for.</li>
                     <li>Add it to the measure reference number field on the next page.</li>
                     <li>Select the "Search" button.</li>
                 </ul>
 
-                <p class="govuk-body"><strong>Multiple measure reference numbers in a file</strong></p>
+                <p class="govuk-body"><strong>A file containing multiple measure reference numbers</strong></p>
                 
                 <p class="gov-body">To search for measures using a measure reference number file, you should:</p>
                     
@@ -49,34 +48,39 @@
                     <li>Save the CSV file.</li>
                     <li>Go to the search page in the Great British Insulation Scheme.</li>
                     <li>Select "Choose file" and select the CSV file you created.</li>
-                    <li>Select "Upload measure reference file" .</li>
+                    <li>Select "Upload measure reference file".</li>
                     <li>Select the "Search" button.</li>
+                </ul>
+
+                <p class="govuk-body"><strong>Using other filters to search for measures</strong></p>
+
+                <p class="govuk-body">You can set other filters when searching for measures. These filters include the measure:</p>
+                
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>status</li>
+                    <li>type</li>
+                    <li>submission date</li>
+                    <li>notification period</li>
                 </ul>
 
                 <!-- See this page again? -->
                 <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset" aria-describedby="hide-start-page-hint">
-                      
-                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                        <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="hide-start-page" name="hide-start-page" type="checkbox" value="Hide page" onchange="hideStartPage()">
-                            <label class="govuk-label govuk-checkboxes__label" for="hide-start-page">
-                                I do not wish to see this page again.
-                            </label>
+                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="hide-start-page" name="hide-start-page" type="checkbox" value="Hide page" onchange="hideStartPage()">
+                                <label class="govuk-label govuk-checkboxes__label" for="hide-start-page">
+                                    Do not show me this page again.
+                                </label>
+                            </div>
                         </div>
-                      </div>
                     </fieldset>
-                  </div>
-
+                </div>
 
                 <!-- Start -->
                 <a href="./search-filters" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
                     Start
-                    <!-- <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-                    </svg> -->
                 </a>
-                
             </div>
         </div>
     </div>

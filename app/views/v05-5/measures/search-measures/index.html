@@ -15,8 +15,7 @@
 
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
-                <p class="govuk-body">Search and view the measures you've previously uploaded to the Great British Insulation Scheme portal using the filters provided.</p>
-                <p class="govuk-body">Once you've set your search filters, select the "Search" button to see your results.</p>
+                <p class="govuk-body">Search and review the measures you've previously uploaded to the Great British Insulation Scheme portal using the filters provided.</p>
 
                 <!-- Different ways to search for measures -->
                 <details class="govuk-details" data-module="govuk-details">
@@ -26,26 +25,25 @@
                         </span>
                     </summary>
                     <div class="govuk-details__text">
-                        <p class="gov-body">You can search for measures in two ways:</p>
-                        
-                        <ul class="govuk-list govuk-list--number indent40">
-                            <li>Using a single measure reference number.</li>
-                            <li>Uploading a file with multiple measure reference numbers.</li>
+                        <p class="gov-body">You can search for measures using:</p>
+                
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>single measure reference numbers</li>
+                            <li>a file containing multiple measure reference numbers</li>
+                            <li>other filters</li>
                         </ul>
 
                         <p class="govuk-body"><strong>Single measure reference numbers</strong></p>
-
-                        <P class="govuk-body">You can search for individual measures using a single measure reference number.</P>
-                        <P class="govuk-body">To do so:</P>
+                        <P class="govuk-body">To search for individual measures using a single reference number:</P>
                             
                         <ul class="govuk-list govuk-list--number indent40">
-                            <li>Find the measure reference number from the original project notification file you uploaded.</li>
-                            <li>Copy the measure reference number.</li>
+                            <li>Find the measure reference number in the original project notification file you uploaded.</li>
+                            <li>Copy the measure reference number you want to search for.</li>
                             <li>Add it to the measure reference number field on the next page.</li>
                             <li>Select the "Search" button.</li>
                         </ul>
 
-                        <p class="govuk-body"><strong>Multiple measure reference numbers in a file</strong></p>
+                        <p class="govuk-body"><strong>A file containing multiple measure reference numbers</strong></p>
                         
                         <p class="gov-body">To search for measures using a measure reference number file, you should:</p>
                             
@@ -55,8 +53,19 @@
                             <li>Save the CSV file.</li>
                             <li>Go to the search page in the Great British Insulation Scheme.</li>
                             <li>Select "Choose file" and select the CSV file you created.</li>
-                            <li>Select "Upload measure reference file" .</li>
+                            <li>Select "Upload measure reference file".</li>
                             <li>Select the "Search" button.</li>
+                        </ul>
+
+                        <p class="govuk-body"><strong>Using other filters to search for measures</strong></p>
+
+                        <p class="govuk-body">You can set other filters when searching for measures. These filters include the measure:</p>
+                        
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>status</li>
+                            <li>type</li>
+                            <li>submission date</li>
+                            <li>notification period</li>
                         </ul>
                     </div>
                 </details>
@@ -80,11 +89,11 @@
                                             <h2 class="govuk-heading-m">Different ways to search for measures</h2>
                                         </legend>
                                         
-                                        <p class="govuk-body">You can search for measures in two ways:</p>
+                                        <p class="govuk-body">You can search for measures using:</p>
                                         
-                                        <ul class="govuk-list govuk-list--number">
-                                            <li>Using a single measure reference number.</li>
-                                            <li>Uploading a file with multiple measure reference numbers.</li>
+                                        <ul class="govuk-list govuk-list--bullet">
+                                            <li>single measure reference numbers</li>
+                                            <li>a file containing multiple measure reference numbers</li>
                                         </ul>
                                         
                                         <div class="govuk-form-group">
@@ -98,7 +107,7 @@
                                         
                                         <div id="measureReferenceFile" class="">
                                             <span class="govuk-label" for="measure-reference-file">
-                                                Measure reference file
+                                                Measure reference number file
                                             </span>
                                             <label for="file-upload" class="custom-file-upload">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -118,7 +127,7 @@
                                             <p id="invalidFileUploaded" class="govuk-error-message hide"><span class="govuk-visually-hidden">Error:</span>The selected file is invalid</p>
                                             <p id="validFileUploaded" class="govuk-success-message hide"><span class="govuk-visually-hidden"></span>File uploaded</p>
                                             
-                                            <button id="uploadBtn" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--secondary govuk-button--disabled margin0" class="govuk-button"  onclick="triggerMrnFileValidation()" type="button">Upload measure reference file</button>
+                                            <button id="uploadBtn" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--secondary govuk-button--disabled margin0" class="govuk-button"  onclick="triggerMrnFileValidation()" type="button">Upload measure reference number file</button>
                                         </div>
                                     </fieldset>
                             </div>
