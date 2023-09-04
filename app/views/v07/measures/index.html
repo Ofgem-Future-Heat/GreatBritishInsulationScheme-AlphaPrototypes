@@ -1,0 +1,51 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+    Measures
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">
+            Measures
+        </h1>
+
+        <p class="govuk-body">View previously uploaded measures, download status reports and view late extensions.</p>
+
+        <div class="govuk-grid-row">
+
+            <!-- Upload measures -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m"><a href="measures/upload-measure" class="govuk-link">Upload measures</a></h3>
+                    <p class="govuk-body">click here to pload a measure.</p>
+                </div>
+            </div>
+            
+            <!-- Search measures -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m"><a id="setPathOfV05Point4" href="measures/search-measures/" class="govuk-link">Search measures</a></h3>
+                    <p class="govuk-body">Search all measures by the Measure reference number, by status, by measure type, submission date and notification period.</p>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+        
+        <p class="govuk-body"><a href="/v07/">Return to homepage</a></p>
+
+        <!-- <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+        <h3 class="govuk-heading-l">Get help</h3>
+        <p><a href="#" target="_blank">How to upload a measure (opens in a new tab)</a></p>
+        <p><a href="#" target="_blank">What you will need to upload a Measure (opens in a new tab)</a></p> -->
+    </div>
+</div>
+
+{% endblock %}

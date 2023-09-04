@@ -11,13 +11,14 @@
         
         <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
 
-        <h1 class="govuk-heading-xl">Search measure results</h1>
+        <h1 class="govuk-heading-xl">Searching the measure register</h1>
 
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
                 <p class="govuk-body">Search and view the measures you've previously uploaded to the Great British Insulation Scheme portal using the filters provided.</p>
                 <p class="govuk-body">Once you've set your search filters, select the "Search" button to see your results.</p>
             </div>
+
             <div class="govuk-grid-column-one-third">
                 <h2 class="govuk-heading-l">Filters</h2>
 
@@ -25,9 +26,9 @@
                     <div class="tabs">
                         <!-- Measure reference number -->
                         <div class="tab">
-                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck1">
-                            <label class="tab-label" for="chck1">Measure reference number</label>
-                            <div class="tab-content">
+                           <input class="hide-accordion-checkboxes" type="checkbox" id="chck1" >
+                           <label class="tab-label" for="chck1">Measure reference number</label>
+                           <div class="tab-content">
                                 <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint">
                                     <legend class="govuk-fieldset__legend">
                                         <h2 class="govuk-heading-m">Different ways to search for measures</h2>
@@ -74,12 +75,12 @@
                                         <button id="uploadBtn" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--secondary govuk-button--disabled margin0" class="govuk-button"  onclick="triggerMrnFileValidation()" type="button">Upload measure reference number file</button>
                                     </div>
                                 </fieldset>
-                             </div>
-                         </div>
+                            </div>
+                        </div>
 
                         <!-- Status -->
                         <div class="tab">
-                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck2">
+                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck2" >
                             <label class="tab-label" for="chck2">Status</label>
                             <div class="tab-content">
                                     <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
@@ -106,7 +107,7 @@
 
                         <!-- Measure type -->
                         <div class="tab">
-                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck3">
+                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck3" >
                             <label class="tab-label" for="chck3">Measure type</label>
                             <div class="tab-content">
                                 <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-type-hint">
@@ -132,7 +133,7 @@
                         
                         <!-- Submission date -->
                         <div class="tab">
-                           <input class="hide-accordion-checkboxes" type="checkbox" id="chck4">
+                           <input class="hide-accordion-checkboxes" type="checkbox" id="chck4" >
                            <label class="tab-label" for="chck4">Submission date</label>
                            <div class="tab-content">
                                     <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint">
@@ -170,7 +171,7 @@
 
                         <!-- Notification period -->
                         <div class="tab">
-                           <input class="hide-accordion-checkboxes" type="checkbox" id="chck5">
+                           <input class="hide-accordion-checkboxes" type="checkbox" id="chck5" >
                            <label class="tab-label" for="chck5">Notification period</label>
                            <div class="tab-content">
                                     <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
@@ -182,9 +183,6 @@
                                             You can select one or more items in the list.
                                         </div>
                                         
-                                        <!-- <select class="govuk-select govuk-!-width-full" id="notification-period" name="notification-period" size="5" multiple="multiple">
-                                            <option value="" selected disabled hidden>Select a notification period</option>
-                                        </select> -->
             
                                         <select class="govuk-select govuk-!-width-full" id="notification-period-none" name="notification-period" size="5" multiple="multiple">
                                             <option value="" selected disabled hidden>Select a notification period</option>
@@ -198,13 +196,18 @@
                         </div>
 
                         <!-- Close all -->
-                        <!-- s -->
+                        <!-- 
+                        <div class="tab">
+                            <input class="hide-accordion-checkboxes" type="checkbox" id="closeAllAccordions" name="rd">
+                            <label for="closeAllAccordions" class="tab-close">Close all</label>
+                        </div> 
+                        -->
                     </div>
                     
                     <!-- Search -->
                     <div class="govuk-button-group">
                         <a href="./search-results" class="govuk-button" data-module="govuk-button">
-                            Update search
+                            Search
                         </a>
                     </div>
 
@@ -214,81 +217,13 @@
 
             <div class="govuk-grid-column-two-thirds">
                 <h2 class="govuk-heading-l">Results</h2>
-
-                <p class="govuk-body">Showing <strong><span id="resultsLength">1903</span></strong> measure<span id="singularPlural"></span>.</p>
-                
-                <div class="scrollable more-height">
-                    <table class="govuk-table">
-                        <thead class="govuk-table__head">
-                                <tr class="govuk-table__row">
-                                    <!-- <th scope="col" class="govuk-table__header">Select All<br>
-                                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">                                
-                                            <div class="govuk-checkboxes__item">
-                                                <input  name="search-results"
-                                                        type="checkbox" 
-                                                        id="Id_SelectAll_InternalMeasuresGrid" 
-                                                        data-test-id="Id_SelectAll_InternalMeasuresGrid" 
-                                                        class="govuk-checkboxes__input"
-                                                        onclick="checkAllCboxes(this)"
-                                                >
-                                                <label for="" class="govuk-label govuk-checkboxes__label"></label>
-                                            </div>
-                                        </div>
-                                    </th> -->
-                                    <th scope="col" class="govuk-table__header">Measure reference number</th>
-                                    <th scope="col" class="govuk-table__header">Measure type</th>
-                                    <th scope="col" class="govuk-table__header">Status</th>
-                                    <th scope="col" class="govuk-table__header">Submission date</th>
-                                    <th scope="col" class="govuk-table__header">Action</th>
-                                </tr>
-                        </thead>
-
-                        <tbody id="resultsList"></tbody>
-                    </table>
-                </div>
-
-                <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
-
-                <!-- Navigation -->
-                <nav class="govuk-pagination" role="navigation" aria-label="results">
-                    <div class="govuk-pagination__prev">
-                        <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
-                            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-                                <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
-                            </svg>
-                            <span class="govuk-pagination__link-title">Previous</span>
-                        </a>
-                    </div>
-                    <ul class="govuk-pagination__list">
-                        <li class="govuk-pagination__item">
-                            <a class="govuk-link govuk-pagination__link" href="search-results" aria-label="Page 1" aria-current="page">
-                                1
-                            </a>
-                        </li>
-                        <li class="govuk-pagination__item govuk-pagination__item--current">
-                            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
-                                2
-                            </a>
-                        </li>
-                        <li class="govuk-pagination__item">
-                            <a class="govuk-link govuk-pagination__link" href="search-results-3" aria-label="Page 3">
-                                3
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="govuk-pagination__next">
-                    <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-                        <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-                        </svg></a>
-                    </div>
-                </nav>
-                
+                <p class="govuk-body">Set the filters to search for previously uploaded measures.</p>
             </div>
         </div>
                 
         <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
            
-        <p class="govuk-body"><a href="/v05-4/home">Return to homepage</a></p>
+        <p class="govuk-body"><a href="/v07/">Return to homepage</a></p>
     </div>
 </div>
 {% endblock %}

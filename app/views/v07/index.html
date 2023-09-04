@@ -1,0 +1,101 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+    {{serviceName}}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        
+        <h1 class="govuk-heading-xl">
+            {{serviceName}}
+        </h1>
+
+        <a role="button" draggable="false" class="govuk-button govuk-button" data-module="govuk-button" href="measures/upload-measure.html">Upload a measure file</a>
+        
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+        <!-- Measure errors -->
+        <div class="govuk-notification-banner govuk-notification-banner--error" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">Latest error reports</h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <h3 class="govuk-notification-banner__heading">The following files you uploaded include measures containing errors</h3>
+
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header app-custom-class">Date</th>
+                            <th scope="col" class="govuk-table__header app-custom-class">Time</th>
+                            <th scope="col" class="govuk-table__header app-custom-class">File name</th>
+                            <th scope="col" class="govuk-table__header app-custom-class">Error stage</th>
+                            <th scope="col" class="govuk-table__header app-custom-class">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th class="govuk-table__cell">12/03/2023</th>
+                            <th class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">measure-12345678.csv</td>
+                            <td class="govuk-table__cell">Stage 3</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
+                            <th scope="row" class="govuk-table__cell">09:29</th>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell">Stage 1</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p class="govuk-body"><a class="govuk-link" href="errors">View all error reports</a></p>
+
+            </div>
+        </div>
+
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+        
+        <div class="govuk-grid-row">
+
+            <!-- Measures -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m"><a href="measures" class="govuk-link">Managing measures</a></h3>
+                    <p class="govuk-body">Upload new measure files, view status on previously uploaded files, <strong>search measures</strong> and view file extensions.</p>
+                </div>
+                <!-- Ignore this for now -->
+            </div>
+
+            <!-- Transfers -->
+            <!-- <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m"><a href="#" class="govuk-link">Transfers</a></h3>
+                    <p class="govuk-body">Transfers request approval or manage approval requests.</p>
+                </div>
+            </div> -->
+
+            <!-- Errors -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m"><a href="errors" class="govuk-link">View all error reports</a></h3>
+                    <p class="govuk-body">View and download all existing error reports.</p>
+                </div>
+                <!-- Build this one out for Alpha -->
+            </div>
+        </div>
+
+        <!-- <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+        <h3 class="govuk-heading-l">Get help</h3>
+        <p><a href="#" target="_blank">How to upload a measure (opens in a new tab)</a></p>
+        <p><a href="#" target="_blank">What you will need to upload a Measure (opens in a new tab)</a></p> -->
+    </div>
+</div>
+
+{% endblock %}

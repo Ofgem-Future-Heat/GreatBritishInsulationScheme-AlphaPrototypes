@@ -95,6 +95,10 @@ function triggerValidation42() {
     window.location.pathname = "/v04-2/measures/success-file-upload-core-check-errors";
 }
 
+function triggerValidation70() {
+    window.location.pathname = "/v07/measures/success-file-upload-core-check-errors";
+}
+
 function triggerMrnFileValidation() {
   // return console.log('file type', filename.split('.').pop());
 
@@ -4802,6 +4806,8 @@ function measureDetails(measureRef) {
     window.location.pathname = "/v05-4/measures/search-measures/measure-details";
   } else if (pageUrlPath === "/v05-5/measures/search-measures/search-results" || pageUrlPath === "/v05-5/measures/search-measures/search-results-2" || pageUrlPath === "/v05-5/measures/search-measures/search-results-3") {
     window.location.pathname = "/v05-5/measures/search-measures/measure-details";
+  } else if (pageUrlPath === "/v07/measures/search-measures/search-results" || pageUrlPath === "/v07/measures/search-measures/search-results-2" || pageUrlPath === "/v07/measures/search-measures/search-results-3") {
+    window.location.pathname = "/v07/measures/search-measures/measure-details";
   } else {
     window.location.pathname = "/v06-1/measure-details";
   }
@@ -4821,6 +4827,8 @@ if ( pageUrlPath === "/v06-1/measure-details"
 
   || pageUrlPath === "/v05-5/measures/search-measures/measure-details"
   // || pageUrlPath === "/v05-5/measures/search-measures/measure-details#" 
+
+  || pageUrlPath === "/v07/measures/search-measures/measure-details"
 ) {
   let measureRefNumber = localStorage.getItem("measureRefNumber");
   let measureDetailsDiv = document.getElementById('measureDetails');
