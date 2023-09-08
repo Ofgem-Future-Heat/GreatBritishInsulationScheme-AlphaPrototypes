@@ -5146,4 +5146,8 @@ if (pageUrlPath === '/v03-5/signed-out-view'){
 }
 if (pageUrlPath === '/v03-5/signed-in-no-ofgem-view'){
   document.getElementById('signOutLi').classList.remove('hide');
+
+  const headUsername = document.getElementById('headerUsername');
+  const parentOfUsername = headUsername.parentElement;
+  parentOfUsername.classList.add('padding-top-zero');
 }
