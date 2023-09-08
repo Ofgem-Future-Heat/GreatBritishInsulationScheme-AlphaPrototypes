@@ -5139,3 +5139,11 @@ if (pageUrlPath === "/v05-4/measures/") {
     hrefRedirect.href = "/v05-4/measures/search-measures/";
   }
 }
+
+
+if (pageUrlPath === '/v03-5/signed-out-view'){
+  document.getElementById('signInLi').classList.remove('hide');
+}
+if (pageUrlPath === '/v03-5/signed-in-no-ofgem-view'){
+  document.getElementById('signOutLi').classList.remove('hide');
+}

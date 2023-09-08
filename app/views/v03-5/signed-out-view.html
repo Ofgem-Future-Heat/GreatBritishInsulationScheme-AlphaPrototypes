@@ -1,0 +1,21 @@
+{% extends "layouts/v03-external-custom-main.html" %}
+
+{% block pageTitle %}
+    Signed out
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Signed out</h1>
+
+        <p class="govuk-body">You are now signed out of the {{serviceName}}.</p>
+
+        <button class="govuk-button" data-module="govuk-button">
+            Sign in again
+        </button>
+    </div>
+</div>
+
+{% endblock %}

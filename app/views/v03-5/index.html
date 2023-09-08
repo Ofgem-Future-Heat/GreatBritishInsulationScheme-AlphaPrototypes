@@ -1,0 +1,21 @@
+{% extends "layouts/v07-external-custom-main.html" %}
+
+{% block pageTitle %}
+    {{serviceName}}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <h1 class="govuk-heading-xl">{{serviceName}}</h1>
+
+        <ul class="govuk-list">
+            <li><a class="govuk-link" href="signed-out-view">Signed out view</a></li>
+            <li><a class="govuk-link" href="signed-in-no-ofgem-view">Signed in with One Login but not registered with Ofgem view</a></li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
