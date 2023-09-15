@@ -4791,7 +4791,7 @@ function resultsListFunct(searchResults) {
       <td><p class="govuk-body">` + searchResults[i].measureType + `</p></td>
       <td><p class="govuk-body">` + searchResults[i].measureStatus + `</p></td>
       <td><p class="govuk-body">` + searchResults[i].submissionDate + `</p></td>
-      <td><p class="govuk-body"><a href="#" class="govuk-link" onclick="measureDetails('`+searchResults[i].measureReferenceNumber+`')">View details</a></p></td>
+      <!-- <td><p class="govuk-body"><a href="#" class="govuk-link" onclick="measureDetails('`+searchResults[i].measureReferenceNumber+`')">View details</a></p></td> -->
     </tr>
     `;
   }
@@ -4800,8 +4800,6 @@ function resultsListFunct(searchResults) {
 
 function measureDetails(measureRef) {
   // window.location.pathname = "/v06-1/measure-details";
-
-  
   if (pageUrlPath === "/v05-4/measures/search-measures/search-results" || pageUrlPath === "/v05-4/measures/search-measures/search-results-2" || pageUrlPath === "/v05-4/measures/search-measures/search-results-3") {
     window.location.pathname = "/v05-4/measures/search-measures/measure-details";
   } else if (pageUrlPath === "/v05-5/measures/search-measures/search-results" || pageUrlPath === "/v05-5/measures/search-measures/search-results-2" || pageUrlPath === "/v05-5/measures/search-measures/search-results-3") {
@@ -4811,7 +4809,6 @@ function measureDetails(measureRef) {
   } else {
     window.location.pathname = "/v06-1/measure-details";
   }
-  
 
   localStorage.setItem("measureRefNumber", measureRef);
 }

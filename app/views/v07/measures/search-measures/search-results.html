@@ -82,25 +82,25 @@
                             <input class="hide-accordion-checkboxes" type="checkbox" id="chck2">
                             <label class="tab-label" for="chck2">Status</label>
                             <div class="tab-content">
-                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
-                                        <legend class="govuk-fieldset__legend">
-                                            <h2 class="govuk-heading-m">What is the measure status?</h2>
-                                        </legend>
-                                        
-                                        <div id="measure-status-hint" class="govuk-hint">
-                                            You can select one or more items in the list.
-                                        </div>
-            
-                                        <select class="govuk-select govuk-!-width-full" id="measure-status-none" name="measure-status" size="5" multiple="multiple">
-                                            <option value="" selected disabled hidden>Select a measure status</option>
-                                        </select>
-            
-                                        <select class="govuk-select govuk-!-width-full hide" id="measure-status-all" name="measure-status" size="5" multiple="multiple">
-                                            <option value="" selected disabled hidden>Select a measure status</option>
-                                        </select>
+                                <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
+                                    <legend class="govuk-fieldset__legend">
+                                        <h2 class="govuk-heading-m">What is the measure status?</h2>
+                                    </legend>
                                     
-                                        <a class="govuk-link" href="javascript:;" onclick="toggleSelectStatusFn()">select <span id="allOrNoneStatus">all</span></a>
-                                    </fieldset>
+                                    <div id="measure-status-hint" class="govuk-hint">
+                                        You can select one or more items in the list.
+                                    </div>
+        
+                                    <select class="govuk-select govuk-!-width-full" id="measure-status-none" name="measure-status" size="5" multiple="multiple">
+                                        <option value="" selected disabled hidden>Select a measure status</option>
+                                    </select>
+        
+                                    <select class="govuk-select govuk-!-width-full hide" id="measure-status-all" name="measure-status" size="5" multiple="multiple">
+                                        <option value="" selected disabled hidden>Select a measure status</option>
+                                    </select>
+                                
+                                    <a class="govuk-link" href="javascript:;" onclick="toggleSelectStatusFn()">select <span id="allOrNoneStatus">all</span></a>
+                                </fieldset>
                             </div>
                         </div>
 
@@ -135,36 +135,36 @@
                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck4">
                            <label class="tab-label" for="chck4">Submission date</label>
                            <div class="tab-content">
-                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint">
-                                        <legend class="govuk-fieldset__legend">
-                                            <h2 class="govuk-heading-m">What is the submission date?</h2>
-                                        </legend>
-            
-                                        <div id="submission-date-hint" class="govuk-hint">
-                                            For example, 27 3 2007
+                                <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint">
+                                    <legend class="govuk-fieldset__legend">
+                                        <h2 class="govuk-heading-m">What is the submission date?</h2>
+                                    </legend>
+        
+                                    <div id="submission-date-hint" class="govuk-hint">
+                                        For example, 27 3 2007
+                                    </div>
+        
+                                    <div class="govuk-date-input" id="submission-date">
+                                        <div class="govuk-date-input__item">
+                                            <label class="govuk-label govuk-date-input__label" for="submission-date-day">
+                                                Day
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="submission-date-day" name="submission-date-day" type="text" inputmode="numeric">
                                         </div>
-            
-                                        <div class="govuk-date-input" id="submission-date">
-                                            <div class="govuk-date-input__item">
-                                                    <label class="govuk-label govuk-date-input__label" for="submission-date-day">
-                                                        Day
-                                                    </label>
-                                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="submission-date-day" name="submission-date-day" type="text" inputmode="numeric">
-                                            </div>
-                                            <div class="govuk-date-input__item">
-                                                    <label class="govuk-label govuk-date-input__label" for="submission-date-month">
-                                                        Month
-                                                    </label>
-                                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="submission-date-month" name="submission-date-month" type="text" inputmode="numeric">
-                                            </div>
-                                            <div class="govuk-date-input__item">
-                                                    <label class="govuk-label govuk-date-input__label" for="submission-date-year">
-                                                        Year
-                                                    </label>
-                                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="submission-date-year" name="submission-date-year" type="text" inputmode="numeric">
-                                            </div>
+                                        <div class="govuk-date-input__item">
+                                            <label class="govuk-label govuk-date-input__label" for="submission-date-month">
+                                                Month
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="submission-date-month" name="submission-date-month" type="text" inputmode="numeric">
                                         </div>
-                                    </fieldset>
+                                        <div class="govuk-date-input__item">
+                                            <label class="govuk-label govuk-date-input__label" for="submission-date-year">
+                                                Year
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="submission-date-year" name="submission-date-year" type="text" inputmode="numeric">
+                                        </div>
+                                    </div>
+                                </fieldset>
                            </div>
                         </div>
 
@@ -173,32 +173,24 @@
                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck5">
                            <label class="tab-label" for="chck5">Notification period</label>
                            <div class="tab-content">
-                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
-                                        <legend class="govuk-fieldset__legend">
-                                            <h2 class="govuk-heading-m">What is the notification period?</h2>
-                                        </legend>
-                                        
-                                        <div id="measure-status-hint" class="govuk-hint">
-                                            You can select one or more items in the list.
-                                        </div>
-                                        
-                                        <!-- <select class="govuk-select govuk-!-width-full" id="notification-period" name="notification-period" size="5" multiple="multiple">
-                                            <option value="" selected disabled hidden>Select a notification period</option>
-                                        </select> -->
-            
-                                        <select class="govuk-select govuk-!-width-full" id="notification-period-none" name="notification-period" size="5" multiple="multiple">
-                                            <option value="" selected disabled hidden>Select a notification period</option>
-                                        </select>
-                                        <select class="govuk-select govuk-!-width-full hide" id="notification-period-all" name="notification-period" size="5" multiple="multiple">
-                                            <option value="" selected disabled hidden>Select a notification period</option>
-                                        </select>
-                                        <a class="govuk-link" href="javascript:;" onclick="toggleSelectNotificationPeriodFn()">select <span id="allOrNoneNotification">all</span></a>
-                                    </fieldset>
+                                <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
+                                    <legend class="govuk-fieldset__legend">
+                                        <h2 class="govuk-heading-m">What is the notification period?</h2>
+                                    </legend>
+                                    
+                                    <div id="measure-status-hint" class="govuk-hint">
+                                        You can select one or more items in the list.
+                                    </div>
+                                    <select class="govuk-select govuk-!-width-full" id="notification-period-none" name="notification-period" size="5" multiple="multiple">
+                                        <option value="" selected disabled hidden>Select a notification period</option>
+                                    </select>
+                                    <select class="govuk-select govuk-!-width-full hide" id="notification-period-all" name="notification-period" size="5" multiple="multiple">
+                                        <option value="" selected disabled hidden>Select a notification period</option>
+                                    </select>
+                                    <a class="govuk-link" href="javascript:;" onclick="toggleSelectNotificationPeriodFn()">select <span id="allOrNoneNotification">all</span></a>
+                                </fieldset>
                            </div>
                         </div>
-
-                        <!-- Close all -->
-                        <!-- s -->
                     </div>
                     
                     <!-- Search -->
@@ -207,40 +199,27 @@
                             Update search
                         </a>
                     </div>
-
                 </form>
-
             </div>
 
             <div class="govuk-grid-column-two-thirds">
                 <h2 class="govuk-heading-l">Results</h2>
 
                 <p class="govuk-body">Showing <strong><span id="resultsLength">1903</span></strong> measure<span id="singularPlural"></span>.</p>
+
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    Download results
+                </button>
                 
                 <div class="scrollable more-height">
                     <table class="govuk-table">
                         <thead class="govuk-table__head">
-                                <tr class="govuk-table__row">
-                                    <!-- <th scope="col" class="govuk-table__header">Select All<br>
-                                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">                                
-                                            <div class="govuk-checkboxes__item">
-                                                <input  name="search-results"
-                                                        type="checkbox" 
-                                                        id="Id_SelectAll_InternalMeasuresGrid" 
-                                                        data-test-id="Id_SelectAll_InternalMeasuresGrid" 
-                                                        class="govuk-checkboxes__input"
-                                                        onclick="checkAllCboxes(this)"
-                                                >
-                                                <label for="" class="govuk-label govuk-checkboxes__label"></label>
-                                            </div>
-                                        </div>
-                                    </th> -->
-                                    <th scope="col" class="govuk-table__header">Measure reference number</th>
-                                    <th scope="col" class="govuk-table__header">Measure type</th>
-                                    <th scope="col" class="govuk-table__header">Status</th>
-                                    <th scope="col" class="govuk-table__header">Submission date</th>
-                                    <th scope="col" class="govuk-table__header">Action</th>
-                                </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header">Measure reference number</th>
+                                <th scope="col" class="govuk-table__header">Measure type</th>
+                                <th scope="col" class="govuk-table__header">Status</th>
+                                <th scope="col" class="govuk-table__header">Submission date</th>
+                            </tr>
                         </thead>
 
                         <tbody id="resultsList"></tbody>
@@ -248,6 +227,10 @@
                 </div>
 
                 <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    Download results
+                </button>
 
                 <!-- Navigation -->
                 <nav class="govuk-pagination" role="navigation" aria-label="results">
