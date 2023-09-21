@@ -1,0 +1,57 @@
+{% extends "layouts/v08-external-custom-main.html" %}
+
+{% block pageTitle %}
+  File not uploaded
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        File uploaded
+      </h1>
+    </div>
+
+    <div class="govuk-error-summary" data-module="govuk-error-summary">
+      <div role="alert">
+        <h2 class="govuk-error-summary__title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <p>The file does not meet the upload requirements.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="govuk-body">The file must be saved and uploaded as a CSV file.</p>
+
+    <div class="govuk-button-group">
+
+      <label class="govuk-button govuk" id="measure-label" data-module="govuk-button" for="measure" role="button" tabindex="0">
+        Try uploading another file
+      </label> 
+      <input  class="govuk-visually-hidden" 
+              id="measure" 
+              name="measure" 
+              type="file" 
+              accept=".csv" 
+              aria-hidden="true" 
+              tabindex="-1"
+              onchange="return triggerValidation22(this)"
+        />
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    
+    <p class="govuk-body"><a href="../home-su">Return to homepage</a></p>
+
+    <h3 class="govuk-heading-l">Get help</h3>
+        <p><a href="#" target="_blank">How to upload a measure (opens in a new tab)</a></p>
+        <p><a href="#" target="_blank">What you will need to upload a Measure (opens in a new tab)</a></p>
+  </div>
+</div>
+
+{% endblock %}

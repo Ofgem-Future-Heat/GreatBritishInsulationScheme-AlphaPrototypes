@@ -1,0 +1,77 @@
+{% extends "layouts/v08-external-custom-main.html" %}
+
+{% block pageTitle %}
+File upload successful
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        File uploaded
+      </h1>
+    </div>
+
+    <h2 class="govuk-heading-l">This file has errors</h2>
+    
+    <!-- <p class="govuk-body">The file contains [no.] measures with errors. These measures with errors have:</p> -->
+    
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        This file has 153 measures with errors.
+      </strong>
+    </div>
+
+    <p class="govuk-body">The measures with errors have:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>failed the core stage checks</li>
+      <li>not been uploaded into the Great British Insulation Scheme register</li>
+    </ul>
+
+    <p class="govuk-body">You need to download the error report containing the unsuccessful measures to find out why they have failed. You will also receive these errors via email.</p>
+
+    <h2 class="govuk-heading-l">What happens next?</h2>
+    
+    <div class="govuk-inset-text">
+      The remaining 847 measures do not have errors.
+    </div>
+
+    <p class="govuk-body">These measures will now go through additional checks to validate the remaining information in the file.</p>
+    
+    <h3 class="govuk-heading-m">Fixing the errors in the file</h3>
+
+    <p class="govuk-body">Before you can progress, you must fix the measures containing errors.</p>
+    <p class="govuk-body">To do this, you must:</p>
+    <ol class="govuk-list govuk-list--number">
+      <li>Download the error report.</li>
+      <li>Follow the instructions in the error report to fix the measures with errors.</li>
+      <li>Reupload the measures that failed the core stage checks in a new CSV file.</li>
+    </ol>
+
+    <h2 class="govuk-heading-l">Downloading your error report</h2>
+    
+    <!-- <p class="govuk-body">If you do not download it here, you'll be unable to access it afterwards and have to upload your file again to generate the error report.</p> -->
+    <p class="govuk-body">You can download the error report here or on the <a href="../errors/index.html">existing error report page</a>.</p>
+    
+    <div class="govuk-button-group">
+      <button class="govuk-button" data-module="govuk-button">
+        Download error report
+      </button>
+    </div>
+    
+    <h3 class="govuk-heading-m">Upload another measure file</h3>
+
+    <p class="govuk-body"><a href="upload-measure.html">Upload another measure file</a></p>
+    
+    <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+    
+    <p class="govuk-body"><a href="/v08/home">Return to homepage</a></p>
+  </div>
+</div>
+
+{% endblock %}
