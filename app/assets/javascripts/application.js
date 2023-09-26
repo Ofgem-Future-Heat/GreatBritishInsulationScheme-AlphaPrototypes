@@ -5152,3 +5152,26 @@ if (pageUrlPath === '/v03-5/signed-in-no-ofgem-view'){
   const parentOfUsername = headUsername.parentElement;
   parentOfUsername.classList.add('padding-top-zero');
 }
+
+
+
+// Check MRN
+function checkMRN() {
+  const performSearch = document.getElementById('performSearch');
+  const errorMRNSummary = document.getElementById('error-MRN-summary');
+  const mrnErrorSection = document.getElementById('mrnErrorSection');
+  const mrnFieldError = document.getElementById('mrn-field-error');
+  const mrnFileFieldError = document.getElementById('mrn-file-field-error');
+  const measureReferenceNumberInputField = document.getElementById('measure-reference-number');
+
+  if((document.getElementById("measure-reference-number").value.length > 1) && (document.getElementById("file-upload").value != "")) {
+    window.scrollTo(0, 0);
+    errorMRNSummary.classList.remove('hide');
+    mrnFieldError.classList.remove('hide');
+    mrnFileFieldError.classList.remove('hide');
+    mrnErrorSection.classList.add('govuk-form-group--error');
+    measureReferenceNumberInputField.classList.add('govuk-input--error');
+  } else {
+    performSearch.href = "/v08/measures/search-measures/search-results";
+  }
+}
