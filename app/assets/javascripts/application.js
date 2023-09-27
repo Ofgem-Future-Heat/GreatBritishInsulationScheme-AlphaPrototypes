@@ -5141,7 +5141,6 @@ if (pageUrlPath === "/v05-4/measures/") {
   }
 }
 
-
 if (pageUrlPath === '/v03-5/signed-out-view'){
   document.getElementById('signInLi').classList.remove('hide');
 }
@@ -5152,8 +5151,6 @@ if (pageUrlPath === '/v03-5/signed-in-no-ofgem-view'){
   const parentOfUsername = headUsername.parentElement;
   parentOfUsername.classList.add('padding-top-zero');
 }
-
-
 
 // Check MRN
 function checkMRN() {
