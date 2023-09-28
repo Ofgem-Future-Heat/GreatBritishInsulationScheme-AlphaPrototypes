@@ -17,15 +17,18 @@
               </h2>
               <div class="govuk-error-summary__body">
                 <ul class="govuk-list govuk-error-summary__list">
-                  <li>
-                    <p><a href="#error-with-MRN">
-                        Enter a single measure reference number to search<br />
-                        Or, search for measure reference numbers by uploading a file containing the numbers you want to search
-                        <br />
-                        <br />
-                        You cannot search using both a single measure reference number and a file containing measure reference numbers
-                    </a>
-                  </li>
+                    <li id="errorWithMRN" class="hide">
+                        <p><a href="#error-with-MRN">
+                            Enter a single measure reference number to search<br />
+                            Or, search for measure reference numbers by uploading a file containing the numbers you want to search
+                            <br />
+                            <br />
+                            You cannot search using both a single measure reference number and a file containing measure reference numbers
+                        </a>
+                    </li>
+                    <li id="errorWithNothingSelected" class="hide">
+                        <p><a href="#error-with-nothing-selected">You must add either an MRN number, or upload an MRN number file or select a status</a></p>
+                    </li>
                 </ul>
               </div>
             </div>
@@ -67,12 +70,22 @@
                         
                         <p class="gov-body">To search for measures using a measure reference number file, you should:</p>
                             
-                        <ul class="govuk-list govuk-list--number indent40">
+                        <!-- <ul class="govuk-list govuk-list--number indent40">
                             <li>Create a text file.</li>
                             <li>Include a single column with the heading labelled as 'measure reference number' and the measure reference numbers you want to search for.</li>
                             <li>Save the text file as a .txt file extension.</li>
                             <li>Go to the search page in the Great British Insulation Scheme.</li>
                             <li>Select "Choose file" and select the text file you created.</li>
+                            <li>Select "Upload measure reference file".</li>
+                            <li>Select the "Search" button.</li>
+                        </ul> -->
+                            
+                        <ul class="govuk-list govuk-list--number indent40">
+                            <li>Create a CSV file in Microsoft Excel.</li>
+                            <li>Include a single column with the heading labelled as 'Measure_reference_number' and the measure reference numbers you want to search for.</li>
+                            <li>Save the CSV file.</li>
+                            <li>Go to the search page in the Great British Insulation Scheme.</li>
+                            <li>Select "Choose file" and select the CSV file you created.</li>
                             <li>Select "Upload measure reference file".</li>
                             <li>Select the "Search" button.</li>
                         </ul>
@@ -132,7 +145,8 @@
                                             </span>
                                             
                                             <p id="mrn-file-field-error" class="govuk-error-message hide">
-                                                <span class="govuk-visually-hidden">Error:</span> Or, search for measure reference numbers by uploading a file containing the numbers you want to search</p>
+                                                <span class="govuk-visually-hidden">Error:</span> Or, search for measure reference numbers by uploading a file containing the numbers you want to search
+                                            </p>
 
                                             <label for="file-upload" class="custom-file-upload">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -164,25 +178,31 @@
                             <input class="hide-accordion-checkboxes" type="checkbox" id="chck2" checked="checked">
                             <label class="tab-label" for="chck2">Status</label>
                             <div class="tab-content">
-                                <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
-                                    <legend class="govuk-fieldset__legend">
-                                        <h2 class="govuk-heading-m">What is the measure status?</h2>
-                                    </legend>
+                                <div class="govuk-form-group" id="statusErrorSection">
+                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint" id="error-with-nothing-selected">
+                                        <legend class="govuk-fieldset__legend">
+                                            <h2 class="govuk-heading-m">What is the measure status?</h2>
+                                        </legend>
+                                        
+                                        <div id="measure-status-hint" class="govuk-hint">
+                                            You can select one or more items in the list.
+                                        </div>
+                                            
+                                        <p id="empty-status-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Select at least one status if you're not searching by measure reference numbers
+                                        </p>
+            
+                                        <select class="govuk-select govuk-!-width-full" id="measure-status-none" name="measure-status" size="5" multiple="multiple">
+                                            <!-- <option value="" selected disabled hidden>Select a measure status</option> -->
+                                        </select>
+            
+                                        <!-- <select class="govuk-select govuk-!-width-full hide" id="measure-status-all" name="measure-status" size="5" multiple="multiple">
+                                            <option value="" selected disabled hidden>Select a measure status</option>
+                                        </select> -->
                                     
-                                    <div id="measure-status-hint" class="govuk-hint">
-                                        You can select one or more items in the list.
-                                    </div>
-        
-                                    <select class="govuk-select govuk-!-width-full" id="measure-status-none" name="measure-status" size="5" multiple="multiple">
-                                        <option value="" selected disabled hidden>Select a measure status</option>
-                                    </select>
-        
-                                    <select class="govuk-select govuk-!-width-full hide" id="measure-status-all" name="measure-status" size="5" multiple="multiple">
-                                        <option value="" selected disabled hidden>Select a measure status</option>
-                                    </select>
-                                
-                                    <!-- <a class="govuk-link" href="javascript:;" onclick="toggleSelectStatusFn()">select <span id="allOrNoneStatus">all</span></a> -->
-                                </fieldset>
+                                        <!-- <a class="govuk-link" href="javascript:;" onclick="toggleSelectStatusFn()">select <span id="allOrNoneStatus">all</span></a> -->
+                                    </fieldset>
+                                </div>
                             </div>
                         </div>
 

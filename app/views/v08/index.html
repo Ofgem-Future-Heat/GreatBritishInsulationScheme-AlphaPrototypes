@@ -16,7 +16,7 @@
             max-width: calc(1280px + 7.5rem);
         }
         h2 {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
         }
         h3 {
             font-size: 1.625rem;
@@ -57,6 +57,40 @@
                 line-height: 1;
             }
         }
+
+        ul.custom-ofgem-bullets {
+            list-style-type: disc;
+            margin-bottom: 1.25rem;
+            padding-left: 2.25rem;
+        }
+
+        /* a  {
+            text-decoration: underline;
+            --text-opacity: 1;
+            color: #2363af;
+            color: rgba(35,99,175,var(--text-opacity));
+            -webkit-text-decoration-skip: ink;
+            text-decoration-skip-ink: auto;
+            transition: color .3 ease 0s;
+        } */
+        /* .c-button {
+            --bg-opacity: 1;
+            background-color: #1d2b39;
+            background-color: rgba(29,43,57,var(--bg-opacity));
+            --text-opacity: 1;
+            color: #fff;
+            color: rgba(255,255,255,var(--text-opacity));
+        } */
+        .c-button--cta {
+            display: inline-flex;
+            align-items: center;
+            padding: .5rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition-property: background-color,border-color,color,fill,stroke;
+            transition-duration: .2s;
+            color: #fff!important;
+        }
         
         /*
         .text-color-yellow {
@@ -87,15 +121,42 @@
         <!-- ######################### -->
         <div class="flex justify-between p-5 border border-color-theme my-10 [ first:mt-0 last:mb-0 ]" style="border-color: #92ae2a;">
             <div>
-                <p class="custom-font-style">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                <h3 class="custom-font-style">Access The Great British Insulation Scheme</h3>
-
-                <a href="/v08/home">Access The Great British Insulation Scheme by clicking here</a>
-
                 
-                <h3 class="custom-font-style">How to access and use the cheme</h3>
-                <p class="custom-font-style">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h2 class="custom-font-style">The Great British Insulation Scheme portal</h2>
+                <p class="custom-font-style">Energy suppliers are obligated to let Ofgem know about measures they've delivered to customers. To do this, they use the Great British Insulation Scheme portal to record these measures.</p>
+                <p class="custom-font-style">The portal is only available to suppliers by sending a request to Ofgem by email.</p>
+
+                <h3 class="custom-font-style">If you already have access to the portal</h3>
+                <p class="custom-font-style">If you have a Great British Insulation Scheme profile and a GOV UK One Login account, you're ready to use the portal. And can do so here</p>
+
+                <a class="group c-button c-button--cta hidden [ md:ml-auto md:self-end md:inline-flex md:flex-none md:mb-10 ] [ lg:mb-12 ]" href="/v08/home">Use the Great British Insulation Scheme portal</a>
+                
+                <h3 class="custom-font-style">Getting accessing to the portal</h3>
+                <p class="custom-font-style">You must have both a Great British Insulation Scheme profile and a GOV UK One Login account to use the portal to record measures.</p>
+                <p class="custom-font-style">If you require a Great British Insulation Scheme profile, you should request this from Ofgem by sending an email to <a href="mailto:#">requestprofile@ofgem.gov.uk</a>.</p>
+                <p class="custom-font-style">You should send this from the same email address you use to create your GOV UK One Login account. This is the only way we can match your Great British Insulation Scheme account to your GOV UK One Login account.</p>
+                <p class="custom-font-style">After sending the email, the Ofgem team will be in touch about creating a profile for you.</p>
+
+                <h3 class="custom-font-style">Using the portal</h3>
+                <p class="custom-font-style">Once you have the required profiles and account, you're ready to use the portal</p>
+                <p class="custom-font-style">The portal can be used to</p>
+                <ul class="custom-ofgem-bullets">
+                    <li>upload measures</li>
+                    <li>search for measures</li>
+                    <li>view error reports</li>
+                </ul>
+                <p class="custom-font-style">You can access the portal here</p>
+
+                <a class="group c-button c-button--cta hidden [ md:ml-auto md:self-end md:inline-flex md:flex-none md:mb-10 ] [ lg:mb-12 ]" href="/v08/home">Use the Great British Insulation Scheme portal</a>
+
+
+                <h3 class="custom-font-style">If you need help accessing or using the portal</h3>
+                <p>You can contact us at <a href="mailto:gbis@ofgem.gov.uk">gbis@ofgem.gov.uk</a> if you need help or have questions about:</p>
+                <ul class="custom-ofgem-bullets">
+                    <li>getting access to the portal</li>
+                    <li>using the portal</li>
+                    <li>anything else relating to the Great British Insulation scheme</li>
+                </ul>
             </div>
 
             <svg class="w-10 h-10 ml-5 flex-none fill-current text-color-yellow" focusable="false" aria-hidden="true"

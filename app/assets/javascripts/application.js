@@ -1715,7 +1715,7 @@ let resultsLength = document.getElementById("resultsLength");
 let singularPlural = document.getElementById("singularPlural");
 const searchResults = [
   {
-    "measureReferenceNumber": "BGT7801767",
+    "measureReferenceNumber": "OVO7801767",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "05/09/2022",
@@ -1764,7 +1764,7 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "BGT1234567",
+    "measureReferenceNumber": "OVO1234567",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "05/10/2022",
@@ -5152,22 +5152,63 @@ if (pageUrlPath === '/v03-5/signed-in-no-ofgem-view'){
   parentOfUsername.classList.add('padding-top-zero');
 }
 
+// Check if status is selected
+// function checkIfStatusIsSelected() {
+//   return (
+//     // document.getElementById('measure-status-none').onclick = function() {
+//       var checked = document.querySelectorAll('#measure-status-none :checked');
+//       var selected = [...checked].map(option => option.value);
+//       alert(selected);
+//     // }
+//   )
+// }
+
 // Check MRN
 function checkMRN() {
   const performSearch = document.getElementById('performSearch');
   const errorMRNSummary = document.getElementById('error-MRN-summary');
+  const errorWithMRN = document.getElementById('errorWithMRN');
+  const errorWithNothingSelected = document.getElementById('errorWithNothingSelected');
   const mrnErrorSection = document.getElementById('mrnErrorSection');
+  const statusErrorSection = document.getElementById('statusErrorSection');
   const mrnFieldError = document.getElementById('mrn-field-error');
   const mrnFileFieldError = document.getElementById('mrn-file-field-error');
   const measureReferenceNumberInputField = document.getElementById('measure-reference-number');
+  const emptyStatusFieldError = document.getElementById('empty-status-field-error');
+  const statusSelect = document.getElementById('measure-status-none');
+  const options = document.getElementById('measure-status-none').options; 
+  let count = 0;
+  let selectedOptions = null;
+  
+  for (let i = 0; i < options.length; i++) {
+    if (options[i].selected) count++;
+    count > 0 ? selectedOptions = true : selectedOptions = false;
+  }
 
   if((document.getElementById("measure-reference-number").value.length > 1) && (document.getElementById("file-upload").value != "")) {
     window.scrollTo(0, 0);
     errorMRNSummary.classList.remove('hide');
+    errorWithMRN.classList.remove('hide');
+
     mrnFieldError.classList.remove('hide');
     mrnFileFieldError.classList.remove('hide');
     mrnErrorSection.classList.add('govuk-form-group--error');
     measureReferenceNumberInputField.classList.add('govuk-input--error');
+  } else if ((document.getElementById("measure-reference-number").value.length === 0) && (document.getElementById("file-upload").value === "")&& (!selectedOptions)) {
+    window.scrollTo(0, 0);
+    document.getElementById("chck1").checked = true;
+    document.getElementById("chck2").checked = true;
+    errorMRNSummary.classList.remove('hide');
+    errorWithNothingSelected.classList.remove('hide');
+
+    mrnErrorSection.classList.add('govuk-form-group--error');
+    errorWithNothingSelected.classList.remove('hide');
+    statusErrorSection.classList.add('govuk-form-group--error');
+    measureReferenceNumberInputField.classList.add('govuk-input--error');
+    mrnFieldError.classList.remove('hide');
+    mrnFileFieldError.classList.remove('hide');
+    emptyStatusFieldError.classList.remove('hide');
+    statusSelect.classList.add('select-error');
   } else {
     performSearch.href = "/v08/measures/search-measures/search-results";
   }
