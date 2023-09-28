@@ -18,8 +18,12 @@
               <div class="govuk-error-summary__body">
                 <ul class="govuk-list govuk-error-summary__list">
                   <li>
-                    <a href="#error-with-MRN">
-                        Enter a measure reference number only without uploading a file or upload a file containing measure reference numbers only without entering a measure reference number in the 'Measure reference number' field.
+                    <p><a href="#error-with-MRN">
+                        Enter a single measure reference number to search<br />
+                        Or, search for measure reference numbers by uploading a file containing the numbers you want to search
+                        <br />
+                        <br />
+                        You cannot search using both a single measure reference number and a file containing measure reference numbers
                     </a>
                   </li>
                 </ul>
@@ -115,7 +119,7 @@
                                                 Measure reference number
                                             </label>
                                             <p id="mrn-field-error" class="govuk-error-message hide">
-                                                <span class="govuk-visually-hidden">Error:</span> Enter a measure reference number only without uploading a file
+                                                <span class="govuk-visually-hidden">Error:</span> Enter a single measure reference number to search
                                             </p>
                                             <input class="govuk-input" id="measure-reference-number" name="measure-reference-number" type="text">
                                         </div>
@@ -128,7 +132,7 @@
                                             </span>
                                             
                                             <p id="mrn-file-field-error" class="govuk-error-message hide">
-                                                <span class="govuk-visually-hidden">Error:</span> Upload a file containing measure reference numbers only without entering a measure reference number in the 'Measure reference number' field.</p>
+                                                <span class="govuk-visually-hidden">Error:</span> Or, search for measure reference numbers by uploading a file containing the numbers you want to search</p>
 
                                             <label for="file-upload" class="custom-file-upload">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
