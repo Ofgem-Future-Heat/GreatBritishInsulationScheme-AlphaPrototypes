@@ -4810,6 +4810,8 @@ function measureDetails(measureRef) {
     window.location.pathname = "/v05-5/measures/search-measures/measure-details";
   } else if (pageUrlPath === "/v07/measures/search-measures/search-results" || pageUrlPath === "/v07/measures/search-measures/search-results-2" || pageUrlPath === "/v07/measures/search-measures/search-results-3") {
     window.location.pathname = "/v07/measures/search-measures/measure-details";
+  } else if (pageUrlPath === "/v08/measures/search-measures/search-results" || pageUrlPath === "/v08/measures/search-measures/search-results-2" || pageUrlPath === "/v08/measures/search-measures/search-results-3") {
+    window.location.pathname = "/v08/measures/search-measures/measure-details";
   } else {
     window.location.pathname = "/v06-1/measure-details";
   }
@@ -5194,7 +5196,7 @@ function checkMRN() {
     mrnFileFieldError.classList.remove('hide');
     mrnErrorSection.classList.add('govuk-form-group--error');
     measureReferenceNumberInputField.classList.add('govuk-input--error');
-  } else if ((document.getElementById("measure-reference-number").value.length === 0) && (document.getElementById("file-upload").value === "")&& (!selectedOptions)) {
+  } else if ((document.getElementById("measure-reference-number").value.length === 0) && (document.getElementById("file-upload").value === "") && (!selectedOptions)) {
     window.scrollTo(0, 0);
     document.getElementById("chck1").checked = true;
     document.getElementById("chck2").checked = true;
