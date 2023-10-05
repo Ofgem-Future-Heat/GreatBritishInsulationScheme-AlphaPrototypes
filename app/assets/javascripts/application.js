@@ -4832,6 +4832,8 @@ if ( pageUrlPath === "/v06-1/measure-details"
   // || pageUrlPath === "/v05-5/measures/search-measures/measure-details#" 
 
   || pageUrlPath === "/v07/measures/search-measures/measure-details"
+
+  || pageUrlPath === "/v08/measures/search-measures/measure-details"
 ) {
   let measureRefNumber = localStorage.getItem("measureRefNumber");
   let measureDetailsDiv = document.getElementById('measureDetails');
