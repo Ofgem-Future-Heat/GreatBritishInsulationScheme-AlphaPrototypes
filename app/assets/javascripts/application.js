@@ -1242,6 +1242,7 @@ function removeSupplierLicenceNumber(id) {
   let select = '';
   let checkboxOptions = [];
   let statusSelect = document.getElementById("measure-status");
+  let statusRadio = document.getElementById("measure-status-radio");
   let statusSelectNone = document.getElementById("measure-status-none");
   let statusSelectAll = document.getElementById("measure-status-all");
 
@@ -1265,7 +1266,7 @@ function removeSupplierLicenceNumber(id) {
   
   // StatusOptionsList
   const measureStatusOptionsList = [
-    "Failed Notification",
+    //"Failed Notification",
     "Notified Incomplete",
     "Measure Awaiting Verification",
     "Notified Pending ",
@@ -1287,6 +1288,12 @@ function removeSupplierLicenceNumber(id) {
     select = statusSelect;
     options = measureStatusOptionsList;
     buildSelectOptions(options, select);
+  }
+  
+  if (statusRadio) {
+    radio = statusRadio;
+    options = measureStatusOptionsList;
+    buildRadioOptions(options);
   }
 
 
@@ -1317,16 +1324,6 @@ function removeSupplierLicenceNumber(id) {
   }
 
 
-
-
-
-
-
-
-
-
-
-  
 
   // TypeOptionsList
   const measureTypeOptionsList = [
@@ -1678,6 +1675,22 @@ function buildCheckboxes(checkboxOptions, cbDiv) {
     </div>`;
   }
   cbDiv.innerHTML += cb;
+}
+
+// Radio buttons
+function buildRadioOptions(options) {
+  let i = 0;
+  options.forEach((e)=> {
+    let radioOptions = `
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="radio-${e}" name="status-options" type="radio" value="${e}">
+      <label class="govuk-label govuk-radios__label" for="radio-${e}">
+        ${e}
+      </label>
+    </div>
+    `;
+    statusRadio.innerHTML += radioOptions;
+  });
 }
 
 function checkAllCboxes(source) {
@@ -5215,5 +5228,28 @@ function checkMRN() {
     statusSelect.classList.add('select-error');
   } else {
     performSearch.href = "/v08/measures/search-measures/search-results";
+  }
+}
+
+
+// Cookies banner simulation
+function acceptCookiesBanner() {
+  const cookiesBanner = document.getElementById('cookiesBanner');
+  cookiesBanner.style.display = 'none';
+  localStorage.setItem('acceptCookie', true);
+}
+function rejectCookiesBanner() {
+  const cookiesBanner = document.getElementById('cookiesBanner');
+  cookiesBanner.style.display = 'none';
+  localStorage.setItem('acceptCookie', false);
+}
+if (pageUrlPath === '/v08/mandatory-feature-documentation/cookies-policy') {
+  if (localStorage.getItem('aaceptCookie') === true) {
+    document.getElementById('analyticsCookieYes').checked = true;
+  } else if (localStorage.getItem('aaceptCookie') === false) {
+    document.getElementById('analyticsCookieNo').checked = true;
+  } else {
+    document.getElementById('analyticsCookieYes').checked = false;
+    document.getElementById('analyticsCookieNo').checked = false;
   }
 }

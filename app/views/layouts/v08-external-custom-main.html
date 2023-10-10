@@ -768,6 +768,32 @@
         }
   </style>
 
+  <!-- Cookie banner -->
+  <div id="cookiesBanner" class="govuk-cookie-banner " data-nosnippet role="region" aria-label="Cookies on {{serviceName}}">
+    <div class="govuk-cookie-banner__message govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on {{serviceName}}</h2>
+          <div class="govuk-cookie-banner__content">
+            <p class="govuk-body">We use some essential cookies to make this service work.</p>
+            <p class="govuk-body">We'd also like to use analytics cookies so we can understand how you use the service and make improvements.</p>
+          </div>
+        </div>
+      </div>
+      <div class="govuk-button-group">
+        <button type="button" class="govuk-button" data-module="govuk-button" onclick="acceptCookiesBanner()">
+          Accept analytics cookies
+        </button>
+        <button type="button" class="govuk-button" data-module="govuk-button" onclick="rejectCookiesBanner()">
+          Reject analytics cookies
+        </button>
+        <a class="govuk-link" href="/v08/mandatory-feature-documentation/cookies-policy">View cookies</a>
+      </div>
+    </div>
+  </div>
+
+
+
   <!-- Ofgem branded header -->
   <header class="govuk-header v08" id="welcomeLogout" role="banner" data-module="govuk-header">
     <div class="govuk-header__container govuk-width-container">
@@ -779,10 +805,11 @@
             </a>
           </div>
         </div>
-        <div class="govuk-header__content">
+        <div class="govuk-header__content" style="position: relative;">
           <a href="/v08" class="govuk-header__link govuk-header__link--service-name govuk-heading-m" style="z-index: 1000;">
             <h2 class="govuk-heading-m">{{serviceName}}</h2>
           </a>
+          <a class="govuk-link" href="#" onclick="return false;" style="position: absolute; top: 20px; right: 0;">Sign out</a>
           <button type="button" role="button" class="govuk-header__menu-button govuk-header__menu-button--post-login govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
         </div>
       </div>
