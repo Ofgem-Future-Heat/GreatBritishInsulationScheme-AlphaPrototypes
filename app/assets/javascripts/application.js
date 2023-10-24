@@ -5192,13 +5192,17 @@ function checkMRN() {
   const mrnFileFieldError = document.getElementById('mrn-file-field-error');
   const measureReferenceNumberInputField = document.getElementById('measure-reference-number');
   const emptyStatusFieldError = document.getElementById('empty-status-field-error');
-  const statusSelect = document.getElementById('measure-status-none');
-  const options = document.getElementById('measure-status-none').options; 
+  // const statusSelect = document.getElementById('measure-status-none');
+  const statusSelect = document.getElementById('cboxesMeasureStatus');
+  // const options = document.getElementById('measure-status-none').options; 
+  const options = document.getElementById('cboxesMeasureStatus'); 
   let count = 0;
   let selectedOptions = null;
   
   for (let i = 0; i < options.length; i++) {
-    if (options[i].selected) count++;
+    // if (options[i].selected) count++;
+    
+    if (options[i].document.querySelectorAll('.govuk-checkboxes__item').document.querySelectorAll('govuk-checkboxes__input :checked')) count++;
     count > 0 ? selectedOptions = true : selectedOptions = false;
   }
 
