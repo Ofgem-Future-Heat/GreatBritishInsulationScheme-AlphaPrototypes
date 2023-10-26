@@ -5194,17 +5194,26 @@ function checkMRN() {
   const emptyStatusFieldError = document.getElementById('empty-status-field-error');
   // const statusSelect = document.getElementById('measure-status-none');
   const statusSelect = document.getElementById('cboxesMeasureStatus');
-  // const options = document.getElementById('measure-status-none').options; 
-  const options = document.getElementById('cboxesMeasureStatus'); 
+  // const options = document.getElementById('measure-status-none').options;
+
+  const optionsContainer = document.getElementById('cboxesMeasureStatus');
+  const options = optionsContainer.getElementsByClassName('govuk-checkboxes__item');
   let count = 0;
   let selectedOptions = null;
+  console.log('options.length', options.length);
   
   for (let i = 0; i < options.length; i++) {
-    // if (options[i].selected) count++;
-    
-    if (options[i].document.querySelectorAll('.govuk-checkboxes__item').document.querySelectorAll('govuk-checkboxes__input :checked')) count++;
+    let option = options[i].querySelectorAll('input[type="checkbox"]:checked');
+    if (option.length) {
+      console.log('checked option', option);
+      count++;
+      console.log('count', count);
+    }
     count > 0 ? selectedOptions = true : selectedOptions = false;
   }
+
+
+  console.log('selectedOptions', selectedOptions);
 
   if((document.getElementById("measure-reference-number").value.length > 1) && (document.getElementById("file-upload").value != "")) {
     window.scrollTo(0, 0);
