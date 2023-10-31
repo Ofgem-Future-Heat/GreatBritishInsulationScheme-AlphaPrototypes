@@ -1,4 +1,4 @@
-{% extends "layouts/internal-main.html" %}
+{% extends "layouts/v02-internal-custom-main.html" %}
 
 {% block pageTitle %}
   Internal users prototypes
@@ -7,6 +7,108 @@
 {% block content %}
 
 <div class="govuk-grid-row">
+  <style> 
+      .govuk-width-container {
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: 3.75rem;
+          padding-right: 3.75rem;
+          max-width: calc(1280px + 7.5rem);
+      }
+      h2 {
+          font-size: 1.8rem;
+      }
+      h3 {
+          font-size: 1.625rem;
+          margin-top: 1rem;
+      }
+      h4 {
+          font-size: 1.125rem;
+          margin-top: 1rem;
+      }
+      /* h2, h3 {
+          margin-bottom: 3rem;
+      } */
+      p {
+          margin-bottom: 1.25rem;
+          color: rgba(29,43,57,var(--text-opacity));
+          font-size: 1.1rem !important;
+          line-height: 1.8rem !important;
+      }
+
+      .custom-font-style {
+          font-family: 'Montserrat',arial,sans-serif !important;
+          color: rgba(29,43,57,var(--text-opacity)) !important;
+      }
+
+      /* Button */
+      .govuk-button--start {
+          font-weight: 700;
+          font-size: 18px;
+          font-size: 1.125rem;
+          line-height: 1;
+          display: inline-flex;
+          min-height: auto;
+          justify-content: center;
+      }
+      .govuk-button:link, .govuk-button:visited, .govuk-button:active, .govuk-button:hover {
+          color: #fff;
+          text-decoration: none;
+      }
+      @media (min-width: 40.0625em) {
+          .govuk-button--start {
+              font-size: 1.5rem !important;
+              line-height: 1;
+          }
+      }
+
+      ul.custom-ofgem-bullets {
+          list-style-type: disc;
+          margin-bottom: 1.25rem;
+          padding-left: 2.25rem;
+      }
+
+      /* a  {
+          text-decoration: underline;
+          --text-opacity: 1;
+          color: #2363af;
+          color: rgba(35,99,175,var(--text-opacity));
+          -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+          transition: color .3 ease 0s;
+      } */
+      /* .c-button {
+          --bg-opacity: 1;
+          background-color: #1d2b39;
+          background-color: rgba(29,43,57,var(--bg-opacity));
+          --text-opacity: 1;
+          color: #fff;
+          color: rgba(255,255,255,var(--text-opacity));
+      } */
+      .c-button--cta {
+          display: inline-flex;
+          align-items: center;
+          padding: .5rem 1.5rem;
+          border-radius: 9999px;
+          text-decoration: none;
+          transition-property: background-color,border-color,color,fill,stroke;
+          transition-duration: .2s;
+          color: #fff!important;
+      }
+
+      .c-button--cta:visited {
+          color: #fff!important;
+      }
+      
+      /*
+      .text-color-yellow {
+          --text-opacity: 1;
+          color: #fbb515;
+          color: rgba(251,181,21,var(--text-opacity));
+      }
+      */
+
+  </style>
   <div class="govuk-grid-column-full">
 
     <h1 class="govuk-heading-xl">Internal users prototypes</h1>
@@ -35,13 +137,13 @@
           <th class="govuk-table__cell" scope="row">V01.1</th>
           <td class="govuk-table__cell">Displaying the <strong>user's home page</strong>, <strong>external user's list</strong>; view existing external users and detail, edit external user, remove external user</td>
           <td class="govuk-table__cell">All internal users</td>
-          <td class="govuk-table__cell"><a class="govuk-link" target="_blank" href="v01-1/">Open prototype</a></td>
+          <td class="govuk-table__cell"><a class="govuk-link" target="_blank" href="internal/v01-1/">Open prototype</a></td>
         </tr>
         <tr class="govuk-table__row">
           <th class="govuk-table__cell" scope="row">V01.2</th>
           <td class="govuk-table__cell">There is a problem with the service.</td>
           <td class="govuk-table__cell">All internal users</td>
-          <td class="govuk-table__cell"><a class="govuk-link" target="_blank" href="v01-2/request-failed">Open prototype</a></td>
+          <td class="govuk-table__cell"><a class="govuk-link" target="_blank" href="internal/v01-2/request-failed">Open prototype</a></td>
         </tr>
       </tbody>
     </table>
