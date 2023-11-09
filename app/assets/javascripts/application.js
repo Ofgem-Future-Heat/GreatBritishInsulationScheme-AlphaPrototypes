@@ -4808,7 +4808,11 @@ function resultsListFunct(searchResults) {
       <td><p class="govuk-body">` + searchResults[i].measureType + `</p></td>
       <td><p class="govuk-body">` + searchResults[i].measureStatus + `</p></td>
       <td><p class="govuk-body">` + searchResults[i].submissionDate + `</p></td>
+
+
       <!-- <td><p class="govuk-body"><a href="#" class="govuk-link" onclick="measureDetails('`+searchResults[i].measureReferenceNumber+`')">View details</a></p></td> -->
+
+      
     </tr>
     `;
   }
