@@ -647,7 +647,7 @@ const externalUsers = [
 ];
 
 // Build external user list
-if (pageUrlPath === '/internal/v01-1/external-users/'){
+if (pageUrlPath === '/internal/v01-1/external-users/' || pageUrlPath === '/internal/v02-0/external-users/'){
   console.log('externalUsers.length', externalUsers.length);
   for (let i = 0; i < externalUsers.length; i++) {
     if (document.getElementById('extUsers')) {
@@ -1724,11 +1724,13 @@ function deleteUser() {
 
 let resultItems = document.getElementById("resultItems");
 let resultsList = document.getElementById("resultsList");
+let resultsListInt = document.getElementById("resultsListInt");
 let resultsLength = document.getElementById("resultsLength");
 let singularPlural = document.getElementById("singularPlural");
 const searchResults = [
   {
-    "measureReferenceNumber": "OVO7801767",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO7801767",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "05/09/2022",
@@ -1777,7 +1779,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO1234567",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO1234567",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "05/10/2022",
@@ -1826,7 +1829,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO1234564",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO1234564",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "05/09/2022",
@@ -1877,7 +1881,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO7890121",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO7890121",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/10/2022",
@@ -1928,7 +1933,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0970129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0970129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -1979,7 +1985,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0910129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0910129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -2030,7 +2037,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0920129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0920129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -2081,7 +2089,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0950129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0950129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -2132,7 +2141,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0100129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0100129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -2183,7 +2193,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0210129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0210129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -2234,7 +2245,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0580129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0580129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -2285,7 +2297,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0200129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0200129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -2336,7 +2349,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0300129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0300129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -2387,7 +2401,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0400129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0400129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -2438,7 +2453,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0500129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0500129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -2489,7 +2505,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0600129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0600129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "05/02/2022",
@@ -2540,7 +2557,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO1234561",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO1234561",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "05/09/2022",
@@ -2591,7 +2609,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO7890122",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO7890122",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/10/2022",
@@ -2642,7 +2661,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0700129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0700129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -2693,7 +2713,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0800129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0800129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -2744,7 +2765,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0890129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0890129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -2795,7 +2817,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0890139",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0890139",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -2846,7 +2869,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0890149",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0890149",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -2897,7 +2921,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0890159",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0890159",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -2948,7 +2973,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0890169",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0890169",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -2999,7 +3025,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0890179",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0890179",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -3050,7 +3077,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO1890189",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO1890189",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -3101,7 +3129,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO2890189",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO2890189",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -3152,7 +3181,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO3890189",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO3890189",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -3203,7 +3233,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO4890189",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO4890189",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "05/02/2022",
@@ -3254,7 +3285,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO1234562",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO1234562",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "05/09/2022",
@@ -3305,7 +3337,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO7890125",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO7890125",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/10/2022",
@@ -3356,7 +3389,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO7370121",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO7370121",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -3407,7 +3441,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO7370122",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO7370122",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -3458,7 +3493,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO5890189",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO5890189",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -3509,7 +3545,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO7370124",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO7370124",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -3560,7 +3597,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO7370125",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO7370125",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -3611,7 +3649,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO7370126",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO7370126",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -3662,7 +3701,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO7370127",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO7370127",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -3713,7 +3753,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO7370128",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO7370128",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -3764,7 +3805,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO1370129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO1370129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -3815,7 +3857,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO2370129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO2370129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -3866,7 +3909,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO3370129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO3370129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -3917,7 +3961,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO4370129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO4370129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "05/02/2022",
@@ -3968,7 +4013,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO1234563",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO1234563",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "05/09/2022",
@@ -4019,7 +4065,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO7890124",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO7890124",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/10/2022",
@@ -4070,7 +4117,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO5370129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO5370129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -4121,7 +4169,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO6370129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO6370129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -4172,7 +4221,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO7470129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO7470129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -4223,7 +4273,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO7370129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO7370129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -4274,7 +4325,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0170129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0170129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -4325,7 +4377,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0370129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0370129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -4376,7 +4429,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0270129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0270129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -4427,7 +4481,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0470129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0470129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -4478,7 +4533,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0570129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0570129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -4529,7 +4585,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0670129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0670129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -4580,7 +4637,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0770129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0770129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "08/08/2022",
@@ -4631,7 +4689,8 @@ const searchResults = [
     "trustMarkCompletedProjectCertID": "A1234567-A"
   },
   {
-    "measureReferenceNumber": "OVO0870129",
+    "supplierName": "OVO",
+"measureReferenceNumber": "OVO0870129",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "05/02/2022",
@@ -4782,6 +4841,11 @@ if (resultsList) {
   resultsLength.innerHTML = searchResults.length*3;
   if (singularPlural) searchResults.length > 1 ? singularPlural.innerHTML = "s" : singularPlural.innerHTML = "";
 }
+if (resultsListInt) {
+  resultsListIntFunct(searchResults, resultsListInt);
+  resultsLength.innerHTML = searchResults.length*3;
+  if (singularPlural) searchResults.length > 1 ? singularPlural.innerHTML = "s" : singularPlural.innerHTML = "";
+}
 // resultsList lists
 function resultsListFunct(searchResults) {
   let result = '';
@@ -4817,6 +4881,47 @@ function resultsListFunct(searchResults) {
     `;
   }
   resultsList.innerHTML += result;
+}
+// resultsListInt lists
+function resultsListIntFunct(searchResults) {
+  let result = '';
+  let searchResult = '';
+  for (let i = 0; i < searchResults.length; i++) {
+    searchResult = searchResults[i];
+    result +=
+    `
+    <tr>
+      <td class="checkbox-col">
+        <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+          <div class="govuk-checkboxes__item">
+            <input  name="search-results"
+                    type="checkbox" 
+                    id="cb` + i + `" 
+                    data-test-id="" 
+                    class="govuk-checkboxes__input results-checkboxes">
+            <label for="" class="govuk-label govuk-checkboxes__label"></label>
+          </div>
+        </div>
+      </td>
+      <td><p class="govuk-body small">` + searchResults[i].measureReferenceNumber + `</p></td>
+      <td><p class="govuk-body small">` + searchResults[i].supplierName + `</p></td>
+      <td><p class="govuk-body small">` + searchResults[i].measureType + `</p></td>
+      <td><p class="govuk-body small">` + searchResults[i].notificationPeriod + `</p></td>
+      <td><p class="govuk-body small">` + searchResults[i].measureStatus + `</p></td>
+      <td class="address-col">
+        <p class="govuk-body small">
+          ` + searchResults[i].addressFields.buildingNumber + ` <br>
+          ` + searchResults[i].addressFields.buildingName + ` <br>
+          ` + searchResults[i].addressFields.flatNameOrNumber + ` <br>
+          ` + searchResults[i].addressFields.postCode + `
+        </p>
+      </td>
+
+      <!-- <td><p class="govuk-body"><a href="#" class="govuk-link" onclick="measureDetails('`+searchResults[i].measureReferenceNumber+`')">View details</a></p></td> -->
+    </tr>
+    `;
+  }
+  resultsListInt.innerHTML += result;
 }
 
 function measureDetails(measureRef) {
@@ -5269,4 +5374,86 @@ if (pageUrlPath === '/v08/mandatory-feature-documentation/cookies-policy') {
     document.getElementById('analyticsCookieYes').checked = false;
     document.getElementById('analyticsCookieNo').checked = false;
   }
+}
+
+
+
+
+
+
+// Internal Search
+
+// Check MRN
+function intCheckMRN() {
+  const performSearch = document.getElementById('performSearch');
+  const errorMRNSummary = document.getElementById('error-MRN-summary');
+  const errorWithMRN = document.getElementById('errorWithMRN');
+  const errorWithNothingSelected = document.getElementById('errorWithNothingSelected');
+  const mrnErrorSection = document.getElementById('mrnErrorSection');
+  const statusErrorSection = document.getElementById('statusErrorSection');
+  const mrnFieldError = document.getElementById('mrn-field-error');
+  const mrnFileFieldError = document.getElementById('mrn-file-field-error');
+  const measureReferenceNumberInputField = document.getElementById('measure-reference-number');
+  const emptyStatusFieldError = document.getElementById('empty-status-field-error');
+  // const statusSelect = document.getElementById('measure-status-none');
+  const statusSelect = document.getElementById('cboxesMeasureStatus');
+  // const options = document.getElementById('measure-status-none').options;
+
+  const optionsContainer = document.getElementById('cboxesMeasureStatus');
+  const options = optionsContainer.getElementsByClassName('govuk-checkboxes__item');
+  let count = 0;
+  let selectedOptions = null;
+  console.log('options.length', options.length);
+  
+  for (let i = 0; i < options.length; i++) {
+    let option = options[i].querySelectorAll('input[type="checkbox"]:checked');
+    if (option.length) {
+      console.log('checked option', option);
+      count++;
+      console.log('count', count);
+    }
+    count > 0 ? selectedOptions = true : selectedOptions = false;
+  }
+
+
+  console.log('selectedOptions', selectedOptions);
+
+  if((document.getElementById("measure-reference-number").value.length > 1) && (document.getElementById("file-upload").value != "")) {
+    window.scrollTo(0, 0);
+    errorMRNSummary.classList.remove('hide');
+    errorWithMRN.classList.remove('hide');
+
+    mrnFieldError.classList.remove('hide');
+    mrnFileFieldError.classList.remove('hide');
+    mrnErrorSection.classList.add('govuk-form-group--error');
+    measureReferenceNumberInputField.classList.add('govuk-input--error');
+  } else if ((document.getElementById("measure-reference-number").value.length === 0) && (document.getElementById("file-upload").value === "") && (!selectedOptions)) {
+    window.scrollTo(0, 0);
+    document.getElementById("chck1").checked = true;
+    document.getElementById("chck2").checked = true;
+    errorMRNSummary.classList.remove('hide');
+    errorWithNothingSelected.classList.remove('hide');
+
+    mrnErrorSection.classList.add('govuk-form-group--error');
+    errorWithNothingSelected.classList.remove('hide');
+    statusErrorSection.classList.add('govuk-form-group--error');
+    measureReferenceNumberInputField.classList.add('govuk-input--error');
+    mrnFieldError.classList.remove('hide');
+    mrnFileFieldError.classList.remove('hide');
+    emptyStatusFieldError.classList.remove('hide');
+    statusSelect.classList.add('select-error');
+  } else {
+    performSearch.href = "/internal/v02-0/search-measures/search-results";
+  }
+}
+
+// selectAllResultsCBs()
+function selectAllResultsCBs() {
+    console.log('SELECT ALL RESULTS CBs');
+    // results-checkboxes
+    let clist=document.getElementsByClassName("results-checkboxes");
+    for (var i = 0; i < clist.length; ++i) { 
+      // clist[i].checked = "checked";
+      clist[i].checked = !clist[i].checked;
+    }
 }

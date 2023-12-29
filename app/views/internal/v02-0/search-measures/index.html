@@ -1,4 +1,4 @@
-{% extends "layouts/v09-external-custom-main.html" %}
+{% extends "layouts/internal-main2-0.html" %}
 
 {% block pageTitle %}
     Searching the measure register
@@ -70,20 +70,8 @@
                         <p class="govuk-body"><strong>A file containing multiple measure reference numbers</strong></p>
                         
                         <p class="gov-body">To search for measures using a measure reference number file, you should:</p>
-                            
-                        <!-- <ul class="govuk-list govuk-list--number indent40">
-                            <li>Create a text file.</li>
-                            <li>Include a single column with the heading labelled as 'measure reference number' and the measure reference numbers you want to search for.</li>
-                            <li>Save the text file as a .txt file extension.</li>
-                            <li>Go to the search page in the Great British Insulation Scheme.</li>
-                            <li>Select "Choose file" and select the text file you created.</li>
-                            <li>Select "Upload measure reference file".</li>
-                            <li>Select the "Search" button.</li>
-                        </ul> -->
-                            
                         <ul class="govuk-list govuk-list--number indent40">
-                            <li>Create a CSV file<!--in Microsoft Excel-->.</li>
-                            <!-- <li>Include a single column with the heading labelled as 'Measure_reference_number' and the measure reference numbers you want to search for.</li> -->
+                            <li>Create a CSV file.</li>
                             <li>Include a single column with the heading labelled as 'Measure_reference_number'.</li>
                             <li>Then, add the measure reference numbers you want to search for in the column.</li>
                             <li>Save the CSV file.</li>
@@ -95,17 +83,12 @@
 
                         <p class="govuk-body"><strong>Using other filters to search for measures</strong></p>
 
-                        <p class="govuk-body">You can also search for measures by selecting the measure status.</p>
-                        <!-- <p class="govuk-body">You can set other filters when searching for measures. These filters include the measure:</p> -->
-                        
-                        <!-- 
-                        <ul class="govuk-list govuk-list--bullet">
-                            <li>status</li>
-                            <li>type</li>
-                            <li>submission date</li>
-                            <li>notification period</li>
-                        </ul> 
-                        -->
+                        <p class="govuk-body">You can also search for measures by the following filters:</p>
+                        <ul class="govuk-list govuk-list--number indent40">
+                            <li>Measure status</li>
+                            <li>Notification period</li>
+                            <li>Property post code</li>
+                        </ul>
                     </div>
                 </details>
             </div>
@@ -115,10 +98,49 @@
 
                 <form>
                     <div class="tabs">
+                        <!-- Supplier name -->
+                        <div class="tab">
+                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck1" checked="checked">
+                            <label class="tab-label" for="chck1">Supplier name</label>
+                            <div class="tab-content">
+                                <fieldset class="govuk-fieldset" role="group" aria-describedby="supplier-name-hint" id="error-with-supplier-name">
+                                    <legend class="govuk-fieldset__legend">
+                                        <h2 class="govuk-heading-m">What is the supplier name?</h2>
+                                    </legend>
+                                    <div id="supplier-name-hint" class="govuk-hint">
+                                        Select the supplier name
+                                    </div>
+                                    <p id="empty-supplier-name-field-error" class="govuk-error-message hide">
+                                        <span class="govuk-visually-hidden">Error:</span> Please provide the supplier name
+                                    </p>
+                                    <!-- <input class="govuk-input" id="supplier-name" name="supplierName" type="text"> -->
+                                    <div class="govuk-form-group">
+                                        <select class="govuk-select" name="supplierName" id="supplierName">
+                                            <option value="" disabled selected>Select a supplier</option>
+                                            <option value="BGT">BGT</option>
+                                            <option value="ECY">ECY</option>
+                                            <option value="EDF">EDF</option>
+                                            <option value="EGE">EGE</option>
+                                            <option value="EON">EON</option>
+                                            <option value="FOX">FOX</option>
+                                            <option value="OCT">OCT</option>
+                                            <option value="OVO">OVO</option>
+                                            <option value="SHL">SHL</option>
+                                            <option value="SOE">SOE</option>
+                                            <option value="SPW">SPW</option>
+                                            <option value="UTA">UTA</option>
+                                            <option value="UTW">UTW</option>
+                                        </select>
+                                        
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+
                         <!-- Measure reference number -->
                         <div class="tab">
-                           <input class="hide-accordion-checkboxes" type="checkbox" id="chck1" checked="checked">
-                           <label class="tab-label" for="chck1">Measure reference number</label>
+                           <input class="hide-accordion-checkboxes" type="checkbox" id="chck2" checked="checked">
+                           <label class="tab-label" for="chck2">Measure reference number</label>
                            <div class="tab-content">
                                 <div class="govuk-form-group" id="mrnErrorSection">
                                     <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint" id="error-with-MRN">
@@ -181,8 +203,8 @@
 
                         <!-- Status -->
                         <div class="tab">
-                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck2" checked="checked">
-                            <label class="tab-label" for="chck2">Status</label>
+                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck3" checked="checked">
+                            <label class="tab-label" for="chck3">Status</label>
                             <div class="tab-content">
                                 <div class="govuk-form-group" id="statusErrorSection">
                                     <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint" id="error-with-status">
@@ -195,16 +217,57 @@
                                         <p id="empty-status-field-error" class="govuk-error-message hide">
                                             <span class="govuk-visually-hidden">Error:</span> Select one status if you're not searching by measure reference numbers
                                         </p>
-                                        
                                         <div id="cboxesMeasureStatus" class="govuk-checkboxes" data-module="govuk-checkboxes"></div>
-
-                                        <!-- <select class="govuk-select govuk-!-width-full" id="measure-status-none" name="measure-status" size="5" multiple="multiple"></select> -->
-                                        <!-- <div id="measure-status-radio" class="govuk-radios" data-module="govuk-radios"></div> -->
                                     </fieldset>
                                 </div>
                             </div>
                         </div>
+                        
+                        <!-- Notification period -->
+                        <div class="tab">
+                           <input class="hide-accordion-checkboxes" type="checkbox" id="chck4" checked="checked" >
+                           <label class="tab-label" for="chck4">Notification period</label>
+                           <div class="tab-content">
+                                <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
+                                    <legend class="govuk-fieldset__legend">
+                                        <h2 class="govuk-heading-m">What is the notification period?</h2>
+                                    </legend>
+                                    
+                                    <div id="measure-status-hint" class="govuk-hint">
+                                        You can select one or more items in the list.
+                                    </div>
+                                    
+        
+                                    <select class="govuk-select govuk-!-width-full" id="notification-period-none" name="notification-period" size="5" multiple="multiple">
+                                        <option value="" selected disabled hidden>Select a notification period</option>
+                                    </select>
+                                    <select class="govuk-select govuk-!-width-full hide" id="notification-period-all" name="notification-period" size="5" multiple="multiple">
+                                        <option value="" selected disabled hidden>Select a notification period</option>
+                                    </select>
+                                    <a class="govuk-link" href="javascript:;" onclick="toggleSelectNotificationPeriodFn()">select <span id="allOrNoneNotification">all</span></a>
+                                </fieldset>
+                           </div>
+                        </div>
 
+                        <!-- Post code -->
+                        <div class="tab">
+                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck5" checked="checked">
+                            <label class="tab-label" for="chck5">Post code</label>
+                            <div class="tab-content">
+                                <fieldset class="govuk-fieldset" role="group" aria-describedby="postcode-hint" id="error-with-postcode">
+                                    <legend class="govuk-fieldset__legend">
+                                        <h2 class="govuk-heading-m">What is the post code?</h2>
+                                    </legend>
+                                    <div id="postcode-hint" class="govuk-hint">
+                                        Enter the post code
+                                    </div>
+                                    <p id="empty-postcode-field-error" class="govuk-error-message hide">
+                                        <span class="govuk-visually-hidden">Error:</span> Please provide the post code
+                                    </p>
+                                    <input class="govuk-input" id="postcode" name="postcode" type="text">
+                                </fieldset>
+                            </div>
+                        </div>
                         
                         <!-- 
                         <div class="govuk-form-group">
@@ -286,35 +349,12 @@
                         </div> -->
 
                         <!-- Notification period -->
-                        <!-- <div class="tab">
-                           <input class="hide-accordion-checkboxes" type="checkbox" id="chck5">
-                           <label class="tab-label" for="chck5">Notification period</label>
-                           <div class="tab-content">
-                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
-                                        <legend class="govuk-fieldset__legend">
-                                            <h2 class="govuk-heading-m">What is the notification period?</h2>
-                                        </legend>
-                                        
-                                        <div id="measure-status-hint" class="govuk-hint">
-                                            You can select one or more items in the list.
-                                        </div>
-                                        
-            
-                                        <select class="govuk-select govuk-!-width-full" id="notification-period-none" name="notification-period" size="5" multiple="multiple">
-                                            <option value="" selected disabled hidden>Select a notification period</option>
-                                        </select>
-                                        <select class="govuk-select govuk-!-width-full hide" id="notification-period-all" name="notification-period" size="5" multiple="multiple">
-                                            <option value="" selected disabled hidden>Select a notification period</option>
-                                        </select>
-                                        <a class="govuk-link" href="javascript:;" onclick="toggleSelectNotificationPeriodFn()">select <span id="allOrNoneNotification">all</span></a>
-                                    </fieldset>
-                           </div>
-                        </div> -->
+                        
                     </div>
                     
                     <!-- Search -->
                     <div class="govuk-button-group">
-                        <a id="performSearch" href="javascript:void(0);" class="govuk-button" data-module="govuk-button" onclick="checkMRN()">
+                        <a id="performSearch" href="javascript:void(0);" class="govuk-button" data-module="govuk-button" onclick="intCheckMRN()">
                             Search
                         </a>
                     </div>
@@ -331,7 +371,7 @@
                 
         <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
            
-        <p class="govuk-body"><a href="/v09/home">Return to homepage</a></p>
+        <p class="govuk-body"><a href="/internal/v02-0/">Return to homepage</a></p>
     </div>
 </div>
 {% endblock %}

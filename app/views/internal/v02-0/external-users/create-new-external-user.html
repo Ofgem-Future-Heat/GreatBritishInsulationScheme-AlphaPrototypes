@@ -1,0 +1,165 @@
+{% extends "layouts/internal-main2-0.html" %}
+
+{% block pageTitle %}
+    Create a new external user
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+    <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Create a new external user
+          </h1>
+        </legend>
+
+        <!-- Supplier name -->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="account-name">
+            Supplier name
+          </label>
+          <select class="govuk-select govuk-!-width-full" id="sort" name="sort">
+            <option value="" selected disabled hidden>Select an Account</option>
+            <option value="18">EON</option>
+            <option value="19">EDF</option>
+            <option value="20">SPW</option>
+            <option value="21">SSE</option>
+            <option value="22">BGT</option>
+            <option value="23">NPW</option>
+            <option value="24">FUL</option>
+            <option value="25">UTW</option>
+            <option value="26">COP</option>
+            <option value="27">OVO</option>
+            <option value="28">UTA</option>
+            <option value="29">XEN</option>
+            <option value="30">SPK</option>
+            <option value="38">EEN</option>
+            <option value="39">FLO</option>
+            <option value="40">HUD</option>
+            <option value="41">BLB</option>
+            <option value="42">OCT</option>
+            <option value="43">GNE</option>
+            <option value="44">EGE</option>
+            <option value="45">AVR</option>
+            <option value="46">SHL</option>
+            <option value="47">SOE</option>
+            <option value="57">RHE</option>
+            <option value="58">TNK</option>
+            <option value="59">PLA</option>
+            <option value="60">ISP</option>
+            <option value="61">UPL</option>
+            <option value="62">ECY</option>
+            <option value="63">BRI</option>
+            <option value="64">ESB</option>
+            <option value="69">IGL</option>
+            <option value="70">TOE</option>
+            <option value="71">FOX</option>
+            <option value="72">PES</option>
+          </select>
+        </div>
+
+        <!-- Username -->
+        <!-- <div class="govuk-form-group">
+          <label class="govuk-label" for="Username">
+            Username 
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="Username" name="Username" type="text" autocomplete="Username">
+        </div> -->
+
+        <!-- Title -->
+        <!-- <div class="govuk-form-group">
+          <label class="govuk-label" for="Title">
+            Title 
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="Title" name="Title" type="text" autocomplete="Title">
+        </div> -->
+
+        <!-- First name -->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="first-name">
+            First name
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="first-name" name="first-name" type="text" autocomplete="first-name">
+        </div>
+
+        <!-- Last name -->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="last-name">
+            Last name
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="last-name" name="last-name" type="text" autocomplete="last-name">
+        </div>
+
+        <!-- Middle initials -->
+        <!-- <div class="govuk-form-group">
+          <label class="govuk-label" for="middle-initials">
+            Middle initials
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="middle-initials" name="middle-initials" type="text" autocomplete="middle-initials">
+        </div> -->
+
+        <!-- Job title -->
+        <!-- <div class="govuk-form-group">
+          <label class="govuk-label" for="job-title">
+            Job title
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="job-title" name="job-title" type="text" autocomplete="job-title">
+        </div> -->
+
+        <!-- Email address -->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="email-address">
+            Email address
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="email-address" name="email-address" type="text" autocomplete="email-address">
+        </div>
+
+        <!-- Telephone number -->
+        <!-- <div class="govuk-form-group">
+          <label class="govuk-label" for="telephone-number">
+            Telephone number
+          </label>
+          <input class="govuk-input govuk-!-width-full" id="telephone-number" name="telephone-number" type="text" autocomplete="telephone-number">
+        </div> -->
+
+        <!-- User type -->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="user-type">
+            User type
+          </label>
+          <select class="govuk-select govuk-!-width-full" id="user-type" name="user-type">
+            <option value="" selected disabled hidden>Select a user type</option>
+            <option value="AuthorisedSignatoryRole">AuthorisedSignatoryRole</option>
+            <option value="AdditionalUserRole">AdditionalUserRole</option>
+          </select>
+        </div>
+        
+        <!-- User status -->
+        <!-- <div class="govuk-form-group">
+          <label class="govuk-label" for="user-status">
+            User status
+          </label>
+          <select class="govuk-select govuk-!-width-full" id="user-status" name="user-status">
+            <option value="" selected disabled hidden>Set user status</option>
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+        </div> -->
+
+        <div class="govuk-button-group">
+            <a class="govuk-button" data-module="govuk-button" href="check-your-answers">
+                Create
+            </a>
+            <a class="govuk-link" href="./">Cancel</a>
+          </div>
+
+    </fieldset>
+
+  </div>
+</div>
+
+{% endblock %}
