@@ -118,12 +118,30 @@
                                         <h2 class="govuk-heading-m">What is the supplier name?</h2>
                                     </legend>
                                     <div id="supplier-name-hint" class="govuk-hint">
-                                        Enter the supplier name or the three-letter identifier (Ask Myron if this is allowed)
+                                        Select the supplier name
                                     </div>
                                     <p id="empty-supplier-name-field-error" class="govuk-error-message hide">
                                         <span class="govuk-visually-hidden">Error:</span> Please provide the supplier name
                                     </p>
-                                    <input class="govuk-input" id="supplier-name" name="supplierName" type="text">
+                                    <!-- <input class="govuk-input" id="supplier-name" name="supplierName" type="text"> -->
+                                    <div class="govuk-form-group">
+                                        <select class="govuk-select" name="supplierName" id="supplierName">
+                                            <option value="" disabled selected>Select a supplier</option>
+                                            <option value="BGT">BGT</option>
+                                            <option value="ECY">ECY</option>
+                                            <option value="EDF">EDF</option>
+                                            <option value="EGE">EGE</option>
+                                            <option value="EON">EON</option>
+                                            <option value="FOX">FOX</option>
+                                            <option value="OCT">OCT</option>
+                                            <option value="OVO">OVO</option>
+                                            <option value="SHL">SHL</option>
+                                            <option value="SOE">SOE</option>
+                                            <option value="SPW">SPW</option>
+                                            <option value="UTA">UTA</option>
+                                            <option value="UTW">UTW</option>
+                                        </select>
+                                    </div>
                                 </fieldset>
                             </div>
                         </div>
