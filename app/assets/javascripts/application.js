@@ -5457,3 +5457,154 @@ function selectAllResultsCBs() {
       clist[i].checked = !clist[i].checked;
     }
 }
+
+
+
+// INTERNAL AUTOMATIC LATE EXTENSION function
+function supplierChange() {
+  document.getElementById("allSuppliers").classList.add('hidden');
+  document.getElementById("AVR").classList.add('hidden');
+  document.getElementById("BGT").classList.add('hidden');
+  document.getElementById("BLB").classList.add('hidden');
+  document.getElementById("BRI").classList.add('hidden');
+  document.getElementById("COP").classList.add('hidden');
+  document.getElementById("ECY").classList.add('hidden');
+  document.getElementById("EDF").classList.add('hidden');
+  document.getElementById("EEN").classList.add('hidden');
+  document.getElementById("EGE").classList.add('hidden');
+  document.getElementById("EON").classList.add('hidden');
+  document.getElementById("ESB").classList.add('hidden');
+  document.getElementById("FLO").classList.add('hidden');
+  document.getElementById("FOX").classList.add('hidden');
+  document.getElementById("FUL").classList.add('hidden');
+  document.getElementById("GNE").classList.add('hidden');
+  document.getElementById("HUD").classList.add('hidden');
+  document.getElementById("IGL").classList.add('hidden');
+  document.getElementById("ISP").classList.add('hidden');
+  document.getElementById("NPW").classList.add('hidden');
+  document.getElementById("OCT").classList.add('hidden');
+  document.getElementById("OVO").classList.add('hidden');
+  document.getElementById("PES").classList.add('hidden');
+  document.getElementById("PLA").classList.add('hidden');
+  document.getElementById("RHE").classList.add('hidden');
+  document.getElementById("SHL").classList.add('hidden');
+  document.getElementById("SOE").classList.add('hidden');
+  document.getElementById("SPK").classList.add('hidden');
+  document.getElementById("SPW").classList.add('hidden');
+  document.getElementById("SSE").classList.add('hidden');
+  document.getElementById("TNK").classList.add('hidden');
+  document.getElementById("TOE").classList.add('hidden');
+  document.getElementById("UPL").classList.add('hidden');
+  document.getElementById("UTA").classList.add('hidden');
+  document.getElementById("UTW").classList.add('hidden');
+  document.getElementById("XEN").classList.add('hidden');
+
+  if (document.getElementById("supplierList").value === "show all"){
+    document.getElementById("allSuppliers").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "AVR") {
+    document.getElementById("AVR").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "BGT") {
+    document.getElementById("BGT").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "BLB") {
+    document.getElementById("BLB").classList.remove('hidden');
+  }   
+  if (document.getElementById("supplierList").value === "BRI") {
+    document.getElementById("BRI").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "COP") {
+    document.getElementById("COP").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "ECY") {
+    document.getElementById("ECY").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "EDF") {
+    document.getElementById("EDF").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "EEN") {
+    document.getElementById("EEN").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "EGE") {
+    document.getElementById("EGE").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "EON") {
+    document.getElementById("EON").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "ESB") {
+    document.getElementById("ESB").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "FLO") {
+    document.getElementById("FLO").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "FOX") {
+    document.getElementById("FOX").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "FUL") {
+    document.getElementById("FUL").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "GNE") {
+    document.getElementById("GNE").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "HUD") {
+    document.getElementById("HUD").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "IGL") {
+    document.getElementById("IGL").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "ISP") {
+    document.getElementById("ISP").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "NPW") {
+    document.getElementById("NPW").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "OCT") {
+    document.getElementById("OCT").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "OVO") {
+    document.getElementById("OVO").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "PES") {
+    document.getElementById("PES").classList.remove('hidden');
+  }  
+  if (document.getElementById("supplierList").value === "PLA") {
+    document.getElementById("PLA").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "RHE") {
+    document.getElementById("RHE").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "SHL") {
+    document.getElementById("SHL").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "SOE") {
+    document.getElementById("SOE").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "SPK") {
+    document.getElementById("SPK").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "SPW") {
+    document.getElementById("SPW").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "SSE") {
+    document.getElementById("SSE").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "TNK") {
+    document.getElementById("TNK").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "TOE") {
+    document.getElementById("TOE").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "UPL") {
+    document.getElementById("UPL").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "UTA") {
+    document.getElementById("UTA").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "UTW") {
+    document.getElementById("UTW").classList.remove('hidden');
+  }
+  if (document.getElementById("supplierList").value === "XEN") {
+    document.getElementById("XEN").classList.remove('hidden');
+  }
+}
