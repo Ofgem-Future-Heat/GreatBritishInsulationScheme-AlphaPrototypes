@@ -5462,7 +5462,7 @@ function selectAllResultsCBs() {
 
 // INTERNAL AUTOMATIC LATE EXTENSION function
 function supplierChange() {
-  document.getElementById("allSuppliers").classList.add('hidden');
+  document.getElementById("selectAsupplier").classList.add('hidden');
   document.getElementById("AVR").classList.add('hidden');
   document.getElementById("BGT").classList.add('hidden');
   document.getElementById("BLB").classList.add('hidden');
@@ -5499,8 +5499,8 @@ function supplierChange() {
   document.getElementById("UTW").classList.add('hidden');
   document.getElementById("XEN").classList.add('hidden');
 
-  if (document.getElementById("supplierList").value === "show all"){
-    document.getElementById("allSuppliers").classList.remove('hidden');
+  if (document.getElementById("supplierList").value === "select-a-supplier"){
+    document.getElementById("selectAsupplier").classList.remove('hidden');
   }
   if (document.getElementById("supplierList").value === "AVR") {
     document.getElementById("AVR").classList.remove('hidden');

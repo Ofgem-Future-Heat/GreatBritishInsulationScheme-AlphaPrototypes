@@ -35,25 +35,28 @@
             </div>
         </div>
 
-        <h1 class="govuk-heading-xl">Search measure results</h1>
+        <h1 class="govuk-heading-xl">Searching supplier uploaded measures </h1>
 
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
-                <!-- <p class="govuk-body">Search and view the measures you've previously uploaded to the Great British Insulation Scheme portal using the filters provided.</p>
-                <p class="govuk-body">Once you've set your search filters, select the "Search" button to see your results.</p> -->
-                
-                <p class="govuk-body">Search and review the measures you've previously uploaded to the Great British Insulation Scheme portal using the filters provided.</p>
+                <p class="govuk-body">
+                    Search and review the measures energy suppliers have uploaded to the Great British Insulation Scheme portal using the filters provided. 
+                </p>
 
-                <!-- Different ways to search for measures -->
+                <!-- Different ways to search for uploaded measures -->
                 <details class="govuk-details" data-module="govuk-details">
                     <summary class="govuk-details__summary">
                         <span class="govuk-details__summary-text">
-                            Different ways to search for measures
+                            Different ways to search for uploaded measures
                         </span>
                     </summary>
                     <div class="govuk-details__text">
+
+                        <p class="govuk-body"><strong>Before searching for uploaded measures</strong></p>
+                        <p class="govuk-body">You need the measure reference numbers the energy suppliers have uploaded to the Great British Insulation Scheme portal. You will already have them or Supplier Compliance will have sent these to you.</p>
+
+                        <p class="govuk-body"><strong>Searching for measures</strong></p>
                         <p class="gov-body">You can search for measures using:</p>
-                
                         <ul class="govuk-list govuk-list--bullet">
                             <li>single measure reference numbers</li>
                             <li>a file containing multiple measure reference numbers</li>
@@ -62,43 +65,33 @@
 
                         <p class="govuk-body"><strong>Single measure reference numbers</strong></p>
                         <P class="govuk-body">To search for individual measures using a single reference number:</P>
-                            
                         <ul class="govuk-list govuk-list--number indent40">
-                            <li>Find the measure reference number in the original notification file you uploaded.</li>
-                            <li>Copy the measure reference number you want to search for.</li>
-                            <li>Add it to the measure reference number field on the next page.</li>
+                            <li>Find the measure reference number you want to search for.</li>
+                            <li>Copy the measure reference number.</li>
+                            <li>Add it to the measure reference number field.</li>
                             <li>Select the "Search" button.</li>
                         </ul>
 
                         <p class="govuk-body"><strong>A file containing multiple measure reference numbers</strong></p>
-                        
                         <p class="gov-body">To search for measures using a measure reference number file, you should:</p>
-                                                        
                         <ul class="govuk-list govuk-list--number indent40">
-                            <li>Create a CSV file<!--in Microsoft Excel-->.</li>
-                            <!-- <li>Include a single column with the heading labelled as 'Measure_reference_number' and the measure reference numbers you want to search for.</li> -->
+                            <li>Create a Microsoft Excel file.</li>
                             <li>Include a single column with the heading labelled as 'Measure_reference_number'.</li>
                             <li>Then, add the measure reference numbers you want to search for in the column.</li>
-                            <li>Save the CSV file.</li>
+                            <li>Save it as a CSV file.</li>
                             <li>Go to the search page in the Great British Insulation Scheme.</li>
                             <li>Select "Choose file" and select the CSV file you created.</li>
-                            <li>Select "Upload measure reference file".</li>
                             <li>Select the "Search" button.</li>
                         </ul>
 
                         <p class="govuk-body"><strong>Using other filters to search for measures</strong></p>
-
-                        <p class="govuk-body">You can also search for measures by selecting the measure status.</p>
-                        <!-- <p class="govuk-body">You can set other filters when searching for measures. These filters include the measure:</p> -->
-                        
-                        <!-- 
-                        <ul class="govuk-list govuk-list--bullet">
-                            <li>status</li>
-                            <li>type</li>
-                            <li>submission date</li>
-                            <li>notification period</li>
-                        </ul> 
-                        -->
+                        <p class="govuk-body">You can also search for measures by the following filters:</p>
+                        <ul class="govuk-list govuk-list--number indent40">
+                            <li>Supplier name</li>
+                            <li>Measure status</li>
+                            <li>Notification period</li>
+                            <li>Property postcode</li>
+                        </ul>
                     </div>
                 </details>
             </div>
@@ -203,7 +196,7 @@
                                             <p id="invalidFileUploaded" class="govuk-error-message hide"><span class="govuk-visually-hidden">Error:</span>The selected file is invalid</p>
                                             <p id="validFileUploaded" class="govuk-success-message hide"><span class="govuk-visually-hidden"></span>File uploaded</p>
                                             
-                                            <button id="uploadBtn" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--secondary govuk-button--disabled margin0" class="govuk-button"  onclick="triggerMrnFileValidation()" type="button">Upload measure reference number file</button>
+                                            <!-- <button id="uploadBtn" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--secondary govuk-button--disabled margin0" class="govuk-button"  onclick="triggerMrnFileValidation()" type="button">Upload measure reference number file</button> -->
                                         </div>
                                     </fieldset>
                                 </div>
@@ -245,6 +238,7 @@
                                     <div id="measure-status-hint" class="govuk-hint">
                                         You can select one or more items in the list.
                                     </div>
+                                    
         
                                     <select class="govuk-select govuk-!-width-full" id="notification-period-none" name="notification-period" size="5" multiple="multiple">
                                         <option value="" selected disabled hidden>Select a notification period</option>
@@ -260,17 +254,17 @@
                         <!-- Post code -->
                         <div class="tab">
                             <input class="hide-accordion-checkboxes" type="checkbox" id="chck5" checked="checked">
-                            <label class="tab-label" for="chck5">Post code</label>
+                            <label class="tab-label" for="chck5">Postcode</label>
                             <div class="tab-content">
                                 <fieldset class="govuk-fieldset" role="group" aria-describedby="postcode-hint" id="error-with-postcode">
                                     <legend class="govuk-fieldset__legend">
-                                        <h2 class="govuk-heading-m">What is the post code?</h2>
+                                        <h2 class="govuk-heading-m">What is the postcode of the property where the measure was installed?</h2>
                                     </legend>
                                     <div id="postcode-hint" class="govuk-hint">
-                                        Enter the post code
+                                        Enter the postcode
                                     </div>
                                     <p id="empty-postcode-field-error" class="govuk-error-message hide">
-                                        <span class="govuk-visually-hidden">Error:</span> Please provide the post code
+                                        <span class="govuk-visually-hidden">Error:</span> Please provide the postcode
                                     </p>
                                     <input class="govuk-input" id="postcode" name="postcode" type="text">
                                 </fieldset>
