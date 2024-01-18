@@ -5396,27 +5396,27 @@ function intCheckMRN() {
   const measureReferenceNumberInputField = document.getElementById('measure-reference-number');
   const emptyStatusFieldError = document.getElementById('empty-status-field-error');
   // const statusSelect = document.getElementById('measure-status-none');
-  const statusSelect = document.getElementById('cboxesMeasureStatus');
+  // const statusSelect = document.getElementById('cboxesMeasureStatus');
   // const options = document.getElementById('measure-status-none').options;
 
-  const optionsContainer = document.getElementById('cboxesMeasureStatus');
-  const options = optionsContainer.getElementsByClassName('govuk-checkboxes__item');
-  let count = 0;
-  let selectedOptions = null;
-  console.log('options.length', options.length);
+  // const optionsContainer = document.getElementById('cboxesMeasureStatus');
+  // const options = optionsContainer.getElementsByClassName('govuk-checkboxes__item');
+  // let count = 0;
+  // let selectedOptions = null;
+  // console.log('options.length', options.length);
   
-  for (let i = 0; i < options.length; i++) {
-    let option = options[i].querySelectorAll('input[type="checkbox"]:checked');
-    if (option.length) {
-      console.log('checked option', option);
-      count++;
-      console.log('count', count);
-    }
-    count > 0 ? selectedOptions = true : selectedOptions = false;
-  }
+  // for (let i = 0; i < options.length; i++) {
+  //   let option = options[i].querySelectorAll('input[type="checkbox"]:checked');
+  //   if (option.length) {
+  //     console.log('checked option', option);
+  //     count++;
+  //     console.log('count', count);
+  //   }
+  //   count > 0 ? selectedOptions = true : selectedOptions = false;
+  // }
 
 
-  console.log('selectedOptions', selectedOptions);
+  // console.log('selectedOptions', selectedOptions);
 
   if((document.getElementById("measure-reference-number").value.length > 1) && (document.getElementById("file-upload").value != "")) {
     window.scrollTo(0, 0);
@@ -5427,7 +5427,9 @@ function intCheckMRN() {
     mrnFileFieldError.classList.remove('hide');
     mrnErrorSection.classList.add('govuk-form-group--error');
     measureReferenceNumberInputField.classList.add('govuk-input--error');
-  } else if ((document.getElementById("measure-reference-number").value.length === 0) && (document.getElementById("file-upload").value === "") && (!selectedOptions)) {
+  } else if ((document.getElementById("measure-reference-number").value.length === 0) && (document.getElementById("file-upload").value === "") 
+            // && (!selectedOptions)
+            ) {
     window.scrollTo(0, 0);
     document.getElementById("chck1").checked = true;
     document.getElementById("chck2").checked = true;
@@ -5441,7 +5443,7 @@ function intCheckMRN() {
     mrnFieldError.classList.remove('hide');
     mrnFileFieldError.classList.remove('hide');
     emptyStatusFieldError.classList.remove('hide');
-    statusSelect.classList.add('select-error');
+    // statusSelect.classList.add('select-error');
   } else {
     performSearch.href = "/internal/v02-0/search-measures/search-results";
   }
