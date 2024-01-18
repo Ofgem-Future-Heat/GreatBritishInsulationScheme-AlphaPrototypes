@@ -359,3 +359,17 @@ input[type="file"] {
 }
 
 
+.short-select-width-month { 
+    max-width: 7em !important;
+    min-width: 7em !important;
+}
+.short-select-width-year { 
+    max-width: 4em !important;
+    min-width: 4em !important;
+}
+
+.govuk-select-field__item {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 0;
+}
