@@ -1730,7 +1730,7 @@ let singularPlural = document.getElementById("singularPlural");
 const searchResults = [
   {
     "supplierName": "OVO",
-"measureReferenceNumber": "OVO7801767",
+    "measureReferenceNumber": "OVO7801767",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "05/09/2022",
@@ -1780,7 +1780,7 @@ const searchResults = [
   },
   {
     "supplierName": "OVO",
-"measureReferenceNumber": "OVO1234567",
+    "measureReferenceNumber": "OVO1234567",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "05/10/2022",
@@ -1830,7 +1830,7 @@ const searchResults = [
   },
   {
     "supplierName": "OVO",
-"measureReferenceNumber": "OVO1234564",
+    "measureReferenceNumber": "OVO1234564",
     "measureType": "Solar_PV",
     "measureStatus": "Notified Incomplete",
     "submissionDate": "05/09/2022",
