@@ -710,7 +710,7 @@ function viewExternalUserDetails(
 }
 
 // Set External user details
-if (pageUrlPath === '/internal/v01-1/external-users/view-external-details') {
+if ((pageUrlPath === '/internal/v01-1/external-users/view-external-details') || (pageUrlPath === '/internal/v02-0/external-users/view-external-details')) {
   // document.getElementById('username').innerText = localStorage.getItem('ext_username');
   // document.getElementById('title').innerText = localStorage.getItem('ext_title');
   document.getElementById('firstName').innerText = localStorage.getItem('ext_firstName');
