@@ -10,7 +10,7 @@
     <div class="govuk-grid-column-two-thirds">
         <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
 
-        <h1 class="govuk-heading-l">Check your answers before editing this user's details</h1>
+        <h1 class="govuk-heading-l">Check your answers before editing user details</h1>
         
         <h2 class="govuk-heading-m">Personal details</h2>
         <dl class="govuk-summary-list">
@@ -24,6 +24,14 @@
                 </dd>
             </div>
             -->
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Supplier name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>BGT</span>
+                </dd>
+            </div>
             
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
@@ -54,18 +62,10 @@
                     <span>01700234567</span>
                 </dd>
             </div> -->
-        </dl>
+        <!-- </dl>
 
         <h2 class="govuk-heading-m">Other details</h2>
-        <dl class="govuk-summary-list">
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                    Supplier name
-                </dt>
-                <dd class="govuk-summary-list__value">
-                    <span>BGT</span>
-                </dd>
-            </div>
+        <dl class="govuk-summary-list"> -->
             <!-- <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">
                     Job title
@@ -95,14 +95,14 @@
         </dl>
         
         <div class="govuk-button-group">
-            <a href="edit-external-user" class="govuk-link govuk-link--no-visited-state">Edit details</a>
+            <a href="edit-external-user" class="govuk-link govuk-link--no-visited-state">Edit user details</a>
         </div>
 
         <div class="govuk-button-group">
             <form action="success-external-user-updated" method="post" novalidate>
                 <input type="hidden" name="answers-checked" value="true">
                 <button class="govuk-button" data-module="govuk-button">
-                    Submit
+                    Edit details
                 </button>
             </form>
         </div>
