@@ -416,17 +416,17 @@ const externalUsers = [
     "jobTitle": "Compliance Officer",
     "userStatus": "Active"
   }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
+    "username": "jaukhan",
+    "title": "Mr",
+    "firstName": "Jau",
+    "middleName": "",
+    "lastName": "Khan",
+    "emailAddress": "jau.khan@britishgas.com",
     "telephoneNumber": "07111222333",
     "supplierName": "SHL",
     "userType": "AdditionalUserRole",
     "jobTitle": "Compliance Officer",
-    "userStatus": "Inactive"
+    "userStatus": "Active"
   }
   //, {
   //   "username": "lorainekelly",
