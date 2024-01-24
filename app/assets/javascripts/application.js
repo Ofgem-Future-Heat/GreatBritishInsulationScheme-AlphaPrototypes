@@ -404,14 +404,14 @@ const externalUsers = [
     "jobTitle": "Quality Assurance",
     "userStatus": "Active"
   }, {
-    "username": "lorainekelly",
+    "username": "jeangray",
     "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
+    "firstName": "Jean",
+    "middleName": "Francine",
+    "lastName": "Gray",
+    "emailAddress": "jean.gray@britishgas",
     "telephoneNumber": "07111222333",
-    "supplierName": "AVR",
+    "supplierName": "BGT",
     "userType": "AdditionalUserRole",
     "jobTitle": "Compliance Officer",
     "userStatus": "Active"
@@ -427,223 +427,224 @@ const externalUsers = [
     "userType": "AdditionalUserRole",
     "jobTitle": "Compliance Officer",
     "userStatus": "Inactive"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "SOE",
-    "userType": "AdditionalUserRole",
-    "jobTitle": "Quality Assurance",
-    "userStatus": "Active"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "RHE",
-    "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer",
-    "userStatus": "Active"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "TNK",
-    "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer",
-    "userStatus": "Active"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "PLA",
-    "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer",
-    "userStatus": "Inactive"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "ISP",
-    "userType": "AdditionalUserRole",
-    "jobTitle": "Quality Assurance",
-    "userStatus": "Active"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "UPL",
-    "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer",
-    "userStatus": "Active"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "ECY",
-    "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer",
-    "userStatus": "Active"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "BRI",
-    "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer",
-    "userStatus": "Active"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "ESB",
-    "userType": "AdditionalUserRole",
-    "jobTitle": "Quality Assurance",
-    "userStatus": "Active"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "IGL",
-    "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance",
-    "userStatus": "Active"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "TOE",
-    "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Compliance Officer",
-    "userStatus": "Active"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "FOX",
-    "userType": "AuthorisedSignatoryRole",
-    "jobTitle": "Quality Assurance",
-    "userStatus": "Active"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "PES",
-    "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer",
-    "userStatus": "Active"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "IGL",
-    "userType": "AdditionalUserRole",
-    "jobTitle": "Quality Assurance",
-    "userStatus": "Active"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "FUL",
-    "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer",
-    "userStatus": "Active"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "OVO",
-    "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer",
-    "userStatus": "Active"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "SPK",
-    "userType": "AdditionalUserRole",
-    "jobTitle": "Quality Assurance",
-    "userStatus": "Active"
-  }, {
-    "username": "lorainekelly",
-    "title": "Ms",
-    "firstName": "Loraine",
-    "middleName": "Jane",
-    "lastName": "Kelly",
-    "emailAddress": "loraine.kelly@orgmail.com",
-    "telephoneNumber": "07111222333",
-    "supplierName": "BRI",
-    "userType": "AdditionalUserRole",
-    "jobTitle": "Compliance Officer",
-    "userStatus": "Active"
   }
+  //, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "SOE",
+  //   "userType": "AdditionalUserRole",
+  //   "jobTitle": "Quality Assurance",
+  //   "userStatus": "Active"
+  // }, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "RHE",
+  //   "userType": "AdditionalUserRole",
+  //   "jobTitle": "Compliance Officer",
+  //   "userStatus": "Active"
+  // }, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "TNK",
+  //   "userType": "AdditionalUserRole",
+  //   "jobTitle": "Compliance Officer",
+  //   "userStatus": "Active"
+  // }, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "PLA",
+  //   "userType": "AdditionalUserRole",
+  //   "jobTitle": "Compliance Officer",
+  //   "userStatus": "Inactive"
+  // }, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "ISP",
+  //   "userType": "AdditionalUserRole",
+  //   "jobTitle": "Quality Assurance",
+  //   "userStatus": "Active"
+  // }, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "UPL",
+  //   "userType": "AdditionalUserRole",
+  //   "jobTitle": "Compliance Officer",
+  //   "userStatus": "Active"
+  // }, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "ECY",
+  //   "userType": "AdditionalUserRole",
+  //   "jobTitle": "Compliance Officer",
+  //   "userStatus": "Active"
+  // }, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "BRI",
+  //   "userType": "AdditionalUserRole",
+  //   "jobTitle": "Compliance Officer",
+  //   "userStatus": "Active"
+  // }, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "ESB",
+  //   "userType": "AdditionalUserRole",
+  //   "jobTitle": "Quality Assurance",
+  //   "userStatus": "Active"
+  // }, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "IGL",
+  //   "userType": "AuthorisedSignatoryRole",
+  //   "jobTitle": "Quality Assurance",
+  //   "userStatus": "Active"
+  // }, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "TOE",
+  //   "userType": "AuthorisedSignatoryRole",
+  //   "jobTitle": "Compliance Officer",
+  //   "userStatus": "Active"
+  // }, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "FOX",
+  //   "userType": "AuthorisedSignatoryRole",
+  //   "jobTitle": "Quality Assurance",
+  //   "userStatus": "Active"
+  // }, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "PES",
+  //   "userType": "AdditionalUserRole",
+  //   "jobTitle": "Compliance Officer",
+  //   "userStatus": "Active"
+  // }, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "IGL",
+  //   "userType": "AdditionalUserRole",
+  //   "jobTitle": "Quality Assurance",
+  //   "userStatus": "Active"
+  // }, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "FUL",
+  //   "userType": "AdditionalUserRole",
+  //   "jobTitle": "Compliance Officer",
+  //   "userStatus": "Active"
+  // }, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "OVO",
+  //   "userType": "AdditionalUserRole",
+  //   "jobTitle": "Compliance Officer",
+  //   "userStatus": "Active"
+  // }, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "SPK",
+  //   "userType": "AdditionalUserRole",
+  //   "jobTitle": "Quality Assurance",
+  //   "userStatus": "Active"
+  // }, {
+  //   "username": "lorainekelly",
+  //   "title": "Ms",
+  //   "firstName": "Loraine",
+  //   "middleName": "Jane",
+  //   "lastName": "Kelly",
+  //   "emailAddress": "loraine.kelly@orgmail.com",
+  //   "telephoneNumber": "07111222333",
+  //   "supplierName": "BRI",
+  //   "userType": "AdditionalUserRole",
+  //   "jobTitle": "Compliance Officer",
+  //   "userStatus": "Active"
+  // }
 ];
 
 // Build external user list
@@ -5389,12 +5390,15 @@ function intCheckMRN() {
   const errorMRNSummary = document.getElementById('error-MRN-summary');
   const errorWithMRN = document.getElementById('errorWithMRN');
   const errorWithNothingSelected = document.getElementById('errorWithNothingSelected');
+  const supplierErrorSection = document.getElementById('supplierErrorSection');
   const mrnErrorSection = document.getElementById('mrnErrorSection');
   const statusErrorSection = document.getElementById('statusErrorSection');
+  const supplierFieldError = document.getElementById('supplier-field-error');
   const mrnFieldError = document.getElementById('mrn-field-error');
   const mrnFileFieldError = document.getElementById('mrn-file-field-error');
   const measureReferenceNumberInputField = document.getElementById('measure-reference-number');
   const emptyStatusFieldError = document.getElementById('empty-status-field-error');
+
   // const statusSelect = document.getElementById('measure-status-none');
   // const statusSelect = document.getElementById('cboxesMeasureStatus');
   // const options = document.getElementById('measure-status-none').options;
@@ -5423,6 +5427,7 @@ function intCheckMRN() {
     errorMRNSummary.classList.remove('hide');
     errorWithMRN.classList.remove('hide');
 
+    supplierFieldError.classList.remove('hide');
     mrnFieldError.classList.remove('hide');
     mrnFileFieldError.classList.remove('hide');
     mrnErrorSection.classList.add('govuk-form-group--error');
@@ -5436,10 +5441,12 @@ function intCheckMRN() {
     errorMRNSummary.classList.remove('hide');
     errorWithNothingSelected.classList.remove('hide');
 
+    supplierErrorSection.classList.add('govuk-form-group--error');
     mrnErrorSection.classList.add('govuk-form-group--error');
     errorWithNothingSelected.classList.remove('hide');
     statusErrorSection.classList.add('govuk-form-group--error');
     measureReferenceNumberInputField.classList.add('govuk-input--error');
+    supplierFieldError.classList.remove('hide');
     mrnFieldError.classList.remove('hide');
     mrnFileFieldError.classList.remove('hide');
     emptyStatusFieldError.classList.remove('hide');

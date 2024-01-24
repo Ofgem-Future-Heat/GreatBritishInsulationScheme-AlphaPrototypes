@@ -27,8 +27,18 @@
                         </a>
                     </li>
                     <li id="errorWithNothingSelected" class="hide">
-                        <p><a href="#error-with-MRN">Enter a single measure reference number or upload a file with measure reference numbers to search</a></p>
-                        <p><a href="#error-with-status">Or, select one or more measure statuses if not searching using measure reference numbers</a></p>
+                        <p><a href="#">You must select at least one of these filters to show the measures uploaded by suppliers:</a></p>
+                        
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li><a href="#error-with-supplier-name">Supplier name</a></li>
+                            <li><a href="#error-with-MRN">Measure reference number</a></li>
+                            <li><a href="#error-with-status">Status</a></li>
+                            <li><a href="#notification-period">Notification period</a></li>
+                            <li><a href="#postcode">Postcode</a></li>
+                        </ul>
+                        
+                        <!-- <p><a href="#error-with-MRN">Enter a single measure reference number or upload a file with measure reference numbers to search</a></p>
+                        <p><a href="#error-with-status">Or, select one or more measure statuses if not searching using measure reference numbers</a></p> -->
                     </li>
                 </ul>
               </div>
@@ -107,74 +117,81 @@
                             <input class="hide-accordion-checkboxes" type="checkbox" id="chck1" checked="checked">
                             <label class="tab-label" for="chck1">Supplier name</label>
                             <div class="tab-content">
-                                <fieldset class="govuk-fieldset" role="group" aria-describedby="supplier-name-hint" id="error-with-supplier-name">
-                                    <legend class="govuk-fieldset__legend">
-                                        <h2 class="govuk-heading-m">What is the supplier name?</h2>
-                                    </legend>
-                                    <div id="supplier-name-hint" class="govuk-hint">
-                                        Select the supplier name
-                                    </div>
-                                    <p id="empty-supplier-name-field-error" class="govuk-error-message hide">
-                                        <span class="govuk-visually-hidden">Error:</span> Please provide the supplier name
-                                    </p>
-                                    <!-- <input class="govuk-input" id="supplier-name" name="supplierName" type="text"> -->
-                                    <div class="govuk-form-group">
-                                        <select class="govuk-select" name="supplierName" id="supplierName">
-                                            <!-- <option value="" disabled >Select a supplier</option> -->
-                                            <option value="none" selected>&mdash;</option>
-                                            <option value="BGT">BGT &mdash; British Gas Trading</option>
-                                            <option value="ECY">ECY &mdash; Ecotricity</option>
-                                            <option value="EDF">EDF</option>
-                                            <option value="EGE">EGE &mdash; E (Gas & Electricity)</option>
-                                            <option value="EON">EON &mdash; E.ON Energy</option>
-                                            <option value="FOX">FOX &mdash; Foxglove Energy</option>
-                                            <option value="OCT">OCT &mdash; Octopus Energy</option>
-                                            <option value="OVO">OVO &mdash; OVO Energy</option>
-                                            <option value="SHL">SHL &mdash; Shell Energy</option>
-                                            <option value="SOE">SOE &mdash; So Energy</option>
-                                            <option value="SPW">SPW &mdash; Scottish Power</option>
-                                            <option value="UTA">UTA &mdash; Utilita Energy</option>
-                                            <option value="UTW">UTW &mdash; Utility Warehouse</option>
+                                <div class="govuk-form-group" id="supplierErrorSection">
+                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="supplier-name-hint" id="error-with-supplier-name">
+                                        <legend class="govuk-fieldset__legend">
+                                            <h2 class="govuk-heading-m">What is the supplier name?</h2>
+                                        </legend>
+                                        
+                                        <p id="supplier-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Select a supplier name if you're not searching using other filters
+                                        </p>
+                                        
+                                        <div id="supplier-name-hint" class="govuk-hint">
+                                            Select the supplier name
+                                        </div>
+                                        <p id="empty-supplier-name-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Please provide the supplier name
+                                        </p>
+                                        <!-- <input class="govuk-input" id="supplier-name" name="supplierName" type="text"> -->
+                                        <div class="govuk-form-group">
+                                            <select class="govuk-select" name="supplierName" id="supplierName">
+                                                <!-- <option value="" disabled >Select a supplier</option> -->
+                                                <option value="none" selected>&mdash;</option>
+                                                <option value="BGT">BGT &mdash; British Gas Trading</option>
+                                                <option value="ECY">ECY &mdash; Ecotricity</option>
+                                                <option value="EDF">EDF</option>
+                                                <option value="EGE">EGE &mdash; E (Gas & Electricity)</option>
+                                                <option value="EON">EON &mdash; E.ON Energy</option>
+                                                <option value="FOX">FOX &mdash; Foxglove Energy</option>
+                                                <option value="OCT">OCT &mdash; Octopus Energy</option>
+                                                <option value="OVO">OVO &mdash; OVO Energy</option>
+                                                <option value="SHL">SHL &mdash; Shell Energy</option>
+                                                <option value="SOE">SOE &mdash; So Energy</option>
+                                                <option value="SPW">SPW &mdash; Scottish Power</option>
+                                                <option value="UTA">UTA &mdash; Utilita Energy</option>
+                                                <option value="UTW">UTW &mdash; Utility Warehouse</option>
 
-                                            <!-- <option value="selectAsupplier" disabled="disabled" selected="selected">Select a supplier</option>
-                                            <option value="AVR" disabled="disabled">AVR &mdash; Avro Energy</option>
-                                            <option value="BGT">BGT &mdash; British Gas Trading</option>
-                                            <option value="BLB">BLB &mdash; Bulb</option>
-                                            <option value="BRI">BRI &mdash; Bristol Energy</option>
-                                            <option value="COP">COP &mdash; Co-operative Energy</option>
-                                            <option value="ECY">ECY &mdash; Ecotricity</option>
-                                            <option value="EDF">EDF &mdash; EDF</option>
-                                            <option value="EEN">EEN &mdash; Economy Energy</option>
-                                            <option value="EGE">EGE &mdash; E (Gas & Electricity)</option>
-                                            <option value="EON">EON &mdash; E.ON Energy</option>
-                                            <option value="ESB">ESB &mdash; ESB Energy</option>
-                                            <option value="FLO">FLO &mdash; Flow Energy</option>
-                                            <option value="FOX">FOX &mdash; Foxglove Energy</option>
-                                            <option value="FUL">FUL &mdash; First Utility</option>
-                                            <option value="GNE" disabled="disabled">GNE &mdash; Great North Energy (GNE Green Network)</option>
-                                            <option value="HUD">HUD &mdash; Hudson Energy</option>
-                                            <option value="IGL">IGL &mdash; Igloo Energy</option>
-                                            <option value="ISP">ISP &mdash; iSupplyEnergy</option>
-                                            <option value="NPW">NPW &mdash; Npower</option>
-                                            <option value="OCT">OCT &mdash; Octopus Energy</option>
-                                            <option value="OVO">OVO &mdash; OVO Energy</option>
-                                            <option value="PES">PES &mdash; People's Energy</option>
-                                            <option value="PLA">PLA &mdash; Pure Planet</option>
-                                            <option value="RHE">RHE &mdash; Robin Hood Energy</option>
-                                            <option value="SHL">SHL &mdash; Shell Energy</option>
-                                            <option value="SOE">SOE &mdash; So Energy</option>
-                                            <option value="SPK">SPK &mdash; Spark Energy</option>
-                                            <option value="SPW">SPW &mdash; Scottish Power</option>
-                                            <option value="SSE">SSE &mdash; SSE Energy</option>
-                                            <option value="TNK">TNK &mdash; Tonik Energy</option>
-                                            <option value="TOE">TOE &mdash; Together Energy</option>
-                                            <option value="UPL">UPL &mdash; Utility Point</option>
-                                            <option value="UTA">UTA &mdash; Utilita Energy</option>
-                                            <option value="UTW">UTW &mdash; Utility Warehouse</option>
-                                            <option value="XEN">XEN &mdash; Extra Energy</option> -->
-                                        </select>
-                                    </div>
-                                </fieldset>
+                                                <!-- <option value="selectAsupplier" disabled="disabled" selected="selected">Select a supplier</option>
+                                                <option value="AVR" disabled="disabled">AVR &mdash; Avro Energy</option>
+                                                <option value="BGT">BGT &mdash; British Gas Trading</option>
+                                                <option value="BLB">BLB &mdash; Bulb</option>
+                                                <option value="BRI">BRI &mdash; Bristol Energy</option>
+                                                <option value="COP">COP &mdash; Co-operative Energy</option>
+                                                <option value="ECY">ECY &mdash; Ecotricity</option>
+                                                <option value="EDF">EDF &mdash; EDF</option>
+                                                <option value="EEN">EEN &mdash; Economy Energy</option>
+                                                <option value="EGE">EGE &mdash; E (Gas & Electricity)</option>
+                                                <option value="EON">EON &mdash; E.ON Energy</option>
+                                                <option value="ESB">ESB &mdash; ESB Energy</option>
+                                                <option value="FLO">FLO &mdash; Flow Energy</option>
+                                                <option value="FOX">FOX &mdash; Foxglove Energy</option>
+                                                <option value="FUL">FUL &mdash; First Utility</option>
+                                                <option value="GNE" disabled="disabled">GNE &mdash; Great North Energy (GNE Green Network)</option>
+                                                <option value="HUD">HUD &mdash; Hudson Energy</option>
+                                                <option value="IGL">IGL &mdash; Igloo Energy</option>
+                                                <option value="ISP">ISP &mdash; iSupplyEnergy</option>
+                                                <option value="NPW">NPW &mdash; Npower</option>
+                                                <option value="OCT">OCT &mdash; Octopus Energy</option>
+                                                <option value="OVO">OVO &mdash; OVO Energy</option>
+                                                <option value="PES">PES &mdash; People's Energy</option>
+                                                <option value="PLA">PLA &mdash; Pure Planet</option>
+                                                <option value="RHE">RHE &mdash; Robin Hood Energy</option>
+                                                <option value="SHL">SHL &mdash; Shell Energy</option>
+                                                <option value="SOE">SOE &mdash; So Energy</option>
+                                                <option value="SPK">SPK &mdash; Spark Energy</option>
+                                                <option value="SPW">SPW &mdash; Scottish Power</option>
+                                                <option value="SSE">SSE &mdash; SSE Energy</option>
+                                                <option value="TNK">TNK &mdash; Tonik Energy</option>
+                                                <option value="TOE">TOE &mdash; Together Energy</option>
+                                                <option value="UPL">UPL &mdash; Utility Point</option>
+                                                <option value="UTA">UTA &mdash; Utilita Energy</option>
+                                                <option value="UTW">UTW &mdash; Utility Warehouse</option>
+                                                <option value="XEN">XEN &mdash; Extra Energy</option> -->
+                                            </select>
+                                        </div>
+                                    </fieldset>
+                                </div>
                             </div>
                         </div>
 
