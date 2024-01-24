@@ -119,7 +119,8 @@
                                     <!-- <input class="govuk-input" id="supplier-name" name="supplierName" type="text"> -->
                                     <div class="govuk-form-group">
                                         <select class="govuk-select" name="supplierName" id="supplierName">
-                                            <!-- <option value="" disabled selected>Select a supplier</option>
+                                            <!-- <option value="" disabled >Select a supplier</option> -->
+                                            <option value="none" selected>&mdash;</option>
                                             <option value="BGT">BGT &mdash; British Gas Trading</option>
                                             <option value="ECY">ECY &mdash; Ecotricity</option>
                                             <option value="EDF">EDF</option>
@@ -132,9 +133,9 @@
                                             <option value="SOE">SOE &mdash; So Energy</option>
                                             <option value="SPW">SPW &mdash; Scottish Power</option>
                                             <option value="UTA">UTA &mdash; Utilita Energy</option>
-                                            <option value="UTW">UTW &mdash; Utility Warehouse</option> -->
+                                            <option value="UTW">UTW &mdash; Utility Warehouse</option>
 
-                                            <option value="selectAsupplier" disabled="disabled" selected="selected">Select a supplier</option>
+                                            <!-- <option value="selectAsupplier" disabled="disabled" selected="selected">Select a supplier</option>
                                             <option value="AVR" disabled="disabled">AVR &mdash; Avro Energy</option>
                                             <option value="BGT">BGT &mdash; British Gas Trading</option>
                                             <option value="BLB">BLB &mdash; Bulb</option>
@@ -169,7 +170,7 @@
                                             <option value="UPL">UPL &mdash; Utility Point</option>
                                             <option value="UTA">UTA &mdash; Utilita Energy</option>
                                             <option value="UTW">UTW &mdash; Utility Warehouse</option>
-                                            <option value="XEN">XEN &mdash; Extra Energy</option>
+                                            <option value="XEN">XEN &mdash; Extra Energy</option> -->
                                         </select>
                                     </div>
                                 </fieldset>
@@ -287,47 +288,14 @@
                                     </div>
                                     <h3 class="govuk-heading-s margin-bottom0">From</h3>
                                     <div class="govuk-form-group">
-                                        <!-- <label class="govuk-label" for="from-month">
-                                            Month
-                                        </label>
-                                        <select class="govuk-select" id="from-month" name="from-month">
-                                            <option value="" disabled selected>Select month</option>
-                                            <option value="January">January</option>
-                                            <option value="February">February</option>
-                                            <option value="March">March</option>
-                                            <option value="April">April</option>
-                                            <option value="May">May</option>
-                                            <option value="June">June</option>
-                                            <option value="July">July</option>
-                                            <option value="August">August</option>
-                                            <option value="September">September</option>
-                                            <option value="October">October</option>
-                                            <option value="November">November</option>
-                                            <option value="December">December</option>
-                                        </select>
-                                    </div>
-                                    <div class="govuk-form-group">
-                                        <label class="govuk-label" for="from-year">
-                                            Year
-                                        </label>
-                                        <select class="govuk-select short-select-width" id="from-year" name="from-year">
-                                            <option value="" disabled selected>Select year</option>
-                                            <option value="2022">2022</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                            <option value="2025">2025</option>
-                                            <option value="2026">2026</option>
-                                        </select> -->
-
                                         <div class="govuk-select-field" id="from">
                                             <div class="govuk-select-field__item">
                                                 <div class="govuk-form-group">
                                                     <label class="govuk-label govuk-select-field__label" for="from-month">
                                                         Month
                                                     </label>
-                                                    <!-- <input class="govuk-input govuk-select-field__input govuk-input--width-5" id="from-month" name="from-month" type="text" inputmode="numeric"> -->
                                                     <select class="govuk-select short-select-width-month" id="from-month" name="from-month">
-                                                        <!-- <option value="" disabled selected>Select month</option> -->
+                                                        <option value="&mdash;" selected>&mdash;</option>
                                                         <option value="January">January</option>
                                                         <option value="February">February</option>
                                                         <option value="March">March</option>
@@ -348,9 +316,8 @@
                                                     <label class="govuk-label govuk-select-field__label" for="from-year">
                                                         Year
                                                     </label>
-                                                    <!-- <input class="govuk-input govuk-select-field__input govuk-input--width-5" id="from-year" name="from-year" type="text" inputmode="numeric"> -->
                                                     <select class="govuk-select short-select-width-year" id="from-year" name="from-year">
-                                                        <!-- <option value="" disabled selected>Select year</option> -->
+                                                        <option value="&mdash;" selected>&mdash;</option>
                                                         <option value="2022">2022</option>
                                                         <option value="2023">2023</option>
                                                         <option value="2024">2024</option>
@@ -371,6 +338,7 @@
                                                         Month
                                                     </label>
                                                     <select class="govuk-select short-select-width-month" id="to-month" name="to-month">
+                                                        <option value="&mdash;" selected>&mdash;</option>
                                                         <option value="January">January</option>
                                                         <option value="February">February</option>
                                                         <option value="March">March</option>
@@ -392,6 +360,7 @@
                                                         Year
                                                     </label>
                                                     <select class="govuk-select short-select-width-year" id="to-year" name="to-year">
+                                                        <option value="&mdash;" selected>&mdash;</option>
                                                         <option value="2022">2022</option>
                                                         <option value="2023">2023</option>
                                                         <option value="2024">2024</option>
@@ -402,20 +371,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-                                    
-                                    <!-- <div id="measure-status-hint" class="govuk-hint">
-                                        You can select one or more items in the list.
-                                    </div> -->
-                                    
-                                    
-                                    <!-- <select class="govuk-select govuk-!-width-full" id="notification-period-none" name="notification-period" size="5" multiple="multiple">
-                                        <option value="" selected disabled hidden>Select a notification period</option>
-                                    </select>
-                                    <select class="govuk-select govuk-!-width-full hide" id="notification-period-all" name="notification-period" size="5" multiple="multiple">
-                                        <option value="" selected disabled hidden>Select a notification period</option>
-                                    </select>
-                                    <a class="govuk-link" href="javascript:;" onclick="toggleSelectNotificationPeriodFn()">select <span id="allOrNoneNotification">all</span></a> -->
                                 </fieldset>
                            </div>
                         </div>
@@ -439,102 +394,9 @@
                                 </fieldset>
                             </div>
                         </div>
-                        
-                        <!-- 
-                        <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset">
-                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                                <h1 class="govuk-fieldset__heading">
-                                  Where do you live?
-                                </h1>
-                              </legend>
-                              <div id="measure-status-radio" class="govuk-radios" data-module="govuk-radios">
-                                
-                              </div>
-                            </fieldset>
-                        </div>
-                        -->
-
-                        <!-- Measure type -->
-                        <!-- 
-                        <div class="tab">
-                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck3">
-                            <label class="tab-label" for="chck3">Measure type</label>
-                            <div class="tab-content">
-                                <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-type-hint">
-                                    <legend class="govuk-fieldset__legend">
-                                        <h2 class="govuk-heading-m">What is the measure type?</h2>
-                                    </legend>
-                                    
-                                    <div id="measure-type-hint" class="govuk-hint">
-                                        You can select one or more items in the list.
-                                    </div>
-        
-                                    <select class="govuk-select govuk-!-width-full" id="measure-type-category-none" name="measure-type-category" size="5" multiple="multiple">
-                                        <option value="" selected disabled hidden>Select a measure type category</option>
-                                    </select>
-                                    <select class="govuk-select govuk-!-width-full hide" id="measure-type-category-all" name="measure-type-category" size="5" multiple="multiple">
-                                        <option value="" selected disabled hidden>Select a measure type category</option>
-                                    </select>
-                                    
-                                    <a class="govuk-link" href="javascript:;" onclick="toggleSelectCategoryTypeFn()">select <span id="allOrNoneCategory">all</span></a>
-                                </fieldset>
-                            </div>
-                        </div> 
-                        -->
-                        
-                        <!-- Submission date -->
-                        <!-- 
-                        <div class="tab">
-                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck4">
-                            <label class="tab-label" for="chck4">Submission date</label>
-                            <div class="tab-content">
-                                <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint">
-                                    <legend class="govuk-fieldset__legend">
-                                        <h2 class="govuk-heading-m">What is the submission date?</h2>
-                                    </legend>
-        
-                                    <div id="submission-date-hint" class="govuk-hint">
-                                        For example, 27 3 2007
-                                    </div>
-        
-                                    <div class="govuk-date-input" id="submission-date">
-                                        <div class="govuk-date-input__item">
-                                            <label class="govuk-label govuk-date-input__label" for="submission-date-day">
-                                                Day
-                                            </label>
-                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="submission-date-day" name="submission-date-day" type="text" inputmode="numeric">
-                                        </div>
-                                        <div class="govuk-date-input__item">
-                                            <label class="govuk-label govuk-date-input__label" for="submission-date-month">
-                                                Month
-                                            </label>
-                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="submission-date-month" name="submission-date-month" type="text" inputmode="numeric">
-                                        </div>
-                                        <div class="govuk-date-input__item">
-                                            <label class="govuk-label govuk-date-input__label" for="submission-date-year">
-                                                Year
-                                            </label>
-                                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="submission-date-year" name="submission-date-year" type="text" inputmode="numeric">
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </div>
-                        </div> 
-                        -->
-
-                        <!-- Notification period -->
                     </div>
-                    
-                    <!-- Search -->
-                    <!-- 
-                    <div class="govuk-button-group">
-                        <a href="./search-results" class="govuk-button" data-module="govuk-button">
-                            Update search
-                        </a>
-                    </div> 
-                    -->
 
+                    <!-- Search -->
                     <div class="govuk-button-group">
                         <a id="performSearch" href="javascript:void(0);" class="govuk-button" data-module="govuk-button" onclick="intCheckMRN()">
                             Search
