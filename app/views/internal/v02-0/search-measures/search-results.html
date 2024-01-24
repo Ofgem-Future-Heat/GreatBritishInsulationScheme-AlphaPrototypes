@@ -27,8 +27,18 @@
                         </a>
                     </li>
                     <li id="errorWithNothingSelected" class="hide">
-                        <p><a href="#error-with-MRN">Enter a single measure reference number or upload a file with measure reference numbers to search</a></p>
-                        <p><a href="#error-with-status">Or, select one or more measure statuses if not searching using measure reference numbers</a></p>
+                        <p><a href="#">You must select at least one of these filters to show the measures uploaded by suppliers:</a></p>
+                        
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li><a href="#error-with-supplier-name">Supplier name</a></li>
+                            <li><a href="#error-with-MRN">Measure reference number</a></li>
+                            <li><a href="#error-with-status">Status</a></li>
+                            <li><a href="#error-with-notification-period">Notification period</a></li>
+                            <li><a href="#error-with-postcode">Postcode</a></li>
+                        </ul>
+                        
+                        <!-- <p><a href="#error-with-MRN">Enter a single measure reference number or upload a file with measure reference numbers to search</a></p>
+                        <p><a href="#error-with-status">Or, select one or more measure statuses if not searching using measure reference numbers</a></p> -->
                     </li>
                 </ul>
               </div>
@@ -107,74 +117,81 @@
                             <input class="hide-accordion-checkboxes" type="checkbox" id="chck1" checked="checked">
                             <label class="tab-label" for="chck1">Supplier name</label>
                             <div class="tab-content">
-                                <fieldset class="govuk-fieldset" role="group" aria-describedby="supplier-name-hint" id="error-with-supplier-name">
-                                    <legend class="govuk-fieldset__legend">
-                                        <h2 class="govuk-heading-m">What is the supplier name?</h2>
-                                    </legend>
-                                    <div id="supplier-name-hint" class="govuk-hint">
-                                        Select the supplier name
-                                    </div>
-                                    <p id="empty-supplier-name-field-error" class="govuk-error-message hide">
-                                        <span class="govuk-visually-hidden">Error:</span> Please provide the supplier name
-                                    </p>
-                                    <!-- <input class="govuk-input" id="supplier-name" name="supplierName" type="text"> -->
-                                    <div class="govuk-form-group">
-                                        <select class="govuk-select" name="supplierName" id="supplierName">
-                                            <!-- <option value="" disabled >Select a supplier</option> -->
-                                            <option value="none" selected>&mdash;</option>
-                                            <option value="BGT">BGT &mdash; British Gas Trading</option>
-                                            <option value="ECY">ECY &mdash; Ecotricity</option>
-                                            <option value="EDF">EDF</option>
-                                            <option value="EGE">EGE &mdash; E (Gas & Electricity)</option>
-                                            <option value="EON">EON &mdash; E.ON Energy</option>
-                                            <option value="FOX">FOX &mdash; Foxglove Energy</option>
-                                            <option value="OCT">OCT &mdash; Octopus Energy</option>
-                                            <option value="OVO">OVO &mdash; OVO Energy</option>
-                                            <option value="SHL">SHL &mdash; Shell Energy</option>
-                                            <option value="SOE">SOE &mdash; So Energy</option>
-                                            <option value="SPW">SPW &mdash; Scottish Power</option>
-                                            <option value="UTA">UTA &mdash; Utilita Energy</option>
-                                            <option value="UTW">UTW &mdash; Utility Warehouse</option>
+                                <div class="govuk-form-group" id="supplierErrorSection">
+                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="supplier-name-hint" id="error-with-supplier-name">
+                                        <legend class="govuk-fieldset__legend">
+                                            <h2 class="govuk-heading-m">What is the supplier name?</h2>
+                                        </legend>
+                                        
+                                        <p id="supplier-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Select a supplier name if you're not searching using other filters
+                                        </p>
+                                        
+                                        <div id="supplier-name-hint" class="govuk-hint">
+                                            Select the supplier name
+                                        </div>
+                                        <p id="empty-supplier-name-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Please provide the supplier name
+                                        </p>
+                                        <!-- <input class="govuk-input" id="supplier-name" name="supplierName" type="text"> -->
+                                        <div class="govuk-form-group">
+                                            <select class="govuk-select" name="supplierName" id="supplierName">
+                                                <!-- <option value="" disabled >Select a supplier</option> -->
+                                                <option value="none" selected>&mdash;</option>
+                                                <option value="BGT">BGT &mdash; British Gas Trading</option>
+                                                <option value="ECY">ECY &mdash; Ecotricity</option>
+                                                <option value="EDF">EDF</option>
+                                                <option value="EGE">EGE &mdash; E (Gas & Electricity)</option>
+                                                <option value="EON">EON &mdash; E.ON Energy</option>
+                                                <option value="FOX">FOX &mdash; Foxglove Energy</option>
+                                                <option value="OCT">OCT &mdash; Octopus Energy</option>
+                                                <option value="OVO">OVO &mdash; OVO Energy</option>
+                                                <option value="SHL">SHL &mdash; Shell Energy</option>
+                                                <option value="SOE">SOE &mdash; So Energy</option>
+                                                <option value="SPW">SPW &mdash; Scottish Power</option>
+                                                <option value="UTA">UTA &mdash; Utilita Energy</option>
+                                                <option value="UTW">UTW &mdash; Utility Warehouse</option>
 
-                                            <!-- <option value="selectAsupplier" disabled="disabled" selected="selected">Select a supplier</option>
-                                            <option value="AVR" disabled="disabled">AVR &mdash; Avro Energy</option>
-                                            <option value="BGT">BGT &mdash; British Gas Trading</option>
-                                            <option value="BLB">BLB &mdash; Bulb</option>
-                                            <option value="BRI">BRI &mdash; Bristol Energy</option>
-                                            <option value="COP">COP &mdash; Co-operative Energy</option>
-                                            <option value="ECY">ECY &mdash; Ecotricity</option>
-                                            <option value="EDF">EDF &mdash; EDF</option>
-                                            <option value="EEN">EEN &mdash; Economy Energy</option>
-                                            <option value="EGE">EGE &mdash; E (Gas & Electricity)</option>
-                                            <option value="EON">EON &mdash; E.ON Energy</option>
-                                            <option value="ESB">ESB &mdash; ESB Energy</option>
-                                            <option value="FLO">FLO &mdash; Flow Energy</option>
-                                            <option value="FOX">FOX &mdash; Foxglove Energy</option>
-                                            <option value="FUL">FUL &mdash; First Utility</option>
-                                            <option value="GNE" disabled="disabled">GNE &mdash; Great North Energy (GNE Green Network)</option>
-                                            <option value="HUD">HUD &mdash; Hudson Energy</option>
-                                            <option value="IGL">IGL &mdash; Igloo Energy</option>
-                                            <option value="ISP">ISP &mdash; iSupplyEnergy</option>
-                                            <option value="NPW">NPW &mdash; Npower</option>
-                                            <option value="OCT">OCT &mdash; Octopus Energy</option>
-                                            <option value="OVO">OVO &mdash; OVO Energy</option>
-                                            <option value="PES">PES &mdash; People's Energy</option>
-                                            <option value="PLA">PLA &mdash; Pure Planet</option>
-                                            <option value="RHE">RHE &mdash; Robin Hood Energy</option>
-                                            <option value="SHL">SHL &mdash; Shell Energy</option>
-                                            <option value="SOE">SOE &mdash; So Energy</option>
-                                            <option value="SPK">SPK &mdash; Spark Energy</option>
-                                            <option value="SPW">SPW &mdash; Scottish Power</option>
-                                            <option value="SSE">SSE &mdash; SSE Energy</option>
-                                            <option value="TNK">TNK &mdash; Tonik Energy</option>
-                                            <option value="TOE">TOE &mdash; Together Energy</option>
-                                            <option value="UPL">UPL &mdash; Utility Point</option>
-                                            <option value="UTA">UTA &mdash; Utilita Energy</option>
-                                            <option value="UTW">UTW &mdash; Utility Warehouse</option>
-                                            <option value="XEN">XEN &mdash; Extra Energy</option> -->
-                                        </select>
-                                    </div>
-                                </fieldset>
+                                                <!-- <option value="selectAsupplier" disabled="disabled" selected="selected">Select a supplier</option>
+                                                <option value="AVR" disabled="disabled">AVR &mdash; Avro Energy</option>
+                                                <option value="BGT">BGT &mdash; British Gas Trading</option>
+                                                <option value="BLB">BLB &mdash; Bulb</option>
+                                                <option value="BRI">BRI &mdash; Bristol Energy</option>
+                                                <option value="COP">COP &mdash; Co-operative Energy</option>
+                                                <option value="ECY">ECY &mdash; Ecotricity</option>
+                                                <option value="EDF">EDF &mdash; EDF</option>
+                                                <option value="EEN">EEN &mdash; Economy Energy</option>
+                                                <option value="EGE">EGE &mdash; E (Gas & Electricity)</option>
+                                                <option value="EON">EON &mdash; E.ON Energy</option>
+                                                <option value="ESB">ESB &mdash; ESB Energy</option>
+                                                <option value="FLO">FLO &mdash; Flow Energy</option>
+                                                <option value="FOX">FOX &mdash; Foxglove Energy</option>
+                                                <option value="FUL">FUL &mdash; First Utility</option>
+                                                <option value="GNE" disabled="disabled">GNE &mdash; Great North Energy (GNE Green Network)</option>
+                                                <option value="HUD">HUD &mdash; Hudson Energy</option>
+                                                <option value="IGL">IGL &mdash; Igloo Energy</option>
+                                                <option value="ISP">ISP &mdash; iSupplyEnergy</option>
+                                                <option value="NPW">NPW &mdash; Npower</option>
+                                                <option value="OCT">OCT &mdash; Octopus Energy</option>
+                                                <option value="OVO">OVO &mdash; OVO Energy</option>
+                                                <option value="PES">PES &mdash; People's Energy</option>
+                                                <option value="PLA">PLA &mdash; Pure Planet</option>
+                                                <option value="RHE">RHE &mdash; Robin Hood Energy</option>
+                                                <option value="SHL">SHL &mdash; Shell Energy</option>
+                                                <option value="SOE">SOE &mdash; So Energy</option>
+                                                <option value="SPK">SPK &mdash; Spark Energy</option>
+                                                <option value="SPW">SPW &mdash; Scottish Power</option>
+                                                <option value="SSE">SSE &mdash; SSE Energy</option>
+                                                <option value="TNK">TNK &mdash; Tonik Energy</option>
+                                                <option value="TOE">TOE &mdash; Together Energy</option>
+                                                <option value="UPL">UPL &mdash; Utility Point</option>
+                                                <option value="UTA">UTA &mdash; Utilita Energy</option>
+                                                <option value="UTW">UTW &mdash; Utility Warehouse</option>
+                                                <option value="XEN">XEN &mdash; Extra Energy</option> -->
+                                            </select>
+                                        </div>
+                                    </fieldset>
+                                </div>
                             </div>
                         </div>
 
@@ -201,7 +218,7 @@
                                                 Measure reference number
                                             </label>
                                             <p id="mrn-field-error" class="govuk-error-message hide">
-                                                <span class="govuk-visually-hidden">Error:</span> Enter a single measure reference number to search
+                                                <span class="govuk-visually-hidden">Error:</span> Enter a single measure reference number to search for measures if you're not searching using other filters
                                             </p>
                                             <input class="govuk-input" id="measure-reference-number" name="measure-reference-number" type="text">
                                         </div>
@@ -214,7 +231,7 @@
                                             </span>
                                             
                                             <p id="mrn-file-field-error" class="govuk-error-message hide">
-                                                <span class="govuk-visually-hidden">Error:</span> Or, search for measure reference numbers by uploading a file containing the numbers you want to search
+                                                <span class="govuk-visually-hidden">Error:</span> Search for measure reference numbers by uploading a file containing the numbers you want to search - if you're not searching using other filters
                                             </p>
 
                                             <label for="file-upload" class="custom-file-upload">
@@ -256,8 +273,9 @@
                                             You can select one or more items in the list.
                                         </div>
                                         <p id="empty-status-field-error" class="govuk-error-message hide">
-                                            <span class="govuk-visually-hidden">Error:</span> Select one status if you're not searching by measure reference numbers
+                                            <span class="govuk-visually-hidden">Error:</span> Select one status if you're not searching using other filters
                                         </p>
+
                                         <!-- <div id="cboxesMeasureStatus" class="govuk-checkboxes" data-module="govuk-checkboxes"></div> -->
 
                                         <select class="govuk-select govuk-!-width-full" id="measure-status-none" name="measure-status" size="5" multiple="multiple">
@@ -279,100 +297,107 @@
                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck4" checked="checked" >
                            <label class="tab-label" for="chck4">Notification period</label>
                            <div class="tab-content">
-                                <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
-                                    <legend class="govuk-fieldset__legend">
-                                        <h2 class="govuk-heading-m">What is the notification period?</h2>
-                                    </legend>
+                                <div class="govuk-form-group" id="notificationPeriodErrorSection">
+                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="notification-period-hint" id="error-with-notification-period">
+                                        <legend class="govuk-fieldset__legend">
+                                            <h2 class="govuk-heading-m">What is the notification period?</h2>
+                                        </legend>
 
-                                    <div id="measure-status-hint" class="govuk-hint">
-                                        Select the month and year in the from and to select drop down list.
-                                    </div>
-                                    <h3 class="govuk-heading-s margin-bottom0">From</h3>
-                                    <div class="govuk-form-group">
-                                        <div class="govuk-select-field" id="from">
-                                            <div class="govuk-select-field__item">
-                                                <div class="govuk-form-group">
-                                                    <label class="govuk-label govuk-select-field__label" for="from-month">
-                                                        Month
-                                                    </label>
-                                                    <select class="govuk-select short-select-width-month" id="from-month" name="from-month">
-                                                        <option value="&mdash;" selected>&mdash;</option>
-                                                        <option value="January">January</option>
-                                                        <option value="February">February</option>
-                                                        <option value="March">March</option>
-                                                        <option value="April">April</option>
-                                                        <option value="May">May</option>
-                                                        <option value="June">June</option>
-                                                        <option value="July">July</option>
-                                                        <option value="August">August</option>
-                                                        <option value="September">September</option>
-                                                        <option value="October">October</option>
-                                                        <option value="November">November</option>
-                                                        <option value="December">December</option>
-                                                    </select>
+                                        <div id="notification-period-hint" class="govuk-hint">
+                                            Select the month and year in the from and to select drop down list.
+                                        </div>
+
+                                        <p id="notification-period-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Select the notification period if you're not searching using other filters
+                                        </p>
+
+                                        <h3 class="govuk-heading-s margin-bottom0">From</h3>
+                                        <div class="govuk-form-group">
+                                            <div class="govuk-select-field" id="from">
+                                                <div class="govuk-select-field__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="from-month">
+                                                            Month
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-month" id="from-month" name="from-month">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="January">January</option>
+                                                            <option value="February">February</option>
+                                                            <option value="March">March</option>
+                                                            <option value="April">April</option>
+                                                            <option value="May">May</option>
+                                                            <option value="June">June</option>
+                                                            <option value="July">July</option>
+                                                            <option value="August">August</option>
+                                                            <option value="September">September</option>
+                                                            <option value="October">October</option>
+                                                            <option value="November">November</option>
+                                                            <option value="December">December</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="govuk-select-field__item">
-                                                <div class="govuk-form-group">
-                                                    <label class="govuk-label govuk-select-field__label" for="from-year">
-                                                        Year
-                                                    </label>
-                                                    <select class="govuk-select short-select-width-year" id="from-year" name="from-year">
-                                                        <option value="&mdash;" selected>&mdash;</option>
-                                                        <option value="2022">2022</option>
-                                                        <option value="2023">2023</option>
-                                                        <option value="2024">2024</option>
-                                                        <option value="2025">2025</option>
-                                                        <option value="2026">2026</option>
-                                                    </select>
+                                                <div class="govuk-select-field__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="from-year">
+                                                            Year
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-year" id="from-year" name="from-year">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="2022">2022</option>
+                                                            <option value="2023">2023</option>
+                                                            <option value="2024">2024</option>
+                                                            <option value="2025">2025</option>
+                                                            <option value="2026">2026</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <h3 class="govuk-heading-s margin-bottom0">To</h3>
-                                    <div class="govuk-form-group">
-                                        <div class="govuk-select-field" id="to">
-                                            <div class="govuk-select-field__item">
-                                                <div class="govuk-form-group">
-                                                    <label class="govuk-label govuk-select-field__label" for="to-month">
-                                                        Month
-                                                    </label>
-                                                    <select class="govuk-select short-select-width-month" id="to-month" name="to-month">
-                                                        <option value="&mdash;" selected>&mdash;</option>
-                                                        <option value="January">January</option>
-                                                        <option value="February">February</option>
-                                                        <option value="March">March</option>
-                                                        <option value="April">April</option>
-                                                        <option value="May">May</option>
-                                                        <option value="June">June</option>
-                                                        <option value="July">July</option>
-                                                        <option value="August">August</option>
-                                                        <option value="September">September</option>
-                                                        <option value="October">October</option>
-                                                        <option value="November">November</option>
-                                                        <option value="December">December</option>
-                                                    </select>
+                                        <h3 class="govuk-heading-s margin-bottom0">To</h3>
+                                        <div class="govuk-form-group">
+                                            <div class="govuk-select-field" id="to">
+                                                <div class="govuk-select-field__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="to-month">
+                                                            Month
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-month" id="to-month" name="to-month">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="January">January</option>
+                                                            <option value="February">February</option>
+                                                            <option value="March">March</option>
+                                                            <option value="April">April</option>
+                                                            <option value="May">May</option>
+                                                            <option value="June">June</option>
+                                                            <option value="July">July</option>
+                                                            <option value="August">August</option>
+                                                            <option value="September">September</option>
+                                                            <option value="October">October</option>
+                                                            <option value="November">November</option>
+                                                            <option value="December">December</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="govuk-select-field__item">
-                                                <div class="govuk-form-group">
-                                                    <label class="govuk-label govuk-select-field__label" for="to-year">
-                                                        Year
-                                                    </label>
-                                                    <select class="govuk-select short-select-width-year" id="to-year" name="to-year">
-                                                        <option value="&mdash;" selected>&mdash;</option>
-                                                        <option value="2022">2022</option>
-                                                        <option value="2023">2023</option>
-                                                        <option value="2024">2024</option>
-                                                        <option value="2025">2025</option>
-                                                        <option value="2026">2026</option>
-                                                    </select>
+                                                <div class="govuk-select-field__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="to-year">
+                                                            Year
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-year" id="to-year" name="to-year">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="2022">2022</option>
+                                                            <option value="2023">2023</option>
+                                                            <option value="2024">2024</option>
+                                                            <option value="2025">2025</option>
+                                                            <option value="2026">2026</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </fieldset>
+                                    </fieldset>
+                                </div>
                            </div>
                         </div>
 
@@ -381,18 +406,26 @@
                             <input class="hide-accordion-checkboxes" type="checkbox" id="chck5" checked="checked">
                             <label class="tab-label" for="chck5">Postcode</label>
                             <div class="tab-content">
-                                <fieldset class="govuk-fieldset" role="group" aria-describedby="postcode-hint" id="error-with-postcode">
-                                    <legend class="govuk-fieldset__legend">
-                                        <h2 class="govuk-heading-m">What is the postcode of the property where the measure was installed?</h2>
-                                    </legend>
-                                    <div id="postcode-hint" class="govuk-hint">
-                                        Enter the postcode
-                                    </div>
-                                    <p id="empty-postcode-field-error" class="govuk-error-message hide">
-                                        <span class="govuk-visually-hidden">Error:</span> Please provide the postcode
-                                    </p>
-                                    <input class="govuk-input" id="postcode" name="postcode" type="text">
-                                </fieldset>
+                                
+                                <div class="govuk-form-group" id="postcodeErrorSection">
+                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="postcode-hint" id="error-with-postcode">
+                                        <legend class="govuk-fieldset__legend">
+                                            <h2 class="govuk-heading-m">What is the postcode of the property where the measure was installed?</h2>
+                                        </legend>
+                                        <div id="postcode-hint" class="govuk-hint">
+                                            Enter the postcode
+                                        </div>
+                                        
+                                        <p id="postcode-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Enter a postcode to search for measures if you're not searching using other filters
+                                        </p>
+
+                                        <p id="empty-postcode-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Please provide the postcode
+                                        </p>
+                                        <input class="govuk-input" id="postcode" name="postcode" type="text">
+                                    </fieldset>
+                                </div>
                             </div>
                         </div>
                     </div>
