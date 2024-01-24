@@ -373,3 +373,11 @@ input[type="file"] {
     margin-right: 20px;
     margin-bottom: 0;
 }
+
+
+.govuk-form-group--error {
+    .short-select-width-month { 
+        max-width: 6em !important;
+        min-width: 6em !important;
+    }
+}

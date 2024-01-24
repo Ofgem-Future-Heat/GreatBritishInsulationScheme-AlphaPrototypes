@@ -5393,11 +5393,15 @@ function intCheckMRN() {
   const supplierErrorSection = document.getElementById('supplierErrorSection');
   const mrnErrorSection = document.getElementById('mrnErrorSection');
   const statusErrorSection = document.getElementById('statusErrorSection');
+  const notificationPeriodErrorSection = document.getElementById('notificationPeriodErrorSection');
+  const postcodeErrorSection = document.getElementById('postcodeErrorSection');
   const supplierFieldError = document.getElementById('supplier-field-error');
   const mrnFieldError = document.getElementById('mrn-field-error');
   const mrnFileFieldError = document.getElementById('mrn-file-field-error');
   const measureReferenceNumberInputField = document.getElementById('measure-reference-number');
   const emptyStatusFieldError = document.getElementById('empty-status-field-error');
+  const notificationPeriodFieldError = document.getElementById('notification-period-field-error');
+  const postcodeFieldError = document.getElementById('postcode-field-error');
 
   // const statusSelect = document.getElementById('measure-status-none');
   // const statusSelect = document.getElementById('cboxesMeasureStatus');
@@ -5445,11 +5449,15 @@ function intCheckMRN() {
     mrnErrorSection.classList.add('govuk-form-group--error');
     errorWithNothingSelected.classList.remove('hide');
     statusErrorSection.classList.add('govuk-form-group--error');
+    notificationPeriodErrorSection.classList.add('govuk-form-group--error');
+    postcodeErrorSection.classList.add('govuk-form-group--error');
     measureReferenceNumberInputField.classList.add('govuk-input--error');
     supplierFieldError.classList.remove('hide');
     mrnFieldError.classList.remove('hide');
     mrnFileFieldError.classList.remove('hide');
     emptyStatusFieldError.classList.remove('hide');
+    notificationPeriodFieldError.classList.remove('hide');
+    postcodeFieldError.classList.remove('hide');
     // statusSelect.classList.add('select-error');
   } else {
     performSearch.href = "/internal/v02-0/search-measures/search-results";

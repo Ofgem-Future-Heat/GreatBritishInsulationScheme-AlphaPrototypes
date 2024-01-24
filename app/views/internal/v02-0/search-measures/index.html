@@ -33,8 +33,8 @@
                             <li><a href="#error-with-supplier-name">Supplier name</a></li>
                             <li><a href="#error-with-MRN">Measure reference number</a></li>
                             <li><a href="#error-with-status">Status</a></li>
-                            <li><a href="#notification-period">Notification period</a></li>
-                            <li><a href="#postcode">Postcode</a></li>
+                            <li><a href="#error-with-notification-period">Notification period</a></li>
+                            <li><a href="#error-with-postcode">Postcode</a></li>
                         </ul>
                         
                         <!-- <p><a href="#error-with-MRN">Enter a single measure reference number or upload a file with measure reference numbers to search</a></p>
@@ -275,7 +275,7 @@
                                         <p id="empty-status-field-error" class="govuk-error-message hide">
                                             <span class="govuk-visually-hidden">Error:</span> Select one status if you're not searching using other filters
                                         </p>
-                                        
+
                                         <!-- <div id="cboxesMeasureStatus" class="govuk-checkboxes" data-module="govuk-checkboxes"></div> -->
 
                                         <select class="govuk-select govuk-!-width-full" id="measure-status-none" name="measure-status" size="5" multiple="multiple">
@@ -297,100 +297,107 @@
                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck4" checked="checked" >
                            <label class="tab-label" for="chck4">Notification period</label>
                            <div class="tab-content">
-                                <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint">
-                                    <legend class="govuk-fieldset__legend">
-                                        <h2 class="govuk-heading-m">What is the notification period?</h2>
-                                    </legend>
+                                <div class="govuk-form-group" id="notificationPeriodErrorSection">
+                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="notification-period-hint" id="error-with-notification-period">
+                                        <legend class="govuk-fieldset__legend">
+                                            <h2 class="govuk-heading-m">What is the notification period?</h2>
+                                        </legend>
 
-                                    <div id="measure-status-hint" class="govuk-hint">
-                                        Select the month and year in the from and to select drop down list.
-                                    </div>
-                                    <h3 class="govuk-heading-s margin-bottom0">From</h3>
-                                    <div class="govuk-form-group">
-                                        <div class="govuk-select-field" id="from">
-                                            <div class="govuk-select-field__item">
-                                                <div class="govuk-form-group">
-                                                    <label class="govuk-label govuk-select-field__label" for="from-month">
-                                                        Month
-                                                    </label>
-                                                    <select class="govuk-select short-select-width-month" id="from-month" name="from-month">
-                                                        <option value="&mdash;" selected>&mdash;</option>
-                                                        <option value="January">January</option>
-                                                        <option value="February">February</option>
-                                                        <option value="March">March</option>
-                                                        <option value="April">April</option>
-                                                        <option value="May">May</option>
-                                                        <option value="June">June</option>
-                                                        <option value="July">July</option>
-                                                        <option value="August">August</option>
-                                                        <option value="September">September</option>
-                                                        <option value="October">October</option>
-                                                        <option value="November">November</option>
-                                                        <option value="December">December</option>
-                                                    </select>
+                                        <div id="notification-period-hint" class="govuk-hint">
+                                            Select the month and year in the from and to select drop down list.
+                                        </div>
+
+                                        <p id="notification-period-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Select the notification period if you're not searching using other filters
+                                        </p>
+
+                                        <h3 class="govuk-heading-s margin-bottom0">From</h3>
+                                        <div class="govuk-form-group">
+                                            <div class="govuk-select-field" id="from">
+                                                <div class="govuk-select-field__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="from-month">
+                                                            Month
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-month" id="from-month" name="from-month">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="January">January</option>
+                                                            <option value="February">February</option>
+                                                            <option value="March">March</option>
+                                                            <option value="April">April</option>
+                                                            <option value="May">May</option>
+                                                            <option value="June">June</option>
+                                                            <option value="July">July</option>
+                                                            <option value="August">August</option>
+                                                            <option value="September">September</option>
+                                                            <option value="October">October</option>
+                                                            <option value="November">November</option>
+                                                            <option value="December">December</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="govuk-select-field__item">
-                                                <div class="govuk-form-group">
-                                                    <label class="govuk-label govuk-select-field__label" for="from-year">
-                                                        Year
-                                                    </label>
-                                                    <select class="govuk-select short-select-width-year" id="from-year" name="from-year">
-                                                        <option value="&mdash;" selected>&mdash;</option>
-                                                        <option value="2022">2022</option>
-                                                        <option value="2023">2023</option>
-                                                        <option value="2024">2024</option>
-                                                        <option value="2025">2025</option>
-                                                        <option value="2026">2026</option>
-                                                    </select>
+                                                <div class="govuk-select-field__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="from-year">
+                                                            Year
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-year" id="from-year" name="from-year">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="2022">2022</option>
+                                                            <option value="2023">2023</option>
+                                                            <option value="2024">2024</option>
+                                                            <option value="2025">2025</option>
+                                                            <option value="2026">2026</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <h3 class="govuk-heading-s margin-bottom0">To</h3>
-                                    <div class="govuk-form-group">
-                                        <div class="govuk-select-field" id="to">
-                                            <div class="govuk-select-field__item">
-                                                <div class="govuk-form-group">
-                                                    <label class="govuk-label govuk-select-field__label" for="to-month">
-                                                        Month
-                                                    </label>
-                                                    <select class="govuk-select short-select-width-month" id="to-month" name="to-month">
-                                                        <option value="&mdash;" selected>&mdash;</option>
-                                                        <option value="January">January</option>
-                                                        <option value="February">February</option>
-                                                        <option value="March">March</option>
-                                                        <option value="April">April</option>
-                                                        <option value="May">May</option>
-                                                        <option value="June">June</option>
-                                                        <option value="July">July</option>
-                                                        <option value="August">August</option>
-                                                        <option value="September">September</option>
-                                                        <option value="October">October</option>
-                                                        <option value="November">November</option>
-                                                        <option value="December">December</option>
-                                                    </select>
+                                        <h3 class="govuk-heading-s margin-bottom0">To</h3>
+                                        <div class="govuk-form-group">
+                                            <div class="govuk-select-field" id="to">
+                                                <div class="govuk-select-field__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="to-month">
+                                                            Month
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-month" id="to-month" name="to-month">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="January">January</option>
+                                                            <option value="February">February</option>
+                                                            <option value="March">March</option>
+                                                            <option value="April">April</option>
+                                                            <option value="May">May</option>
+                                                            <option value="June">June</option>
+                                                            <option value="July">July</option>
+                                                            <option value="August">August</option>
+                                                            <option value="September">September</option>
+                                                            <option value="October">October</option>
+                                                            <option value="November">November</option>
+                                                            <option value="December">December</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="govuk-select-field__item">
-                                                <div class="govuk-form-group">
-                                                    <label class="govuk-label govuk-select-field__label" for="to-year">
-                                                        Year
-                                                    </label>
-                                                    <select class="govuk-select short-select-width-year" id="to-year" name="to-year">
-                                                        <option value="&mdash;" selected>&mdash;</option>
-                                                        <option value="2022">2022</option>
-                                                        <option value="2023">2023</option>
-                                                        <option value="2024">2024</option>
-                                                        <option value="2025">2025</option>
-                                                        <option value="2026">2026</option>
-                                                    </select>
+                                                <div class="govuk-select-field__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="to-year">
+                                                            Year
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-year" id="to-year" name="to-year">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="2022">2022</option>
+                                                            <option value="2023">2023</option>
+                                                            <option value="2024">2024</option>
+                                                            <option value="2025">2025</option>
+                                                            <option value="2026">2026</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </fieldset>
+                                    </fieldset>
+                                </div>
                            </div>
                         </div>
 
@@ -399,18 +406,26 @@
                             <input class="hide-accordion-checkboxes" type="checkbox" id="chck5" checked="checked">
                             <label class="tab-label" for="chck5">Postcode</label>
                             <div class="tab-content">
-                                <fieldset class="govuk-fieldset" role="group" aria-describedby="postcode-hint" id="error-with-postcode">
-                                    <legend class="govuk-fieldset__legend">
-                                        <h2 class="govuk-heading-m">What is the postcode of the property where the measure was installed?</h2>
-                                    </legend>
-                                    <div id="postcode-hint" class="govuk-hint">
-                                        Enter the postcode
-                                    </div>
-                                    <p id="empty-postcode-field-error" class="govuk-error-message hide">
-                                        <span class="govuk-visually-hidden">Error:</span> Please provide the postcode
-                                    </p>
-                                    <input class="govuk-input" id="postcode" name="postcode" type="text">
-                                </fieldset>
+                                
+                                <div class="govuk-form-group" id="postcodeErrorSection">
+                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="postcode-hint" id="error-with-postcode">
+                                        <legend class="govuk-fieldset__legend">
+                                            <h2 class="govuk-heading-m">What is the postcode of the property where the measure was installed?</h2>
+                                        </legend>
+                                        <div id="postcode-hint" class="govuk-hint">
+                                            Enter the postcode
+                                        </div>
+                                        
+                                        <p id="postcode-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Enter a postcode to search for measures if you're not searching using other filters
+                                        </p>
+
+                                        <p id="empty-postcode-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Please provide the postcode
+                                        </p>
+                                        <input class="govuk-input" id="postcode" name="postcode" type="text">
+                                    </fieldset>
+                                </div>
                             </div>
                         </div>
                     </div>
