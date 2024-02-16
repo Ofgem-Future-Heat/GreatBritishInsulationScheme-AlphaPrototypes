@@ -5322,25 +5322,23 @@ function checkMRN() {
     count > 0 ? selectedOptions = true : selectedOptions = false;
   }
 
-
   console.log('selectedOptions', selectedOptions);
 
-  if((document.getElementById("measure-reference-number").value.length > 1) && (document.getElementById("file-upload").value != "")) {
+  if ((document.getElementById("measure-reference-number").value.length > 1) && (document.getElementById("file-upload").value != "")) {
     window.scrollTo(0, 0);
     errorMRNSummary.classList.remove('hide');
     errorWithMRN.classList.remove('hide');
-
     mrnFieldError.classList.remove('hide');
     mrnFileFieldError.classList.remove('hide');
     mrnErrorSection.classList.add('govuk-form-group--error');
     measureReferenceNumberInputField.classList.add('govuk-input--error');
+
   } else if ((document.getElementById("measure-reference-number").value.length === 0) && (document.getElementById("file-upload").value === "") && (!selectedOptions)) {
     window.scrollTo(0, 0);
     document.getElementById("chck1").checked = true;
     document.getElementById("chck2").checked = true;
     errorMRNSummary.classList.remove('hide');
     errorWithNothingSelected.classList.remove('hide');
-
     mrnErrorSection.classList.add('govuk-form-group--error');
     errorWithNothingSelected.classList.remove('hide');
     statusErrorSection.classList.add('govuk-form-group--error');
@@ -5349,11 +5347,11 @@ function checkMRN() {
     mrnFileFieldError.classList.remove('hide');
     emptyStatusFieldError.classList.remove('hide');
     statusSelect.classList.add('select-error');
+
   } else {
     performSearch.href = "/v08/measures/search-measures/search-results";
   }
 }
-
 
 // Cookies banner simulation
 function acceptCookiesBanner() {
@@ -5366,7 +5364,7 @@ function rejectCookiesBanner() {
   cookiesBanner.style.display = 'none';
   localStorage.setItem('acceptCookie', false);
 }
-if (pageUrlPath === '/v08/mandatory-feature-documentation/cookies-policy') {
+if ((pageUrlPath === '/v08/mandatory-feature-documentation/cookies-policy') || (pageUrlPath === '/v10/mandatory-feature-documentation/cookies-policy')) {
   if (localStorage.getItem('aaceptCookie') === true) {
     document.getElementById('analyticsCookieYes').checked = true;
   } else if (localStorage.getItem('aaceptCookie') === false) {
@@ -5376,11 +5374,6 @@ if (pageUrlPath === '/v08/mandatory-feature-documentation/cookies-policy') {
     document.getElementById('analyticsCookieNo').checked = false;
   }
 }
-
-
-
-
-
 
 // Internal Search
 
@@ -5474,8 +5467,6 @@ function selectAllResultsCBs() {
       clist[i].checked = !clist[i].checked;
     }
 }
-
-
 
 // INTERNAL AUTOMATIC LATE EXTENSION function
 function supplierChange() {
@@ -5623,5 +5614,56 @@ function supplierChange() {
   }
   if (document.getElementById("supplierList").value === "XEN") {
     document.getElementById("XEN").classList.remove('hidden');
+  }
+}
+
+// External: Search measure processing errors
+function checkME() {
+  console.log('Search measure processing errors');
+  
+  const performSearch = document.getElementById('performSearch');
+  const errorMRNSummary = document.getElementById('error-MRN-summary');
+  const errorWithMRN = document.getElementById('errorWithMRN');
+  const mrnFieldError = document.getElementById('mrn-field-error');
+  const mrnFileFieldError = document.getElementById('mrn-file-field-error');
+  const measureReferenceNumberInputField = document.getElementById('measure-reference-number');
+
+  if((document.getElementById("measure-reference-number").value.length > 1) && (document.getElementById("file-upload").value != "")) {
+    window.scrollTo(0, 0);
+    errorMRNSummary.classList.remove('hide');
+    errorWithMRN.classList.remove('hide');
+
+    // supplierFieldError.classList.remove('hide');
+    mrnFieldError.classList.remove('hide');
+    mrnFileFieldError.classList.remove('hide');
+    // mrnErrorSection.classList.add('govuk-form-group--error');
+    measureReferenceNumberInputField.classList.add('govuk-input--error');
+  } else if ((document.getElementById("measure-reference-number").value.length === 0) && (document.getElementById("file-upload").value === "") 
+            // && (!selectedOptions)
+          ) {
+    window.scrollTo(0, 0);
+    document.getElementById("chck1").checked = true;
+    document.getElementById("chck2").checked = true;
+    document.getElementById("chck3").checked = true;
+    document.getElementById("chck4").checked = true;
+    errorMRNSummary.classList.remove('hide');
+    errorWithNothingSelected.classList.remove('hide');
+
+    // supplierErrorSection.classList.add('govuk-form-group--error');
+    // mrnErrorSection.classList.add('govuk-form-group--error');
+    // errorWithNothingSelected.classList.remove('hide');
+    // statusErrorSection.classList.add('govuk-form-group--error');
+    // notificationPeriodErrorSection.classList.add('govuk-form-group--error');
+    // postcodeErrorSection.classList.add('govuk-form-group--error');
+    measureReferenceNumberInputField.classList.add('govuk-input--error');
+    // supplierFieldError.classList.remove('hide');
+    mrnFieldError.classList.remove('hide');
+    mrnFileFieldError.classList.remove('hide');
+    // emptyStatusFieldError.classList.remove('hide');
+    // notificationPeriodFieldError.classList.remove('hide');
+    // postcodeFieldError.classList.remove('hide');
+    // statusSelect.classList.add('select-error');
+  } else {
+    performSearch.href = "/v10/measures/search-measure-errors/search-results";
   }
 }

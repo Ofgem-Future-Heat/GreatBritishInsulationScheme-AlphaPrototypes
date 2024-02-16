@@ -104,7 +104,7 @@ ul {
 }
 
 .margin-top-20 { margin-bottom: 20px; }
-.margin0 { margin: 0; }
+.margin0 { margin: 0 !important; }
 .margin-bottom0 { margin-bottom: 0; }
 
 .scrollable {
@@ -359,9 +359,13 @@ input[type="file"] {
 }
 
 
+.short-select-width-day { 
+    max-width: 3em !important;
+    min-width: 3em !important;
+}
 .short-select-width-month { 
-    max-width: 7em !important;
-    min-width: 7em !important;
+    max-width: 4em !important;
+    min-width: 4em !important;
 }
 .short-select-width-year { 
     max-width: 4em !important;
