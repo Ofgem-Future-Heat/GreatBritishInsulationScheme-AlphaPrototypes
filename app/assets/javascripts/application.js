@@ -5632,11 +5632,8 @@ function checkME() {
     window.scrollTo(0, 0);
     errorMRNSummary.classList.remove('hide');
     errorWithMRN.classList.remove('hide');
-
-    // supplierFieldError.classList.remove('hide');
     mrnFieldError.classList.remove('hide');
     mrnFileFieldError.classList.remove('hide');
-    // mrnErrorSection.classList.add('govuk-form-group--error');
     measureReferenceNumberInputField.classList.add('govuk-input--error');
   } else if ((document.getElementById("measure-reference-number").value.length === 0) && (document.getElementById("file-upload").value === "") 
             // && (!selectedOptions)
@@ -5649,20 +5646,9 @@ function checkME() {
     errorMRNSummary.classList.remove('hide');
     errorWithNothingSelected.classList.remove('hide');
 
-    // supplierErrorSection.classList.add('govuk-form-group--error');
-    // mrnErrorSection.classList.add('govuk-form-group--error');
-    // errorWithNothingSelected.classList.remove('hide');
-    // statusErrorSection.classList.add('govuk-form-group--error');
-    // notificationPeriodErrorSection.classList.add('govuk-form-group--error');
-    // postcodeErrorSection.classList.add('govuk-form-group--error');
     measureReferenceNumberInputField.classList.add('govuk-input--error');
-    // supplierFieldError.classList.remove('hide');
     mrnFieldError.classList.remove('hide');
     mrnFileFieldError.classList.remove('hide');
-    // emptyStatusFieldError.classList.remove('hide');
-    // notificationPeriodFieldError.classList.remove('hide');
-    // postcodeFieldError.classList.remove('hide');
-    // statusSelect.classList.add('select-error');
   } else {
     performSearch.href = "/v10/measures/search-measure-errors/search-results";
   }
