@@ -26,6 +26,15 @@
             <div class="govuk-notification-banner__content">
                 <h3 class="govuk-notification-banner__heading">The following files you uploaded include measures containing errors</h3>
 
+                <div class="govuk-warning-text">
+                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                    <strong class="govuk-warning-text__text">
+                        <span class="govuk-visually-hidden">Warning</span>
+                        <!-- If there are more than 15,000 errors in a single report, then the list of errors will be truncated to 15,000. You will need to first fix the existing errors and resubmit the measures again. -->
+                        Error reports can contain up to 15,000 errors. Where reports have this many errors, it shows there is possibly an issue with the data uploaded originally. You should review the measure notification file uploaded originally and ensure the data is accurate. If the problem persists, email Ofgem at <a href="mailto:GBIS.enquiry@ofgem.gov.uk" class="govuk-link">GBIS.enquiry@ofgem.gov.uk</a>.
+                    </strong>
+                </div>
+                
                 <table class="govuk-table">
                     <thead class="govuk-table__head">
                         <tr class="govuk-table__row">
