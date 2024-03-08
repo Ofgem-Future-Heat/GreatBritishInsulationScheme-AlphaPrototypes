@@ -5653,3 +5653,15 @@ function checkME() {
     performSearch.href = "/v10/measures/search-measure-errors/search-results";
   }
 }
+
+
+function otherSelected(status) {
+  console.log('status', status);
+  if (status === 'Other') {
+    console.log('show text input for Other');
+    const otherStatus = document.getElementById('otherStatus').classList.remove("hide");
+  } else {
+    console.log('hide Other text input');
+    const otherStatus = document.getElementById('otherStatus').classList.add("hide");
+  }
+}

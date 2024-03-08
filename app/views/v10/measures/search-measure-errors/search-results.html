@@ -35,21 +35,21 @@
             </div>
         </div>
 
-        <h1 class="govuk-heading-xl">Search measure processing errors</h1>
+        <h1 class="govuk-heading-xl">Searching measure errors</h1>
 
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
-                <p class="govuk-body">Search and review the error reports previously generated to the Great British Insulation Scheme portal using the filters provided.</p>
+                <p class="govuk-body">Search and review errors found in measures uploaded to the Great British Insulation Scheme portal using the filters.</p>
 
-                <!-- Different ways to search for measures -->
+                <!-- Different ways to search for errors -->
                 <details class="govuk-details" data-module="govuk-details">
                     <summary class="govuk-details__summary">
                         <span class="govuk-details__summary-text">
-                            Different ways to search for measures
+                            Different ways to search for errors
                         </span>
                     </summary>
                     <div class="govuk-details__text">
-                        <p class="gov-body">You can search for measures using:</p>
+                        <p class="gov-body">You can search for errors using:</p>
                 
                         <ul class="govuk-list govuk-list--bullet">
                             <li>single measure reference numbers</li>
@@ -58,54 +58,38 @@
                         </ul>
 
                         <p class="govuk-body"><strong>Single measure reference numbers</strong></p>
-                        <P class="govuk-body">To search for individual measures using a single reference number:</P>
+                        <P class="govuk-body">To search for individual errors found in measures using a single reference number:</P>
                             
                         <ul class="govuk-list govuk-list--number indent40">
                             <li>Find the measure reference number in the original notification file you uploaded.</li>
                             <li>Copy the measure reference number you want to search for.</li>
-                            <li>Add it to the measure reference number field on the next page.</li>
+                            <li>Add it to the measure reference number field in the filter.</li>
                             <li>Select the "Search" button.</li>
                         </ul>
 
                         <p class="govuk-body"><strong>A file containing multiple measure reference numbers</strong></p>
                         
-                        <p class="gov-body">To search for measures using a measure reference number file, you should:</p>
-                            
-                        <!-- <ul class="govuk-list govuk-list--number indent40">
-                            <li>Create a text file.</li>
-                            <li>Include a single column with the heading labelled as 'measure reference number' and the measure reference numbers you want to search for.</li>
-                            <li>Save the text file as a .txt file extension.</li>
-                            <li>Go to the search page in the Great British Insulation Scheme.</li>
-                            <li>Select "Choose file" and select the text file you created.</li>
-                            <li>Select "Upload measure reference file".</li>
-                            <li>Select the "Search" button.</li>
-                        </ul> -->
+                        <p class="gov-body">To search for multiple errors found in measures using a measure reference number file, you should:</p>
                             
                         <ul class="govuk-list govuk-list--number indent40">
-                            <li>Create a CSV file<!--in Microsoft Excel-->.</li>
-                            <!-- <li>Include a single column with the heading labelled as 'Measure_reference_number' and the measure reference numbers you want to search for.</li> -->
+                            <li>Start a new blank workbook in Microsoft Excel.</li>
                             <li>Include a single column with the heading labelled as 'Measure_reference_number'.</li>
                             <li>Then, add the measure reference numbers you want to search for in the column.</li>
-                            <li>Save the CSV file.</li>
-                            <li>Go to the search page in the Great British Insulation Scheme.</li>
-                            <li>Select "Choose file" and select the CSV file you created.</li>
-                            <!-- <li>Select "Upload measure reference file".</li> -->
+                            <li>Save the CSV file with a relevant file name.</li>
+                            <li>Go to the "Measure reference number" filter on the search page.</li>
+                            <li>Select "Choose file" </li>
+                            <li>Select the CSV file you created and select "Open".</li>
                             <li>Select the "Search" button.</li>
                         </ul>
 
-                        <p class="govuk-body"><strong>Using other filters to search for measures</strong></p>
+                        <p class="govuk-body"><strong>Using additional filters to search for errors</strong></p>
 
-                        <p class="govuk-body">You can also search for measures by selecting the measure status.</p>
-                        <!-- <p class="govuk-body">You can set other filters when searching for measures. These filters include the measure:</p> -->
-                        
-                        <!-- 
-                        <ul class="govuk-list govuk-list--bullet">
-                            <li>status</li>
-                            <li>type</li>
-                            <li>submission date</li>
-                            <li>date</li>
-                        </ul> 
-                        -->
+                        <p class="govuk-body">You can set additional filters when searching for errors found in measures. These filters include the error:</p>
+                        <ul class="govuk-list govuk-list--number indent40">
+                            <li>report date</li>
+                            <li>test reference number</li>
+                            <li>stage</li>
+                        </ul>
                     </div>
                 </details>
             </div>
@@ -117,324 +101,318 @@
                     <div class="tabs">
                         <!-- Measure reference number -->
                         <div class="tab">
-                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck1" checked="checked">
-                            <label class="tab-label" for="chck1">Measure reference number</label>
+                           <input class="hide-accordion-checkboxes" type="checkbox" id="chck1" checked="checked">
+                           <label class="tab-label" for="chck1">Measure reference number</label>
+                           <div class="tab-content">
+                                <div class="govuk-form-group" id="mrnErrorSection">
+                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint" id="error-with-MRN">
+                                        <legend class="govuk-fieldset__legend">
+                                            <h2 class="govuk-heading-m">Search for errors found in measures using:</h2>
+                                        </legend>
+                                        
+                                        <!-- <p class="govuk-body">Single measure reference number:</p> -->
+                                        
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label" for="measure-reference-number">
+                                                Single measure reference number:
+                                            </label>
+                                            <p id="mrn-field-error" class="govuk-error-message hide">
+                                                <span class="govuk-visually-hidden">Error:</span> Enter a single measure reference number to search
+                                            </p>
+                                            <input class="govuk-input" id="measure-reference-number" name="measure-reference-number" type="text">
+                                        </div>
+            
+                                        <div class="or-class"><p class="govuk-body">Or</div>
+                                        
+                                        <div id="measureReferenceFile" class="">
+                                            <span class="govuk-label" for="measure-reference-file">
+                                                Measure reference number file
+                                            </span>
+                                            
+                                            <p id="mrn-file-field-error" class="govuk-error-message hide">
+                                                <span class="govuk-visually-hidden">Error:</span> Or, search for measure reference numbers by uploading a file containing the numbers you want to search
+                                            </p>
+
+                                            <label for="file-upload" class="custom-file-upload">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M11 14.9861C11 15.5384 11.4477 15.9861 12 15.9861C12.5523 15.9861 13 15.5384 13 14.9861V7.82831L16.2428 11.0711L17.657 9.65685L12.0001 4L6.34326 9.65685L7.75748 11.0711L11 7.82854V14.9861Z" fill="currentColor"/>
+                                                    <path d="M4 14H6V18H18V14H20V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V14Z" fill="currentColor"/>
+                                                </svg> Choose file
+                                            </label>
+                                            <input  class="" 
+                                                    id="file-upload" 
+                                                    name="file-upload" 
+                                                    type="file" 
+                                                    accept=".csv" 
+                                                    tabindex="-1"
+                                                    title="file-upload"
+                                                    onchange="fileSelection()"/>
+                                            
+                                            <p id="invalidFileUploaded" class="govuk-error-message hide"><span class="govuk-visually-hidden">Error:</span>The selected file is invalid</p>
+                                            <p id="validFileUploaded" class="govuk-success-message hide"><span class="govuk-visually-hidden"></span>File uploaded</p>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Error date -->
+                        <div class="tab">
+                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck2" checked="checked" >
+                            <label class="tab-label" for="chck2">Error date</label>
                             <div class="tab-content">
-                                 <div class="govuk-form-group" id="mrnErrorSection">
-                                     <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint" id="error-with-MRN">
+                                 <div class="govuk-form-group" id="dateErrorSection">
+                                     <fieldset class="govuk-fieldset" role="group" aria-describedby="date-hint" id="error-with-date">
                                          <legend class="govuk-fieldset__legend">
-                                             <h2 class="govuk-heading-m">Different ways to search for measure errors</h2>
+                                             <h2 class="govuk-heading-m">What dates do you want to search for errors found in measures from?</h2>
                                          </legend>
-                                         
-                                         <p class="govuk-body">You can search for measure errors using:</p>
-                                         
-                                         <ul class="govuk-list govuk-list--bullet">
-                                             <li>single measure reference numbers</li>
-                                             <li>a file containing multiple measure reference numbers</li>
-                                         </ul>
-                                         
+ 
+                                         <div id="date-hint" class="govuk-hint">
+                                            Select the date range you want to search for when errors were found in uploaded measures.
+                                         </div>
+ 
+                                         <p id="date-field-error" class="govuk-error-message hide">
+                                             <span class="govuk-visually-hidden">Error:</span> Select the date if you're not searching using other filters
+                                         </p>
+ 
+                                         <h3 class="govuk-heading-s margin-bottom0">From</h3>
                                          <div class="govuk-form-group">
-                                             <label class="govuk-label" for="measure-reference-number">
-                                                 Measure reference number
-                                             </label>
-                                             <p id="mrn-field-error" class="govuk-error-message hide">
-                                                 <span class="govuk-visually-hidden">Error:</span> Enter a single measure reference number to search
-                                             </p>
-                                             <input class="govuk-input" id="measure-reference-number" name="measure-reference-number" type="text">
+                                            <div class="govuk-select-field" id="from">
+                                                <!-- Day -->
+                                                <div class="govuk-select-field__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="from-day">
+                                                            Day
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-day" id="from-day" name="from-day">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                            <option value="10">10</option>
+                                                            <option value="11">11</option>
+                                                            <option value="12">12</option>
+                                                            <option value="13">13</option>
+                                                            <option value="14">14</option>
+                                                            <option value="15">15</option>
+                                                            <option value="16">16</option>
+                                                            <option value="17">17</option>
+                                                            <option value="18">18</option>
+                                                            <option value="19">19</option>
+                                                            <option value="20">20</option>
+                                                            <option value="21">21</option>
+                                                            <option value="22">22</option>
+                                                            <option value="23">23</option>
+                                                            <option value="24">24</option>
+                                                            <option value="25">25</option>
+                                                            <option value="26">26</option>
+                                                            <option value="27">27</option>
+                                                            <option value="28">28</option>
+                                                            <option value="29">29</option>
+                                                            <option value="30">30</option>
+                                                            <option value="31">31</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Month -->
+                                                <div class="govuk-select-field__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="from-month">
+                                                            Month
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-month" id="from-month" name="from-month">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="January">Jan</option>
+                                                            <option value="February">Feb</option>
+                                                            <option value="March">Mar</option>
+                                                            <option value="April">Apr</option>
+                                                            <option value="May">May</option>
+                                                            <option value="June">Jun</option>
+                                                            <option value="July">Jul</option>
+                                                            <option value="August">Aug</option>
+                                                            <option value="September">Sep</option>
+                                                            <option value="October">Oct</option>
+                                                            <option value="November">Nov</option>
+                                                            <option value="December">Dec</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Year -->
+                                                <div class="govuk-select-field__item margin0">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="from-year">
+                                                            Year
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-year" id="from-year" name="from-year">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="2023">2023</option>
+                                                            <option value="2024">2024</option>
+                                                            <option value="2025">2025</option>
+                                                            <option value="2026">2026</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
                                          </div>
-             
-                                         <div class="or-class"><p class="govuk-body">Or</div>
-                                         
-                                         <div id="measureReferenceFile" class="">
-                                             <span class="govuk-label" for="measure-reference-file">
-                                                 Measure reference number file
-                                             </span>
-                                             
-                                             <p id="mrn-file-field-error" class="govuk-error-message hide">
-                                                 <span class="govuk-visually-hidden">Error:</span> Or, search for measure reference numbers by uploading a file containing the numbers you want to search
-                                             </p>
  
-                                             <label for="file-upload" class="custom-file-upload">
-                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                     <path d="M11 14.9861C11 15.5384 11.4477 15.9861 12 15.9861C12.5523 15.9861 13 15.5384 13 14.9861V7.82831L16.2428 11.0711L17.657 9.65685L12.0001 4L6.34326 9.65685L7.75748 11.0711L11 7.82854V14.9861Z" fill="currentColor"/>
-                                                     <path d="M4 14H6V18H18V14H20V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V14Z" fill="currentColor"/>
-                                                 </svg> Choose file
-                                             </label>
-                                             <input  class="" 
-                                                     id="file-upload" 
-                                                     name="file-upload" 
-                                                     type="file" 
-                                                     accept=".csv" 
-                                                     tabindex="-1"
-                                                     title="file-upload"
-                                                     onchange="fileSelection()"/>
-                                             
-                                             <p id="invalidFileUploaded" class="govuk-error-message hide"><span class="govuk-visually-hidden">Error:</span>The selected file is invalid</p>
-                                             <p id="validFileUploaded" class="govuk-success-message hide"><span class="govuk-visually-hidden"></span>File uploaded</p>
-                                             
-                                             <!-- <button id="uploadBtn" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--secondary govuk-button--disabled margin0" class="govuk-button"  onclick="triggerMrnFileValidation()" type="button">Upload measure reference number file</button> -->
-                                         </div>
-                                     </fieldset>
-                                 </div>
-                             </div>
-                         </div>
- 
-                         <!-- Error report date -->
-                         <div class="tab">
-                             <input class="hide-accordion-checkboxes" type="checkbox" id="chck2" checked="checked" >
-                             <label class="tab-label" for="chck2">Error report date</label>
-                             <div class="tab-content">
-                                  <div class="govuk-form-group" id="dateErrorSection">
-                                      <fieldset class="govuk-fieldset" role="group" aria-describedby="date-hint" id="error-with-date">
-                                          <legend class="govuk-fieldset__legend">
-                                              <h2 class="govuk-heading-m">What date was the error report generated?</h2>
-                                          </legend>
-  
-                                          <div id="date-hint" class="govuk-hint">
-                                              Select the day, the month and year in the 'From' and 'To' drop down list.
-                                          </div>
-  
-                                          <p id="date-field-error" class="govuk-error-message hide">
-                                              <span class="govuk-visually-hidden">Error:</span> Select the date if you're not searching using other filters
-                                          </p>
-  
-                                          <h3 class="govuk-heading-s margin-bottom0">From</h3>
-                                          <div class="govuk-form-group">
-                                             <div class="govuk-select-field" id="from">
-                                                 <!-- Day -->
-                                                 <div class="govuk-select-field__item">
-                                                     <div class="govuk-form-group">
-                                                         <label class="govuk-label govuk-select-field__label" for="from-day">
-                                                             Day
-                                                         </label>
-                                                         <select class="govuk-select short-select-width-day" id="from-day" name="from-day">
-                                                             <option value="&mdash;" selected>&mdash;</option>
-                                                             <option value="1">1</option>
-                                                             <option value="2">2</option>
-                                                             <option value="3">3</option>
-                                                             <option value="4">4</option>
-                                                             <option value="5">5</option>
-                                                             <option value="6">6</option>
-                                                             <option value="7">7</option>
-                                                             <option value="8">8</option>
-                                                             <option value="9">9</option>
-                                                             <option value="10">10</option>
-                                                             <option value="11">11</option>
-                                                             <option value="12">12</option>
-                                                             <option value="13">13</option>
-                                                             <option value="14">14</option>
-                                                             <option value="15">15</option>
-                                                             <option value="16">16</option>
-                                                             <option value="17">17</option>
-                                                             <option value="18">18</option>
-                                                             <option value="19">19</option>
-                                                             <option value="20">20</option>
-                                                             <option value="21">21</option>
-                                                             <option value="22">22</option>
-                                                             <option value="23">23</option>
-                                                             <option value="24">24</option>
-                                                             <option value="25">25</option>
-                                                             <option value="26">26</option>
-                                                             <option value="27">27</option>
-                                                             <option value="28">28</option>
-                                                             <option value="29">29</option>
-                                                             <option value="30">30</option>
-                                                             <option value="31">31</option>
-                                                         </select>
-                                                     </div>
-                                                 </div>
-                                                 
-                                                 <!-- Month -->
-                                                 <div class="govuk-select-field__item">
-                                                     <div class="govuk-form-group">
-                                                         <label class="govuk-label govuk-select-field__label" for="from-month">
-                                                             Month
-                                                         </label>
-                                                         <select class="govuk-select short-select-width-month" id="from-month" name="from-month">
-                                                             <option value="&mdash;" selected>&mdash;</option>
-                                                             <option value="January">Jan</option>
-                                                             <option value="February">Feb</option>
-                                                             <option value="March">Mar</option>
-                                                             <option value="April">Apr</option>
-                                                             <option value="May">May</option>
-                                                             <option value="June">Jun</option>
-                                                             <option value="July">Jul</option>
-                                                             <option value="August">Aug</option>
-                                                             <option value="September">Sep</option>
-                                                             <option value="October">Oct</option>
-                                                             <option value="November">Nov</option>
-                                                             <option value="December">Dec</option>
-                                                         </select>
-                                                     </div>
-                                                 </div>
- 
-                                                 <!-- Year -->
-                                                 <div class="govuk-select-field__item margin0">
-                                                     <div class="govuk-form-group">
-                                                         <label class="govuk-label govuk-select-field__label" for="from-year">
-                                                             Year
-                                                         </label>
-                                                         <select class="govuk-select short-select-width-year" id="from-year" name="from-year">
-                                                             <option value="&mdash;" selected>&mdash;</option>
-                                                             <option value="2023">2023</option>
-                                                             <option value="2024">2024</option>
-                                                             <option value="2025">2025</option>
-                                                             <option value="2026">2026</option>
-                                                         </select>
-                                                     </div>
-                                                 </div>
-                                             </div>
-                                          </div>
-  
-                                          <h3 class="govuk-heading-s margin-bottom0">To</h3>
-                                          <div class="govuk-form-group">
-                                             <div class="govuk-select-field" id="to">
-                                                 <!-- Day -->
-                                                 <div class="govuk-select-field__item">
-                                                     <div class="govuk-form-group">
-                                                         <label class="govuk-label govuk-select-field__label" for="to-day">
-                                                             Day
-                                                         </label>
-                                                         <select class="govuk-select short-select-width-day" id="to-day" name="to-day">
-                                                             <option value="&mdash;" selected>&mdash;</option>
-                                                             <option value="1">1</option>
-                                                             <option value="2">2</option>
-                                                             <option value="3">3</option>
-                                                             <option value="4">4</option>
-                                                             <option value="5">5</option>
-                                                             <option value="6">6</option>
-                                                             <option value="7">7</option>
-                                                             <option value="8">8</option>
-                                                             <option value="9">9</option>
-                                                             <option value="10">10</option>
-                                                             <option value="11">11</option>
-                                                             <option value="12">12</option>
-                                                             <option value="13">13</option>
-                                                             <option value="14">14</option>
-                                                             <option value="15">15</option>
-                                                             <option value="16">16</option>
-                                                             <option value="17">17</option>
-                                                             <option value="18">18</option>
-                                                             <option value="19">19</option>
-                                                             <option value="20">20</option>
-                                                             <option value="21">21</option>
-                                                             <option value="22">22</option>
-                                                             <option value="23">23</option>
-                                                             <option value="24">24</option>
-                                                             <option value="25">25</option>
-                                                             <option value="26">26</option>
-                                                             <option value="27">27</option>
-                                                             <option value="28">28</option>
-                                                             <option value="29">29</option>
-                                                             <option value="30">30</option>
-                                                             <option value="31">31</option>
-                                                         </select>
-                                                     </div>
-                                                 </div>
-                                                 
-                                                 <!-- Month -->
-                                                 <div class="govuk-select-field__item">
-                                                     <div class="govuk-form-group">
-                                                         <label class="govuk-label govuk-select-field__label" for="to-month">
-                                                             Month
-                                                         </label>
-                                                         <select class="govuk-select short-select-width-month" id="to-month" name="to-month">
-                                                             <option value="&mdash;" selected>&mdash;</option>
-                                                             <option value="January">Jan</option>
-                                                             <option value="February">Feb</option>
-                                                             <option value="March">Mar</option>
-                                                             <option value="April">Apr</option>
-                                                             <option value="May">May</option>
-                                                             <option value="June">Jun</option>
-                                                             <option value="July">Jul</option>
-                                                             <option value="August">Aug</option>
-                                                             <option value="September">Sep</option>
-                                                             <option value="October">Oct</option>
-                                                             <option value="November">Nov</option>
-                                                             <option value="December">Dec</option>
-                                                         </select>
-                                                     </div>
-                                                 </div>
- 
-                                                 <!-- Year -->
-                                                 <div class="govuk-select-field__item margin0">
-                                                     <div class="govuk-form-group">
-                                                         <label class="govuk-label govuk-select-field__label" for="to-year">
-                                                             Year
-                                                         </label>
-                                                         <select class="govuk-select short-select-width-year" id="to-year" name="to-year">
-                                                             <option value="&mdash;" selected>&mdash;</option>
-                                                             <option value="2023">2023</option>
-                                                             <option value="2024">2024</option>
-                                                             <option value="2025">2025</option>
-                                                             <option value="2026">2026</option>
-                                                         </select>
-                                                     </div>
-                                                 </div>
-                                             </div>
-                                          </div>
-                                      </fieldset>
-                                  </div>
-                             </div>
-                          </div>
- 
-                         <!-- Test reference number -->
-                         <div class="tab">
-                             <input class="hide-accordion-checkboxes" type="checkbox" id="chck3" checked="checked">
-                             <label class="tab-label" for="chck3">Test reference number</label>
-                             <div class="tab-content">
-                                 <div class="govuk-form-group" id="testReferenceNumberErrorSection">
-                                     <fieldset class="govuk-fieldset" role="group" aria-describedby="test-reference-number-hint" id="error-with-test-reference-number">
-                                         <legend class="govuk-fieldset__legend">
-                                             <h2 class="govuk-heading-m">What is the test reference number of the error report?</h2>
-                                         </legend>
-                                         <div id="test-reference-number-hint" class="govuk-hint">
-                                             Enter a test reference number.
-                                         </div>
-                                         <p id="empty-test-reference-number-field-error" class="govuk-error-message hide">
-                                             <span class="govuk-visually-hidden">Error:</span> Enter a test reference number to search
-                                         </p>
-                                         
-                                         <input class="govuk-input" id="test-reference-number" name="test-reference-number" type="text">
-                                     </fieldset>
-                                 </div>
-                             </div>
-                         </div>
-                         
-                         <!-- Error type -->
-                         <div class="tab">
-                             <input class="hide-accordion-checkboxes" type="checkbox" id="chck4" checked="checked">
-                             <label class="tab-label" for="chck4">Error type</label>
-                             <div class="tab-content">
-                                 <div class="govuk-form-group" id="errorTypeErrorSection">
-                                     <fieldset class="govuk-fieldset" role="group" aria-describedby="error-type-hint" id="error-with-error-type">
-                                         <legend class="govuk-fieldset__legend">
-                                             <h2 class="govuk-heading-m">What is the error type?</h2>
-                                         </legend>
-                                         
-                                         <p id="error-type-field-error" class="govuk-error-message hide">
-                                             <span class="govuk-visually-hidden">Error:</span> Select an error type if you're not searching using other filters
-                                         </p>
-                                         
-                                         <div id="error-type-hint" class="govuk-hint">
-                                             Select the error type.
-                                         </div>
-                                         <p id="empty-error-type-field-error" class="govuk-error-message hide">
-                                             <span class="govuk-visually-hidden">Error:</span> Please provide the error type.
-                                         </p>
-                                         <!-- <input class="govuk-input" id="supplier-name" name="supplierName" type="text"> -->
+                                         <h3 class="govuk-heading-s margin-bottom0">To</h3>
                                          <div class="govuk-form-group">
-                                             <select class="govuk-select" name="supplierName" id="supplierName">
-                                                 <option value="none" selected>&mdash;</option>
-                                                 <option value="Stage 1 errors">Stage 1 errors</option>
-                                                 <option value="Stage 2 errors">Stage 2 errors</option>
-                                                 <option value="TrustMark verification errors">TrustMark verification errors</option>
-                                             </select>
+                                            <div class="govuk-select-field" id="to">
+                                                <!-- Day -->
+                                                <div class="govuk-select-field__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="to-day">
+                                                            Day
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-day" id="to-day" name="to-day">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+                                                            <option value="7">7</option>
+                                                            <option value="8">8</option>
+                                                            <option value="9">9</option>
+                                                            <option value="10">10</option>
+                                                            <option value="11">11</option>
+                                                            <option value="12">12</option>
+                                                            <option value="13">13</option>
+                                                            <option value="14">14</option>
+                                                            <option value="15">15</option>
+                                                            <option value="16">16</option>
+                                                            <option value="17">17</option>
+                                                            <option value="18">18</option>
+                                                            <option value="19">19</option>
+                                                            <option value="20">20</option>
+                                                            <option value="21">21</option>
+                                                            <option value="22">22</option>
+                                                            <option value="23">23</option>
+                                                            <option value="24">24</option>
+                                                            <option value="25">25</option>
+                                                            <option value="26">26</option>
+                                                            <option value="27">27</option>
+                                                            <option value="28">28</option>
+                                                            <option value="29">29</option>
+                                                            <option value="30">30</option>
+                                                            <option value="31">31</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Month -->
+                                                <div class="govuk-select-field__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="to-month">
+                                                            Month
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-month" id="to-month" name="to-month">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="January">Jan</option>
+                                                            <option value="February">Feb</option>
+                                                            <option value="March">Mar</option>
+                                                            <option value="April">Apr</option>
+                                                            <option value="May">May</option>
+                                                            <option value="June">Jun</option>
+                                                            <option value="July">Jul</option>
+                                                            <option value="August">Aug</option>
+                                                            <option value="September">Sep</option>
+                                                            <option value="October">Oct</option>
+                                                            <option value="November">Nov</option>
+                                                            <option value="December">Dec</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Year -->
+                                                <div class="govuk-select-field__item margin0">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="to-year">
+                                                            Year
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-year" id="to-year" name="to-year">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="2023">2023</option>
+                                                            <option value="2024">2024</option>
+                                                            <option value="2025">2025</option>
+                                                            <option value="2026">2026</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
                                          </div>
                                      </fieldset>
                                  </div>
-                             </div>
+                            </div>
                          </div>
+
+                        <!-- Measure test reference number -->
+                        <div class="tab">
+                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck3" checked="checked">
+                            <label class="tab-label" for="chck3">Measure test reference number</label>
+                            <div class="tab-content">
+                                <div class="govuk-form-group" id="testReferenceNumberErrorSection">
+                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="test-reference-number-hint" id="error-with-test-reference-number">
+                                        <legend class="govuk-fieldset__legend">
+                                            <h2 class="govuk-heading-m">What is the measure test reference number?</h2>
+                                        </legend>
+                                        <div id="test-reference-number-hint" class="govuk-hint">
+                                            Enter the error test reference number from the error report.
+                                        </div>
+                                        <p id="empty-test-reference-number-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Enter a test reference number to search
+                                        </p>
+                                        
+                                        <input class="govuk-input" id="test-reference-number" name="test-reference-number" type="text">
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Erro stage -->
+                        <div class="tab">
+                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck4" checked="checked">
+                            <label class="tab-label" for="chck4">Erro stage</label>
+                            <div class="tab-content">
+                                <div class="govuk-form-group" id="errorTypeErrorSection">
+                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="error-type-hint" id="error-with-error-type">
+                                        <legend class="govuk-fieldset__legend">
+                                            <h2 class="govuk-heading-m">What stage was the error found in the validation checks?</h2>
+                                        </legend>
+                                        
+                                        <p id="error-type-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Select an error type if you're not searching using other filters
+                                        </p>
+                                        
+                                        <div id="error-type-hint" class="govuk-hint">
+                                            Select the error type.
+                                        </div>
+                                        
+                                        <p id="empty-error-type-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Please provide the error type.
+                                        </p>
+                                        
+                                        <div class="govuk-form-group">
+                                            <select class="govuk-select" name="supplierName" id="supplierName">
+                                                <option value="none" selected>&mdash;</option>
+                                                <option value="Stage 1 errors">Stage 1 errors</option>
+                                                <option value="Stage 2 errors">Stage 2 errors</option>
+                                                <option value="TrustMark verification errors">TrustMark verification errors</option>
+                                            </select>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
                     <!-- Search -->
@@ -460,10 +438,10 @@
                         <thead class="govuk-table__head">
                             <tr class="govuk-table__row">
                                 <th scope="col" class="govuk-table__header">Measure reference number</th>
-                                <th scope="col" class="govuk-table__header">Test Reference Number</th>
+                                <th scope="col" class="govuk-table__header">Measure test Reference Number</th>
                                 <th scope="col" class="govuk-table__header">Field containing error in notification template</th>
                                 <th scope="col" class="govuk-table__header">What was added to the notification template</th>
-                                <th scope="col" class="govuk-table__header">Error report date</th>
+                                <th scope="col" class="govuk-table__header">Error date</th>
                                 <th scope="col" class="govuk-table__header">Error Stage</th>
                             </tr>
                         </thead>
