@@ -398,59 +398,73 @@
 
                 <p class="govuk-body">Showing <strong><span id="resultsLength">1903</span></strong> measure<span id="singularPlural"></span>.</p>
 
-
                 <div class="govuk-grid-row">
                     <div class="govuk-grid-column-one-third">
                         <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
                             Download results
                         </button>
                     </div>
-                    <div class="govuk-grid-column-two-thirds">
+                </div>
+                
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
                         <div class="govuk-grid-row">
-                            <div class="govuk-grid-column-two-thirds">
-                                <div class="govuk-form-group">
-                                    <select class="govuk-select" name="statusSelect" id="statusSelect" onchange="otherSelected(this.value)">
-                                        <option value="none" selected>&mdash;</option>
-                                        <optgroup label="Change status">
-                                            <option>Notified Incomplete</option>
-                                            <option>Notified Incomplete - TrustMark</option>
-                                            <option>Notified Pending</option>
-                                            <option>Notified Pending - TrustMark</option>
-                                            <option>Measure Awaiting Verification</option>
-                                            <option>On Hold</option>
-                                            <option>With Supplier</option>
-                                            <option>Internal query</option>
-                                            <option>Being Assessed</option>
-                                            <option>Approved</option>
-                                            <option>Rejected</option>
-                                        </optgroup>
-                                        <br />
-                                        <optgroup label="Change Category">
-                                            <option>Audit</option>
-                                            <option>Duplicate</option>
-                                            <option>Investigation - Fraud</option>
-                                            <option>Late Measure</option>
-                                            <option>Measure Change</option>
-                                            <option>TrustMark QA</option>
-                                            <option>Notification Error</option>
-                                            <option>Process Later</option>
-                                            <option>Rejection</option>
-                                            <option>Validating</option>
-                                            <option>Flex</option>
-                                            <option id="other">Other</option>
-                                        </optgroup>
-                                    </select>
-                                </div>
+                            <div class="govuk-grid-column-three-quarters">
+                                                
+                                <div class="govuk-grid-row">
+                                    <div class="govuk-grid-column-one-half">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label" for="event-name">
+                                                <strong>Status</strong>
+                                            </label>
 
-                                <!-- Other text input -->
-                                <div id="otherStatus" class="govuk-form-group hide">
-                                    <label class="govuk-label" for="event-name">
-                                        <strong>Other status</strong>
-                                    </label>
-                                    <input class="govuk-input" id="other-status" name="other-status" type="text">
+                                            <select class="govuk-select" name="statusSelect" id="statusSelect" onchange="otherSelected(this.value)">
+                                                <option value="none" selected>Select a bulk action to perform</option>
+                                                <optgroup label="Change status">
+                                                    <option>Notified Incomplete</option>
+                                                    <option>Notified Incomplete - TrustMark</option>
+                                                    <option>Notified Pending</option>
+                                                    <option>Notified Pending - TrustMark</option>
+                                                    <option>Measure Awaiting Verification</option>
+                                                    <option>On Hold</option>
+                                                    <option>With Supplier</option>
+                                                    <option>Internal query</option>
+                                                    <option>Being Assessed</option>
+                                                    <option>Approved</option>
+                                                    <option>Rejected</option>
+                                                </optgroup>
+                                                <optgroup label="Change Category">
+                                                    <option>Audit</option>
+                                                    <option>Duplicate</option>
+                                                    <option>Investigation - Fraud</option>
+                                                    <option>Late Measure</option>
+                                                    <option>Measure Change</option>
+                                                    <option>TrustMark QA</option>
+                                                    <option>Notification Error</option>
+                                                    <option>Process Later</option>
+                                                    <option>Rejection</option>
+                                                    <option>Validating</option>
+                                                    <option>Flex</option>
+                                                    <option id="other">Other</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="govuk-grid-column-one-half">
+                                        <!-- Other text input -->
+                                        <div id="otherStatus" class="govuk-form-group hide">
+                                            <label class="govuk-label" for="event-name">
+                                                <strong>Other status</strong>
+                                            </label>
+                                            <input class="govuk-input" id="other-status" name="other-status" type="text">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="govuk-grid-column-one-third">
+
+                            <div class="govuk-grid-column-one-quarter">
+                                <label class="govuk-label" for=""><div>&nbsp;</div></label>
                                 <button data-prevent-double-click="true" class="govuk-button margin-left-30" data-module="govuk-button">
                                     Action
                                 </button>
