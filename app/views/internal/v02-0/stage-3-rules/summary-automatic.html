@@ -1,0 +1,59 @@
+{% extends "layouts/internal-main2-0.html" %}
+
+{% block pageTitle %}
+    Searching the measure register
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Stage 3 rules - Automatic processing</h1>
+
+        <p class="govuk-body">Blurb reharding a summary of the automatic processing of stage 3 rules.</p>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <div class="govuk-inset-text">
+                    There are 213 measures that have been processed.
+                </div>
+
+                 <table class="govuk-table">
+                    <caption class="govuk-table__caption govuk-table__caption--m">Summary</caption>
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Detail</th>
+                            <th scope="col" class="govuk-table__header">Information</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Report generated</th>
+                            <td class="govuk-table__cell">7 3 2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Number of measures in validation</th>
+                            <td class="govuk-table__cell">34123</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Number of suppliers</th>
+                            <td class="govuk-table__cell">4</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+           
+                <p class="govuk-body"><a href="/internal/v02-0/">Return to homepage</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+       
+    </script>
+</div>
+{% endblock %}
