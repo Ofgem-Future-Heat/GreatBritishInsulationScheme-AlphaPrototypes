@@ -391,3 +391,11 @@ input[type="file"] {
         min-width: 6em !important;
     }
 }
+
+
+.govuk-select option {
+    word-wrap: normal;
+    word-break: break-all;
+    white-space: normal;
+    display: block;
+}
