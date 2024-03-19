@@ -10,18 +10,18 @@
     <div class="govuk-grid-column-full">
         <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
 
-        <h1 class="govuk-heading-xl">Stage 3 rules - Automatic processing</h1>
+        <h1 class="govuk-heading-xl">Automatic processing summary</h1>
 
-        <p class="govuk-body">Blurb reharding a summary of the automatic processing of stage 3 rules.</p>
+        <p class="govuk-body">Blurb reharding a summary of the automatic processing of stage 3 measures.</p>
 
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-
+<!-- 
                 <div class="govuk-inset-text">
-                    There are 213 measures that have been processed.
-                </div>
+                    There are 1000 measures that have been processed.
+                </div> -->
 
-                 <table class="govuk-table">
+                <table class="govuk-table">
                     <caption class="govuk-table__caption govuk-table__caption--m">Summary</caption>
                     <thead class="govuk-table__head">
                         <tr class="govuk-table__row">
@@ -36,7 +36,7 @@
                         </tr>
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">Number of measures in validation</th>
-                            <td class="govuk-table__cell">34123</td>
+                            <td class="govuk-table__cell">1000</td>
                         </tr>
                         <tr class="govuk-table__row">
                             <th scope="row" class="govuk-table__header">Number of suppliers</th>
@@ -44,6 +44,116 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+
+            <!-- Recommended status -->
+            <div class="govuk-grid-column-full">
+                <table class="govuk-table">
+                    <caption class="govuk-table__caption govuk-table__caption--m">Recommended status</caption>
+
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Supplier name</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Recommended for approval</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Recommended with supplier</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Total</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">BGT</th>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">125</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">125</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">250</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">OVO</th>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">125</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">125</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">250</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">EDF</th>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">125</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">125</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">250</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">EON</th>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">125</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">125</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">250</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Percentage</th>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong>50%</strong></td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong>50%</strong></td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong>100%</strong></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Total</th>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong>500</strong></td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong>500</strong></td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong>1000</strong></td>
+                        </tr> 
+                    </tbody>
+                </table>
+
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-half">
+                        <div id="measureReferenceFile" class="">
+                            
+                            <div class="govuk-grid-row">
+                                <div class="govuk-grid-column-one-half">
+                                    <span class="govuk-label" for="measure-reference-file">
+                                        Upload error file
+                                    </span>
+                                    
+                                    <p id="mrn-file-field-error" class="govuk-error-message hide">
+                                        <span class="govuk-visually-hidden">Error:</span> Search for measure reference numbers by uploading a file containing the numbers you want to search - if you're not searching using other filters
+                                    </p>
+        
+                                    <label for="file-upload" class="custom-file-upload">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M11 14.9861C11 15.5384 11.4477 15.9861 12 15.9861C12.5523 15.9861 13 15.5384 13 14.9861V7.82831L16.2428 11.0711L17.657 9.65685L12.0001 4L6.34326 9.65685L7.75748 11.0711L11 7.82854V14.9861Z" fill="currentColor"/>
+                                            <path d="M4 14H6V18H18V14H20V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V14Z" fill="currentColor"/>
+                                        </svg> Choose file
+                                    </label>
+                                    <input  class="" 
+                                            id="file-upload" 
+                                            name="file-upload" 
+                                            type="file" 
+                                            accept=".csv" 
+                                            tabindex="-1"
+                                            title="file-upload"
+                                            onchange="fileSelectionS3Rules()"/>
+                                </div>
+                                <div class="govuk-grid-column-one-half">
+                                    <a class="govuk-button govuk-button--secondary margin-top-30" href="summary-manual">
+                                        Upload error
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="govuk-grid-column-one-half">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-half">
+                                <button type="submit" class="govuk-button govuk-button--secondary margin-top-30" data-module="govuk-button">
+                                    Export error
+                                </button>
+                            </div>
+                            <div class="govuk-grid-column-one-half">
+                                <!-- <a class="govuk-button margin-top-30" href="measure-complete"> -->
+                                <a class="govuk-button margin-top-30" href="commit-notify-confirmation">
+                                    Commit and notify
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
            

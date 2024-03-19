@@ -1,0 +1,43 @@
+{% extends "layouts/internal-main2-0.html" %}
+
+{% block pageTitle %}
+    Searching the measure register
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Revert Stage 3 processing</h1>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+                <p class="govuk-body">Blurb reharding triggering reverting stage 3 process.</p>
+
+                <div class="govuk-inset-text">
+                    There are currently 1000 measures in stage 3 process.
+                </div>
+
+                <p class="govuk-body">Blurb reharding reverting stage 3 rules. Click the button below to revert the current stage 3 process</p>
+
+                <button type="submit" class="govuk-button" data-module="govuk-button" onclick="gotoURL()">
+                    Revert
+                </button>
+
+                <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+           
+                <p class="govuk-body"><a href="/internal/v02-0/">Return to homepage</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function  gotoURL() {
+            window.location.pathname = "internal/v02-0/stage-3-rules/loading-screen-s3-processing";
+        }
+    </script>
+</div>
+{% endblock %}
