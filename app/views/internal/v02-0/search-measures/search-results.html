@@ -233,11 +233,11 @@
                                         </p>
 
                                         <select class="govuk-select govuk-!-width-full" id="measure-status-none" name="measure-status" size="5" multiple="multiple">
-                                            <option value="" selected disabled hidden>Select a measure status</option>
+                                            <!-- <option value="" selected disabled hidden>Select a measure status</option> -->
                                         </select>
             
                                         <select class="govuk-select govuk-!-width-full hide" id="measure-status-all" name="measure-status" size="5" multiple="multiple">
-                                            <option value="" selected disabled hidden>Select a measure status</option>
+                                            <!-- <option value="" selected disabled hidden>Select a measure status</option> -->
                                         </select>
                                     
                                         <a class="govuk-link" href="javascript:;" onclick="toggleSelectStatusFn()">select <span id="allOrNoneStatus">all</span></a>
@@ -415,11 +415,15 @@
                                     <div class="govuk-grid-column-one-half">
                                         <div class="govuk-form-group">
                                             <label class="govuk-label" for="event-name">
-                                                <strong>Bulk action</strong>
+                                                <strong>Bulk action and ownership</strong>
                                             </label>
 
                                             <select class="govuk-select" name="statusSelect" id="statusSelect" onchange="otherSelected(this.value)">
                                                 <option value="none" selected>Select a bulk action to perform</option>
+                                                <optgroup class="optgroup" label="Ownership">
+                                                    <option>Own</option>
+                                                    <option>Disown</option>
+                                                </optgroup>
                                                 <optgroup class="optgroup" label="Change status">
                                                     <option>Notified Incomplete</option>
                                                     <option>Notified Incomplete - TrustMark</option>
@@ -473,7 +477,34 @@
                         </div>
                     </div>
                 </div>
-                
+
+                <!--
+                <div class="scrollable more-height">
+                    <table class="govuk-table smaller">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header checkbox-col">
+                                    <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">
+                                        <div class="govuk-checkboxes__item">
+                                            <input name="search-results" type="checkbox" id="selectAllCBs" data-test-id="" class="govuk-checkboxes__input" onchange="selectAllResultsCBs()">
+                                            <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="govuk-table__header">Measure reference number</th>
+                                <th scope="col" class="govuk-table__header">Supplier name</th>
+                                <th scope="col" class="govuk-table__header">Measure type</th>
+                                <th scope="col" class="govuk-table__header">Notification period</th>
+                                <th scope="col" class="govuk-table__header">Status</th>
+                                <th scope="col" class="govuk-table__header address-col">Address</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="resultsListInt"></tbody>
+                    </table>
+                </div>
+                -->
+
                 <div class="scrollable more-height">
                     <table class="govuk-table smaller">
                         <thead class="govuk-table__head">
