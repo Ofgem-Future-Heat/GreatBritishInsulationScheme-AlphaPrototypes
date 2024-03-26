@@ -36,7 +36,7 @@
                         onchange="fileSelection()"/>
             </div>
 
-            <button id="uploadBtn" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--disabled margin0" class="govuk-button"  onclick="triggerValidation80()" type="button">Upload a measure file</button>
+            <button id="uploadBtn" disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--disabled margin0" class="govuk-button"  onclick="updaloadFile()" type="button">Upload a measure file</button>
         </form>
 
         <!-- <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" /> -->
@@ -47,6 +47,11 @@
         <!-- <p class="govuk-body"><a href="#" target="_blank">How to upload a measure (opens in a new tab)</a></p>
         <p class="govuk-body"><a href="#" target="_blank">What you will need to upload a Measure (opens in a new tab)</a></p> -->
     </div>
+    <script>
+        function updaloadFile() {
+            window.location.pathname = "/v10/measures/success-file-upload-core-check-errors";
+        }
+    </script>
 </div>
 
 {% endblock %}
