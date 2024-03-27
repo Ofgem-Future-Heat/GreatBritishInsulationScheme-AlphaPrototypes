@@ -419,7 +419,7 @@
                                         <div class="slide-switch">
                                             <div class="switch-label all">All</div>
                                             <label class="switch">
-                                                <input id="sliding-switch" type="checkbox">
+                                                <input id="sliding-switch" type="checkbox" onchange="changeOwnership()">
                                                 <span class="slider round"></span>
                                             </label>
                                             <div class="switch-label mine">Mine</div>
@@ -523,7 +523,9 @@
                 -->
 
                 <div class="scrollable more-height">
-                    <table class="govuk-table smaller">
+                    
+                    <!-- Show all owners -->
+                    <table class="govuk-table smaller" id="showAllOwners">
                         <thead class="govuk-table__head">
                             <tr class="govuk-table__row">
                                 <th scope="col" class="govuk-table__header checkbox-col">
@@ -907,6 +909,76 @@
                           
                         </tbody>
                     </table>
+                    
+                    <table class="govuk-table smaller hide" id="showOnlyMine">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header checkbox-col">
+                                    <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">
+                                        <div class="govuk-checkboxes__item">
+                                            <input name="search-results" type="checkbox" id="selectAllCBs" data-test-id="" class="govuk-checkboxes__input" onchange="selectAllResultsCBs()">
+                                            <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="govuk-table__header">Measure reference number</th>
+                                <th scope="col" class="govuk-table__header">Measure type</th>
+                                <th scope="col" class="govuk-table__header">Notification period</th>
+                                <th scope="col" class="govuk-table__header">Status</th>
+                                <th scope="col" class="govuk-table__header address-col">Address</th>
+                                <th scope="col" class="govuk-table__header">Owned by</th>
+                            </tr>
+                        </thead>
+
+                        <tbody> 
+                            <tr>
+                              <td class="checkbox-col">
+                                <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                  <div class="govuk-checkboxes__item">
+                                    <input name="search-results" type="checkbox" id="cb1" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                    <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                  </div>
+                                </div>
+                              </td>
+                              <td><p class="govuk-body small">OVO1234567</p></td>
+                              <td><p class="govuk-body small">Solar_PV</p></td>
+                              <td><p class="govuk-body small">August 2022</p></td>
+                              <td><p class="govuk-body small">Notified Incomplete</p></td>
+                              <td class="address-col">
+                                <p class="govuk-body small">
+                                  198 <br>
+                                  Blake House <br>
+                                  Flat 19 <br>
+                                  B1 4KE
+                                </p>
+                              </td>
+                              <td><p class="govuk-body small">Me</p></td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox-col">
+                                  <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                    <div class="govuk-checkboxes__item">
+                                      <input name="search-results" type="checkbox" id="cb1" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                      <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td><p class="govuk-body small">OVO1234567</p></td>
+                                <td><p class="govuk-body small">Solar_PV</p></td>
+                                <td><p class="govuk-body small">August 2022</p></td>
+                                <td><p class="govuk-body small">Notified Incomplete</p></td>
+                                <td class="address-col">
+                                  <p class="govuk-body small">
+                                    109 <br>
+                                    Gooding Hall<br>
+                                    Flat 19 <br>
+                                    B1 4KE
+                                  </p>
+                                </td>
+                                <td><p class="govuk-body small">Me</p></td>
+                              </tr>
+                        </tbody>
+                    </table>
                 </div>
 
                 <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
@@ -1009,6 +1081,21 @@
         <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
            
         <p class="govuk-body"><a href="/internal/v02-0/">Return to homepage</a></p>
+
+        <script>
+            // Ownership toggles 'Owned by' column
+            function changeOwnership() {
+                console.log('Changing the ownership ===================<>');
+                if (document.getElementById('sliding-switch').checked) {
+                    document.getElementById('showAllOwners').classList.add('hide');
+                    document.getElementById('showOnlyMine').classList.remove('hide');
+                } else {
+                    document.getElementById('showAllOwners').classList.remove('hide');
+                    document.getElementById('showOnlyMine').classList.add('hide');
+                }
+            }
+
+        </script>
     </div>
 </div>
 {% endblock %}

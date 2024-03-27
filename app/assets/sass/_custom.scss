@@ -133,6 +133,9 @@ ul {
             height: 400px;
         }
     }
+    &.hide {
+        display: none;
+    }
 }
 
 input[type="file"] {
