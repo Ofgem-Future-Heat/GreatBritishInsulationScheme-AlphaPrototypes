@@ -5368,7 +5368,7 @@ function rejectCookiesBanner() {
   cookiesBanner.style.display = 'none';
   localStorage.setItem('acceptCookie', false);
 }
-if ((pageUrlPath === '/v08/mandatory-feature-documentation/cookies-policy') || (pageUrlPath === '/v10/mandatory-feature-documentation/cookies-policy')) {
+if ((pageUrlPath === '/v08/mandatory-feature-documentation/cookies-policy') || (pageUrlPath === '/v10/mandatory-feature-documentation/cookies-policy') || (pageUrlPath === '/v11/mandatory-feature-documentation/cookies-policy')) {
   if (localStorage.getItem('aaceptCookie') === true) {
     document.getElementById('analyticsCookieYes').checked = true;
   } else if (localStorage.getItem('aaceptCookie') === false) {
@@ -5655,6 +5655,42 @@ function checkME() {
     mrnFileFieldError.classList.remove('hide');
   } else {
     performSearch.href = "/v10/measures/search-measure-errors/search-results";
+  }
+}
+
+function checkME11() {
+  console.log('Search measure processing errors');
+  
+  const performSearch = document.getElementById('performSearch');
+  const errorMRNSummary = document.getElementById('error-MRN-summary');
+  const errorWithMRN = document.getElementById('errorWithMRN');
+  const mrnFieldError = document.getElementById('mrn-field-error');
+  const mrnFileFieldError = document.getElementById('mrn-file-field-error');
+  const measureReferenceNumberInputField = document.getElementById('measure-reference-number');
+
+  if((document.getElementById("measure-reference-number").value.length > 1) && (document.getElementById("file-upload").value != "")) {
+    window.scrollTo(0, 0);
+    errorMRNSummary.classList.remove('hide');
+    errorWithMRN.classList.remove('hide');
+    mrnFieldError.classList.remove('hide');
+    mrnFileFieldError.classList.remove('hide');
+    measureReferenceNumberInputField.classList.add('govuk-input--error');
+  } else if ((document.getElementById("measure-reference-number").value.length === 0) && (document.getElementById("file-upload").value === "") 
+            // && (!selectedOptions)
+          ) {
+    window.scrollTo(0, 0);
+    document.getElementById("chck1").checked = true;
+    document.getElementById("chck2").checked = true;
+    document.getElementById("chck3").checked = true;
+    document.getElementById("chck4").checked = true;
+    errorMRNSummary.classList.remove('hide');
+    errorWithNothingSelected.classList.remove('hide');
+
+    measureReferenceNumberInputField.classList.add('govuk-input--error');
+    mrnFieldError.classList.remove('hide');
+    mrnFileFieldError.classList.remove('hide');
+  } else {
+    performSearch.href = "/v11/measures/search-measure-errors/search-results";
   }
 }
 
