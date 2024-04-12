@@ -10,12 +10,12 @@
     <div class="govuk-grid-column-full">
         <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
 
-        <h1 class="govuk-heading-xl">Upload recommendations</h1>
+        <h1 class="govuk-heading-xl">Upload stage 3 recommendations</h1>
 
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
 
-                <p class="govuk-body">Blurb reharding uploading stage 3 validation file.</p>
+                <p class="govuk-body">Upload a file</p>
                 
                 <div class="govuk-grid-row">
                     <div class="govuk-grid-column-one-half">
@@ -39,15 +39,29 @@
                                         accept=".csv" 
                                         tabindex="-1"
                                         title="file-upload"
-                                        onchange="fileSelectionS3Rules()"/>
-                            </div>
-                            <div class="govuk-grid-column-one-half">
+                                        onchange="fileSelectionS3Rules()" />
+
+                                
+                                <br />
+                                <br />
                                 <a class="govuk-button govuk-button--secondary " href="upload-in-progress">
-                                    Upload
+                                    Upload file
                                 </a>
                             </div>
                         </div>
                     </div>
+                    
+                    <!--                     
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-half">
+                            
+                            <a class="govuk-button govuk-button--secondary " href="upload-in-progress">
+                                Upload file
+                            </a>
+                        </div>
+                    </div>
+                    -->
+
                 </div>
 
                 <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
