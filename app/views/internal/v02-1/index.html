@@ -1,0 +1,49 @@
+{% extends "layouts/internal-main2-0.html" %}
+
+{% block pageTitle %}
+  Great British Insulation Scheme &mdash; Internal user management
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">GBIS Register for internal users</h1>
+    
+    <p>Welcome, <span id="welcomeUsernameMessage"></span>.</p>
+    <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+        
+    <div class="govuk-grid-row">
+
+      <!-- Search measures -->
+      <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+        <div class="card govuk-!-padding-5">
+            <h3 class="govuk-heading-m"><a href="search-measures/" class="govuk-link">View supplier uploaded measures</a></h3>
+            <p class="govuk-body">Search and view measures uploaded to the GBIS register by energy suppliers.</p>
+        </div>
+      </div>
+
+      <!-- Automatic late extension report -->
+      <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+        <div class="card govuk-!-padding-5">
+            <h3 class="govuk-heading-m"><a href="automatic-late-extension-report/" class="govuk-link">Automatic late extension report</a></h3>
+            <p class="govuk-body">Search and view energy supplier automatic late extension reports.</p>
+        </div>
+      </div>
+
+      <!-- Stage 3 processing -->
+      
+      <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+        <div class="card govuk-!-padding-5">
+            <h3 class="govuk-heading-m"><a href="stage-3-rules/stage-3-processing" class="govuk-link">Stage 3 measure validation</a></h3>
+            <p class="govuk-body">Trigger stage 3 measure validation and view summary details.</p>
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+</div>
+
+{% endblock %}

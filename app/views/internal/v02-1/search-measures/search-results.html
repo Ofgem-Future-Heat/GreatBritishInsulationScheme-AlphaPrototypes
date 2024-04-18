@@ -1,0 +1,1120 @@
+{% extends "layouts/internal-main2-0.html" %}
+
+{% block pageTitle %}
+    Search measure results
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <div class="govuk-error-summary hide" data-module="govuk-error-summary" id="error-MRN-summary">
+            <div role="alert">
+              <h2 class="govuk-error-summary__title">
+                There is a problem
+              </h2>
+              <div class="govuk-error-summary__body">
+                <ul class="govuk-list govuk-error-summary__list">
+                    <li id="errorWithMRN" class="hide">
+                        <p><a href="#error-with-MRN">
+                            Enter a single measure reference number to search<br />
+                            Or, search for measure reference numbers by uploading a file containing the numbers you want to search
+                            <br />
+                            <br />
+                            You cannot search using both a single measure reference number and a file containing measure reference numbers
+                        </a>
+                    </li>
+                    <li id="errorWithNothingSelected" class="hide">
+                        <p><a href="#">You must select at least one of these filters to show the measures uploaded by suppliers:</a></p>
+                        
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li><a href="#error-with-supplier-name">Supplier name</a></li>
+                            <li><a href="#error-with-MRN">Measure reference number</a></li>
+                            <li><a href="#error-with-status">Status</a></li>
+                            <li><a href="#error-with-notification-period">Notification period</a></li>
+                            <li><a href="#error-with-postcode">Postcode</a></li>
+                        </ul>
+                    </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+
+        <h1 class="govuk-heading-xl">Searching supplier uploaded measures </h1>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <p class="govuk-body">
+                    Search and review the measures energy suppliers have uploaded to the Great British Insulation Scheme portal using the filters provided. 
+                </p>
+
+                <!-- Different ways to search for uploaded measures -->
+                <details class="govuk-details" data-module="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            Different ways to search for uploaded measures
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text">
+
+                        <p class="govuk-body"><strong>Before searching for uploaded measures</strong></p>
+                        <p class="govuk-body">You need the measure reference numbers the energy suppliers have uploaded to the Great British Insulation Scheme portal. You will already have them or Supplier Compliance will have sent these to you.</p>
+
+                        <p class="govuk-body"><strong>Searching for measures</strong></p>
+                        <p class="gov-body">You can search for measures using:</p>
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>single measure reference numbers</li>
+                            <li>a file containing multiple measure reference numbers</li>
+                            <li>other filters</li>
+                        </ul>
+
+                        <p class="govuk-body"><strong>Single measure reference numbers</strong></p>
+                        <P class="govuk-body">To search for individual measures using a single reference number:</P>
+                        <ul class="govuk-list govuk-list--number indent40">
+                            <li>Find the measure reference number you want to search for.</li>
+                            <li>Copy the measure reference number.</li>
+                            <li>Add it to the measure reference number field.</li>
+                            <li>Select the "Search" button.</li>
+                        </ul>
+
+                        <p class="govuk-body"><strong>A file containing multiple measure reference numbers</strong></p>
+                        <p class="gov-body">To search for measures using a measure reference number file, you should:</p>
+                        <ul class="govuk-list govuk-list--number indent40">
+                            <li>Create a Microsoft Excel file.</li>
+                            <li>Include a single column with the heading labelled as 'Measure_reference_number'.</li>
+                            <li>Then, add the measure reference numbers you want to search for in the column.</li>
+                            <li>Save it as a CSV file.</li>
+                            <li>Go to the search page in the Great British Insulation Scheme.</li>
+                            <li>Select "Choose file" and select the CSV file you created.</li>
+                            <li>Select the "Search" button.</li>
+                        </ul>
+
+                        <p class="govuk-body"><strong>Using other filters to search for measures</strong></p>
+                        <p class="govuk-body">You can also search for measures by the following filters:</p>
+                        <ul class="govuk-list govuk-list--number indent40">
+                            <li>Supplier name</li>
+                            <li>Measure status</li>
+                            <li>Notification period</li>
+                            <li>Property postcode</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <div class="govuk-grid-column-one-third">
+                <h2 class="govuk-heading-l">Filters</h2>
+
+                <form>
+                    <!-- Tabs -->
+                    <div class="tabs">
+                        <!-- Supplier name -->
+                        <div class="tab">
+                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck1" checked="checked">
+                            <label class="tab-label" for="chck1">Supplier name</label>
+                            <div class="tab-content">
+                                <div class="govuk-form-group" id="supplierErrorSection">
+                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="supplier-name-hint" id="error-with-supplier-name">
+                                        <legend class="govuk-fieldset__legend">
+                                            <h2 class="govuk-heading-m">What is the supplier name?</h2>
+                                        </legend>
+                                        
+                                        <p id="supplier-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Select a supplier name if you're not searching using other filters
+                                        </p>
+                                        
+                                        <div id="supplier-name-hint" class="govuk-hint">
+                                            Select the supplier name
+                                        </div>
+                                        <p id="empty-supplier-name-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Please provide the supplier name
+                                        </p>
+                                        <div class="govuk-form-group">
+                                            <select class="govuk-select" name="supplierName" id="supplierName">
+                                                <option value="none" selected>&mdash;</option>
+                                                <option value="BGT">BGT</option>
+                                                <option value="ECY">ECY</option>
+                                                <option value="EDF">EDF</option>
+                                                <option value="EGE">EGE</option>
+                                                <option value="EON">EON</option>
+                                                <option value="FOX">FOX</option>
+                                                <option value="OCT">OCT</option>
+                                                <option value="OVO">OVO</option>
+                                                <option value="SHL">SHL</option>
+                                                <option value="SOE">SOE</option>
+                                                <option value="SPW">SPW</option>
+                                                <option value="UTA">UTA</option>
+                                                <option value="UTW">UTW</option>
+                                            </select>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Measure reference number -->
+                        <div class="tab">
+                           <input class="hide-accordion-checkboxes" type="checkbox" id="chck2" checked="checked">
+                           <label class="tab-label" for="chck2">Measure reference number</label>
+                           <div class="tab-content">
+                                <div class="govuk-form-group" id="mrnErrorSection">
+                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="submission-date-hint" id="error-with-MRN">
+                                        <legend class="govuk-fieldset__legend">
+                                            <h2 class="govuk-heading-m">Different ways to search for measures</h2>
+                                        </legend>
+                                        
+                                        <p class="govuk-body">You can search for measures using:</p>
+                                        
+                                        <ul class="govuk-list govuk-list--bullet">
+                                            <li>single measure reference numbers</li>
+                                            <li>a file containing multiple measure reference numbers</li>
+                                        </ul>
+                                        
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label" for="measure-reference-number">
+                                                Measure reference number
+                                            </label>
+                                            <p id="mrn-field-error" class="govuk-error-message hide">
+                                                <span class="govuk-visually-hidden">Error:</span> Enter a single measure reference number to search for measures if you're not searching using other filters
+                                            </p>
+                                            <input class="govuk-input" id="measure-reference-number" name="measure-reference-number" type="text">
+                                        </div>
+            
+                                        <div class="or-class"><p class="govuk-body">Or</div>
+                                        
+                                        <div id="measureReferenceFile" class="">
+                                            <span class="govuk-label" for="measure-reference-file">
+                                                Measure reference number file
+                                            </span>
+                                            
+                                            <p id="mrn-file-field-error" class="govuk-error-message hide">
+                                                <span class="govuk-visually-hidden">Error:</span> Search for measure reference numbers by uploading a file containing the numbers you want to search - if you're not searching using other filters
+                                            </p>
+
+                                            <label for="file-upload" class="custom-file-upload">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M11 14.9861C11 15.5384 11.4477 15.9861 12 15.9861C12.5523 15.9861 13 15.5384 13 14.9861V7.82831L16.2428 11.0711L17.657 9.65685L12.0001 4L6.34326 9.65685L7.75748 11.0711L11 7.82854V14.9861Z" fill="currentColor"/>
+                                                    <path d="M4 14H6V18H18V14H20V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V14Z" fill="currentColor"/>
+                                                </svg> Choose file
+                                            </label>
+                                            <input  class="" 
+                                                    id="file-upload" 
+                                                    name="file-upload" 
+                                                    type="file" 
+                                                    accept=".csv" 
+                                                    tabindex="-1"
+                                                    title="file-upload"
+                                                    onchange="fileSelection()"/>
+                                            
+                                            <p id="invalidFileUploaded" class="govuk-error-message hide"><span class="govuk-visually-hidden">Error:</span>The selected file is invalid</p>
+                                            <p id="validFileUploaded" class="govuk-success-message hide"><span class="govuk-visually-hidden"></span>File uploaded</p>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Status -->
+                        <div class="tab">
+                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck3" checked="checked">
+                            <label class="tab-label" for="chck3">Status</label>
+                            <div class="tab-content">
+                                <div class="govuk-form-group" id="statusErrorSection">
+                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint" id="error-with-status">
+                                        <legend class="govuk-fieldset__legend">
+                                            <h2 class="govuk-heading-m">What is the measure status?</h2>
+                                        </legend>
+                                        <div id="measure-status-hint" class="govuk-hint">
+                                            You can select one or more items in the list.
+                                        </div>
+                                        <p id="empty-status-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Select one status if you're not searching using other filters
+                                        </p>
+
+                                        <select class="govuk-select govuk-!-width-full" id="measure-status-none" name="measure-status" size="5" multiple="multiple">
+                                            <!-- <option value="" selected disabled hidden>Select a measure status</option> -->
+                                        </select>
+            
+                                        <select class="govuk-select govuk-!-width-full hide" id="measure-status-all" name="measure-status" size="5" multiple="multiple">
+                                            <!-- <option value="" selected disabled hidden>Select a measure status</option> -->
+                                        </select>
+                                    
+                                        <a class="govuk-link" href="javascript:;" onclick="toggleSelectStatusFn()">select <span id="allOrNoneStatus">all</span></a>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Notification period -->
+                        <div class="tab">
+                           <input class="hide-accordion-checkboxes" type="checkbox" id="chck4" checked="checked" >
+                           <label class="tab-label" for="chck4">Notification period</label>
+                           <div class="tab-content">
+                                <div class="govuk-form-group" id="notificationPeriodErrorSection">
+                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="notification-period-hint" id="error-with-notification-period">
+                                        <legend class="govuk-fieldset__legend">
+                                            <h2 class="govuk-heading-m">What is the notification period?</h2>
+                                        </legend>
+
+                                        <div id="notification-period-hint" class="govuk-hint">
+                                            Select the month and year in the from and to select drop down list.
+                                        </div>
+
+                                        <p id="notification-period-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Select the notification period if you're not searching using other filters
+                                        </p>
+
+                                        <h3 class="govuk-heading-s margin-bottom0">From</h3>
+                                        <div class="govuk-form-group">
+                                            <div class="govuk-select-field" id="from">
+                                                <div class="govuk-select-field__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="from-month">
+                                                            Month
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-month" id="from-month" name="from-month">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="January">January</option>
+                                                            <option value="February">February</option>
+                                                            <option value="March">March</option>
+                                                            <option value="April">April</option>
+                                                            <option value="May">May</option>
+                                                            <option value="June">June</option>
+                                                            <option value="July">July</option>
+                                                            <option value="August">August</option>
+                                                            <option value="September">September</option>
+                                                            <option value="October">October</option>
+                                                            <option value="November">November</option>
+                                                            <option value="December">December</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="govuk-select-field__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="from-year">
+                                                            Year
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-year" id="from-year" name="from-year">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="2022">2022</option>
+                                                            <option value="2023">2023</option>
+                                                            <option value="2024">2024</option>
+                                                            <option value="2025">2025</option>
+                                                            <option value="2026">2026</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <h3 class="govuk-heading-s margin-bottom0">To</h3>
+                                        <div class="govuk-form-group">
+                                            <div class="govuk-select-field" id="to">
+                                                <div class="govuk-select-field__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="to-month">
+                                                            Month
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-month" id="to-month" name="to-month">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="January">January</option>
+                                                            <option value="February">February</option>
+                                                            <option value="March">March</option>
+                                                            <option value="April">April</option>
+                                                            <option value="May">May</option>
+                                                            <option value="June">June</option>
+                                                            <option value="July">July</option>
+                                                            <option value="August">August</option>
+                                                            <option value="September">September</option>
+                                                            <option value="October">October</option>
+                                                            <option value="November">November</option>
+                                                            <option value="December">December</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="govuk-select-field__item">
+                                                    <div class="govuk-form-group">
+                                                        <label class="govuk-label govuk-select-field__label" for="to-year">
+                                                            Year
+                                                        </label>
+                                                        <select class="govuk-select short-select-width-year" id="to-year" name="to-year">
+                                                            <option value="&mdash;" selected>&mdash;</option>
+                                                            <option value="2022">2022</option>
+                                                            <option value="2023">2023</option>
+                                                            <option value="2024">2024</option>
+                                                            <option value="2025">2025</option>
+                                                            <option value="2026">2026</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                           </div>
+                        </div>
+
+                        <!-- Post code -->
+                        <div class="tab">
+                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck5" checked="checked">
+                            <label class="tab-label" for="chck5">Postcode</label>
+                            <div class="tab-content">
+                                
+                                <div class="govuk-form-group" id="postcodeErrorSection">
+                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="postcode-hint" id="error-with-postcode">
+                                        <legend class="govuk-fieldset__legend">
+                                            <h2 class="govuk-heading-m">What is the postcode of the property where the measure was installed?</h2>
+                                        </legend>
+                                        <div id="postcode-hint" class="govuk-hint">
+                                            Enter the postcode
+                                        </div>
+                                        
+                                        <p id="postcode-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Enter a postcode to search for measures if you're not searching using other filters
+                                        </p>
+
+                                        <p id="empty-postcode-field-error" class="govuk-error-message hide">
+                                            <span class="govuk-visually-hidden">Error:</span> Please provide the postcode
+                                        </p>
+                                        <input class="govuk-input" id="postcode" name="postcode" type="text">
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ownership -->
+                        <div class="tab">
+                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck6" checked="checked">
+                            <label class="tab-label" for="chck6">Ownership</label>
+                            <div class="tab-content">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" aria-describedby="only-my-measures-hint">
+                                        <legend class="govuk-fieldset__legend">
+                                            <h2 class="govuk-heading-m">Would you like to view just your own measures?</h2>
+                                        </legend>
+                                        <div id="only-my-measures-hint" class="govuk-hint">
+                                            Selecting mine will only show your own measures, leaving this unchecked will show all measures owned by everyone.
+                                        </div>
+                                        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                            <div class="govuk-checkboxes__item">
+                                                <input class="govuk-checkboxes__input" id="only-my-measures" name="only-my-measures" type="checkbox" value="Show only my measures">
+                                                <label class="govuk-label govuk-checkboxes__label" for="only-my-measures">
+                                                    Show my measures
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Search -->
+                    <div class="govuk-button-group">
+                        <a id="performSearch" href="javascript:void(0);" class="govuk-button" data-module="govuk-button" onclick="intCheckMRN()">
+                            Search
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="govuk-grid-column-two-thirds">
+                <h2 class="govuk-heading-l">Results</h2>
+
+                <p class="govuk-body">Showing <strong><span id="resultsLength">1903</span></strong> measure<span id="singularPlural"></span>.</p>
+
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-third">
+                        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Download results
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-three-quarters">
+                                                
+                                <div class="govuk-grid-row">
+                                    <!-- <div class="govuk-grid-column-one-half">
+                                        <label class="govuk-label slider-label-main" for="sliding-switch">
+                                            <strong>Ownership</strong>
+                                        </label>
+                                        <div class="slide-switch">
+                                            <div class="switch-label all">All</div>
+                                            <label class="switch">
+                                                <input id="sliding-switch" type="checkbox" onchange="changeOwnership()">
+                                                <span class="slider round"></span>
+                                            </label>
+                                            <div class="switch-label mine">Mine</div>
+                                        </div>
+                                    </div> -->
+                                    <div class="govuk-grid-column-one-half">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label" for="event-name">
+                                                <strong>Set action</strong>
+                                            </label>
+
+                                            <select class="govuk-select" name="statusSelect" id="statusSelect" onchange="otherSelected(this.value)">
+                                                <option value="none" selected>Select an option</option>
+                                                <optgroup class="optgroup" label="Ownership">
+                                                    <option>Own</option>
+                                                    <option>Disown</option>
+                                                </optgroup>
+                                                <optgroup class="optgroup" label="Change status">
+                                                    <option>Notified Incomplete</option>
+                                                    <option>Notified Incomplete - TrustMark</option>
+                                                    <option>Notified Pending</option>
+                                                    <option>Notified Pending - TrustMark</option>
+                                                    <option>Measure Awaiting Verification</option>
+                                                    <option>On Hold</option>
+                                                    <option>With Supplier</option>
+                                                    <option>Internal query</option>
+                                                    <option>Being Assessed</option>
+                                                    <option>Approved</option>
+                                                    <option>Rejected</option>
+                                                </optgroup>
+                                                <optgroup class="optgroup" label="Change Category">
+                                                    <option>No category</option>
+                                                    <option>Audit</option>
+                                                    <option>Duplicate</option>
+                                                    <option>Investigation - Fraud</option>
+                                                    <option>Late Measure</option>
+                                                    <option>Measure Change</option>
+                                                    <option>TrustMark QA</option>
+                                                    <option>Notification Error</option>
+                                                    <option>Process Later</option>
+                                                    <option>Rejection</option>
+                                                    <option>Validating</option>
+                                                    <option>Flex</option>
+                                                    <!-- <option id="other">Other</option> -->
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="govuk-grid-column-one-half">
+                                      <label class="govuk-label" for=""><div>&nbsp;</div></label>
+                                      <a href="bulk-action-confirmation" class="govuk-button margin-left-30" data-module="govuk-button">
+                                          Action
+                                      </a>
+                                  </div>
+
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="govuk-section-break govuk-section-break--visible">
+
+                <!--
+                <div class="scrollable more-height">
+                    <table class="govuk-table smaller">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header checkbox-col">
+                                    <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">
+                                        <div class="govuk-checkboxes__item">
+                                            <input name="search-results" type="checkbox" id="selectAllCBs" data-test-id="" class="govuk-checkboxes__input" onchange="selectAllResultsCBs()">
+                                            <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="govuk-table__header">Measure reference number</th>
+                                <th scope="col" class="govuk-table__header">Supplier name</th>
+                                <th scope="col" class="govuk-table__header">Measure type</th>
+                                <th scope="col" class="govuk-table__header">Notification period</th>
+                                <th scope="col" class="govuk-table__header">Status</th>
+                                <th scope="col" class="govuk-table__header address-col">Address</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="resultsListInt"></tbody>
+                    </table>
+                </div>
+                -->
+
+                <div class="scrollable more-height">
+                    
+                    <!-- Show all owners -->
+                    <table class="govuk-table smaller" id="showAllOwners">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header checkbox-col">
+                                    <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">
+                                        <div class="govuk-checkboxes__item">
+                                            <input name="search-results" type="checkbox" id="selectAllCBs" data-test-id="" class="govuk-checkboxes__input" onchange="selectAllResultsCBs()">
+                                            <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="govuk-table__header">Measure reference number</th>
+                                <th scope="col" class="govuk-table__header">Measure type</th>
+                                <th scope="col" class="govuk-table__header">Notification period</th>
+                                <th scope="col" class="govuk-table__header">Status</th>
+                                <th scope="col" class="govuk-table__header address-col">Address</th>
+                                <th scope="col" class="govuk-table__header">Owned by</th>
+                            </tr>
+                        </thead>
+                      
+                        <tbody>
+                      
+                          <tr>
+                            <td class="checkbox-col">
+                              <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                <div class="govuk-checkboxes__item">
+                                  <input name="search-results" type="checkbox" id="cb0" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                  <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p class="govuk-body small">OVO7801767</p></td>
+                            <td><p class="govuk-body small">Solar_PV</p></td>
+                            <td><p class="govuk-body small">July 2022</p></td>
+                            <td><p class="govuk-body small">Notified Incomplete</p></td>
+                            <td class="address-col">
+                              <p class="govuk-body small">
+                                123 <br>
+                                Mansion House <br>
+                                Flat 3 <br>
+                                P05 TCD
+                              </p>
+                            </td>
+                            <td><p class="govuk-body small">Albert Lee</p></td>
+                          </tr>
+                          
+                          <tr>
+                            <td class="checkbox-col">
+                              <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                <div class="govuk-checkboxes__item">
+                                  <input name="search-results" type="checkbox" id="cb1" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                  <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p class="govuk-body small">OVO1234500</p></td>
+                            <td><p class="govuk-body small">Solar_PV</p></td>
+                            <td><p class="govuk-body small">August 2022</p></td>
+                            <td><p class="govuk-body small">Notified Incomplete</p></td>
+                            <td class="address-col">
+                              <p class="govuk-body small">
+                                198 <br>
+                                Blake House <br>
+                                Flat 19 <br>
+                                B1 4KE
+                              </p>
+                            </td>
+                            <td><p class="govuk-body small">Cainan Able</p></td>
+                          </tr>
+                          
+                          <tr>
+                            <td class="checkbox-col">
+                              <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                <div class="govuk-checkboxes__item">
+                                  <input name="search-results" type="checkbox" id="cb0" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                  <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p class="govuk-body small">BGT1234567</p></td>
+                            <td><p class="govuk-body small">Solar_PV</p></td>
+                            <td><p class="govuk-body small">July 2022</p></td>
+                            <td><p class="govuk-body small">Notified Incomplete</p></td>
+                            <td class="address-col">
+                              <p class="govuk-body small">
+                                123 <br>
+                                Mansion House <br>
+                                Flat 3 <br>
+                                P05 TCD
+                              </p>
+                            </td>
+                            <td><p class="govuk-body small">Jean Gray</p></td>
+                          </tr>
+                      
+                          <tr>
+                            <td class="checkbox-col">
+                              <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                <div class="govuk-checkboxes__item">
+                                  <input name="search-results" type="checkbox" id="cb0" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                  <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p class="govuk-body small">OVO7801767</p></td>
+                            <td><p class="govuk-body small">Solar_PV</p></td>
+                            <td><p class="govuk-body small">July 2022</p></td>
+                            <td><p class="govuk-body small">Notified Incomplete</p></td>
+                            <td class="address-col">
+                              <p class="govuk-body small">
+                                123 <br>
+                                Mansion House <br>
+                                Flat 3 <br>
+                                P05 TCD
+                              </p>
+                            </td>
+                            <td><p class="govuk-body small">Angela Korng</p></td>
+                          </tr>
+                      
+                          <tr>
+                            <td class="checkbox-col">
+                              <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                <div class="govuk-checkboxes__item">
+                                  <input name="search-results" type="checkbox" id="cb0" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                  <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p class="govuk-body small">OVO7801767</p></td>
+                            <td><p class="govuk-body small">Solar_PV</p></td>
+                            <td><p class="govuk-body small">July 2022</p></td>
+                            <td><p class="govuk-body small">Notified Incomplete</p></td>
+                            <td class="address-col">
+                              <p class="govuk-body small">
+                                123 <br>
+                                Mansion House <br>
+                                Flat 3 <br>
+                                P05 TCD
+                              </p>
+                            </td>
+                            <td><p class="govuk-body small">Luca Trimboli</p></td>
+                          </tr>
+                      
+                          <tr>
+                            <td class="checkbox-col">
+                              <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                <div class="govuk-checkboxes__item">
+                                  <input name="search-results" type="checkbox" id="cb0" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                  <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p class="govuk-body small">OVO7801767</p></td>
+                            <td><p class="govuk-body small">Solar_PV</p></td>
+                            <td><p class="govuk-body small">July 2022</p></td>
+                            <td><p class="govuk-body small">Notified Incomplete</p></td>
+                            <td class="address-col">
+                              <p class="govuk-body small">
+                                123 <br>
+                                Mansion House <br>
+                                Flat 3 <br>
+                                P05 TCD
+                              </p>
+                            </td>
+                            <td><p class="govuk-body small">Lily Sullivan</p></td>
+                          </tr>
+                      
+                          <tr>
+                            <td class="checkbox-col">
+                              <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                <div class="govuk-checkboxes__item">
+                                  <input name="search-results" type="checkbox" id="cb0" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                  <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p class="govuk-body small">OVO7801767</p></td>
+                            <td><p class="govuk-body small">Solar_PV</p></td>
+                            <td><p class="govuk-body small">July 2022</p></td>
+                            <td><p class="govuk-body small">Notified Incomplete</p></td>
+                            <td class="address-col">
+                              <p class="govuk-body small">
+                                123 <br>
+                                Mansion House <br>
+                                Flat 3 <br>
+                                P05 TCD
+                              </p>
+                            </td>
+                            <td><p class="govuk-body small">Terrence Crawford</p></td>
+                          </tr>
+                      
+                          <tr>
+                            <td class="checkbox-col">
+                              <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                <div class="govuk-checkboxes__item">
+                                  <input name="search-results" type="checkbox" id="cb0" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                  <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p class="govuk-body small">OVO7801767</p></td>
+                            <td><p class="govuk-body small">Solar_PV</p></td>
+                            <td><p class="govuk-body small">July 2022</p></td>
+                            <td><p class="govuk-body small">Notified Incomplete</p></td>
+                            <td class="address-col">
+                              <p class="govuk-body small">
+                                123 <br>
+                                Mansion House <br>
+                                Flat 3 <br>
+                                P05 TCD
+                              </p>
+                            </td>
+                            <td><p class="govuk-body small">Chase Coleman</p></td>
+                          </tr>
+                      
+                          <tr>
+                            <td class="checkbox-col">
+                              <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                <div class="govuk-checkboxes__item">
+                                  <input name="search-results" type="checkbox" id="cb0" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                  <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p class="govuk-body small">OVO7801767</p></td>
+                            <td><p class="govuk-body small">Solar_PV</p></td>
+                            <td><p class="govuk-body small">July 2022</p></td>
+                            <td><p class="govuk-body small">Notified Incomplete</p></td>
+                            <td class="address-col">
+                              <p class="govuk-body small">
+                                123 <br>
+                                Mansion House <br>
+                                Flat 3 <br>
+                                P05 TCD
+                              </p>
+                            </td>
+                            <td><p class="govuk-body small">Janet Tan</p></td>
+                          </tr>
+                          
+                          <tr>
+                            <td class="checkbox-col">
+                              <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                <div class="govuk-checkboxes__item">
+                                  <input name="search-results" type="checkbox" id="cb0" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                  <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p class="govuk-body small">BGT1234567</p></td>
+                            <td><p class="govuk-body small">Solar_PV</p></td>
+                            <td><p class="govuk-body small">July 2022</p></td>
+                            <td><p class="govuk-body small">Notified Incomplete</p></td>
+                            <td class="address-col">
+                              <p class="govuk-body small">
+                                123 <br>
+                                Mansion House <br>
+                                Flat 3 <br>
+                                P05 TCD
+                              </p>
+                            </td>
+                            <td><p class="govuk-body small">Matt Vesely</p></td>
+                          </tr>
+                          
+                          <tr>
+                            <td class="checkbox-col">
+                              <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                <div class="govuk-checkboxes__item">
+                                  <input name="search-results" type="checkbox" id="cb0" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                  <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p class="govuk-body small">BGT1234567</p></td>
+                            <td><p class="govuk-body small">Solar_PV</p></td>
+                            <td><p class="govuk-body small">July 2022</p></td>
+                            <td><p class="govuk-body small">Notified Incomplete</p></td>
+                            <td class="address-col">
+                              <p class="govuk-body small">
+                                123 <br>
+                                Mansion House <br>
+                                Flat 3 <br>
+                                P05 TCD
+                              </p>
+                            </td>
+                            <td><p class="govuk-body small">Martin Scorsese</p></td>
+                          </tr>
+                      
+                          <tr>
+                            <td class="checkbox-col">
+                              <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                <div class="govuk-checkboxes__item">
+                                  <input name="search-results" type="checkbox" id="cb0" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                  <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p class="govuk-body small">OVO7801767</p></td>
+                            <td><p class="govuk-body small">Solar_PV</p></td>
+                            <td><p class="govuk-body small">July 2022</p></td>
+                            <td><p class="govuk-body small">Notified Incomplete</p></td>
+                            <td class="address-col">
+                              <p class="govuk-body small">
+                                123 <br>
+                                Mansion House <br>
+                                Flat 3 <br>
+                                P05 TCD
+                              </p>
+                            </td>
+                            <td><p class="govuk-body small">Barry Allen</p></td>
+                          </tr>
+                      
+                          <tr>
+                            <td class="checkbox-col">
+                              <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                <div class="govuk-checkboxes__item">
+                                  <input name="search-results" type="checkbox" id="cb0" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                  <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p class="govuk-body small">OVO7801767</p></td>
+                            <td><p class="govuk-body small">Solar_PV</p></td>
+                            <td><p class="govuk-body small">July 2022</p></td>
+                            <td><p class="govuk-body small">Notified Incomplete</p></td>
+                            <td class="address-col">
+                              <p class="govuk-body small">
+                                123 <br>
+                                Mansion House <br>
+                                Flat 3 <br>
+                                P05 TCD
+                              </p>
+                            </td>
+                            <td><p class="govuk-body small">Jon Winchester</p></td>
+                          </tr>
+                          
+                          <tr>
+                            <td class="checkbox-col">
+                              <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                <div class="govuk-checkboxes__item">
+                                  <input name="search-results" type="checkbox" id="cb1" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                  <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p class="govuk-body small">BGT1014567</p></td>
+                            <td><p class="govuk-body small">Solar_PV</p></td>
+                            <td><p class="govuk-body small">August 2022</p></td>
+                            <td><p class="govuk-body small">Notified Incomplete</p></td>
+                            <td class="address-col">
+                              <p class="govuk-body small">
+                                109 <br>
+                                Gooding Hall<br>
+                                Flat 19 <br>
+                                B1 4KE
+                              </p>
+                            </td>
+                            <td><p class="govuk-body small">Cainan Able</p></td>
+                          </tr>
+                          
+                          <tr>
+                            <td class="checkbox-col">
+                              <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                <div class="govuk-checkboxes__item">
+                                  <input name="search-results" type="checkbox" id="cb0" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                  <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                </div>
+                              </div>
+                            </td>
+                            <td><p class="govuk-body small">BGT1234567</p></td>
+                            <td><p class="govuk-body small">Solar_PV</p></td>
+                            <td><p class="govuk-body small">July 2022</p></td>
+                            <td><p class="govuk-body small">Notified Incomplete</p></td>
+                            <td class="address-col">
+                              <p class="govuk-body small">
+                                123 <br>
+                                Mansion House <br>
+                                Flat 3 <br>
+                                P05 TCD
+                              </p>
+                            </td>
+                            <td><p class="govuk-body small">Bruce Lee</p></td>
+                          </tr>
+                          
+                        </tbody>
+                    </table>
+                    
+                    <!-- Show logged in user -->
+                    <table class="govuk-table smaller hide" id="showOnlyMine">
+                        <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                                <th scope="col" class="govuk-table__header checkbox-col">
+                                    <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">
+                                        <div class="govuk-checkboxes__item">
+                                            <input name="search-results" type="checkbox" id="selectAllCBs" data-test-id="" class="govuk-checkboxes__input" onchange="selectAllResultsCBs()">
+                                            <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                        </div>
+                                    </div>
+                                </th>
+                                <th scope="col" class="govuk-table__header">Measure reference number</th>
+                                <th scope="col" class="govuk-table__header">Measure type</th>
+                                <th scope="col" class="govuk-table__header">Notification period</th>
+                                <th scope="col" class="govuk-table__header">Status</th>
+                                <th scope="col" class="govuk-table__header address-col">Address</th>
+                                <th scope="col" class="govuk-table__header">Owned by</th>
+                            </tr>
+                        </thead>
+
+                        <tbody> 
+                            <tr>
+                              <td class="checkbox-col">
+                                <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                  <div class="govuk-checkboxes__item">
+                                    <input name="search-results" type="checkbox" id="cb1" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                    <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                  </div>
+                                </div>
+                              </td>
+                              <td><p class="govuk-body small">OVO1234500</p></td>
+                              <td><p class="govuk-body small">Solar_PV</p></td>
+                              <td><p class="govuk-body small">August 2022</p></td>
+                              <td><p class="govuk-body small">Notified Incomplete</p></td>
+                              <td class="address-col">
+                                <p class="govuk-body small">
+                                  198 <br>
+                                  Blake House <br>
+                                  Flat 19 <br>
+                                  B1 4KE
+                                </p>
+                              </td>
+                              <td><p class="govuk-body small">Cainan Able</p></td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox-col">
+                                  <div class="govuk-checkboxes smaller" data-module="govuk-checkboxes">                                
+                                    <div class="govuk-checkboxes__item">
+                                      <input name="search-results" type="checkbox" id="cb1" data-test-id="" class="govuk-checkboxes__input results-checkboxes">
+                                      <label for="" class="govuk-label govuk-checkboxes__label"></label>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td><p class="govuk-body small">BGT1014567</p></td>
+                                <td><p class="govuk-body small">Solar_PV</p></td>
+                                <td><p class="govuk-body small">August 2022</p></td>
+                                <td><p class="govuk-body small">Notified Incomplete</p></td>
+                                <td class="address-col">
+                                  <p class="govuk-body small">
+                                    109 <br>
+                                    Gooding Hall<br>
+                                    Flat 19 <br>
+                                    B1 4KE
+                                  </p>
+                                </td>
+                                <td><p class="govuk-body small">Cainan Able</p></td>
+                              </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+                <!-- Navigation -->
+                <nav class="govuk-pagination" role="navigation" aria-label="Pagination">
+                    <div class="govuk-pagination__prev">
+                      <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+                        <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                          <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                        </svg>
+                        <span class="govuk-pagination__link-title">
+                          Previous<span class="govuk-visually-hidden"> page</span>
+                        </span>
+                      </a>
+                    </div>
+                    <ul class="govuk-pagination__list">
+                      <li class="govuk-pagination__item">
+                        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+                          1
+                        </a>
+                      </li>
+                      <li class="govuk-pagination__item govuk-pagination__item--ellipses">
+                        &ctdot;
+                      </li>
+                      <li class="govuk-pagination__item">
+                        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 6">
+                          6
+                        </a>
+                      </li>
+                      <li class="govuk-pagination__item govuk-pagination__item--current">
+                        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 7" aria-current="page">
+                          7
+                        </a>
+                      </li>
+                      <li class="govuk-pagination__item">
+                        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 8">
+                          8
+                        </a>
+                      </li>
+                      <li class="govuk-pagination__item govuk-pagination__item--ellipses">
+                        &ctdot;
+                      </li>
+                      <li class="govuk-pagination__item">
+                        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 42">
+                          42
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="govuk-pagination__next">
+                      <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+                        <span class="govuk-pagination__link-title">
+                          Next<span class="govuk-visually-hidden"> page</span>
+                        </span>
+                        <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                          <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </nav>
+                <!-- <nav class="govuk-pagination" role="navigation" aria-label="results">
+                    <div class="govuk-pagination__prev">
+                        <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+                            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                                <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                            </svg>
+                            <span class="govuk-pagination__link-title">Previous</span>
+                        </a>
+                    </div>
+
+                    <ul class="govuk-pagination__list">
+                        <li class="govuk-pagination__item govuk-pagination__item--current">
+                            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+                                1
+                            </a>
+                        </li>
+                        <li class="govuk-pagination__item">
+                            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+                                2
+                            </a>
+                        </li>
+                        <li class="govuk-pagination__item">
+                            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                                3
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="govuk-pagination__next">
+                        <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </nav> -->
+                
+            </div>
+        </div>
+                
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+           
+        <p class="govuk-body"><a href="/internal/v02-1/">Return to homepage</a></p>
+
+        <script>
+            // Ownership toggles 'Owned by' column
+            function changeOwnership() {
+                console.log('Changing the ownership ===================<>');
+                if (document.getElementById('sliding-switch').checked) {
+                    document.getElementById('showAllOwners').classList.add('hide');
+                    document.getElementById('showOnlyMine').classList.remove('hide');
+                } else {
+                    document.getElementById('showAllOwners').classList.remove('hide');
+                    document.getElementById('showOnlyMine').classList.add('hide');
+                }
+            }
+
+        </script>
+    </div>
+</div>
+{% endblock %}

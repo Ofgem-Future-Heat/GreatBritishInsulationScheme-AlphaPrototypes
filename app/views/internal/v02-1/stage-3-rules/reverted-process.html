@@ -1,0 +1,43 @@
+{% extends "layouts/internal-main2-0.html" %}
+
+{% block pageTitle %}
+    Searching the measure register
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Revert stage 3 measure validation</h1>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+                <!-- <p class="govuk-body">Blurb reharding triggering reverting stage 3 validation process.</p> -->
+
+                <div class="govuk-inset-text">
+                    There are 1,000 measures ready to be reverted in the stage 3 validation process.
+                </div>
+
+                <p class="govuk-body">Reverting stage 3 validation checks cannot be undone.</p>
+
+                <button type="submit" class="govuk-button" data-module="govuk-button" onclick="gotoURL()">
+                    Revert validation
+                </button>
+
+                <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+           
+                <p class="govuk-body"><a href="/internal/v02-1/">Return to homepage</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function  gotoURL() {
+            window.location.pathname = "internal/v02-1/stage-3-rules/revert-confirmation";
+        }
+    </script>
+</div>
+{% endblock %}
