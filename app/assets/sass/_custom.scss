@@ -1,6 +1,6 @@
 
 * {
-    font-family: "proxima-nova", 'Montserrat', arial, sans-serif !important;
+    font-family: Arial, sans-serif !important;
 }
 
 .contents_list_item {
@@ -123,11 +123,11 @@ ul {
 
     tbody {
         display: block;
-        height: 400px;
+        max-height: 400px;
         overflow: auto;
-        &.trustmark {
-            height: 100px;
-        }
+        // &.trustmark {
+        //     height: 100px;
+        // }
     }
     thead, tbody tr {
         display: table;
@@ -155,14 +155,12 @@ input[type="file"] {
     font-size: 1.1875rem;
     line-height: 1.3157894737;
     color: #0b0c0c;
-    // font-family: "GDS Transport", arial, sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 .custom-file-upload {
     font-size: 1.1875rem;
     line-height: 1.3157894737;
     color: #0b0c0c;
-    // font-family: "GDS Transport", arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     border: 1px solid #ccc;
     display: inline-block;
@@ -246,7 +244,6 @@ input[type="file"] {
     border-left: 5px solid #00703c;
 }
 .govuk-success-message {
-    // font-family: "GDS Transport", arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 700;
