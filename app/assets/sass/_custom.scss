@@ -314,8 +314,22 @@ input[type="file"] {
 
 .hidden { display: none;}
 
+.govuk-table__header,
 .govuk-table__cell {
-    word-break: break-all;
+    &.date { width: 20% !important; }
+    &.time { width: 15% !important; }
+    &.filename { width: 45% !important; }
+    &.action { 
+        text-align: left !important;
+        width: 20% !important;
+    }
+}
+
+.govuk-table__cell {
+    // &.filename { max-width: 80px; }
+    &.action {
+        // word-break: break-word;
+    }
 }
 
 .govuk-body.small {
@@ -430,3 +444,5 @@ option {
 .minwidth100 {
     min-width: 100px;
 }
+
+.align-left { text-align: left !important; }
