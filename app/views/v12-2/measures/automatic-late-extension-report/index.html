@@ -1,0 +1,183 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+Automatic Late Extension reports
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Automatic Late Extension reports</h1>
+
+        <p class="govuk-body">The reports detail where your organisation has submitted measures after the required Notification Period.</p>
+
+        <!-- selectAsupplier -->
+        <!-- <p  id="selectAsupplier">Select a supplier name to show their automatic late extension reports and the report details.</p> -->
+
+        <!-- BGT -->
+        <table class="govuk-table" id="BGT">
+            <!-- <caption class="govuk-table__caption govuk-table__caption--l">British Gas Trading</caption> -->
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <!-- <th scope="col" class="govuk-table__header">Supplier name</th> -->
+                    <th scope="col" class="govuk-table__header">Date of completed installation (DOCI)</th>
+                    <th scope="col" class="govuk-table__header">Notification Period</th>
+                    <th scope="col" class="govuk-table__header">Late period start</th>
+                    <th scope="col" class="govuk-table__header">Late period end</th>
+                    <th scope="col" class="govuk-table__header">Total measure count</th>
+                    <th scope="col" class="govuk-table__header">Total 5% quota for period</th>
+                    <th scope="col" class="govuk-table__header">Remaining quota</th>
+                </tr>
+            </thead>
+
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <!-- <th scope="row" class="govuk-table__header">BGT</td> -->
+                    <td class="govuk-table__cell">Sep-23</td>
+                    <td class="govuk-table__cell">Oct-23</td>
+                    <td class="govuk-table__cell">Nov-23</td>
+                    <td class="govuk-table__cell">Jan-24</td>
+                    <td class="govuk-table__cell">3</td>
+                    <td class="govuk-table__cell">0</td>
+                    <td class="govuk-table__cell">0</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- <th scope="row" class="govuk-table__header">BGT</td> -->
+                    <td class="govuk-table__cell">Aug-23</td>
+                    <td class="govuk-table__cell">Sep-23</td>
+                    <td class="govuk-table__cell">Oct-23</td>
+                    <td class="govuk-table__cell">Dec-23</td>
+                    <td class="govuk-table__cell">68</td>
+                    <td class="govuk-table__cell">3</td>
+                    <td class="govuk-table__cell">3</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- <th scope="row" class="govuk-table__header">BGT</td> -->
+                    <td class="govuk-table__cell">Jul-23</td>
+                    <td class="govuk-table__cell">Aug-23</td>
+                    <td class="govuk-table__cell">Sep-23</td>
+                    <td class="govuk-table__cell">Nov-23</td>
+                    <td class="govuk-table__cell">10</td>
+                    <td class="govuk-table__cell">0</td>
+                    <td class="govuk-table__cell">0</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- <th scope="row" class="govuk-table__header">BGT</td> -->
+                    <td class="govuk-table__cell">Jun-23</td>
+                    <td class="govuk-table__cell">Jul-23</td>
+                    <td class="govuk-table__cell">Aug-23</td>
+                    <td class="govuk-table__cell">Oct-23</td>
+                    <td class="govuk-table__cell">3</td>
+                    <td class="govuk-table__cell">0</td>
+                    <td class="govuk-table__cell">0</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- <th scope="row" class="govuk-table__header">BGT</td> -->
+                    <td class="govuk-table__cell">May-23</td>
+                    <td class="govuk-table__cell">Jun-23</td>
+                    <td class="govuk-table__cell">Jul-23</td>
+                    <td class="govuk-table__cell">Sep-23</td>
+                    <td class="govuk-table__cell">5</td>
+                    <td class="govuk-table__cell">0</td>
+                    <td class="govuk-table__cell">0</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- <th scope="row" class="govuk-table__header">BGT</td> -->
+                    <td class="govuk-table__cell">Apr-23</td>
+                    <td class="govuk-table__cell">May-23</td>
+                    <td class="govuk-table__cell">Jun-23</td>
+                    <td class="govuk-table__cell">Aug-23</td>
+                    <td class="govuk-table__cell">12</td>
+                    <td class="govuk-table__cell">0</td>
+                    <td class="govuk-table__cell">0</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- <th scope="row" class="govuk-table__header">BGT</td> -->
+                    <td class="govuk-table__cell">Mar-23</td>
+                    <td class="govuk-table__cell">Apr-23</td>
+                    <td class="govuk-table__cell">May-23</td>
+                    <td class="govuk-table__cell">Jul-23</td>
+                    <td class="govuk-table__cell">62</td>
+                    <td class="govuk-table__cell">3</td>
+                    <td class="govuk-table__cell">-13</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- <th scope="row" class="govuk-table__header">BGT</td> -->
+                    <td class="govuk-table__cell">Feb-23</td>
+                    <td class="govuk-table__cell">Mar-23</td>
+                    <td class="govuk-table__cell">Apr-23</td>
+                    <td class="govuk-table__cell">Jun-23</td>
+                    <td class="govuk-table__cell">225</td>
+                    <td class="govuk-table__cell">11</td>
+                    <td class="govuk-table__cell">9</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- <th scope="row" class="govuk-table__header">BGT</td> -->
+                    <td class="govuk-table__cell">Jan-23</td>
+                    <td class="govuk-table__cell">Feb-23</td>
+                    <td class="govuk-table__cell">Mar-23</td>
+                    <td class="govuk-table__cell">May-23</td>
+                    <td class="govuk-table__cell">2230</td>
+                    <td class="govuk-table__cell">111</td>
+                    <td class="govuk-table__cell">105</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- <th scope="row" class="govuk-table__header">BGT</td> -->
+                    <td class="govuk-table__cell">Dec-22</td>
+                    <td class="govuk-table__cell">Jan-23</td>
+                    <td class="govuk-table__cell">Feb-23</td>
+                    <td class="govuk-table__cell">Apr-23</td>
+                    <td class="govuk-table__cell">3053</td>
+                    <td class="govuk-table__cell">152</td>
+                    <td class="govuk-table__cell">145</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- <th scope="row" class="govuk-table__header">BGT</td> -->
+                    <td class="govuk-table__cell">Nov-22</td>
+                    <td class="govuk-table__cell">Dec-22</td>
+                    <td class="govuk-table__cell">Jan-23</td>
+                    <td class="govuk-table__cell">Mar-23</td>
+                    <td class="govuk-table__cell">2883</td>
+                    <td class="govuk-table__cell">144</td>
+                    <td class="govuk-table__cell">102</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- <th scope="row" class="govuk-table__header">BGT</td> -->
+                    <td class="govuk-table__cell">Oct-22</td>
+                    <td class="govuk-table__cell">Nov-22</td>
+                    <td class="govuk-table__cell">Dec-22</td>
+                    <td class="govuk-table__cell">Feb-23</td>
+                    <td class="govuk-table__cell">1808</td>
+                    <td class="govuk-table__cell">90</td>
+                    <td class="govuk-table__cell">55</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- <th scope="row" class="govuk-table__header">BGT</td> -->
+                    <td class="govuk-table__cell">Sep-22</td>
+                    <td class="govuk-table__cell">Oct-22</td>
+                    <td class="govuk-table__cell">Nov-22</td>
+                    <td class="govuk-table__cell">Jan-23</td>
+                    <td class="govuk-table__cell">959</td>
+                    <td class="govuk-table__cell">47</td>
+                    <td class="govuk-table__cell">22</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <!-- <th scope="row" class="govuk-table__header">BGT</td> -->
+                    <td class="govuk-table__cell">Aug-22</td>
+                    <td class="govuk-table__cell">Sep-22</td>
+                    <td class="govuk-table__cell">Oct-22</td>
+                    <td class="govuk-table__cell">Dec-22</td>
+                    <td class="govuk-table__cell">215</td>
+                    <td class="govuk-table__cell">10</td>
+                    <td class="govuk-table__cell">0</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="govuk-body"><a href="/v11/home">Return to homepage</a></p>
+    </div>
+</div>
+{% endblock %}

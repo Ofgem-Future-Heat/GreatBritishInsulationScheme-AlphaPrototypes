@@ -1,0 +1,52 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+File upload successful
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        File uploaded
+      </h1>
+    </div>
+    
+    <div class="govuk-inset-text">The stage 1 checks found no errors with this file.</div>
+
+    <p class="govuk-body">The measures have been added to the Great British Insulation Scheme register.</p>
+        
+    <h2 class="govuk-heading-l">What happens next?</h2>
+    <p class="govuk-body">The file will now go through several additional checks. We'll take a closer look at the file to check if there are any errors with the details in the file.</p>
+    
+    <h3 class="govuk-heading-m">If no errors are found during additional checks</h3>
+    <p class="govuk-body">If the measures in the file pass the additional checks and no errors are found, these measures will be updated on the Great British Insulation Scheme register.</p>
+    
+    <h3 class="govuk-heading-m">If errors are found during additional checks</h3>
+    <p class="govuk-body">If the measures are found to have errors during the additional checks, these will not be updated on the register.</p>
+    <p class="govuk-body">We'll let you know about this by email. We'll send this to the email address you used to create an account with us.</p>
+    <p class="govuk-body">You'll be able to access any error reports relating to the file on the homepage.</p>
+
+
+    <h2 class="govuk-heading-l">Have more than one file to upload?</h2>
+    <p class="govuk-body">You can upload any additional measure files you have here.</p>
+
+    <p class="govuk-body"><a role="button" draggable="false" class="govuk-button govuk-button margin-bottom0" data-module="govuk-button" href="upload-measure.html">Upload another measure file</a></p>
+    
+    <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+       
+    <p class="govuk-body"><a href="/v11/home">Return to homepage</a></p>
+  </div>
+  
+  <div class="govuk-grid-column-one-third">
+    <p class="govuk-body">
+      <a href="success-file-upload-core-check-errors">View file uploaded with some stage 1 check errors</a>
+    </p>
+  </div>
+
+</div>
+
+{% endblock %}
