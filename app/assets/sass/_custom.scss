@@ -446,3 +446,41 @@ option {
 }
 
 .align-left { text-align: left !important; }
+
+.step-header {
+    padding-top: 20px;
+}
+.step-header, .step-description {
+    display: flex;
+    margin-bottom: 20px;
+
+    .step-number, .step-description-spacer {
+        width: 40px;
+    }
+    .step-number {
+        .number {
+            border: solid 1px #b1b4b6;
+            border-radius: 15px;
+            display: block;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 30px;
+        }
+    }
+    .step-title {
+        border-top: solid 1px #b1b4b6;
+        padding-top: 5px;
+    }
+    .step-title, .step-description {
+        font-size: 16px;
+        line-height: 1.3;
+        width: calc(100% - 40px);
+    }
+    .step-number, .step-title {
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+}
