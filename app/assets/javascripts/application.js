@@ -5356,6 +5356,67 @@ function checkMRN() {
     performSearch.href = "/v08/measures/search-measures/search-results";
   }
 }
+function checkMRN_12_2() {
+  const performSearch = document.getElementById('performSearch');
+  const errorMRNSummary = document.getElementById('error-MRN-summary');
+  const errorWithMRN = document.getElementById('errorWithMRN');
+  const errorWithNothingSelected = document.getElementById('errorWithNothingSelected');
+  const mrnErrorSection = document.getElementById('mrnErrorSection');
+  const statusErrorSection = document.getElementById('statusErrorSection');
+  const mrnFieldError = document.getElementById('mrn-field-error');
+  const mrnFileFieldError = document.getElementById('mrn-file-field-error');
+  const measureReferenceNumberInputField = document.getElementById('measure-reference-number');
+  const emptyStatusFieldError = document.getElementById('empty-status-field-error');
+  // const statusSelect = document.getElementById('measure-status-none');
+  const statusSelect = document.getElementById('cboxesMeasureStatus');
+  // const options = document.getElementById('measure-status-none').options;
+
+  const optionsContainer = document.getElementById('cboxesMeasureStatus');
+  const options = optionsContainer.getElementsByClassName('govuk-checkboxes__item');
+  let count = 0;
+  let selectedOptions = null;
+  console.log('options.length', options.length);
+  
+  for (let i = 0; i < options.length; i++) {
+    let option = options[i].querySelectorAll('input[type="checkbox"]:checked');
+    if (option.length) {
+      console.log('checked option', option);
+      count++;
+      console.log('count', count);
+    }
+    count > 0 ? selectedOptions = true : selectedOptions = false;
+  }
+
+  console.log('selectedOptions', selectedOptions);
+
+  if ((document.getElementById("measure-reference-number").value.length > 1) && (document.getElementById("file-upload").value != "")) {
+    window.scrollTo(0, 0);
+    errorMRNSummary.classList.remove('hide');
+    errorWithMRN.classList.remove('hide');
+    mrnFieldError.classList.remove('hide');
+    mrnFileFieldError.classList.remove('hide');
+    mrnErrorSection.classList.add('govuk-form-group--error');
+    measureReferenceNumberInputField.classList.add('govuk-input--error');
+
+  } else if ((document.getElementById("measure-reference-number").value.length === 0) && (document.getElementById("file-upload").value === "") && (!selectedOptions)) {
+    window.scrollTo(0, 0);
+    document.getElementById("chck1").checked = true;
+    document.getElementById("chck2").checked = true;
+    errorMRNSummary.classList.remove('hide');
+    errorWithNothingSelected.classList.remove('hide');
+    mrnErrorSection.classList.add('govuk-form-group--error');
+    errorWithNothingSelected.classList.remove('hide');
+    statusErrorSection.classList.add('govuk-form-group--error');
+    measureReferenceNumberInputField.classList.add('govuk-input--error');
+    mrnFieldError.classList.remove('hide');
+    mrnFileFieldError.classList.remove('hide');
+    emptyStatusFieldError.classList.remove('hide');
+    statusSelect.classList.add('select-error');
+
+  } else {
+    performSearch.href = "/v12-2/measures/search-measures/search-results";
+  }
+}
 
 // Cookies banner simulation
 function acceptCookiesBanner() {
@@ -5368,7 +5429,7 @@ function rejectCookiesBanner() {
   cookiesBanner.style.display = 'none';
   localStorage.setItem('acceptCookie', false);
 }
-if ((pageUrlPath === '/v08/mandatory-feature-documentation/cookies-policy') || (pageUrlPath === '/v10/mandatory-feature-documentation/cookies-policy') || (pageUrlPath === '/v11/mandatory-feature-documentation/cookies-policy')) {
+if ((pageUrlPath === '/v08/mandatory-feature-documentation/cookies-policy') || (pageUrlPath === '/v10/mandatory-feature-documentation/cookies-policy') || (pageUrlPath === '/v11/mandatory-feature-documentation/cookies-policy') || (pageUrlPath === '/v12-2/mandatory-feature-documentation/cookies-policy')) {
   if (localStorage.getItem('aaceptCookie') === true) {
     document.getElementById('analyticsCookieYes').checked = true;
   } else if (localStorage.getItem('aaceptCookie') === false) {
@@ -5748,6 +5809,42 @@ function checkME11() {
     mrnFileFieldError.classList.remove('hide');
   } else {
     performSearch.href = "/v11/measures/search-measure-errors/search-results";
+  }
+}
+
+function checkME12_2() {
+  console.log('Search measure processing errors');
+  
+  const performSearch = document.getElementById('performSearch');
+  const errorMRNSummary = document.getElementById('error-MRN-summary');
+  const errorWithMRN = document.getElementById('errorWithMRN');
+  const mrnFieldError = document.getElementById('mrn-field-error');
+  const mrnFileFieldError = document.getElementById('mrn-file-field-error');
+  const measureReferenceNumberInputField = document.getElementById('measure-reference-number');
+
+  if((document.getElementById("measure-reference-number").value.length > 1) && (document.getElementById("file-upload").value != "")) {
+    window.scrollTo(0, 0);
+    errorMRNSummary.classList.remove('hide');
+    errorWithMRN.classList.remove('hide');
+    mrnFieldError.classList.remove('hide');
+    mrnFileFieldError.classList.remove('hide');
+    measureReferenceNumberInputField.classList.add('govuk-input--error');
+  } else if ((document.getElementById("measure-reference-number").value.length === 0) && (document.getElementById("file-upload").value === "") 
+            // && (!selectedOptions)
+          ) {
+    window.scrollTo(0, 0);
+    document.getElementById("chck1").checked = true;
+    document.getElementById("chck2").checked = true;
+    document.getElementById("chck3").checked = true;
+    document.getElementById("chck4").checked = true;
+    errorMRNSummary.classList.remove('hide');
+    errorWithNothingSelected.classList.remove('hide');
+
+    measureReferenceNumberInputField.classList.add('govuk-input--error');
+    mrnFieldError.classList.remove('hide');
+    mrnFileFieldError.classList.remove('hide');
+  } else {
+    performSearch.href = "/v12-2/measures/search-measure-errors/search-results";
   }
 }
 
