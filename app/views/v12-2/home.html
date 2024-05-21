@@ -24,15 +24,19 @@
                 <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">Latest error reports</h2>
             </div>
             <div class="govuk-notification-banner__content">
-                <h3 class="govuk-notification-banner__heading">The following files you uploaded include measures containing errors</h3>
+                <!-- <h3 class="govuk-notification-banner__heading">The following files you uploaded include measures containing errors</h3> -->
 
-                <div class="govuk-warning-text">
+                <!-- <div class="govuk-warning-text">
                     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
                     <strong class="govuk-warning-text__text">
                         <span class="govuk-visually-hidden">Warning</span>
-                        <!-- If there are more than 15,000 errors in a single report, then the list of errors will be truncated to 15,000. You will need to first fix the existing errors and resubmit the measures again. -->
                         Error reports can contain up to 15,000 errors. Where reports have this many errors, it shows there is possibly an issue with the data uploaded originally. You should review the measure notification file uploaded originally and ensure the data is accurate. If the problem persists, email Ofgem at <a href="mailto:GBIS.enquiry@ofgem.gov.uk" class="govuk-link">GBIS.enquiry@ofgem.gov.uk</a>.
                     </strong>
+                </div> -->
+
+                <!-- Inset text -->
+                <div class="govuk-inset-text">
+                    Error reports can contain up to 15,000 errors. Where reports have this many errors, it shows there is possibly an issue with the data uploaded originally. You should review the measure notification file uploaded originally and ensure the data is accurate. If the problem persists, email Ofgem at <a href="mailto:GBIS.enquiry@ofgem.gov.uk" class="govuk-link">GBIS.enquiry@ofgem.gov.uk</a>.
                 </div>
                 
                 <table class="govuk-table">
@@ -47,27 +51,33 @@
                     </thead>
                     <tbody class="govuk-table__body">
                         <tr class="govuk-table__row">
-                            <th class="govuk-table__cell">11/12/2023</th>
-                            <th class="govuk-table__cell">17:18pm</th>
+                            <td class="govuk-table__cell">11/12/2023</td>
+                            <td class="govuk-table__cell">17:18pm</td>
                             <td class="govuk-table__cell">TrustMarkErrorReport_supplierName_dateTime.csv</td>
                             <td class="govuk-table__cell">TrustMark</td>
                             <td class="govuk-table__cell"><a href="#">Download error report</a></td>
                         </tr>
-                            <th class="govuk-table__cell">12/03/2023</th>
-                            <th class="govuk-table__cell">2:35pm</th>
+                            <td class="govuk-table__cell">12/03/2023</td>
+                            <td class="govuk-table__cell">2:35pm</td>
                             <td class="govuk-table__cell">measure-12345678.csv</td>
                             <td class="govuk-table__cell">Stage 2</td>
                             <td class="govuk-table__cell"><a href="#">Download error report</a></td>
                         </tr>
                         <tr class="govuk-table__row">
-                            <th scope="row" class="govuk-table__cell">23/02/2023</th>
-                            <th scope="row" class="govuk-table__cell">09:29</th>
+                            <td scope="row" class="govuk-table__cell">23/02/2023</td>
+                            <td scope="row" class="govuk-table__cell">09:29</td>
                             <td class="govuk-table__cell">measure-09876543.csv</td>
                             <td class="govuk-table__cell">Stage 1</td>
                             <td class="govuk-table__cell"><a href="#">Download error report</a></td>
                         </tr>
+                        <!-- <tr class="sr-only-text">
+                            <td>Latest error reports end</td>
+                        </tr> -->
                     </tbody>
                 </table>
+
+                <!-- <div class="sr-only-text">Latest error reports end 1</div> -->
+                <div class="sr-only">Latest error reports end</div>
 
                 <p class="govuk-body"><a class="govuk-link" href="errors">View all error reports</a></p>
 
