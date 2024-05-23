@@ -519,3 +519,29 @@ option {
     height:1px;
     overflow:hidden;
 }
+
+// Dashboard
+.dashboard-module {
+    border: 4px solid #1d70b8;
+    margin: 0 0 40px;
+    padding: 10px;
+
+    .module-heading { color: #1d70b8; }
+    .module-description { 
+        height: 50px;
+        line-height: 1.2;
+    }
+
+    .stat {
+        .single-stat-headline.impact-number {
+            strong {
+                font-size: 48px;
+                line-height: 1.0416666667;
+                
+                abbr[title] {
+                    cursor: help;
+                }
+            }
+        }
+    }
+}

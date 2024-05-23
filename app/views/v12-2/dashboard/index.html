@@ -1,0 +1,187 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+    Measures
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">
+            GBIS Dashboard
+        </h1>
+
+        <p class="govuk-body">View your organisation's progress on GBIS.</p>
+        
+        <!-- Organisation -->
+        <h2 class="govuk-heading-l">Organisation</h2>
+        
+        <div class="govuk-grid-row">
+            <!-- Measures uploaded -->
+            <div class="govuk-grid-column-one-half">
+                <div class="dashboard-module">
+                    <h3 class="govuk-heading-m"><span class="module-heading">Measures uploaded</span></h3>
+                    <p class="govuk-body module-description">Total number of measures uploaded by your organisation to date.</p>
+                    <div class="stat">
+                        <p class="single-stat-headline impact-number">
+                            <strong>
+                                <abbr aria-label="2,251,523,009" title="2,251,523,009">
+                                    2.25bn
+                                </abbr>
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Measures complete -->
+            <div class="govuk-grid-column-one-half">
+                <div class="dashboard-module">
+                    <h3 class="govuk-heading-m"><span class="module-heading">Measures completed</span></h3>
+                    <p class="govuk-body module-description">Total number of completed measures by your organisation to date.</p>
+                    <div class="stat">
+                        <p class="single-stat-headline impact-number">
+                            <strong>
+                                <abbr aria-label="251,523,009" title="251,523,009">
+                                    252.2m
+                                </abbr>
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Measures with errors -->
+            <div class="govuk-grid-column-one-half">
+                <div class="dashboard-module">
+                    <h3 class="govuk-heading-m"><span class="module-heading">Measures with errors</span></h3>
+                    <p class="govuk-body module-description">Total number of measures with errors by your organisation to date.</p>
+                    <div class="stat">
+                        <p class="single-stat-headline impact-number">
+                            <strong>
+                                <abbr aria-label="432,040" title="432,040">
+                                    432,040
+                                </abbr>
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Number of fixed errors -->
+            <div class="govuk-grid-column-one-half">
+                <div class="dashboard-module">
+                    <h3 class="govuk-heading-m"><span class="module-heading">Number of fixed errors</span></h3>
+                    <p class="govuk-body module-description">Total number of measures with errors fixed by your organisation to date.</p>
+                    <div class="stat">
+                        <p class="single-stat-headline impact-number">
+                            <strong>
+                                <abbr aria-label="292,407" title="292,407">
+                                    292,407
+                                </abbr>
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        
+        <!-- Individual -->
+        <h2 class="govuk-heading-l">Individual</h2>
+        
+        <div class="govuk-grid-row">
+            <!-- Measures uploaded -->
+            <div class="govuk-grid-column-one-half">
+                <div class="dashboard-module">
+                    <h3 class="govuk-heading-m"><span class="module-heading">Measures uploaded</span></h3>
+                    <p class="govuk-body module-description">Total number of measures uploaded by you to date.</p>
+                    <div class="stat">
+                        <p class="single-stat-headline impact-number">
+                            <strong>
+                                <abbr aria-label="523,009" title="523,009">
+                                    523,009
+                                </abbr>
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Measures complete -->
+            <div class="govuk-grid-column-one-half">
+                <div class="dashboard-module">
+                    <h3 class="govuk-heading-m"><span class="module-heading">Measures completed</span></h3>
+                    <p class="govuk-body module-description">Total number of completed measures by you to date.</p>
+                    <div class="stat">
+                        <p class="single-stat-headline impact-number">
+                            <strong>
+                                <abbr aria-label="4,226,609" title="4,226,609">
+                                    4.2m
+                                </abbr>
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Measures with errors -->
+            <div class="govuk-grid-column-one-half">
+                <div class="dashboard-module">
+                    <h3 class="govuk-heading-m"><span class="module-heading">Measures with errors</span></h3>
+                    <p class="govuk-body module-description">Total number of measures with errors to date.</p>
+                    <div class="stat">
+                        <p class="single-stat-headline impact-number">
+                            <strong>
+                                <abbr aria-label="41,575" title="41,575">
+                                    41,575
+                                </abbr>
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Number of fixed errors -->
+            <div class="govuk-grid-column-one-half">
+                <div class="dashboard-module">
+                    <h3 class="govuk-heading-m"><span class="module-heading">Number of fixed errors</span></h3>
+                    <p class="govuk-body module-description">Total number of measures with errors fixed by you to date.</p>
+                    <div class="stat">
+                        <p class="single-stat-headline impact-number">
+                            <strong>
+                                <abbr aria-label="120,983" title="120,983">
+                                    120,983
+                                </abbr>
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Last logged in date -->
+            <div class="govuk-grid-column-one-half">
+                <div class="dashboard-module">
+                    <h3 class="govuk-heading-m"><span class="module-heading">Last logged in date</span></h3>
+                    <p class="govuk-body module-description">You last logged in to the GBIS external portal on:</p>
+                    <div class="stat">
+                        <p class="single-stat-headline impact-number">
+                            <strong>
+                                18/04/2024
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}
