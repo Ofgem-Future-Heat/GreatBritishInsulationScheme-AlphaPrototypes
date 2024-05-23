@@ -157,20 +157,33 @@ input[type="file"] {
     color: #0b0c0c;
     -webkit-font-smoothing: antialiased;
 }
+
+.upload-container {
+    border: 1px solid #b1b4b6;
+    padding: 10px;
+}
+
 .custom-file-upload {
     font-size: 1.1875rem;
     line-height: 1.3157894737;
     color: #0b0c0c;
     -webkit-font-smoothing: antialiased;
-    border: 1px solid #ccc;
+    border: 1px solid #b1b4b6;
     display: inline-block;
-    padding: 6px 12px;
+    padding: 6px;
     cursor: pointer;
-    margin: 0 0 20px;
+    margin: 0;
 
     svg {
         position: relative;
         top: 5px;
+    }
+}
+
+input[type=file]#file-upload {
+    &:focus {
+        background-color: #ffdd00;
+        box-shadow: 0 -2px #ffdd00, 0 0x #ffdd00;
     }
 }
 
