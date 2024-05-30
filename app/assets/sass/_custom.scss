@@ -65,10 +65,17 @@ ul {
     color: white;
     border: 1px solid #b1b4b6;
     border-bottom-width: 4px;
+
+    .card-description {
+        height: 120px;
+        &.short {
+            height: 72px;
+        }
+    }
 }
 @media (min-width: 40.0625em) {
     .card {
-        height: 180px;
+        // height: 230px;
         color: white;
         border: 1px solid #b1b4b6;
         border-bottom-width: 4px;
