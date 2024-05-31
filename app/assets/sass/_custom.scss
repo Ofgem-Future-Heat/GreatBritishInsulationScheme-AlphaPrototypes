@@ -72,6 +72,11 @@ ul {
             height: 72px;
         }
     }
+    
+    .card-link {
+        display: block;
+        height: 35px !important;
+    }
 }
 @media (min-width: 40.0625em) {
     .card {
