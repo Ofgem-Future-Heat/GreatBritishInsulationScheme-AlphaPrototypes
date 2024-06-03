@@ -60,6 +60,12 @@ ul {
     margin-bottom: 15px !important;
 }
 
+.govuk-link:link, 
+.das-table__sort:link, 
+.das-button--inline-link:link { 
+        color: #003078 !important; 
+}
+
 .card {
     height: auto;
     color: white;
