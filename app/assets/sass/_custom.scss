@@ -544,7 +544,8 @@ option {
     margin: 0 0 40px;
     padding: 10px;
 
-    .module-heading { color: #1d70b8; }
+    .module-heading, .module-subheading { color: #1d70b8; }
+    .module-subheading { font-weight: bold; }
     .module-description { 
         height: 50px;
         line-height: 1.2;
@@ -560,6 +561,17 @@ option {
                     cursor: help;
                 }
             }
+        }
+    }
+}
+
+ul.responsive-list {
+    display: flex; 
+    flex-wrap: wrap;
+    li {
+        width: 50%;
+        &.logged-in-user {
+            font-weight: bold;
         }
     }
 }
