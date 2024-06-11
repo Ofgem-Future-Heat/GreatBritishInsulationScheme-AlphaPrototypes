@@ -1,0 +1,20 @@
+{#% extends "layouts/internal-main3.html" %#}
+{% extends "layouts/internal-main2-1.html" %}
+
+{% block pageTitle %}
+  Great British Insulation Scheme &mdash; Internal user management
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+        
+        <h1 class="govuk-heading-l">You do not have permission to use this service</h1>
+        
+        <p class="govuk-body">You cannot access the Great British Insulation Scheme.</p>
+        <p class="govuk-body">This is because you're not currently included in any of the four active directory groups with permission to use this resource.</p>
+        <p class="govuk-body">If you need access to this, you can request it by <a href="#" class="govuk-link">completing a ticket in Ivanti</a>.</p>
+    </div>
+  </div>
+{% endblock %}
