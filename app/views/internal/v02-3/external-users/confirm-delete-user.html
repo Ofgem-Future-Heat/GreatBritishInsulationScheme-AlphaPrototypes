@@ -1,0 +1,87 @@
+{% extends "layouts/internal-main2-3.html" %}
+
+{% block pageTitle %}
+    Confirm delete external user
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <!-- <h1 class="govuk-heading-l">Confirm that you would like to delete this user</h1> -->
+        <h1 class="govuk-heading-l">Do you want to deactivate this user?</h1>
+        
+        <p class="govuk-body">This user will no longer have access to the Great British Insulation Scheme portal if you deactivate their user profile.</p>
+        <!-- <h2 class="govuk-heading-m">Personal details</h2> -->
+        <dl class="govuk-summary-list">
+            
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Supplier name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>BGT</span>
+                </dd>
+            </div>
+            
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Full name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>Jean</span>&nbsp;
+                    <span>Gray</span>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Email address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>jean.gray@britishgas</span>
+                </dd>
+            </div>
+        </dl>
+
+        <!-- <h2 class="govuk-heading-m">Other details</h2> -->
+        <dl class="govuk-summary-list">
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    User type
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>AdditionalUserRole</span>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    User status
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <!-- <span>Active &mdash; This user will be set as inactive</span> -->
+                    <span>Active</span>
+                </dd>
+            </div>
+        </dl>
+
+        <div class="govuk-button-group">
+            <form action="success-external-user-deleted" method="post" novalidate>
+                <input type="hidden" name="answers-checked" value="true">
+                <button class="govuk-button" data-module="govuk-button">
+                    Deactivate user
+                </button>
+
+                <a href="./" class="govuk-link" data-module="govuk-button">
+                    Cancel
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

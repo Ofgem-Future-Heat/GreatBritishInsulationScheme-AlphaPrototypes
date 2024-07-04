@@ -1,0 +1,50 @@
+{% extends "layouts/internal-main2-3.html" %}
+
+{% block pageTitle %}
+    Searching the measure register
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+        
+        <h1 class="govuk-heading-xl">Bulk action confirmation</h1>
+        
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <div class="govuk-warning-text">
+                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                    <strong class="govuk-warning-text__text">
+                        <span class="govuk-visually-hidden">Warning</span>
+                        You have selected 1000 measures to apply an action. Please  provide your comment and click 'Confirm' to proceed or 'Cancel' to return to search results.
+                    </strong>
+                </div>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="more-detail">
+                        <strong>Provide the details related to this bulk action update</strong>
+                    </label>
+
+                    <div id="more-detail-hint" class="govuk-hint">
+                        You have 1000 characters to make your comment for this action.
+                    </div>
+
+                    <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="4"></textarea>
+                </div>
+
+                <div class="govuk-button-group">
+                    <a class="govuk-button margin-top-30" href="search-results">Confirm</a>
+                    <a class="govuk-link" href="#" onclick="history.go(-1)">Cancel</a>
+                </div>
+            </div>
+        </div>
+                
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+           
+        <p class="govuk-body"><a href="/internal/v02-1/">Return to homepage</a></p>
+    </div>
+</div>
+{% endblock %}

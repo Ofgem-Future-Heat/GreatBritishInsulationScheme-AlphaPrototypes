@@ -575,3 +575,27 @@ ul.responsive-list {
         }
     }
 }
+
+
+.medium-column {
+    min-width: 105px;
+}
+
+.smaller-column {
+    min-width: 40px;
+}
+.announcement-header {
+    // font-size: 22px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.govuk-notification-banner__title {
+    display: flex;
+    .announcement-date {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: auto;
+        margin-right: 0;
+    }
+}

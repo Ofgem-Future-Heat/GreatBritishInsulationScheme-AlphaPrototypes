@@ -1,0 +1,242 @@
+{% extends "layouts/v12-external-ofgem-main.html" %}
+
+{% block pageTitle %}
+    {{serviceName}} guidance
+{% endblock %}
+
+{% block content %}
+<div>
+    <style>
+        .govuk-width-container {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 3.75rem;
+            padding-right: 3.75rem;
+            max-width: calc(1280px + 7.5rem);
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        h3 {
+            font-size: 1.625rem;
+            margin-top: 3rem;
+            margin-bottom: 1.2rem;
+        }
+        h4 {
+            font-size: 1.125rem;
+            margin-top: 1rem;
+        }
+        /* h2, h3 {
+            margin-bottom: 3rem;
+        } */
+        p {
+            margin-bottom: 1.25rem;
+            color: rgba(29,43,57,var(--text-opacity));
+            font-size: 1.1rem !important;
+            line-height: 1.8rem !important;
+        }
+
+        .custom-font-style {
+            font-family: Arial,sans-serif !important;
+            color: rgba(29,43,57,var(--text-opacity)) !important;
+        }
+
+        .bold { font-weight: bolder; }
+
+        /* Button */
+        .govuk-button--start {
+            font-weight: 700;
+            font-size: 18px;
+            font-size: 1.125rem;
+            line-height: 1;
+            display: inline-flex;
+            min-height: auto;
+            justify-content: center;
+        }
+        .govuk-button:link, .govuk-button:visited, .govuk-button:active, .govuk-button:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+        @media (min-width: 40.0625em) {
+            .govuk-button--start {
+                font-size: 1.5rem !important;
+                line-height: 1;
+            }
+        }
+
+        ul.custom-ofgem-bullets {
+            list-style-type: disc;
+            margin-bottom: 1.25rem;
+            padding-left: 2.25rem;
+        }
+
+        a.c-button--cta {
+            display: inline-flex;
+            align-items: center;
+            padding: .5rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition-property: background-color,border-color,color,fill,stroke;
+            transition-duration: .2s;
+            color: #fff!important;
+        }
+
+        a.c-button--cta:visited {
+            color: #fff!important;
+        }
+        
+        a:link, .govuk-link:link {
+            font-weight: normal;
+            font-size: 1.1rem;
+        }
+
+        .border-color-theme {
+            border-top: 1px solid #e76d1c;
+        }
+        
+            
+        .hr {
+                height: 2px;
+                margin: 40px 0;
+                width: 100%;
+        }
+    </style>
+
+    <!-- The Great British Insulation Scheme portal -->
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <h2 class="" style="font-size: 32px;">The Great British Insulation Scheme portal</h2>
+            &nbsp;
+        </div>
+        
+        <div class="govuk-grid-column-two-thirds">
+
+            <p class="govuk-body custom-font-style">Energy suppliers are obligated to let Ofgem know about measures they've delivered to customers. To do this, they use the Great British Insulation Scheme portal to record these measures.</p>
+            <p class="govuk-body custom-font-style">All users need a GOV.UK One Login account and a Great British Insulation Scheme user profile to access and use the portal.</p>
+
+            <h3 class="custom-font-style">Accessing the portal</h3>
+            <p class="govuk-body custom-font-style">To do this you will need a:</p>
+            <ul class="custom-ofgem-bullets">
+                <li>GOV.UK One Login account</li>
+                <li>Great British Insulation Scheme user profile</li>
+            </ul>
+
+            <h3 class="custom-font-style">If you already have both</h3>
+            <p class="govuk-body custom-font-style">If you have a GOV.UK One Login account and a Great British Insulation Scheme user profile, you're ready to use the portal. You will be taken the GOV.UK One Login website, where you will login. Then you will be taken to the portal</p>
+
+            <a class="group c-button c-button--cta hidden" href="/v13-1/home">Use the Great British Insulation Scheme portal</a>
+
+            <h3 class="custom-font-style">Why you need a GOV.UK One Login account</h3>
+            <p class="govuk-body custom-font-style">We use your GOV.UK One Login account to verify you and create your Great British Insulation Scheme user profile.</p>
+            <p class="govuk-body custom-font-style">You should create your GOV.UK One Login using your work email address.</p>
+
+            <h3 class="custom-font-style">Creating a GOV.UK One Login account</h3>
+            <p class="govuk-body custom-font-style">You create this account on the GOV.UK One Login website. You will receive step by step instructions on how to do this.</p>
+
+            <a class="group c-button c-button--cta hidden" href="#">Create a GOV.UK One Login account</a>
+
+            <h3 class="custom-font-style">Great British Insulation Scheme user profile</h3>
+            <p class="govuk-body custom-font-style">Once you have a GOV.UK One Login account, you're ready to request a Great British Insulation Scheme user profile from Ofgem.</p>
+            <p class="govuk-body custom-font-style">Use the same email address as the one used to create your GOV.UK One Login. This allows us to verify your identity. This should be your work email address.</p>
+            
+            <h3 class="custom-font-style">Request for user profiles must come from authorised signatory</h3>
+            <p class="govuk-body custom-font-style">Only the authorised signatory for your organisation can request Great British Insulation Scheme user profiles on behalf of colleagues. You can make these requests by email at <a href="mailto:GBIS.enquiry@ofgem.gov.uk">GBIS.enquiry@ofgem.gov.uk</a></p>
+
+            <h3 class="custom-font-style">Include your 'authorised data provider statement of authorisation form'</h3>
+            <p class="govuk-body custom-font-style">In the email to Ofgem, you must attach your 'authorised data provider statement of authorisation form'. This is the document a supplier uses to let Ofgem know the details of the person that is responsible for requesting user profiles to use the portal</p>
+            <p class="govuk-body custom-font-style"><a href="https://www.ofgem.gov.uk/sites/default/files/2024-02/GBIS_authorised_data%20provider_statement_of_authorisation_form.docx">Download the authorised data provider form (42.82 KB)</a></p>
+            <p class="govuk-body custom-font-style">The people requesting user profiles must use the same email address as they have when creating a GOV.UK One Login account for verification reasons.</p>
+
+            <h3 class="custom-font-style">How long will this take to set up?</h3>
+            <p class="govuk-body custom-font-style">After sending your request, we will contact you by email about creating user profiles. If you already have a GOV.UK One Login account and you respond to our email reply immediately, we should be able to give you access to the portal promptly.</p>
+
+            <a class="group c-button c-button--cta hidden" href="/v13-1/home">Use the Great British Insulation Scheme portal</a>
+            
+            <h3 class="custom-font-style"></h3>
+            
+            <p class="govuk-body custom-font-style">Once you have the required Great British Insulation Scheme profile and GOV.UK One Login account, you can use the portal.</p>
+            <p class="govuk-body custom-font-style">The portal can be used to:</p>
+            
+            <ul class="custom-ofgem-bullets">
+                <li>upload measures</li>
+                <li>search for measures</li>
+                <li>view error reports</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="border-color-theme hr"></div>
+
+    <!-- Documents you need to use with the Great British Insulation Scheme -->
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <h2 class="" style="font-size: 32px;">Documents you need to use with the Great British Insulation Scheme</h2>
+            &nbsp;
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+            <p class="govuk-body custom-font-style">There are documents you need when using the Great British Insulation Scheme. They are the:</p>
+            <ul class="custom-ofgem-bullets">
+                <li>Measure notification template</li>
+                <li>Data dictionary</li>
+            </ul>
+            <p class="govuk-body custom-font-style bold">Measure notification template</p>
+            <p class="govuk-body custom-font-style">This is the document a supplier uses to add the information about installed measures. They then upload this document to the portal</p>
+            <p class="govuk-body custom-font-style"><a href="https://www.ofgem.gov.uk/publications/great-british-insulation-scheme-supplier-data-dictionary">Download the measure notification template</a></p>
+            <p class="govuk-body custom-font-style bold">Data dictionary</p>
+            <p class="govuk-body custom-font-style">This document includes information to help suppliers complete the measure notification template.</p>
+            <p class="govuk-body custom-font-style">It contains a:</p>
+            <ul class="custom-ofgem-bullets">
+                <li>description of every field on the template</li>
+                <li>acceptable data that may be entered in those fields</li>
+                <li>circumstances under which this data should be included</li>
+            </ul>
+            <p class="govuk-body custom-font-style">Suppliers should only use the most recent version of the dictionary and template unless instructed otherwise. The information in this document relates to all measures installed by the supplier from 30 March 2023.</p>
+            <p class="govuk-body custom-font-style"><a href="https://www.ofgem.gov.uk/publications/great-british-insulation-scheme-supplier-data-dictionary">Download the data dictionary</a></p>
+        </div>
+    </div>
+
+    <div class="border-color-theme hr"></div>
+
+    <!-- If you need help accessing or using the portal -->
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <h2 class="" style="font-size: 32px;">If you need help accessing or using the portal</h2>
+            &nbsp;
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+            <p class="govuk-body custom-font-style">You can contact us by email at <a href="mailto:GBIS.enquiry@ofgem.gov.uk">GBIS.enquiry@ofgem.gov.uk</a> if you need help or have questions about:</p>
+
+            <ul class="custom-ofgem-bullets">
+                <li>getting access to the portal</li>
+                <li>using the portal</li>
+                <li>anything else relating to the Great British Insulation Scheme</li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ##################################### -->
+    <!-- 
+        <br />
+        <br /> 
+    -->
+    <!-- ##################################### -->
+
+    <!--
+    </div>
+    <h3 class="custom-font-style">___</h3>
+    <p class="govuk-body custom-font-style">___</p>
+    <p class="govuk-body custom-font-style bold">___</p>
+    <p class="govuk-body custom-font-style"><a href="___">___</a></p>
+    <ul class="custom-ofgem-bullets">
+        <li>___</li>
+    </ul>
+    -->
+</div>
+
+{% endblock %}
