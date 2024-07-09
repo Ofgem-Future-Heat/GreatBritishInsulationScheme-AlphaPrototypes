@@ -11,8 +11,9 @@
         
         <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
 
-        <h1 class="govuk-heading-xl">Existing error reports</h1>
+        <h1 id="errorTop" class="govuk-heading-xl">Stage 1 error reports</h1>
 
+        <!--
         <p class="govuk-body">All existing error reports are listed here by what stage they're at in the process of validation.</p>
 
         <p class="govuk-body">The list of error reports <strong>includes all reports generated</strong> as a result of you uploading a notification template. The most recent reports are shown first.</p>
@@ -26,8 +27,44 @@
         </div>
 
         <p class="govuk-body">You should download any relevant error report then follow the next steps.</p>
+        -->
 
-        <a class="govuk-link" href="errors/stage1">Stage 1</a> | <a class="govuk-link" href="errors/stage2">Stage 2</a> | <a class="govuk-link" href="errors/trustmark">TrustMark</a> | <a class="govuk-link" href="errors/stage3">Stage 3</a> 
+        <p class="govuk-body">
+            Stage 1 | <a class="govuk-link" href="stage2">Stage 2</a> | <a class="govuk-link" href="trustmark">TrustMark</a> | <a class="govuk-link" href="stage3">Stage 3</a>
+        </p>
+        
+        <div class="" id="stage1">
+            <table class="govuk-table">
+                <caption class="govuk-table__caption govuk-table__caption--m">Stage 1 error reports</caption>
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header app-custom-class date">Date</th>
+                        <th scope="col" class="govuk-table__header app-custom-class time">Time</th>
+                        <th scope="col" class="govuk-table__header app-custom-class filename">File name</th>
+                        <th scope="col" class="govuk-table__header app-custom-class action left-align">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__cell date">12/12/2023</th>
+                        <td class="govuk-table__cell time">2:35pm</th>
+                        <td class="govuk-table__cell filename">BGT-26042024-17021-FB-133585151428718745.csv</td>
+                        <td class="govuk-table__cell action"><a href="#">Download error report</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__cell date">09/12/2023</th>
+                        <td class="govuk-table__cell time">9:29am</th>
+                        <td class="govuk-table__cell filename">BGT-26042024-17021-FB-133585151428718745.csv</td>
+                        <td class="govuk-table__cell action"><a href="#">Download error report</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="sr-only">Stage 1 error reports end</div>
+
+            <p class="govuk-body back-to-top"><a class="govuk-link" href="#errorTop">Back to top</a> &#129033;</p>
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        </div>
 
         <p class="govuk-body"><a href="/v13-1/home">Return to homepage</a></p>
     </div>

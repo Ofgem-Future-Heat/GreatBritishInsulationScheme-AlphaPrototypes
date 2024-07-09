@@ -599,3 +599,17 @@ ul.responsive-list {
         margin-right: 0;
     }
 }
+
+.sticky-container {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.govuk-link:link, .das-table__sort:link, .das-button--inline-link:link {
+    color: #003078;
+}
