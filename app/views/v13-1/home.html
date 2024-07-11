@@ -8,6 +8,9 @@
 
 <div class="govuk-grid-row">
     <script>
+        function dismissNotification() {
+          window.document.getElementById('notification').remove();
+        }
         function dismissNotification1() {
           window.document.getElementById('notification1').remove();
         }
@@ -17,9 +20,9 @@
     </script>
 
     <div class="govuk-grid-column-full">
-
         <!-- notification1 -->
-        <div id="notification1" class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div id="notification">
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
             <div class="govuk-notification-banner__header">
                 <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
                     <span class="">Latest announcement</span>
@@ -31,15 +34,37 @@
                     Login Issue Resolution
                 </p>
                 <p class="govuk-body">Please be aware that we have performed a fix for the login issue that was impacting users on 21/03/2024 and 22/03/2023/ If you know any users that are unable to login to the register please flag this asap through the regular communication channels.</p>
-                <!-- <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
-                <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="dismissNotification1()">
+                <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="dismissNotification()">
                     Close
                 </button>
             </div>
         </div>
+      <p class="govuk-body"><a class="govuk-link" href="announcements/">View all announcements</a></p>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    </div>
+
+
+        <!-- notification1 -->
+        <!-- <div id="notification1" class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    <span class="">Latest announcement</span>
+                    <span class="announcement-date">20/06/2024</span>
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <p class="govuk-notification-banner__heading">
+                    Login Issue Resolution
+                </p>
+                <p class="govuk-body">Please be aware that we have performed a fix for the login issue that was impacting users on 21/03/2024 and 22/03/2023/ If you know any users that are unable to login to the register please flag this asap through the regular communication channels.</p>
+                <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="dismissNotification1()">
+                    Close
+                </button>
+            </div>
+        </div> -->
 
         <!-- notification2 -->
-        <div id="notification2" class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <!-- <div id="notification2" class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
             <div class="govuk-notification-banner__header">
                 <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
                     <span class="">Previous announcement</span>
@@ -52,12 +77,11 @@
                 </p>
                 <p class="govuk-body">We are investigating an incident affecting project and measure uploads casuing uploads to fail to progress to core checks. We will provide updates via email and through the Register announcements here soon.</p>
                 <p class="govuk-body"><strong>Updates:</strong> Please be advised that this issue has been fixed and uploads are working as expected.</p>
-                <!-- <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
                 <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="dismissNotification2()">
                     Close
                 </button>
             </div>
-        </div>
+        </div> -->
 
         
         <h1 class="govuk-heading-xl">
