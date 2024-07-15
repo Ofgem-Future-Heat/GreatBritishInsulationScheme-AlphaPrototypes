@@ -270,11 +270,26 @@
                         <label class="govuk-label" for="announcement-type">
                             <strong>Announcement type</strong>
                         </label>
-                        <select class="govuk-select" id="announcement-type" name="announcement-type">
+                        <!-- <select class="govuk-select" id="announcement-type" name="announcement-type">
                             <option disabled selected>Select type</option>
                             <option value="external">External</option>
                             <option value="internal" >Internal</option>
-                        </select>
+                        </select> -->
+                        
+                        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="external" name="annoucement-type" type="checkbox" value="External">
+                                <label class="govuk-label govuk-checkboxes__label" for="external">
+                                    External
+                                </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="internal" name="annoucement-type" type="checkbox" value="internal">
+                                <label class="govuk-label govuk-checkboxes__label" for="internal">
+                                    Internal
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Start date -->
