@@ -89,9 +89,9 @@
             Reason for error with measure
           </label>
           <div id="reason-for-error-with-measure-hint" class="govuk-hint">
-             Enter the reason for the error with the neasure (maybe with an example?) (Graham B is the expert here)
+             Enter the reason for the error with the neasure.
           </div>
-          <textarea class="govuk-textarea" id="reason-for-error-with-measure" name="reason-for-error-with-measure" rows="8" aria-describedby="reason-for-error-with-measure-hint"></textarea>
+          <textarea class="govuk-textarea" id="reason-for-error-with-measure" name="reason-for-error-with-measure" rows="8" aria-describedby="reason-for-error-with-measure-hint" onkeydown="getReasonForErrorWithMeasure()"></textarea>
         </div>
 
 
@@ -119,6 +119,11 @@
     function getErrorNotificationField() {
       let errorNotificationField = document.getElementById("error-notification-field").value;
       localStorage.setItem('errorNotificationField', errorNotificationField);
+    }
+
+    function getReasonForErrorWithMeasure() {
+      let reasonForErrorWithMeasure = document.getElementById("reason-for-error-with-measure").value;
+      localStorage.setItem('reasonForErrorWithMeasure', reasonForErrorWithMeasure);
     }
   </script>
 
