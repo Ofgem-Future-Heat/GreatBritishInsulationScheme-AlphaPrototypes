@@ -1,0 +1,85 @@
+{% extends "layouts/internal-main2-3.html" %}
+
+{% block pageTitle %}
+    Upload manual errors
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+    <h1 class="govuk-heading-xl">Upload manual errors</h1>
+
+    <a class="govuk-button" href="add-manual-error">Add manual error</a></p>
+    
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        
+    <!-- Show list of manual errors -->
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Manual errors</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Test Reference Number</th>
+          <th scope="col" class="govuk-table__header">Field containing error in notification template</th>
+          <th scope="col" class="govuk-table__header">Reason for error with measure</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body" id="manualErrors">
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">GBIS10001</td>
+            <td class="govuk-table__cell">Measure Type</td>
+            <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="delete-manual-error">Delete</a>
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">GBIS10002</td>
+            <td class="govuk-table__cell">Building Number</td>
+            <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="delete-manual-error">Delete</a>
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">GBIS10003</td>
+            <td class="govuk-table__cell">Measure Type</td>
+            <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="delete-manual-error">Delete</a>
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">GBIS10004</td>
+            <td class="govuk-table__cell">Eligibility Type</td>
+            <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="delete-manual-error">Delete</a>
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">GBIS10005</td>
+            <td class="govuk-table__cell">Floor Area</td>
+            <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="delete-manual-error">Delete</a>
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">GBIS10006</td>
+            <td class="govuk-table__cell">Building Name</td>
+            <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+            <td class="govuk-table__cell">
+                <a class="govuk-link" href="delete-manual-error">Delete</a>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="govuk-body"><a href="/internal/v02-3/">Return to homepage</a></p>
+  </div>
+</div>
+
+{% endblock %}
