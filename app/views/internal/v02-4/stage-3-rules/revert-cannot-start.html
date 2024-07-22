@@ -1,0 +1,39 @@
+{% extends "layouts/internal-main2-3.html" %}
+
+{% block pageTitle %}
+    Searching the measure register
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Revert stage 3 measure validation</h1>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+                <div class="govuk-warning-text">
+                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                    <strong class="govuk-warning-text__text">
+                        <span class="govuk-visually-hidden">Warning</span>
+                        You cannot revert any measures while there are validations in progress.
+                    </strong>
+                    </strong>
+                </div>
+                <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+           
+                <p class="govuk-body"><a href="/internal/v02-4/">Return to homepage</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function  gotoURL() {
+            window.location.pathname = "internal/v02-4/stage-3-rules/revert-confirmation";
+        }
+    </script>
+</div>
+{% endblock %}

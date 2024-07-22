@@ -652,7 +652,8 @@ if (pageUrlPath === '/internal/v01-1/external-users/' ||
     pageUrlPath === '/internal/v02-0/external-users/' || 
     pageUrlPath === '/internal/v02-1/external-users/' || 
     pageUrlPath === '/internal/v02-2/external-users/' || 
-    pageUrlPath === '/internal/v02-3/external-users/'){
+    pageUrlPath === '/internal/v02-3/external-users/' || 
+    pageUrlPath === '/internal/v02-4/external-users/'){
   console.log('externalUsers.length', externalUsers.length);
   for (let i = 0; i < externalUsers.length; i++) {
     if (document.getElementById('extUsers')) {
@@ -719,7 +720,8 @@ if ((pageUrlPath === '/internal/v01-1/external-users/view-external-details') ||
     (pageUrlPath === '/internal/v02-0/external-users/view-external-details') ||
     (pageUrlPath === '/internal/v02-1/external-users/view-external-details') ||
     (pageUrlPath === '/internal/v02-2/external-users/view-external-details') ||
-    (pageUrlPath === '/internal/v02-3/external-users/view-external-details')
+    (pageUrlPath === '/internal/v02-3/external-users/view-external-details') ||
+    (pageUrlPath === '/internal/v02-4/external-users/view-external-details')
   ) {
   // document.getElementById('username').innerText = localStorage.getItem('ext_username');
   // document.getElementById('title').innerText = localStorage.getItem('ext_title');
@@ -943,7 +945,8 @@ if (pageUrlPath === '/internal/v01-1/internal-users/' ||
     pageUrlPath === '/internal/v02-0/internal-users/' ||
     pageUrlPath === '/internal/v02-1/internal-users/' ||
     pageUrlPath === '/internal/v02-2/internal-users/' ||
-    pageUrlPath === '/internal/v02-3/internal-users/' 
+    pageUrlPath === '/internal/v02-3/internal-users/' ||
+    pageUrlPath === '/internal/v02-4/internal-users/' 
 ){
   for (let i = 0; i < internalUsers.length; i++) {
     if (document.getElementById('intUsers')) {
@@ -1005,7 +1008,8 @@ if (pageUrlPath === '/internal/v01-1/internal-users/view-internal-details' ||
     pageUrlPath === '/internal/v02-0/internal-users/view-internal-details' ||
     pageUrlPath === '/internal/v02-1/internal-users/view-internal-details' ||
     pageUrlPath === '/internal/v02-2/internal-users/view-internal-details' ||
-    pageUrlPath === '/internal/v02-3/internal-users/view-internal-details'
+    pageUrlPath === '/internal/v02-3/internal-users/view-internal-details' ||
+    pageUrlPath === '/internal/v02-4/internal-users/view-internal-details'
 ) {
   document.getElementById('username').innerText = localStorage.getItem('int_username');
   document.getElementById('title').innerText = localStorage.getItem('int_title');

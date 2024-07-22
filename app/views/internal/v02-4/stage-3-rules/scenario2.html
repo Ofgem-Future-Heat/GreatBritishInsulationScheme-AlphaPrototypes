@@ -1,0 +1,57 @@
+{% extends "layouts/internal-main2-3.html" %}
+
+{% block pageTitle %}
+    Searching the measure register
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Start stage 3 measure validation</h1>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+                <!-- <p class="govuk-body">Blurb reharding triggering stage 3 rules.</p> -->
+
+                <div class="govuk-inset-text">
+                    There are 1,000 measures being checked as part of the stage 3 validation process. 
+                    <!-- There are no new measures to check at this time.  -->
+                </div>
+
+                <!-- <p class="govuk-body">Blurb reharding triggering stage 3 rules. View the current stage 3 rules being processed</p> -->
+                
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-two-thirds">
+                                <button type="submit" class="govuk-button" data-module="govuk-button" onclick="gotoURL()">
+                                    View stage 3 validation summary
+                                </button>
+                            </div>
+                            <div class="govuk-grid-column-one-third">
+                                <a href="reverted-process" class="govuk-button govuk-button--secondary" >
+                                    Revert validation
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+           
+                <p class="govuk-body"><a href="/internal/v02-4/">Return to homepage</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function  gotoURL() {
+            window.location.pathname = "internal/v02-4/stage-3-rules/summary-automatic";
+        }
+    </script>
+</div>
+{% endblock %}

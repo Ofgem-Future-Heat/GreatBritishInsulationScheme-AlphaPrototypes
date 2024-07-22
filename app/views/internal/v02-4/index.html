@@ -1,0 +1,227 @@
+{% extends "layouts/internal-main2-3.html" %}
+
+{% block pageTitle %}
+  Great British Insulation Scheme &mdash; Internal user management
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <script>
+    function dismissNotification() {
+      window.document.getElementById('notification').remove();
+    }
+    function dismissNotification1() {
+      window.document.getElementById('notification1').remove();
+    }
+    function dismissNotification2() {
+      window.document.getElementById('notification2').remove();
+    }
+    // function dismissNotification3() {
+    //   window.document.getElementById('notification3').remove();
+    // }
+    // function dismissNotification4() {
+    //   window.document.getElementById('notification4').remove();
+    // }
+    // function dismissNotification5() {
+    //   window.document.getElementById('notification5').remove();
+    // }
+  </script>
+
+  <div class="govuk-grid-column-full">
+    <!-- notification1 -->
+    <div id="notification">
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <!-- <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="">
+          <span class="">Latest announcement</span>
+          <span class="announcement-date">20/06/2024</span>
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          Server restart planned
+        </p>
+        <p class="govuk-body">From 12:15 to 13:30 (Wednesday 27th April) you will not be able to make amendments/renotification while we restart our servers.</p>
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="dismissNotification1()">
+          Close
+        </button>
+      </div> -->
+
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="">
+          <span class="">Latest announcement</span>
+          <span class="announcement-date">12/10/2023</span>
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          ECO4.24.01 Planned Release
+        </p>
+        <p class="govuk-body bold">Please be aware that this release has been cancelled due to an issue with one of our release tools we use to ensure that our changes do not impact the reliability and resilience of the register. Changes outlined below for this release will be rolled into our January release unless stated otherwise. Apologies for any inconveniences.</p>
+        <p class="govuk-body bold">The ECO Register will be offline on <strong>Tuesday 16th January 2024 from 17:00 to 19:00 due to a planned release.</strong></p>
+        <p class="govuk-body bold">Functionality being deployed is as follows:</p>
+        <p class="govuk-body">You can buy:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Late Automatic Late Rules and Report Update</li>
+          <li>T4110: Observed Value will be Project Status name instead of numeric status ID</li>
+          <li>ECO3 interim Completed Measure Transfers</li>
+          <li>Innovation Measure Numbers 022 and 023</li>
+          <li>Removal of "Town" field checks with TrustMark</li>
+          <li>"Social Housing" Tenure Type applicable for "in-fill" elegibility type projects (P40517, P40518, P40519)</li>
+          <li>Update to the Partial Project Score matrix to published version 5</li>
+        </ul>
+        <p class="govuk-body">Live issue fixes being deployed are:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Clear Partial Project Scores associated with Exemption Measures</li>
+          <li>TP0005 will now be case insensitive</li>
+          <li>Fixed an issue where large measure uploads with MRNs of 11-characters were occasionally timing out</li>
+          <li>We have also added some background processing to reduce the build up of measures getting stuck in "Measure Awaiting Verification" status</li>
+        </ul>
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="dismissNotification()">
+          Close
+        </button>
+      </div>
+
+    </div>
+    <!-- <p class="govuk-body"><a class="govuk-link" href="announcements/internal-announcements-normal">View all announcements</a></p> -->
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+  </div>
+
+    <!-- notification2 -->
+    <!-- <div id="notification2" class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="">
+          <span class="">Previous announcement</span>
+          <span class="announcement-date">12/10/2023</span>
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          ECO4.24.01 Planned Release
+        </p>
+        <p class="govuk-body bold">Please be aware that this release has been cancelled due to an issue with one of our release tools we use to ensure that our changes do not impact the reliability and resilience of the register. Changes outlined below for this release will be rolled into our January release unless stated otherwise. Apologies for any inconveniences.</p>
+        <p class="govuk-body bold">The ECO Register will be offline on <strong>Tuesday 16th January 2024 from 17:00 to 19:00 due to a planned release.</strong></p>
+        <p class="govuk-body bold">Functionality being deployed is as follows:</p>
+        <p class="govuk-body">You can buy:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Late Automatic Late Rules and Report Update</li>
+          <li>T4110: Observed Value will be Project Status name instead of numeric status ID</li>
+          <li>ECO3 interim Completed Measure Transfers</li>
+          <li>Innovation Measure Numbers 022 and 023</li>
+          <li>Removal of "Town" field checks with TrustMark</li>
+          <li>"Social Housing" Tenure Type applicable for "in-fill" elegibility type projects (P40517, P40518, P40519)</li>
+          <li>Update to the Partial Project Score matrix to published version 5</li>
+        </ul>
+        <p class="govuk-body">Live issue fixes being deployed are:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Clear Partial Project Scores associated with Exemption Measures</li>
+          <li>TP0005 will now be case insensitive</li>
+          <li>Fixed an issue where large measure uploads with MRNs of 11-characters were occasionally timing out</li>
+          <li>We have also added some background processing to reduce the build up of measures getting stuck in "Measure Awaiting Verification" status</li>
+        </ul>
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="dismissNotification2()">
+          Close
+        </button>
+      </div>
+    </div> -->
+
+    <!-- notification3 -->
+    <!-- <div id="notification3" class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Announcements
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          You have 7 days left to send your application.
+          <a class="govuk-notification-banner__link" href="#">View application</a>.
+        </p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="dismissNotification3()">
+          Dismiss notification
+        </button>
+      </div>
+    </div> -->
+
+    <!-- notification4 -->
+    <!-- <div id="notification4" class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Announcements
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          You have 7 days left to send your application.
+          <a class="govuk-notification-banner__link" href="#">View application</a>.
+        </p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="dismissNotification4()">
+          Dismiss notification
+        </button>
+      </div>
+    </div> -->
+
+    <!-- notification5 -->
+    <!-- <div id="notification5" class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Announcements
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          You have 7 days left to send your application.
+          <a class="govuk-notification-banner__link" href="#">View application</a>.
+        </p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="dismissNotification5()">
+          Dismiss notification
+        </button>
+      </div>
+    </div> -->
+
+
+    <h1 class="govuk-heading-xl">GBIS Register for internal users</h1>
+    
+    <p>Welcome, <span id="welcomeUsernameMessage"></span>.</p>
+    <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+        
+    <div class="govuk-grid-row">
+
+      <!-- Search measures -->
+      <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+        <div class="card govuk-!-padding-5">
+            <h3 class="govuk-heading-m"><a class="govuk-link" href="search-measures/">View supplier uploaded measures</a></h3>
+            <p class="govuk-body card-description short">Search and view measures uploaded to the GBIS register by energy suppliers.</p>
+            <!-- <a data-test-id="supplier-uploaded-measures-card-link" class="govuk-link card-link" href="search-measures/" aria-describedby="supplier-uploaded-measures-description">Click to view supplier uploaded measures</a> -->
+        </div>
+      </div>
+
+      <!-- Automatic late extension report -->
+      <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+        <div class="card govuk-!-padding-5">
+            <h3 class="govuk-heading-m"><a class="govuk-link" href="automatic-late-extension-report/">Automatic late extension report</a></h3>
+            <p class="govuk-body card-description short">Search and view energy supplier automatic late extension reports.</p>
+            <!-- <a data-test-id="automatic-late-extension-report-card-link" class="govuk-link card-link" href="automatic-late-extension-report/" aria-describedby="automatic-late-extension-report-description">Click to view automatic late extension report</a> -->
+        </div>
+      </div>
+
+      <!-- Stage 3 processing -->  
+      <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+        <div class="card govuk-!-padding-5">
+            <h3 class="govuk-heading-m"><a class="govuk-link" href="stage-3-rules/stage-3-processing">Stage 3 measure validation</a></h3>
+            <p class="govuk-body card-description short">Trigger stage 3 measure validation and view summary details.</p>
+            <!-- <a data-test-id="stage-3-measure-validation-card-link" class="govuk-link card-link" href="stage-3-rules/stage-3-processing" aria-describedby="stage-3-measure-validation-description">Click to view Stage 3 measure validation</a> -->
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+</div>
+
+{% endblock %}

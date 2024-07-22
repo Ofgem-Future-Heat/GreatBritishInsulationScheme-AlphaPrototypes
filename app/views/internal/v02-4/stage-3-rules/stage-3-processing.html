@@ -1,0 +1,47 @@
+{% extends "layouts/internal-main2-3.html" %}
+
+{% block pageTitle %}
+  Great British Insulation Scheme &mdash; Internal user management
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-xl">Stage 3 measure validation</h1>
+    
+    <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+        
+    <div class="govuk-grid-row">
+
+      <!-- Trigger Stage 3 Rules -->
+      <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+        <div class="card govuk-!-padding-5">
+            <h3 class="govuk-heading-m"><a class="govuk-link" href="index.html">Start stage 3 measure validation</a></h3>
+            <p class="govuk-body card-description short">Start the stage 3 measure validation process.</p>
+            <!-- <a data-test-id="start-stage-3-measure-validation-card-link" class="govuk-link card-link" id="" href="index.html" aria-describedby="start-stage-3-measure-validation-description">Click to start stage 3 measure validation</a> -->
+        </div>
+      </div>
+
+      <!-- View Stage 3 Rules -->
+      <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+        <div class="card govuk-!-padding-5">
+            <h3 class="govuk-heading-m"><a class="govuk-link"href="index2.html">Stage 3 measure validation summaries</a></h3>
+            <p class="govuk-body card-description short">View stage 3 summary details after measure validation has finished.</p>
+            <!-- <a data-test-id="stage-3-measure-validation-summaries-card-link" class="govuk-link card-link" id="" href="index2.html" aria-describedby="stage-3-measure-validation-summaries-description">Click to search measures</a> -->
+        </div>
+      </div>
+
+      <!-- "Upload manual errors" -->
+      <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+        <div class="card govuk-!-padding-5">
+            <h3 class="govuk-heading-m"><a href="upload-manual-errors" class="govuk-link">Upload manual errors</a></h3>
+            <p class="govuk-body">Upload manual errors and delete previously uploaded manual errors.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
