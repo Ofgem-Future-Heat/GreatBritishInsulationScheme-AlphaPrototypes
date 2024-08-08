@@ -72,12 +72,12 @@ ul {
     border: 1px solid #b1b4b6;
     border-bottom-width: 4px;
 
-    .card-description {
-        height: 120px;
-        &.short {
-            height: 72px;
-        }
-    }
+    // .card-description {
+    //     height: 120px;
+    //     &.short {
+    //         height: 72px;
+    //     }
+    // }
     
     .card-link {
         display: block;
@@ -179,6 +179,7 @@ input[type="file"] {
 .upload-container {
     border: 1px solid #b1b4b6;
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 .custom-file-upload {
@@ -432,6 +433,10 @@ input[type=file]#file-upload {
     max-width: 4em !important;
     min-width: 4em !important;
 }
+.two-by-two-select-width { 
+    max-width: 6em !important;
+    min-width: 6em !important;
+}
 
 .govuk-select-field__item {
     display: inline-block;
@@ -617,3 +622,44 @@ ul.responsive-list {
 .color-white {
     color: #ffffff !important;
 }
+
+// CSS Grid list same height
+// .card-list {
+//     display: grid;
+//     overflow: hidden;
+//     grid-template-columns: repeat(3, 1fr);
+//     grid-auto-rows: 1fr;
+//     grid-column-gap: 5px;
+//     grid-row-gap: 5px;
+//     max-width: 500px;
+//   }
+//   .card-list-item {
+//     background-color: #ccc;
+//     display: flex;
+//     padding: 0.5em;
+//     margin-bottom: 20px;
+//   }
+//   .card-list-content {
+//     width: 100%;
+//   }
+
+.grid-list {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    // gap: .5rem;
+    gap: 15px;
+ }
+     
+ .grid-list li {
+    // padding: 25px;
+    // border-radius: 1rem;
+    // background: yellow;
+ }   
+ 
+ .grid-list li:last-child {
+    // grid-column-start: 2;
+ }  

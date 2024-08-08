@@ -1,0 +1,54 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+    Transfer request confirmed
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <!-- <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">
+                Transfer request confirmed for<br/>
+                <strong>GBIS_TR000060</strong>
+            </h1>
+        </div> -->
+        <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h1 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    Success
+                </h1>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <h2 class="govuk-notification-banner__heading">
+                    Transfer request confirmed for <strong>GBIS_TR000060</strong>
+                </h2>
+                <!-- <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">example@department.gov.uk</a> if you think there’s a problem.</p> -->
+            </div>
+        </div>
+
+        <p class="govuk-body">Your transfer request will now be sent to the supplier who is receiving the transfer for their approval. If they accept, then Ofgem will process this transfer request and inform you of the outcomes once complete.</p>
+        <p class="govuk-body">If this transfer request was to another licence belonging to the same supplier, it will go directly to Ofgem to process.</p>
+        
+        <h2 class="govuk-heading-m">What happens next</h2>
+
+        <p class="govuk-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        
+        <p class="govuk-body">
+            <a class="govuk-link" href="/v13-1/transfers-and-tradings/">Back to transfers and tradings</a>
+        </p>
+    </div>
+    
+    <div class="govuk-grid-column-one-thirds">
+        <p class="govuk-body">EXAMPLE: REMOVE LATER<br />
+            <a class="govuk-link" href="failed-transfer-request">View a failed transfer request for approval</a>
+        </p>
+    </div>
+</div>
+
+{% endblock %}

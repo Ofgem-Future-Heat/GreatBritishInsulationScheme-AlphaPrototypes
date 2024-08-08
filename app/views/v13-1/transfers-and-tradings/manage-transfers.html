@@ -1,0 +1,45 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+    Manage transfer
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <script>
+       
+    </script>
+
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Manage transfers</h1>
+
+        <div class="grid-list">
+
+            <!-- View approval requests raised -->
+            <div class="card govuk-!-padding-5">
+                <h3 class="govuk-heading-m">View approval requests raised</h3>
+                <p class="govuk-body card-description">View all the approval requests your organisation has raised.</p>
+                <p class="govuk-body"><a data-test-id="view-approval-requests-raised-link" class="govuk-link " href="./view-approval-requests-raised" aria-describedby="view-approval-requests-raised-description">Click to view approval requests raised</a></p>
+            </div>
+
+            <!-- View approval requests received -->
+            <div class="card govuk-!-padding-5">
+                <h3 class="govuk-heading-m">View approval requests received</h3>
+                <p class="govuk-body card-description">View all the approval requests your organisation has received.</p>
+                <p class="govuk-body"><a data-test-id="view-approval-requests-received-link" class="govuk-link " href="./view-approval-requests-received" aria-describedby="view-approval-requests-received-description">Click to view approval requests received</a></p>
+            </div>
+            
+        </div>
+
+        <!-- HOME -->
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+        <p class="govuk-body"><a href="/v13-1/home">Return to homepage</a></p>
+        
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,118 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+    Check transfer request details
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Check transfer request details</h1>
+        
+        <h2 class="govuk-heading-m">Transfer summary</h2>
+
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    BGIS supplier reference transferring measures from
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>EON3401234E</span>
+                </dd>
+            </div>
+            
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    GBIS Supplier reference transferring measures to
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>BGT0307811E</span>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Number of measures
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>3</span>
+                </dd>
+            </div>
+            
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    GBIS obligation amount
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>£203.40</span>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    LIMR sub-obligation amount
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>£203.40</span>
+                </dd>
+            </div>
+
+
+
+            <!--
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    HHCRO obligation amount
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>£203.40</span>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    SWMR sub-obligation amount
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>0 properties</span>
+                </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    EFGMR sub-obligation amount
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>£203.40</span>
+                </dd>
+            </div>
+            -->
+
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Supplementary information
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                </dd>
+            </div>
+        </dl>
+        
+        <div class="govuk-button-group">
+            <a href="request-transfer" class="govuk-link govuk-link--no-visited-state">Edit transfer details</a>
+        </div>
+
+        <div class="govuk-button-group">
+            <form action="success-transfer-requested" method="post" novalidate>
+                <input type="hidden" name="answers-checked" value="true">
+                <button class="govuk-button" data-module="govuk-button">
+                    Confirm transfer request
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

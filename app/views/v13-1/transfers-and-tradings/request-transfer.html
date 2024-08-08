@@ -1,0 +1,75 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+    Request approval for a transfer
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <script>
+       
+    </script>
+
+    <div class="govuk-grid-column-two-thirds">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Request approval for a transfer</h1>
+
+        <p class="govuk-body">Select teh file you wish to upload by using the 'browse' button and then selecting the option to upload. Please ensure that each file is in the correct CSV format.</p>
+        <p class="govuk-body">Once the request is made, the measures contained in the request will be restricted from further processing until a decision ont he request is completed.</p>
+
+        <form id="" method="post" action="check-request-transfer-details">
+            <!-- BGIS supplier reference transferring measures from: -->
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--s" for="supplier-reference-transferring-from">
+                    BGIS supplier reference transferring measures from:
+                </label>
+                <select class="govuk-select" id="supplier-reference-transferring-from" name="supplier-reference-transferring-from" style="width: 100%;">
+                    <option value="" disabled="disabled" selected>Select supplier reference number</option>
+                    <option value="EON3407430E">EON3401234E</option>
+                    <option value="EON3407430E">EON3405678E</option>
+                    <option value="EON3407430E">EON3409101E</option>
+                    <option value="EON3407430E">EON3402345E</option>
+                </select>
+            </div>
+
+            <!-- GBIS Supplier reference transferring measures to: -->
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--s" for="supplier-reference-transferring-to">
+                    GBIS Supplier reference transferring measures to:
+                </label>
+                <input class="govuk-input" id="supplier-reference-transferring-to" name="supplier-reference-transferring-to" type="text">
+            </div>
+
+            <!-- Supplementary information -->
+            <!-- <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="250"> -->
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--s" for="supplementary-information">
+                    Supplementary information (optional)
+                </label>
+                <!-- <div id="reason-for-error-with-measure-hint" class="govuk-hint">
+                    Enter the reason for the error with the neasure.
+                </div> -->
+                <textarea class="govuk-textarea" id="supplementary-information" name="supplementary-information" rows="5" aria-describedby="supplementary-information-hint"></textarea>
+                <!-- <textarea class="govuk-textarea govuk-js-character-count" id="supplementary-information" name="supplementary-information" rows="5" aria-describedby="supplementary-information-hint"></textarea> -->
+                <!-- <div id="supplementary-information-info" class="govuk-hint govuk-character-count__message">
+                    You can enter up to 250 characters
+                </div> -->
+            </div>
+
+            <!-- Upload -->
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+                Upload transfer request
+            </button>
+        </form>
+
+        <!-- HOME -->
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+        <p class="govuk-body"><a href="/v13-1/home">Return to homepage</a></p>
+        
+    </div>
+</div>
+
+{% endblock %}

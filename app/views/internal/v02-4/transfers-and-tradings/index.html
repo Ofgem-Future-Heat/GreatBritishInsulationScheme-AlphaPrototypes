@@ -1,0 +1,37 @@
+{% extends "layouts/internal-main2-3.html" %}
+
+{% block pageTitle %}
+    Transfers and trading
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">
+            Transfers and trading
+        </h1>
+
+        <p class="govuk-body">Review all GBIS transfer requests and lorem ipsum.</p>
+
+        <div class="grid-list">
+
+            <!-- Review GBIS transfer requests -->
+            <div class="card govuk-!-padding-5">
+                <h3 class="govuk-heading-m">Review GBIS transfer requests</h3>
+                <p class="govuk-body card-description">Request approval of transfer of measures.</p>
+                <p class="govuk-body"><a data-test-id="request-transfer-card-link" class="govuk-link " href="/internal/v02-4/transfers-and-tradings/review-transfer-requests" aria-describedby="review-transfer-description">Click to review transfer requests</a></p>
+            </div>
+        </div>
+
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+        
+        <p class="govuk-body"><a href="/internal/v02-4/">Return to homepage</a></p>
+
+    </div>
+</div>
+
+{% endblock %}

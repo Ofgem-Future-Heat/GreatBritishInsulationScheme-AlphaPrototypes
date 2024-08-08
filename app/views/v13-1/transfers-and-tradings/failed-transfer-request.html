@@ -1,0 +1,61 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+    Transfer request confirmed
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <!-- <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">
+                Transfer request confirmed for<br/>
+                <strong>GBIS_TR000060</strong>
+            </h1>
+        </div> -->
+        <div class="govuk-notification-banner govuk-notification-banner--error" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h1 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    Failed transfer
+                </h1>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <h2 class="govuk-notification-banner__heading">
+                    Transfer request unsuccessful
+                </h2>
+                <!-- <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">example@department.gov.uk</a> if you think there’s a problem.</p> -->
+            </div>
+        </div>
+
+        <p class="govuk-body">Ensure that all measures intended for transfer meet the following citeria.</p>
+        
+        <ul class="govuk-list govuk-list--bullet">
+            <li>All child measuers belonging within the transwer request are in te appropriate statuses of</li>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Approved</li>
+                <li>Rejected</li>
+                <li>Withdrawn</li>
+            </ul>
+        </ul>
+        
+        <p class="govuk-body">For further information, download the detailed error report.</p>
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+            Download error report
+        </button>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        
+        <p class="govuk-body">
+            <a class="govuk-link" href="/v13-1/transfers-and-tradings/">Back to transfers and tradings</a>
+        </p>
+    </div>
+    
+    <div class="govuk-grid-column-one-thirds">
+        <p class="govuk-body">EXAMPLE: REMOVE LATER<br />
+            <a class="govuk-link" href="success-transfer-requested">View a successful transfer request for approval</a>
+        </p>
+    </div>
+</div>
+
+{% endblock %}

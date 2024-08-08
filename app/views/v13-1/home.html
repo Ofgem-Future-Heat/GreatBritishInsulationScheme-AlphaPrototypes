@@ -207,9 +207,7 @@
 
         <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
         
-        <div class="govuk-grid-row">
-
-            <!-- Measures -->
+        <!-- <div class="govuk-grid-row">
             <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
                 <div class="card govuk-!-padding-5">
                     <h3 class="govuk-heading-m">Manage measures</h3>
@@ -218,13 +216,48 @@
                 </div>
             </div>
 
-            <!-- Errors -->
+
             <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
                 <div class="card govuk-!-padding-5">
                     <h3 class="govuk-heading-m">View all error reports</h3>
                     <p class="govuk-body card-description">View and download all existing error reports.</p>
                     <a data-test-id="home-errors-card-link" class="govuk-link card-link" href="errors" aria-describedby="errors-description">Click to view errors</a>
                 </div>
+            </div>
+
+            
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m">Manage transfers and tradings</h3>
+                    <p class="govuk-body card-description">Manage approval requests and request approval transfers.</p>
+                    <a data-test-id="home-transfers-and-tradings-card-link" class="govuk-link card-link" href="transfers-and-tradings" aria-describedby="transfers-and-tradings-description">Click to manage and request transfers</a>
+                </div>
+            </div>
+        </div>
+
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" /> -->
+
+        <div class="grid-list">
+
+            <!-- Measures -->
+            <div class="card govuk-!-padding-5">
+                <h3 class="govuk-heading-m">Manage measures</h3>
+                <p class="govuk-body card-description">Upload new measure files, view status on previously uploaded files, <strong>search measures</strong> and view file extensions.</p>
+                <p class="govuk-body"><a data-test-id="home-manage-measures-card-link" class="govuk-link card-link" href="measures" aria-describedby="manage-measures-description">Click to manage measures</a></p>
+            </div>
+
+            <!-- Errors -->
+            <div class="card govuk-!-padding-5">
+                <h3 class="govuk-heading-m">View all error reports</h3>
+                <p class="govuk-body card-description">View and download all existing error reports.</p>
+                <p class="govuk-body"><a data-test-id="home-errors-card-link" class="govuk-link card-link" href="errors" aria-describedby="errors-description">Click to view errors</a></p>
+            </div>
+
+            <!-- Transfers and tradings -->
+            <div class="card govuk-!-padding-5">
+                <h3 class="govuk-heading-m">Manage transfers and tradings</h3>
+                <p class="govuk-body card-description">Manage approval requests and request approval transfers.</p>
+                <p class="govuk-body"><a data-test-id="home-transfers-and-tradings-card-link" class="govuk-link card-link" href="transfers-and-tradings" aria-describedby="transfers-and-tradings-description">Click to manage and request transfers</a></p>
             </div>
         </div>
 
