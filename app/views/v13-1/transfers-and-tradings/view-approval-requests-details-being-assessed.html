@@ -12,20 +12,6 @@ Transfer request details
         <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
 
         <h1 class="govuk-heading-xl">Transfer request details</h1>
-
-        <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-          <div class="govuk-notification-banner__header">
-              <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-                  Complete
-              </h2>
-          </div>
-          <div class="govuk-notification-banner__content">
-              <h3 class="govuk-notification-banner__heading">
-                  This transfer request has been accepted
-              </h3>
-          </div>
-        </div>
-
         
         <div id="measureDetails">
             <p class="govuk-body">Your organisation has raised following transfer.</p>
@@ -72,7 +58,9 @@ Transfer request details
                   
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Transfer status</dt>
-                    <dd class="govuk-summary-list__value">Approval of transfer requested</dd>
+                    <dd class="govuk-summary-list__value">
+                      <span class="govuk-tag govuk-tag--turquoise">Request for approval being assessed</span>
+                    </dd>
                   </div>
 
                   <div class="govuk-summary-list__row">
@@ -102,10 +90,15 @@ Transfer request details
                 </dl>
               </div>
             </div>
+
+            <!-- Withdraw request -->
+            <a class="govuk-button govuk-button--warning" href="withdraw-request">
+              Withdraw request
+            </a>
         </div>
 
         <p class="govuk-body">
-            <a class="govuk-link" href="view-approval-requests-received.html">View received approval requests</a>
+            <a class="govuk-link" href="view-approval-requests-raised.html">View raised approval requests</a>
         </p>
     </div>
 </div>
