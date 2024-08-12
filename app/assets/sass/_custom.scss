@@ -660,6 +660,32 @@ ul.responsive-list {
     // background: yellow;
  }   
  
- .grid-list li:last-child {
-    // grid-column-start: 2;
- }  
+.grid-list li:last-child {
+// grid-column-start: 2;
+}
+
+.plain-cb {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    .govuk-checkboxes__item {
+        margin: 0;
+    }
+}
+.tag-text {
+    font-size: 14px;
+}
+
+.embedded-table {
+    margin-bottom: 0;
+
+    .govuk-table__body {
+        .govuk-table__row {
+            &:last-child {
+                .govuk-table__header, .govuk-table__cell { border: 0; }
+            }
+        }
+    }
+}
+
+.no-border { border: 0; }
