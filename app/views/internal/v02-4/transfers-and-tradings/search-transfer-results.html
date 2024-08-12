@@ -315,7 +315,76 @@
 
             <div class="govuk-grid-column-two-thirds">
                 <h2 class="govuk-heading-l">Results</h2>
-                <p class="govuk-body">Set the filters to search for previously uploaded measures by energy suppliers.</p>
+                
+                <p class="govuk-body">Showing <strong><span id="resultsLength">150</span></strong> measure<span id="singularPlural"></span>.</p>
+
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-third">
+                        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                            Download results
+                        </button>
+                    </div>
+                </div>
+                
+                
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-three-quarters">
+                                                
+                                <div class="govuk-grid-row">
+                                    <!-- <div class="govuk-grid-column-one-half">
+                                        <label class="govuk-label slider-label-main" for="sliding-switch">
+                                            <strong>Ownership</strong>
+                                        </label>
+                                        <div class="slide-switch">
+                                            <div class="switch-label all">All</div>
+                                            <label class="switch">
+                                                <input id="sliding-switch" type="checkbox" onchange="changeOwnership()">
+                                                <span class="slider round"></span>
+                                            </label>
+                                            <div class="switch-label mine">Mine</div>
+                                        </div>
+                                    </div> -->
+                                    <div class="govuk-grid-column-one-half">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label" for="event-name">
+                                                <strong>Select an action</strong>
+                                            </label>
+
+                                            <select class="govuk-select" name="statusSelect" id="statusSelect" onchange="otherSelected(this.value)">
+                                                <option value="none" selected>Select an option</option>
+                                                <optgroup class="optgroup" label="Choose transfer recommendation">
+                                                    <option>No recommendation</option>
+                                                    <option>Transfer recommended for approval</option>
+                                                    <option>Transfer not recommended for approval</option>
+                                                </optgroup>
+                                                <optgroup class="optgroup" label="Choose transfer status">
+                                                    <option>Transfer approved</option>
+                                                    <option>Transfer not approved</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="govuk-grid-column-one-half">
+                                      <label class="govuk-label" for=""><div>&nbsp;</div></label>
+                                      <a href="bulk-action-confirmation" class="govuk-button margin-left-30" data-module="govuk-button">
+                                          Action
+                                      </a>
+                                  </div>
+
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="govuk-section-break govuk-section-break--visible">
+
+
             </div>
         </div>
                 

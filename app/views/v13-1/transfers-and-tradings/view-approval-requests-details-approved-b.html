@@ -12,9 +12,22 @@ Transfer request details
         <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
 
         <h1 class="govuk-heading-xl">Transfer request details</h1>
+
+        <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+              <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                  Complete
+              </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+              <h3 class="govuk-notification-banner__heading">
+                This transfer request has been approved
+              </h3>
+          </div>
+      </div>
         
         <div id="measureDetails">
-            <p class="govuk-body">The following transfer has been raised for transfer. You can either accept or decline this transfer.</p>
+            <p class="govuk-body">The following transfer has been approved for transfer.</p>
 
             <div class="govuk-grid-row">
               <!-- Left half -->
@@ -58,7 +71,7 @@ Transfer request details
                   
                   <div class="govuk-summary-list__row">
                     <dt class="govuk-summary-list__key">Transfer status</dt>
-                    <dd class="govuk-summary-list__value"><span class="govuk-tag govuk-tag--blue">Approval of transfer requested</span></dd>
+                    <dd class="govuk-summary-list__value"><span class="govuk-tag govuk-tag--green">Transfer approved</span></dd>
                   </div>
 
                   <div class="govuk-summary-list__row">
@@ -89,8 +102,7 @@ Transfer request details
               </div>
             </div>
 
-            <form id="declineReasons" method="post" action="accept-transfer-request-received">
-              <!-- Accept/decline transfer -->
+            <!-- <form id="declineReasons" method="post" action="accept-transfer-request-received">
               <div class="govuk-button-group">
                 <button type="submit" class="govuk-button" data-module="govuk-button">
                   Accept transfer
@@ -99,12 +111,12 @@ Transfer request details
                   Decline transfer
                 </a>
               </div>
-            </form>
+            </form> -->
             
         </div>
 
         <p class="govuk-body">
-            <a class="govuk-link" href="view-approval-requests-received">View raised approval requests</a>
+            <a class="govuk-link" href="view-approval-requests-received">View received approval requests</a>
         </p>
     </div>
 </div>
