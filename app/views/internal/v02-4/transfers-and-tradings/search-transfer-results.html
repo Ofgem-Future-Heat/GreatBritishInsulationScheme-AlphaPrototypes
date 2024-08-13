@@ -384,7 +384,7 @@
 
                 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
-                <p class="govuk-body"><a href="" class="govuk-link">Select all</a></p>
+                <p class="govuk-body"><a href="javascript:void(0)" onclick="selectAll()" class="govuk-link">Select all</a></p>
 
                 
                 <div class="govuk-grid-row">
@@ -395,7 +395,7 @@
                             <div class="govuk-summary-card__title-wrapper">
                                 <div class="govuk-checkboxes plain-cb" data-module="govuk-checkboxes">
                                     <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="cb-transfer-request" name="cb-transfer-request" type="checkbox" value="GBIS_TR000060">
+                                        <input class="govuk-checkboxes__input" id="cbTransferRequest1" name="cb-transfer-request" type="checkbox" value="GBIS_TR000060">
                                         <label class="govuk-label govuk-checkboxes__label" for="cb-transfer-request">
                                             <span class="govuk-summary-card__title">GBIS_TR000060</span>
                                         </label>
@@ -451,7 +451,7 @@
                             <div class="govuk-summary-card__title-wrapper">
                                 <div class="govuk-checkboxes plain-cb" data-module="govuk-checkboxes">
                                     <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="cb-transfer-request" name="cb-transfer-request" type="checkbox" value="GBIS_TR000060">
+                                        <input class="govuk-checkboxes__input" id="cbTransferRequest2" name="cb-transfer-request" type="checkbox" value="GBIS_TR000060">
                                         <label class="govuk-label govuk-checkboxes__label" for="cb-transfer-request">
                                             <span class="govuk-summary-card__title">GBIS_TR000031</span>
                                         </label>
@@ -507,7 +507,7 @@
                             <div class="govuk-summary-card__title-wrapper">
                                 <div class="govuk-checkboxes plain-cb" data-module="govuk-checkboxes">
                                     <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="cb-transfer-request" name="cb-transfer-request" type="checkbox" value="GBIS_TR000060">
+                                        <input class="govuk-checkboxes__input" id="cbTransferRequest3" name="cb-transfer-request" type="checkbox" value="GBIS_TR000060">
                                         <label class="govuk-label govuk-checkboxes__label" for="cb-transfer-request">
                                             <span class="govuk-summary-card__title">GBIS_TR000034</span>
                                         </label>
@@ -567,5 +567,13 @@
            
         <p class="govuk-body"><a href="/internal/v02-4/">Return to homepage</a></p>
     </div>
+    <script>
+        function selectAll() {
+            console.log('select all');
+            document.getElementById("cbTransferRequest1").checked = !document.getElementById("cbTransferRequest1").checked;
+            document.getElementById("cbTransferRequest2").checked = !document.getElementById("cbTransferRequest2").checked;
+            document.getElementById("cbTransferRequest3").checked = !document.getElementById("cbTransferRequest3").checked;
+        }
+    </script>
 </div>
 {% endblock %}
