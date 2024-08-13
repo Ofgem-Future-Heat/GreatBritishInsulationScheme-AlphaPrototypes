@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/v09-external-custom-main.html" %}
 
 {% block pageTitle %}
 Transfer request details
@@ -89,10 +89,16 @@ Transfer request details
               </div>
             </div>
 
-            <!-- Withdraw request -->
-            <a class="govuk-button govuk-button--warning" href="withdraw-request">
-              Withdraw request
-            </a>
+            <div class="govuk-button-group">
+              <!-- Withdraw request -->
+              <a class="govuk-button govuk-button--warning" href="withdraw-request">
+                Withdraw request
+              </a>
+              <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Download transfer request file
+              </button>
+            </div>
+
         </div>
 
         <p class="govuk-body">
