@@ -1,0 +1,194 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+    Manage trading obligations
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">
+            Manage trading obligations
+        </h1>
+
+        <p class="govuk-body">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+
+        
+        <form id="" method="post" action="confirm-trading-obligations">
+                
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-half">
+                    <!-- Supplier licence A (trading from) -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="supplier-licence-a-from">
+                            Supplier licence A (trading from)
+                        </label>
+                        <select class="govuk-select" id="supplier-licence-a-from" name="supplier-licence-a-from" style="width: 100%;">
+                            <option value="" disabled="disabled">Select supplier licence number</option>
+                            <option value="EON3407430E" selected>EON3401234E</option>
+                            <option value="EON3407430E">EON3405678E</option>
+                            <option value="EON3407430E">EON3409101E</option>
+                            <option value="EON3407430E">EON3402345E</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="govuk-grid-column-one-half">
+                    <!-- Supplier licence B (trading to) -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="supplier-licence-b-to">
+                            Supplier licence B (trading to)
+                        </label>
+                        <select class="govuk-select" id="supplier-licence-b-to" name="supplier-licence-b-to" style="width: 100%;">
+                            <option value="" disabled="disabled">Select supplier licence number</option>
+                            <option value="EON3407430E">EON3401234E</option>
+                            <option value="EON3407430E">EON3405678E</option>
+                            <option value="EON3407430E " selected>EON3409101E</option>
+                            <option value="EON3407430E">EON3402345E</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-half">
+                    <!-- GBIS phase to be traded -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="gbis-phase-traded">
+                            GBIS phase to be traded
+                        </label>
+                        <select class="govuk-select" id="gbis-phase-traded" name="gbis-phase-traded" style="width: 100%;">
+                            <option value="" disabled="disabled">Select phase</option>
+                            <option value="Phase1">Phase 1</option>
+                            <option value="Phase2">Phase 2</option>
+                            <option value="Phase3" selected>Phase 3</option>
+                            <option value="Phase4">Phase 4</option>
+                            <option value="Phase5">Phase 5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="govuk-grid-column-one-half">
+                    <!-- Obligation category to be traded -->
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="obligation-category-traded">
+                            Obligation category to be traded
+                        </label>
+                        <select class="govuk-select" id="obligation-category-traded" name="obligation-category-traded" style="width: 100%;">
+                            <option value="" disabled="disabled">Select obligation category traded</option>
+                            <option value="HHCRO">HHCRO</option>
+                            <option value="HHCRO">HHCRO</option>
+                            <option value="HHCRO" selected>HHCRO</option>
+                            <option value="HHCRO">HHCRO</option>
+                            <option value="HHCRO">HHCRO</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Obligation results -->
+            <div class="govuk-grid-row">
+                <!-- Supplier A current obligation value (£ or household) -->
+                <div class="govuk-grid-column-one-half">
+                    <div class="dashboard-module">
+                        <h3 class="govuk-heading-m"><span class="module-heading">Supplier A</span></h3>
+                        <p class="govuk-body">Current obligation value (£ or household):</p>
+                        <div class="stat">
+                            <p class="single-stat-headline impact-number">
+                                <strong>
+                                    <abbr aria-label="0" title="0">
+                                        <span>£</span>4.555
+                                    </abbr>
+                                </strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Supplier B current obligation value (£ or household) -->
+                <div class="govuk-grid-column-one-half">
+                    <div class="dashboard-module">
+                        <h3 class="govuk-heading-m"><span class="module-heading">Supplier B</span></h3>
+                        <p class="govuk-body">Current obligation value (£ or household):</p>
+                        <div class="stat">
+                            <p class="single-stat-headline impact-number">
+                                <strong>
+                                    <abbr aria-label="0" title="0">
+                                        <span>£</span>4.555
+                                    </abbr>
+                                </strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <div class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="event-name">
+                            Obligation amount to be traded from A to B
+                        </label>
+                        <div id="event-name-hint" class="govuk-hint">
+                            Enter the obligation amount to be traded from supplier A to supplier B.
+                        </div>
+                        <input class="govuk-input" id="event-name" name="eventName" type="number" inputmode="numeric" value="5.1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="govuk-grid-row">
+                <!-- Supplier A new obligation value (£ or household -->
+                <div class="govuk-grid-column-one-half">
+                    <div class="dashboard-module">
+                        <h3 class="govuk-heading-m"><span class="module-heading">Supplier A</span></h3>
+                        <p class="govuk-body">New obligation value (£ or household):</p>
+                        <div class="stat">
+                            <p class="single-stat-headline impact-number">
+                                <strong>
+                                    <abbr aria-label="5.1" title="5.1">
+                                        <span>£</span>5.1
+                                    </abbr>
+                                </strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Supplier B new obligation value (£ or household -->
+                <div class="govuk-grid-column-one-half">
+                    <div class="dashboard-module">
+                        <h3 class="govuk-heading-m"><span class="module-heading">Supplier B</span></h3>
+                        <p class="govuk-body">New obligation value (£ or household):</p>
+                        <div class="stat">
+                            <p class="single-stat-headline impact-number">
+                                <strong>
+                                    <abbr aria-label="5.1" title="5.1">
+                                        <span>£</span>5.1
+                                    </abbr>
+                                </strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculate -->
+            <div class="govuk-button-group">
+                <a class="govuk-link" href="manage-trading-obligations2">Recalculate</a>
+                <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Confirm
+                </button>
+            </div>
+
+        </form>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        
+        <p class="govuk-body"><a href="/v13-1/home">Return to homepage</a></p>
+    </div>
+</div>
+
+{% endblock %}
