@@ -1,7 +1,7 @@
 {% extends "layouts/v09-external-custom-main.html" %}
 
 {% block pageTitle %}
-    Request approval for a transfer
+Request transfer of measures
 {% endblock %}
 
 {% block content %}
@@ -15,16 +15,16 @@
         
         <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
 
-        <h1 class="govuk-heading-xl">Request approval for a transfer</h1>
+        <h1 class="govuk-heading-xl">Request transfer of measures</h1>
 
-        <p class="govuk-body">Select teh file you wish to upload by using the 'browse' button and then selecting the option to upload. Please ensure that each file is in the correct CSV format.</p>
-        <p class="govuk-body">Once the request is made, the measures contained in the request will be restricted from further processing until a decision ont he request is completed.</p>
+        <p class="govuk-body">Select the file you want to transfer measures from.</p>
+        <p class="govuk-body">Once you send the request, measures contained in this file are restricted from any further processing until a decision is made on the request.</p>
 
         <form id="" method="post" action="check-request-transfer-details">
-            <!-- BGIS supplier reference transferring measures from: -->
+            <!-- Transfer measures from: (GBIS supplier reference): -->
             <div class="govuk-form-group">
                 <label class="govuk-label govuk-label--s" for="supplier-reference-transferring-from">
-                    GBIS supplier reference transferring measures from:
+                    Transfer measures from: (GBIS supplier reference)
                 </label>
                 <select class="govuk-select" id="supplier-reference-transferring-from" name="supplier-reference-transferring-from" style="width: 100%;">
                     <option value="" disabled="disabled" selected>Select supplier reference number</option>
@@ -35,10 +35,10 @@
                 </select>
             </div>
 
-            <!-- GBIS Supplier reference transferring measures to: -->
+            <!-- Transfer measures to: (GBIS supplier reference): -->
             <div class="govuk-form-group">
                 <label class="govuk-label govuk-label--s" for="supplier-reference-transferring-to">
-                    GBIS Supplier reference transferring measures to:
+                    Transfer measures to: (GBIS supplier reference)
                 </label>
                 <input class="govuk-input" id="supplier-reference-transferring-to" name="supplier-reference-transferring-to" type="text">
             </div>
@@ -46,11 +46,9 @@
             <!-- Upload MRN -->
             <div class="govuk-form-group">
                 <label class="govuk-label bold" for="transfer-request-file">
-                  Upload transfer request file
+                    Upload transfer request file
                 </label>
-                <!-- <div id="location-hint" class="govuk-hint">
-                  Select a transfer request file.
-                </div> -->
+                
                 <div class="upload-container">
                     <label for="file-upload" class="custom-file-upload">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -73,7 +71,7 @@
             <!-- <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="250"> -->
             <div class="govuk-form-group">
                 <label class="govuk-label govuk-label--s" for="supplementary-information">
-                    Supplementary information (optional)
+                    Additional information about transfer request (optional)
                 </label>
                 <!-- <div id="reason-for-error-with-measure-hint" class="govuk-hint">
                     Enter the reason for the error with the neasure.
@@ -87,7 +85,7 @@
 
             <!-- Upload -->
             <button type="submit" class="govuk-button" data-module="govuk-button">
-                Upload transfer request
+                Send transfer request
             </button>
         </form>
 

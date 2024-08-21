@@ -1,7 +1,7 @@
 {% extends "layouts/v09-external-custom-main.html" %}
 
 {% block pageTitle %}
-    Transfers
+Manage measure transfers
 {% endblock %}
 
 {% block content %}
@@ -12,50 +12,46 @@
         <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
 
         <h1 class="govuk-heading-xl">
-            Transfers and tradings
+            Manage measure transfers
         </h1>
         
         <h2 class="govuk-heading-l">
             Transfers
         </h2>
 
-        <p class="govuk-body">Request approval of a transfer and manage approval requests.</p>
+        <p class="govuk-body">Request transfer of measures or manage approval requests for transferring measures in GBIS.</p>
 
         <div class="grid-list">
 
-            <!-- Request a transfer -->
+            <!-- Request transfer of measures -->
             <div class="card govuk-!-padding-5">
-                <h3 class="govuk-heading-m">Request a transfer</h3>
-                <p class="govuk-body card-description">Request approval of transfer of measures.</p>
-                <!-- <p class="govuk-body"><a data-test-id="measures-upload-card-link" class="govuk-link " href="transfers-and-tradings/request-transfer" aria-describedby="upload-measures-description">Click to request a transfer</a></p> -->
-                <p class="govuk-body"><a data-test-id="request-transfer-card-link" class="govuk-link " href="/v13-1/transfers-and-tradings/request-transfer" aria-describedby="request-transfer-description">Click to request a transfer</a></p>
+                <h3 class="govuk-heading-m">Request transfer of measures</h3>
+                <p class="govuk-body card-description">Send information about your request to transfer measures to another energy supplier.</p>
+                <p class="govuk-body"><a data-test-id="request-transfer-card-link" class="govuk-link " href="/v13-1/transfers-and-tradings/request-transfer" aria-describedby="request-transfer-description">Request transfer of measures</a></p>
             </div>
             
-            <!-- Manage approval requests -->
+            <!-- Manage measure approval requests -->
             <div class="card govuk-!-padding-5">
-                <h3 class="govuk-heading-m">Manage approval requests</h3>
-                <p class="govuk-body card-description">Manage approval requests of transfered measures.</p>
-                <!-- <p class="govuk-body"><a data-test-id="search-measures-card-link" class="govuk-link " id="" href="transfers-and-tradings/manage-transfers" aria-describedby="search-measures-description">Click to manage transfers</a></p> -->
-                <p class="govuk-body"><a data-test-id="manage-transfers-card-link" class="govuk-link " id="" href="/v13-1/transfers-and-tradings/manage-transfers" aria-describedby="maange-transfer-description">Click to manage transfers</a></p>
+                <h3 class="govuk-heading-m">Manage measure approval requests</h3>
+                <p class="govuk-body card-description">View, accept and decline all measure approval requests sent and received.</p>
+                <p class="govuk-body"><a data-test-id="manage-transfers-card-link" class="govuk-link " id="" href="/v13-1/transfers-and-tradings/manage-transfers" aria-describedby="maange-transfer-description">Manage measure approvals</a></p>
             </div>
             
         </div>
 
-        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+        <!-- <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
 
         <h2 class="govuk-heading-l">
             Tradings
-        </h2>
-
-        <div class="grid-list">
-
-            <!-- Manage trading obligations -->
+        </h2> -->
+        
+        <!-- Manage trading obligations -->
+        <!-- <div class="grid-list">
             <div class="card govuk-!-padding-5">
                 <h3 class="govuk-heading-m">Manage trading obligations</h3>
-                <!-- <p class="govuk-body card-description">Request approval of transfer of measures.</p> -->
                 <p class="govuk-body"><a data-test-id="request-transfer-card-link" class="govuk-link " href="/v13-1/transfers-and-tradings/manage-trading-obligations" aria-describedby="request-transfer-description">Click to manage trading obligations</a></p>
             </div>
-        </div>
+        </div> -->
 
         <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
         
