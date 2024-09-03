@@ -10,6 +10,48 @@
     <div class="govuk-grid-column-two-thirds">
         
         <!-- <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a> -->
+        <div class="govuk-error-summary" data-module="govuk-error-summary">
+          <div role="alert">
+            <h2 class="govuk-error-summary__title">
+              There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#error1">The selected file must be a CSV</a>
+                </li>
+                <li>
+                  <a href="#error2">The selected file must be smaller than 10 MB</a>
+                </li>
+                <li>
+                  <a href="#error3">The selected CSV doesn't match the accepted template headers</a>
+                </li>
+                <li>
+                  <a href="#error4">The selected CSV file is empty</a>
+                </li>
+                <li>
+                  <a href="#error5">You can only upload up to 25,000 rows in a single CSV</a>
+                </li>
+                <li>
+                  <a href="#error6">The selected CSV contains duplicates</a>
+                </li>
+                <li>
+                  <a href="#error7">The chosen CSV file includes pre-existing MRNs listed under the column New_Measure_Reference_Number</a>
+                </li>
+                <li>
+                  <a href="#error8">The MRNs in the selected CSV file, listed under 'Measure_Reference_Number', do not correspond with the transfer request that has been initiated</a>
+                </li>
+                <li>
+                  <a href="#error9">The MRNs in the selected CSV file are part of an active transfer</a>
+                </li>
+                <li>
+                  <a href="#error10">The MRN format in the chosen CSV file is incorrect</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
 
         <h1 class="govuk-heading-xl">Accept transfer request</h1>
         
@@ -103,13 +145,46 @@
             </details>
 
             <!-- Upload MRN -->
-            <div class="govuk-form-group">
+            <div class="govuk-form-group govuk-form-group--error">
               <label class="govuk-label bold" for="transfer-decline-reason-notes-detail">
                 Upload measure reference number CSV file
               </label>
               <div id="location-hint" class="govuk-hint">
                 Select the CSV file with the new measure reference numbers to replace the existing measure reference numbers.
               </div>
+
+              <p id="error1" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The selected file must be a CSV
+              </p>
+              <p id="error2" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The selected file must be smaller than 10 
+              </p>
+              <p id="error3" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The selected CSV doesn't match the accepted template headers
+              </p>
+              <p id="error4" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The selected CSV file is empty 
+              </p>
+              <p id="error5" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> You can only upload up to 25,000 rows in a single CSV
+              </p>
+              <p id="error6" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The selected CSV contains duplicates
+              </p>
+              <p id="error7" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The chosen CSV file includes pre-existing MRNs listed under the column New_Measure_Reference_Number
+              </p>
+              <p id="error8" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The MRNs in the selected CSV file, listed under 'Measure_Reference_Number', do not correspond with the transfer request that has been initiated
+              </p>
+              <p id="error9" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The MRNs in the selected CSV file are part of an active transfer
+              </p>
+              <p id="error10" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The MRN format in the chosen CSV file is incorrect
+              </p>
+
+
               <div class="upload-container">
                   <label for="file-upload" class="custom-file-upload">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -129,10 +204,14 @@
             </div>
             
             <!-- Reasons for accepting the transfer request -->
-            <div class="govuk-form-group">
+            <!-- <div class="govuk-form-group govuk-form-group--error"> -->
+            <div class="govuk-form-group ">
               <label class="govuk-label bold" for="transfer-decline-reason-notes-detail">
                 Reasons for accepting the transfer request
               </label>
+              <!-- <p id="passport-issued-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> Passport issue date must include a year
+              </p> -->
               <textarea class="govuk-textarea" id="transfer-accept-reason-notes-detail" name="transferAcceptReasonNotesDetail" rows="5"></textarea>
             </div>
 
@@ -147,9 +226,9 @@
       <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
       <p class="govuk-body"><a href="/v13-1/home">Return to homepage</a></p>
     </div>
-
+    
     <div class="govuk-grid-column-one-third">
-      <p class="govuk-body">EXAMPLE: REMOVE LATER<br/><a class="govuk-link" href="accept-transfer-request-received-error-states">View this page with error states</a></p>
+      <p class="govuk-body">EXAMPLE: REMOVE LATER<br/><a class="govuk-link" href="accept-transfer-request-received">View this page without error states</a></p>
     </div>
 </div>
 {% endblock %}
