@@ -14,18 +14,44 @@ Request transfer of measures
     <div class="govuk-grid-column-two-thirds">
         
         <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+        
+        <div class="govuk-error-summary" data-module="govuk-error-summary">
+            <div role="alert">
+                <h2 class="govuk-error-summary__title">
+                    There is a problem
+                </h2>
+                <div class="govuk-error-summary__body">
+                    <ul class="govuk-list govuk-error-summary__list">
+                        <li>
+                            <a href="#error1">Transfer measures from GBIS supplier reference must be selected</a>
+                        </li>
+                        <li>
+                            <a href="#error2">The supplier reference you selected is not recognised in the supplier reference list</a>
+                        </li>
+                        <li>
+                            <a href="#error3">Transfer request file must be uploaded to the request</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <h1 class="govuk-heading-xl">Request transfer of measures</h1>
 
         <p class="govuk-body">Select the file you want to transfer measures from.</p>
         <p class="govuk-body">Once you send the request, measures contained in this file are restricted from any further processing until a decision is made on the request.</p>
 
-        <form id="" method="post" action="check-request-transfer-details">
+        <form id="" method="post" action="#">
             <!-- Transfer measures from: (GBIS supplier reference): -->
-            <div class="govuk-form-group">
+            <div id="error1" class="govuk-form-group govuk-form-group--error">
                 <label class="govuk-label govuk-label--s" for="supplier-reference-transferring-from">
                     Transfer measures from: (GBIS supplier reference)
                 </label>
+
+                <p id="supplier-reference-transferring-from-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> Transfer measures from GBIS supplier reference must be selected
+                </p>
+
                 <select class="govuk-select" id="supplier-reference-transferring-from" name="supplier-reference-transferring-from" style="width: 100%;">
                     <option value="" disabled="disabled" selected>Select supplier reference number</option>
                     <option value="EON3407430E">EON3401234E</option>
@@ -36,18 +62,25 @@ Request transfer of measures
             </div>
 
             <!-- Transfer measures to: (GBIS supplier reference): -->
-            <div class="govuk-form-group">
+            <div id="error2" class="govuk-form-group govuk-form-group--error">
                 <label class="govuk-label govuk-label--s" for="supplier-reference-transferring-to">
                     Transfer measures to: (GBIS supplier reference)
                 </label>
-                <input class="govuk-input" id="supplier-reference-transferring-to" name="supplier-reference-transferring-to" type="text">
+                <p id="supplier-reference-transferring-to-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> The supplier reference you selected is not recognised in the supplier reference list
+                </p>
+                <input class="govuk-input govuk-input--error" id="supplier-reference-transferring-to" name="supplier-reference-transferring-to" type="text">
             </div>
 
             <!-- Upload MRN -->
-            <div class="govuk-form-group">
+            <div id="error3" class="govuk-form-group govuk-form-group--error">
                 <label class="govuk-label bold" for="transfer-request-file">
                     Upload transfer request file
                 </label>
+
+                <p id="transfer-request-file-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> Transfer request file must be uploaded to the request
+                </p>
                 
                 <div class="upload-container">
                     <label for="file-upload" class="custom-file-upload">
@@ -68,19 +101,12 @@ Request transfer of measures
               
 
             <!-- Supplementary information -->
-            <!-- <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="250"> -->
             <div class="govuk-form-group">
                 <label class="govuk-label govuk-label--s" for="supplementary-information">
                     Additional information about transfer request (optional)
                 </label>
-                <!-- <div id="reason-for-error-with-measure-hint" class="govuk-hint">
-                    Enter the reason for the error with the neasure.
-                </div> -->
                 <textarea class="govuk-textarea" id="supplementary-information" name="supplementary-information" rows="5" aria-describedby="supplementary-information-hint"></textarea>
-                <!-- <textarea class="govuk-textarea govuk-js-character-count" id="supplementary-information" name="supplementary-information" rows="5" aria-describedby="supplementary-information-hint"></textarea> -->
-                <!-- <div id="supplementary-information-info" class="govuk-hint govuk-character-count__message">
-                    You can enter up to 250 characters
-                </div> -->
+                
             </div>
 
             <!-- Upload -->
@@ -96,7 +122,7 @@ Request transfer of measures
     </div>
 
     <div class="govuk-grid-column-one-third">
-        <p class="govuk-body">EXAMPLE: REMOVE LATER<br/><a class="govuk-link" href="request-transfer-error-states">View this page with error states</a></p>
+        <p class="govuk-body">EXAMPLE: REMOVE LATER<br/><a class="govuk-link" href="request-transfer">View this page without error states</a></p>
     </div>
 </div>
 
