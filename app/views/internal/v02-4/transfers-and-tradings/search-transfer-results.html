@@ -44,64 +44,35 @@
         </div>
         -->
 
-        <h1 class="govuk-heading-xl">Review GBIS transfer requests</h1>
+        <h1 class="govuk-heading-xl">Manage GBIS measure transfer requests</h1>
 
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
                 <p class="govuk-body">
-                    Search and review GBIS transfer requests between organisations using the filters provided. 
+                    Search, review and manage all GBIS transfer requests between energy suppliers using the filters provided. 
                 </p>
 
-                <!-- Different ways to search for uploaded measures -->
+                <!-- Different ways to search for and view GBIS transfer requests -->
                 <details class="govuk-details" data-module="govuk-details">
                     <summary class="govuk-details__summary">
                         <span class="govuk-details__summary-text">
-                            Different ways to search for BGIS transfer requests
+                            Different ways to search for and view GBIS transfer requests
                         </span>
                     </summary>
 
                     <div class="govuk-details__text">
 
-                        <p class="govuk-body"><strong>Before searching for uploaded measures</strong></p>
-                        <p class="govuk-body">You need the measure reference numbers the energy suppliers have uploaded to the Great British Insulation Scheme portal. You will already have them or Supplier Compliance will have sent these to you.</p>
-
-                        <p class="govuk-body"><strong>Searching for measures</strong></p>
-                        <p class="gov-body">You can search for measures using:</p>
+                        <p class="govuk-body"><strong>Searching for GBIS measure transfer requests</strong></p>
+                        <p class="govuk-body">You can search for measure transfer requests using the following filters:</p>
                         <ul class="govuk-list govuk-list--bullet">
-                            <li>single measure reference numbers</li>
-                            <li>a file containing multiple measure reference numbers</li>
-                            <li>other filters</li>
+                            <li>transfer request number</li>
+                            <li>supplier licence reference details</li>
+                            <li>transfer status</li>
+                            <li>measure reference number (MRN)</li>
+                            <li>transfer recommendation</li>
                         </ul>
 
-                        <p class="govuk-body"><strong>Single measure reference numbers</strong></p>
-                        <P class="govuk-body">To search for individual measures using a single reference number:</P>
-                        <ul class="govuk-list govuk-list--number indent40">
-                            <li>Find the measure reference number you want to search for.</li>
-                            <li>Copy the measure reference number.</li>
-                            <li>Add it to the measure reference number field.</li>
-                            <li>Select the "Search" button.</li>
-                        </ul>
-
-                        <p class="govuk-body"><strong>A file containing multiple measure reference numbers</strong></p>
-                        <p class="gov-body">To search for measures using a measure reference number file, you should:</p>
-                        <ul class="govuk-list govuk-list--number indent40">
-                            <li>Create a Microsoft Excel file.</li>
-                            <li>Include a single column with the heading labelled as 'Measure_reference_number'.</li>
-                            <li>Then, add the measure reference numbers you want to search for in the column.</li>
-                            <li>Save it as a CSV file.</li>
-                            <li>Go to the search page in the Great British Insulation Scheme.</li>
-                            <li>Select "Choose file" and select the CSV file you created.</li>
-                            <li>Select the "Search" button.</li>
-                        </ul>
-
-                        <p class="govuk-body"><strong>Using other filters to search for measures</strong></p>
-                        <p class="govuk-body">You can also search for measures by the following filters:</p>
-                        <ul class="govuk-list govuk-list--number indent40">
-                            <li>Supplier name</li>
-                            <li>Measure status</li>
-                            <li>Notification period</li>
-                            <li>Property postcode</li>
-                        </ul>
+                        <p class="govuk-body">Not all filters have to be set to search for measure transfer requests.</p>
                     </div>
                 </details>
             </div>
@@ -141,24 +112,21 @@
                             </div>
                         </div>
 
-                        <!-- Supplier licence reference transferred from -->
+                        <!-- Supplier licence reference numbers -->
                         <div class="tab">
                             <input class="hide-accordion-checkboxes" type="checkbox" id="chck2" checked="checked">
-                            <label class="tab-label" for="chck2">Supplier licence reference transferred</label>
+                            <label class="tab-label" for="chck2">Supplier licence reference numbers</label>
                             <div class="tab-content">
                                 <div class="govuk-form-group" id="transferredFromErrorSection">
                                     <fieldset class="govuk-fieldset" role="group" aria-describedby="transferredFrom-hint" id="error-with-transferredFrom">
                                         <legend class="govuk-fieldset__legend">
-                                            <h2 class="govuk-heading-m">What is the licence reference transferred 'from' and 'to' number?</h2>
+                                            <h2 class="govuk-heading-m">What are the licence reference numbers the measures are being transferred from and to?</h2>
                                         </legend>
                                         
                                         <p id="transferredFrom-field-error" class="govuk-error-message hide">
                                             <span class="govuk-visually-hidden">Error:</span> Select the 'from' and 'to' licence reference transfer numbers if you're not searching using other filters
                                         </p>
                                         
-                                        <div id="transferredFrom-hint" class="govuk-hint">
-                                            Select the 'from' and 'to' licence reference transfer numbers
-                                        </div>
                                         <p id="empty-supplier-name-field-error" class="govuk-error-message hide">
                                             <span class="govuk-visually-hidden">Error:</span> Select the 'from' and 'to' licence reference transfer numbers
                                         </p>
@@ -270,7 +238,7 @@
                                 <div class="govuk-form-group" id="transferRecommendationErrorSection">
                                     <fieldset class="govuk-fieldset" role="group" aria-describedby="transferRecommendation-hint" id="error-with-transferRecommendation">
                                         <legend class="govuk-fieldset__legend">
-                                            <h2 class="govuk-heading-m">What is the transfer recommendation?</h2>
+                                            <h2 class="govuk-heading-m">What is the transfer request number?</h2>
                                         </legend>
                                         
                                         <p id="transferRecommendation-field-error" class="govuk-error-message hide">
