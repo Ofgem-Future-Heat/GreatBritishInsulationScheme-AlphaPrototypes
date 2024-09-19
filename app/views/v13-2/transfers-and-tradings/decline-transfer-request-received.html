@@ -1,0 +1,50 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+Transfer request details
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+        <!-- <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a> -->
+
+        <h1 class="govuk-heading-xl">Decline transfer request</h1>
+        
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+
+              <div class="govuk-warning-text">
+                  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                  <strong class="govuk-warning-text__text">
+                      <span class="govuk-visually-hidden">Warning</span>
+                      Are you sure you want want to decline this transfer request?
+                  </strong>
+              </div>
+
+              <div class="govuk-form-group govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+                <label class="govuk-label govuk-label--s" for="transfer-decline-reason-notes-detail">
+                  Reasons for decline the transfer request
+                </label>
+                <textarea class="govuk-textarea govuk-js-character-count" id="transfer-decline-reason-notes-detail" name="transfer-accept-reason-notes-detail" rows="5" aria-describedby="transfer-decline-reason-notes-detail-hint"></textarea>
+                <div id="transfer-decline-reason-notes-detail-info" class="govuk-hint govuk-character-count__message">
+                    You can enter up to 200 characters
+                </div>
+              </div>
+
+
+              <div class="govuk-button-group">
+                  <a class="govuk-button margin-top-30" href="decline-transfer-request-complete">Confirm</a>
+                  <a class="govuk-link" href="#" onclick="history.go(-1)">Cancel</a>
+              </div>
+          </div>
+      </div>
+
+      <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+      <p class="govuk-body"><a href="/v13-2/home">Return to homepage</a></p>
+    </div>
+</div>
+{% endblock %}
+

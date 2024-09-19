@@ -1,0 +1,139 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+    Errors
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 id="errorTop" class="govuk-heading-xl">Stage 1 error reports</h1>
+
+        <!--
+        <p class="govuk-body">All existing error reports are listed here by what stage they're at in the process of validation.</p>
+
+        <p class="govuk-body">The list of error reports <strong>includes all reports generated</strong> as a result of you uploading a notification template. The most recent reports are shown first.</p>
+
+        <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+                <span class="govuk-visually-hidden">Warning</span>
+                Error reports can contain up to 15,000 errors. Where reports have this many errors, it shows there is possibly an issue with the data uploaded originally. You should review the measure notification file uploaded originally and ensure the data is accurate. If the problem persists, email Ofgem at <a href="mailto:GBIS.enquiry@ofgem.gov.uk" class="govuk-link">GBIS.enquiry@ofgem.gov.uk</a>.
+            </strong>
+        </div>
+
+        <p class="govuk-body">You should download any relevant error report then follow the next steps.</p>
+        -->
+
+        <p class="govuk-body">
+            <a class="govuk-link" href="/v13-2/errors/">Errors home</a> | Stage 1 | <a class="govuk-link" href="stage2">Stage 2</a> | <a class="govuk-link" href="trustmark">TrustMark</a> | <a class="govuk-link" href="stage3">Stage 3</a>
+        </p>
+        <p class="govuk-body">You should download any relevant error report then follow the next steps.</p>
+        
+        <div class="" id="stage1">
+            <table class="govuk-table">
+                <caption class="govuk-table__caption govuk-table__caption--m sr-only">Stage 1 error reports</caption>
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header app-custom-class date">Date</th>
+                        <th scope="col" class="govuk-table__header app-custom-class time">Time</th>
+                        <th scope="col" class="govuk-table__header app-custom-class filename">File name</th>
+                        <th scope="col" class="govuk-table__header app-custom-class action left-align">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__cell date">12/12/2023</th>
+                        <td class="govuk-table__cell time">2:35pm</th>
+                        <td class="govuk-table__cell filename">BGT-26042024-17021-FB-133585151428718745.csv</td>
+                        <td class="govuk-table__cell action"><a href="#">Download error report</a></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__cell date">09/12/2023</th>
+                        <td class="govuk-table__cell time">9:29am</th>
+                        <td class="govuk-table__cell filename">BGT-26042024-17021-FB-133585151428718745.csv</td>
+                        <td class="govuk-table__cell action"><a href="#">Download error report</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="sr-only">Stage 1 error reports end</div>
+
+            <p class="govuk-body back-to-top"><a class="govuk-link" href="#errorTop">Back to top</a> &#129033;</p>
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        </div>
+
+        <p class="govuk-body"><a href="/v13-2/home">Return to homepage</a></p>
+    </div>
+
+    <div class="govuk-grid-column-one-third sticky-container">
+        <h2 class="govuk-heading-m">Next steps</h2>
+
+        <!-- 1. Download error report -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="step-header">
+                    <span class="step-number">
+                        <span class="number"><span class="sr-only-text">Step </span>1</span>
+                    </span>
+                    <span class="step-title">Download error report</span>
+                </div>
+            </div>
+            <div class="govuk-grid-column-full">
+                <div class="step-description">
+                    <span class="step-description-spacer">&nbsp;</span>
+                    <span class="step-description">Download the error report.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Fix outstanding measures with errors -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="step-header">
+                    <span class="step-number">
+                        <span class="number"><span class="sr-only-text">Step </span>2</span>
+                    </span>
+                    <span class="step-title">Fix outstanding measures with errors</span>
+                </div>
+            </div>
+            <div class="govuk-grid-column-full">
+                <div class="step-description">
+                    <span class="step-description-spacer">&nbsp;</span>
+                    <span class="step-description">The measures with errors and how you fix them are detailed in the error report. Follow the instructions to fix the measures with errors.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Reupload measures that failed the checks in new CSV notification file -->
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <div class="step-header">
+                    <span class="step-number">
+                        <span class="number"><span class="sr-only-text">Step </span>3</span>
+                    </span>
+                    <span class="step-title">Reupload measures that failed the checks in new CSV notification file</span>
+                </div>
+            </div>
+            <div class="govuk-grid-column-full">
+                <div class="step-description">
+                    <span class="step-description-spacer">&nbsp;</span>
+                    <span class="step-description">
+                        <span>
+                            After fixing the measures with errors, you should save the document as a new CSV notification file.
+                            <br /><br />
+                            Then, you should return to the <a href="/v13-2/measures/upload-measure">Upload measures page</a> and upload the new CSV notification file.
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

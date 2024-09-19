@@ -244,6 +244,11 @@ input[type=file]#file-upload {
 .govuk-table__header:last-child, .govuk-table__cell:last-child {
     text-align: right;
 }
+.govuk-table.no-numbers {
+    .govuk-table__header:last-child, .govuk-table__cell:last-child {
+        text-align: left;
+    }
+}
 
 .found-users {
     background: #f3f2f1;
@@ -689,3 +694,5 @@ ul.responsive-list {
 }
 
 .no-border { border: 0; }
+
+// .govuk-tag { text-align: center; }

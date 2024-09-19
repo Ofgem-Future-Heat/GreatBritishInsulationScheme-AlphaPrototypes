@@ -1,0 +1,163 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+View approval requests raised
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Manage transfer requests sent</h1>
+
+        <p class="govuk-body">View all transfer requests sent by your organisation.</p>
+
+        <details class="govuk-details">
+            <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                    What do the transfer statuses mean?
+                </span>
+            </summary>
+            <div class="govuk-details__text">
+                <table class="govuk-table no-numbers">
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th class="govuk-table__header" scope="col">Status</th>
+                        <th class="govuk-table__header" scope="col">Explanation</th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body no-numbers">
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <span class="govuk-tag govuk-tag--blue">Approval of transfer requested</span>
+                            </td>
+                            <td class="govuk-table__cell">
+                                The transfer request is successfully raised but is not accepted by other energy supplier yet.
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <span class="govuk-tag govuk-tag--turquoise">Request for approval being assessed</span>
+                            </td>
+                            <td class="govuk-table__cell">
+                                The transfer is ready to be reviewed by Ofgem internal users.
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <span class="govuk-tag govuk-tag--yellow">Request for approval withdrawn</span>
+                            </td>
+                            <td class="govuk-table__cell">
+                                The supplier who raised the transfer request has 'withdrawn' their request.
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <span class="govuk-tag govuk-tag--red">Request not supported</span>
+                            </td>
+                            <td class="govuk-table__cell">
+                                The supplier who received the transfer request has 'Declined' the request.
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <span class="govuk-tag govuk-tag--red">Transfer not approved</span>
+                            </td>
+                            <td class="govuk-table__cell">
+                                Transfer request has not been approved by Ofgem.
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <span class="govuk-tag govuk-tag--green">Transfer approved</span>
+                            </td>
+                            <td class="govuk-table__cell">
+                                Transfer request has been approved by Ofgem.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
+
+        <table class="govuk-table no-numbers" id="BGT">
+            <caption class="govuk-table__caption govuk-table__caption--m">Transfer requests sent</caption>
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Request number</th>
+                    <th scope="col" class="govuk-table__header">Status</th>
+                    <th scope="col" class="govuk-table__header">Transfer from</th>
+                    <th scope="col" class="govuk-table__header">Transfer to</th>
+                    <th scope="col" class="govuk-table__header">Date created</th>
+                    <th scope="col" class="govuk-table__header">Action</th>
+                </tr>
+            </thead>
+
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">GBIS_TR000060</td>
+                    <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--blue">Approval of transfer requested</span></td>
+                    <td class="govuk-table__cell">OCT3401234E</td>
+                    <td class="govuk-table__cell">EON0307811E</td>
+                    <td class="govuk-table__cell">01/08/2024</td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="view-approval-requests-details-raised">View details</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">GBIS_TR000061</td>
+                    <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Transfer approved</span></td>
+                    <td class="govuk-table__cell">OCT3405678E</td>
+                    <td class="govuk-table__cell">BGT0307822E</td>
+                    <td class="govuk-table__cell">24/07/2024</td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="view-approval-requests-details-approved">View detail</a></td>
+                </tr>
+                <tr>
+                    <td class="govuk-table__cell">GBIS_TR000045</td>
+                    <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--turquoise">Request for approval being assessed</span></td>
+                    <td class="govuk-table__cell">OCT3405699E</td>
+                    <td class="govuk-table__cell">BGT0307822E</td>
+                    <td class="govuk-table__cell">21/07/2024</td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="view-approval-requests-details-being-assessed">View details</a></td>
+                </tr>
+                <tr>
+                    <td class="govuk-table__cell">GBIS_TR000034</td>
+                    <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--yellow">Request for approval withdrawn</span></td>
+                    <td class="govuk-table__cell">OCT3405699E</td>
+                    <td class="govuk-table__cell">ABC0307822E</td>
+                    <td class="govuk-table__cell">11/06/2024</td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="view-approval-requests-details-withdrawn">View details</a></td>
+                </tr>
+                <tr>
+                    <td class="govuk-table__cell">GBIS_TR000031</td>
+                    <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--red">Request not supported</span></td>
+                    <td class="govuk-table__cell">OCT3405699E</td>
+                    <td class="govuk-table__cell">XYZ0307822E</td>
+                    <td class="govuk-table__cell">15/03/2024</td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="view-approval-requests-details-declined">View details</a></td>
+                </tr>
+                <tr>
+                    <td class="govuk-table__cell">GBIS_TR000087</td>
+                    <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--red">Transfer not approved</span></td>
+                    <td class="govuk-table__cell">OCT3455639E</td>
+                    <td class="govuk-table__cell">XYZ0305826E</td>
+                    <td class="govuk-table__cell">05/03/2024</td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="view-approval-requests-details-not-approved">View details</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">GBIS_TR000057</td>
+                    <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Transfer approved</span></td>
+                    <td class="govuk-table__cell">XYZ3400078E</td>
+                    <td class="govuk-table__cell">BGT0307832E</td>
+                    <td class="govuk-table__cell">28/11/2023</td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="view-approval-requests-details-approved">View detail</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="sr-only">End of the raised requests list</div>
+
+        <p class="govuk-body"><a href="/v13-2/home">Return to homepage</a></p>
+    </div>
+</div>
+{% endblock %}

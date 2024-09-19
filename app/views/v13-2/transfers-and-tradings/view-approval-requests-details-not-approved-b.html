@@ -1,0 +1,119 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+Transfer request details
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Transfer request details</h1>
+
+        <div class="govuk-notification-banner govuk-notification-banner--info" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+              <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                  Information
+              </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+              <h3 class="govuk-notification-banner__heading">
+                  This request is not approved
+              </h3>
+          </div>
+        </div>
+
+        
+        <div id="measureDetails">
+            <!-- <p class="govuk-body">Your organisation has raised following transfer.</p> -->
+
+            <div class="govuk-grid-row">
+              <!-- Left half -->
+              <div class="govuk-grid-column-one-half">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row list-row">
+                    <dt class="govuk-summary-list__key list-key">Request number</dt>
+                    <dd class="govuk-summary-list__value list-value">GBIS_TR000060</dd>
+                  </div>
+        
+                  <div class="govuk-summary-list__row list-row">
+                    <dt class="govuk-summary-list__key list-key">Date sent</dt>
+                    <dd class="govuk-summary-list__value list-value">01/08/2024</dd>
+                  </div>
+                </dl>
+              </div>
+        
+              <!-- Right half -->
+              <div class="govuk-grid-column-one-half">
+                <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row list-row">
+                    <dt class="govuk-summary-list__key list-key">Transfer from</dt>
+                    <dd class="govuk-summary-list__value list-value">OCT3455639E</dd>
+                  </div>
+                  
+                  <div class="govuk-summary-list__row list-row">
+                    <dt class="govuk-summary-list__key list-key">Transfer to</dt>
+                    <dd class="govuk-summary-list__value list-value">XYZ0305826E</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            
+            <!-- General measure details card -->
+            <div class="govuk-summary-card">
+              <div class="govuk-summary-card__title-wrapper">
+                <h2 class="govuk-summary-card__title">Transfer details</h2>
+              </div>
+              <div class="govuk-summary-card__content">
+                <dl class="govuk-summary-list">
+                  
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Status</dt>
+                    <dd class="govuk-summary-list__value"><span class="govuk-tag govuk-tag--red">Transfer not approved</span></dd>
+                  </div>
+
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Number of measures</dt>
+                    <dd class="govuk-summary-list__value">3</dd>
+                  </div>
+                  
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">GBIS obligation value</dt>
+                    <dd class="govuk-summary-list__value">£203.40</dd>
+                  </div>
+                  
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">LIMR sub-obligation value</dt>
+                    <dd class="govuk-summary-list__value">£203.40</dd>
+                  </div>
+                  
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Raised by</dt>
+                    <dd class="govuk-summary-list__value">Jean Grey</dd>
+                  </div>
+                  
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Additional information</dt>
+                    <dd class="govuk-summary-list__value">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            
+            <div class="govuk-button-group">
+              <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                Download transfer request file
+              </button>
+            </div>
+        </div>
+
+        <p class="govuk-body">
+            <a class="govuk-link" href="view-approval-requests-received">View raised approval requests</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,59 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+Manage measure transfers
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">
+            Manage measure transfers
+        </h1>
+        
+        <h2 class="govuk-heading-l">
+            Transfers
+        </h2>
+
+        <p class="govuk-body">Request transfer of measures or manage approval requests for transferring measures in GBIS.</p>
+
+        
+        <div class="govuk-grid-row">
+
+            <!-- Request transfer of measures -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m"><a href="/v13-2/transfers-and-tradings/request-transfer" class="govuk-link">Request transfer of measures</a></h3>
+                    <p class="govuk-body">Send information about your request to transfer measures to another energy supplier.</p>
+                </div>
+            </div>
+
+            <!-- Requests sent to other energy suppliers -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m"><a href="/v13-2/transfers-and-tradings/view-approval-requests-raised" class="govuk-link">View requests sent</a></h3>
+                    <p class="govuk-body">All requests your organisation has sent.</p>
+                </div>
+            </div>
+
+            <!-- Requests sent to other energy suppliers -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m"><a href="/v13-2/transfers-and-tradings/view-approval-requests-received" class="govuk-link">View requests received</a></h3>
+                    <p class="govuk-body">All requests your organisation has received.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+        
+        <p class="govuk-body"><a href="/v13-2/home">Return to homepage</a></p>
+
+    </div>
+</div>
+
+{% endblock %}
