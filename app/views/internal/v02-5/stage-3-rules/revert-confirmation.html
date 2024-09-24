@@ -1,0 +1,44 @@
+{% extends "layouts/internal-main2-4.html" %}
+
+{% block pageTitle %}
+    Searching the measure register
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Revert stage 3 measure validation</h1>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+                <div class="govuk-warning-text">
+                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                    <strong class="govuk-warning-text__text">
+                        <span class="govuk-visually-hidden">Warning</span>
+                        Are you sure? You will no longer be able to access the current measure validation checks. 
+                    </strong>
+                </div>
+
+                <div class="govuk-button-group">
+                    <a class="govuk-button margin-top-30" href="loading-screen-reverting">Confirm</a>
+                    <a class="govuk-link" href="#" onclick="history.go(-1)">Cancel</a>
+                </div>
+                
+                <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+           
+                <p class="govuk-body"><a href="/internal/v02-5/">Return to homepage</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // function gotoURL() {
+        //     window.location.pathname = "loading-screen-reverting";
+        // }
+    </script>
+</div>
+{% endblock %}

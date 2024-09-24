@@ -1,0 +1,35 @@
+{% extends "layouts/internal-main2-4.html" %}
+
+{% block pageTitle %}
+    Searching the measure register
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Stage 3 measure validation summary</h1>
+
+        
+        <div class="govuk-inset-text">
+            <!-- Stage 3 measure validation is not active as it has not been started. -->
+            Stage 3 measure validation is not initiated or is not completed yet. Please try again later.
+        </div>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds"></div>
+
+            <!-- Recommended status -->
+            <div class="govuk-grid-column-full">
+                <p class="govuk-body"><a href="/internal/v02-5/">Return to homepage</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+       
+    </script>
+</div>
+{% endblock %}

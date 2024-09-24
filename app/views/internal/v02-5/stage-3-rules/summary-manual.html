@@ -1,0 +1,162 @@
+{% extends "layouts/internal-main2-4.html" %}
+
+{% block pageTitle %}
+    Searching the measure register
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+            <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                    Important
+                </h2>
+            </div>
+            <div class="govuk-notification-banner__content">
+                <p class="govuk-notification-banner__heading">
+                    <!-- The data in the table below is currently being updated. -->
+                    The data in the table below is currently being updated. Please check back later for the most current information.
+                </p>
+            </div>
+        </div>
+
+        <h1 class="govuk-heading-xl">Stage 3 measure validation summary</h1>
+
+        <p class="govuk-body">Measures that have been through stage 3 validation checks.</p>
+
+        <!-- <div class="govuk-inset-text">
+            The data in the table below is currently being updated.
+        </div> -->
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Summary details</th>
+                            <th scope="col" class="govuk-table__header"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Report created</th>
+                            <td class="govuk-table__cell">7/3/2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Number of measures in validation</th>
+                            <td class="govuk-table__cell">1,000</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Number of suppliers</th>
+                            <td class="govuk-table__cell">4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Recommended status -->
+            <div class="govuk-grid-column-full">
+                <table class="govuk-table">
+                    <caption class="govuk-table__caption govuk-table__caption--m">Recommended status</caption>
+
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Supplier name</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Recommended for Approval</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Recommended for With Supplier</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Recommended for Internal Query</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Recommended for On Hold</th>
+                            <th scope="col" class="govuk-table__header govuk-table__header--numeric minwidth100">Total</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">BGT</th>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">123</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">2</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">250</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">OVO</th>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">120</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">5</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">250</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">EDF</th>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">115</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">135</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">250</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">EON</th>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">125</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">125</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">250</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Percentage</th>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong>48.3%</strong></td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong>50%</strong></td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong>0.7%</strong></td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong>1%</strong></td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong>100%</strong></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Total</th>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong>483</strong></td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong>500</strong></td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong>7</strong></td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong>10</strong></td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric"><strong>1,000</strong></td>
+                        </tr> 
+                    </tbody>
+                </table>
+
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-three-quarters">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-half">
+                                <a class="govuk-button govuk-button--secondary margin-top-30" href="upload-error">
+                                    Upload recommendations
+                                </a>
+                            </div>
+                            <div class="govuk-grid-column-one-half">
+                                <button type="submit" class="govuk-button govuk-button--secondary margin-top-30" data-module="govuk-button">
+                                    Export summary report
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="govuk-grid-column-one-quarter">
+                        <a class="govuk-button margin-top-30" href="commit-notify-confirmation">
+                            Commit and notify summary
+                        </a>
+                    </div>
+                </div>
+
+                <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+            
+                <p class="govuk-body"><a href="/internal/v02-5/">Return to homepage</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+       
+    </script>
+</div>
+{% endblock %}

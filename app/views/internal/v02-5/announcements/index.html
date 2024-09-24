@@ -1,0 +1,47 @@
+{% extends "layouts/internal-main2-4.html" %}
+
+{% block pageTitle %}
+    Announcements
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">Announcements</h1>
+        <div class="govuk-grid-row">
+
+            <!-- Internal announcements -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+              <div class="card govuk-!-padding-5">
+                  <h3 class="govuk-heading-m"><a class="govuk-link" href="internal-announcements">Internal announcements</a></h3>
+                  <p class="govuk-body card-description short">View current and previous internal announcements.</p>
+              </div>
+            </div>
+
+            <!-- External announcements -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+              <div class="card govuk-!-padding-5">
+                  <h3 class="govuk-heading-m"><a class="govuk-link" href="external-announcements">External announcements</a></h3>
+                  <p class="govuk-body card-description short">View current and previous external announcements.</p>
+              </div>
+            </div>
+
+            <!-- Create announcements -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+              <div class="card govuk-!-padding-5">
+                  <h3 class="govuk-heading-m"><a class="govuk-link" href="create-announcement">Create announcements</a></h3>
+                  <p class="govuk-body card-description short">Create a new external or internal announcement.</p>
+              </div>
+            </div>
+        </div>
+                
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+   
+        <p class="govuk-body"><a href="/internal/v02-5/">Return to homepage</a></p>
+      
+    </div>
+</div>
+{% endblock %}

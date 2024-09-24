@@ -1,0 +1,114 @@
+{% extends "layouts/internal-main2-4.html" %}
+
+{% block pageTitle %}
+  Great British Insulation Scheme &mdash; Internal user management
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <script>
+    function dismissNotification() {
+      window.document.getElementById('notification').remove();
+    }
+    function dismissNotification1() {
+      window.document.getElementById('notification1').remove();
+    }
+    function dismissNotification2() {
+      window.document.getElementById('notification2').remove();
+    }
+  </script>
+
+  <div class="govuk-grid-column-full">
+    <!-- notification1 -->
+    <div id="notification">
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="">
+          <span class="">Latest announcement</span>
+          <span class="announcement-date">12/10/2023</span>
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          ECO4.24.01 Planned Release
+        </p>
+        <p class="govuk-body bold">Please be aware that this release has been cancelled due to an issue with one of our release tools we use to ensure that our changes do not impact the reliability and resilience of the register. Changes outlined below for this release will be rolled into our January release unless stated otherwise. Apologies for any inconveniences.</p>
+        <p class="govuk-body bold">The ECO Register will be offline on <strong>Tuesday 16th January 2024 from 17:00 to 19:00 due to a planned release.</strong></p>
+        <p class="govuk-body bold">Functionality being deployed is as follows:</p>
+        <p class="govuk-body">You can buy:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Late Automatic Late Rules and Report Update</li>
+          <li>T4110: Observed Value will be Project Status name instead of numeric status ID</li>
+          <li>ECO3 interim Completed Measure Transfers</li>
+          <li>Innovation Measure Numbers 022 and 023</li>
+          <li>Removal of "Town" field checks with TrustMark</li>
+          <li>"Social Housing" Tenure Type applicable for "in-fill" elegibility type projects (P40517, P40518, P40519)</li>
+          <li>Update to the Partial Project Score matrix to published version 5</li>
+        </ul>
+        <p class="govuk-body">Live issue fixes being deployed are:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Clear Partial Project Scores associated with Exemption Measures</li>
+          <li>TP0005 will now be case insensitive</li>
+          <li>Fixed an issue where large measure uploads with MRNs of 11-characters were occasionally timing out</li>
+          <li>We have also added some background processing to reduce the build up of measures getting stuck in "Measure Awaiting Verification" status</li>
+        </ul>
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="dismissNotification()">
+          Close
+        </button>
+      </div>
+
+    </div>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+  </div>
+
+    <h1 class="govuk-heading-xl">GBIS Register for internal users</h1>
+    
+    <p>Welcome, <span id="welcomeUsernameMessage"></span>.</p>
+    <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+    <div class="grid-list">
+
+      <!-- Measures -->
+      <div class="card govuk-!-padding-5">
+          <h3 class="govuk-heading-m">Search measures</h3>
+          <p class="govuk-body card-description">Search and view measures uploaded to the GBIS register by energy suppliers.</p>
+          <p class="govuk-body"><a data-test-id="home-manage-measures-card-link" class="govuk-link card-link" href="/internal/v02-5/search-measures/" aria-describedby="manage-measures-description">View supplier uploaded measures</a></p>
+      </div>
+
+      <!-- Automatic late extension report -->
+      <div class="card govuk-!-padding-5">
+          <h3 class="govuk-heading-m">Automatic late extension report</h3>
+          <p class="govuk-body card-description">Search and view energy supplier automatic late extension reports.</p>
+          <p class="govuk-body"><a data-test-id="home-manage-measures-card-link" class="govuk-link card-link" href="/internal/v02-5/automatic-late-extension-report/" aria-describedby="manage-measures-description">View automatic late extensions</a></p>
+      </div>
+
+      <!-- Stage 3 processing -->
+      <div class="card govuk-!-padding-5">
+          <h3 class="govuk-heading-m">Stage 3 processing</h3>
+          <p class="govuk-body card-description">Trigger stage 3 measure validation and view summary details.</p>
+          <p class="govuk-body"><a data-test-id="home-manage-measures-card-link" class="govuk-link card-link" href="/internal/v02-5/stage-3-rules/stage-3-processing" aria-describedby="manage-measures-description">View Stage 3 measure validation</a></p>
+      </div>
+
+      <!-- Manage transfers -->
+      <div class="card govuk-!-padding-5">
+          <h3 class="govuk-heading-m">Manage measure transfer requests</h3>
+          <p class="govuk-body card-description">Review and action all GBIS measure transfer requests from energy suppliers.</p>
+          <p class="govuk-body"><a data-test-id="home-manage-measures-card-link" class="govuk-link card-link" href="/internal/v02-5/transfers-and-tradings/review-transfer-requests" aria-describedby="manage-measures-description">Manage transfers</a></p>
+      </div>
+
+      <!-- Manage trading obligations -->
+      <div class="card govuk-!-padding-5">
+          <h3 class="govuk-heading-m">Manage trading obligations</h3>
+          <p class="govuk-body card-description">Tradings description.</p>
+          <p class="govuk-body"><a data-test-id="home-manage-measures-card-link" class="govuk-link card-link" href="/internal/v02-5/manage-trading-obligations/" aria-describedby="manage-measures-description">Manage tradings</a></p>
+      </div>
+
+    </div>
+    
+  </div>
+</div>
+
+{% endblock %}
