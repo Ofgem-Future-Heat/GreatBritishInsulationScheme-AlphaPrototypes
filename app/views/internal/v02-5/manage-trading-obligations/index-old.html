@@ -1,0 +1,307 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+    Manage trading obligations
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+        <div id="errorSummary" class="govuk-error-summary hide" data-module="govuk-error-summary">
+            <div role="alert">
+                <h2 class="govuk-error-summary__title">
+                    There is a problem
+                </h2>
+                <div class="govuk-error-summary__body">
+                    <ul class="govuk-list govuk-error-summary__list">
+                        <li id ="supplierError
+                        ">
+                            <a href="">Supplier A licence cannot be equal to Supplier B</a>
+                        </li>
+                        <li id="fieldError">
+                            <a href="">Field cannot be empty</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="govuk-heading-xl">
+            Manage trading obligations
+        </h1>
+
+        <p class="govuk-body">[A description of this feature goes here].</p>
+
+        
+        <form id="" method="post" onsubmit="event.preventDefault();">
+                
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-half">
+                    <!-- Supplier licence A (trading from) -->
+                    <div id="supplierAErrorField" class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="supplier-licence-a-from">
+                            Supplier licence A (trading from)
+                        </label>
+                        <p id="supplierADropDownErrorDescription" class="govuk-error-message hide">
+                            <span class="govuk-visually-hidden">Error:</span> Supplier A licence number cannot be the same as Supplier B licence number
+                        </p>
+                        <p id="supplierAEmptyFieldError" class="govuk-error-message hide">
+                            <span class="govuk-visually-hidden">Error:</span> Supplier A licence number cannot be empty
+                        </p>
+                        <select id="supplierADropDown" class="govuk-select" id="supplier-licence-a-from" name="supplier-licence-a-from" style="width: 100%;" onchange="compareSupplierLicenceNumbers(); checkForemptyField()">
+                            <option value="" disabled="disabled" selected>Select supplier licence number</option>
+                            <option value="EON3401234E">EON3401234E</option>
+                            <option value="EON3405678E">EON3405678E</option>
+                            <option value="EON3409101E">EON3409101E</option>
+                            <option value="EON3402345E">EON3402345E</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="govuk-grid-column-one-half">
+                    <!-- Supplier licence B (trading to) -->
+                    <div id="supplierBErrorField" class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="supplier-licence-b-to">
+                            Supplier licence B (trading to)
+                        </label>
+                        <p id="supplierBDropDownErrorDescription" class="govuk-error-message hide">
+                            <span class="govuk-visually-hidden">Error:</span> Supplier B licence number cannot be the same as Supplier A licence number
+                        </p>
+                        <p id="supplierBEmptyFieldError" class="govuk-error-message hide">
+                            <span class="govuk-visually-hidden">Error:</span> Supplier B licence number cannot be empty
+                        </p>
+                        <select id="supplierBDropDown" class="govuk-select" id="supplier-licence-b-to" name="supplier-licence-b-to" style="width: 100%;" onchange="compareSupplierLicenceNumbers(); checkForemptyField()">
+                            <option value="" disabled="disabled" selected>Select supplier licence number</option>
+                            <option value="EON3401234E">EON3401234E</option>
+                            <option value="EON3405678E">EON3405678E</option>
+                            <option value="EON3409101E">EON3409101E</option>
+                            <option value="EON3402345E">EON3402345E</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-half">
+                    <!-- GBIS phase to be traded -->
+                    <div id="phaseErrorField" class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="gbis-phase-traded">
+                            GBIS phase to be traded
+                        </label>
+                        <p id="phaseEmptyFieldError" class="govuk-error-message hide">
+                            <span class="govuk-visually-hidden">Error:</span> GBIS phase field cannot be empty
+                        </p>
+                        <select id="phaseDropDown" class="govuk-select" id="gbis-phase-traded" name="gbis-phase-traded" style="width: 100%;" onchange="checkForemptyField()">
+                            <option value="" disabled="disabled" selected>Select phase</option>
+                            <option value="Phase A">Phase A</option>
+                            <option value="Phase B">Phase B</option>
+                            <option value="Phase C">Phase C</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="govuk-grid-column-one-half">
+                    <!-- Obligation category to be traded -->
+                    <div id="categoryErrorField" class="govuk-form-group">
+                        <label class="govuk-label govuk-label--s" for="obligation-category-traded">
+                            Obligation category to be traded
+                        </label>
+                        <p id="categoryEmptyFieldError" class="govuk-error-message hide">
+                            <span class="govuk-visually-hidden">Error:</span> Obligation category field cannot be empty
+                        </p>
+                        <select id="categoryDropDown" class="govuk-select" id="obligation-category-traded" name="obligation-category-traded" style="width: 100%;" onchange="checkForemptyField()">
+                            <option value="" disabled="disabled" selected>Select obligation category traded</option>
+                            <option value="HHCRO">HHCRO</option>
+                            <option value="LIMR">LIMR</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Obligation results -->
+            <div class="govuk-grid-row">
+                <!-- Supplier A current obligation value (£ or household) -->
+                <div class="govuk-grid-column-one-half">
+                    <div class="dashboard-module">
+                        <h3 class="govuk-heading-m"><span class="module-heading">Supplier A</span></h3>
+                        <p class="govuk-body">Current obligation value (£ or household):</p>
+                        <div class="stat">
+                            <p class="single-stat-headline impact-number">
+                                <strong>
+                                    <abbr aria-label="0" title="0">
+                                        <span>£</span><span id="supplierACurrentObligation"></span>
+                                    </abbr>
+                                </strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Supplier B current obligation value (£ or household) -->
+                <div class="govuk-grid-column-one-half">
+                    <div class="dashboard-module">
+                        <h3 class="govuk-heading-m"><span class="module-heading">Supplier B</span></h3>
+                        <p class="govuk-body">Current obligation value (£ or household):</p>
+                        <div class="stat">
+                            <p class="single-stat-headline impact-number">
+                                <strong>
+                                    <abbr aria-label="0" title="0">
+                                        <span>£</span><span id="supplierBCurrentObligation"></span>
+                                    </abbr>
+                                </strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue -->
+            <button type="submit" class="govuk-button" data-module="govuk-button" onclick="validationCheck()">
+                Continue
+            </button>
+
+        </form>
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        
+        <p class="govuk-body"><a href="/internal/v02-5/">Return to homepage</a></p>
+    </div>
+
+    <script>
+        // write a validation for the users selecting the same Supplier Licence number
+
+        function validationCheck() {
+            const supplierADropDown = document.getElementById("supplierADropDown");
+            const supplierBDropDown = document.getElementById("supplierBDropDown");
+            const phaseDropDown = document.getElementById("phaseDropDown");
+            const categoryDropDown = document.getElementById("categoryDropDown");
+            
+            var selectedSupplierA = supplierADropDown.value;
+            var selectedSupplierB = supplierBDropDown.value;
+            var selectedPhase = phaseDropDown.value;
+            var selectedCategory = categoryDropDown.value;
+            // let selectedSupplierA = supplierADropDown.options[supplierADropDown.selectedIndex].text;
+            // let selectedSupplierB = supplierBDropDown.options[supplierBDropDown.selectedIndex].text;
+
+            console.log('selectedSupplierA', selectedSupplierA);
+            console.log('selectedSupplierB', selectedSupplierB);
+            console.log('selectedPhase', selectedPhase);
+            console.log('selectedCategory', selectedCategory);
+
+            document.getElementById("fieldError").classList.remove('hide');
+
+            if (document.getElementById("supplierADropDown").value.length < 1) {
+                document.getElementById("errorSummary").classList.remove('hide');
+                document.getElementById("supplierAErrorField").classList.add('govuk-form-group--error');
+                document.getElementById("supplierAEmptyFieldError").classList.remove('hide');
+            } else if (document.getElementById("supplierBDropDown").value.length < 1) {
+                document.getElementById("errorSummary").classList.remove('hide');
+                document.getElementById("supplierBErrorField").classList.add('govuk-form-group--error');
+                document.getElementById("supplierBEmptyFieldError").classList.remove('hide');
+            } else if (document.getElementById("phaseDropDown").value.length < 1) {
+                document.getElementById("errorSummary").classList.remove('hide');
+                document.getElementById("phaseErrorField").classList.add('govuk-form-group--error');
+                document.getElementById("phaseEmptyFieldError").classList.remove('hide');
+            } else if (document.getElementById("categoryDropDown").value.length < 1) {
+                document.getElementById("errorSummary").classList.remove('hide');
+                document.getElementById("categoryErrorField").classList.add('govuk-form-group--error');
+                document.getElementById("categoryEmptyFieldError").classList.remove('hide');
+            } else if ((selectedSupplierA.length > 0 || selectedSupplierB.length > 0) && (selectedSupplierA === selectedSupplierB)) {
+                // SHOW ERROR
+                
+                document.getElementById("errorSummary").classList.remove('hide');
+                 document.getElementById("supplierError").classList.add('hide');
+                document.getElementById("fieldError").classList.add('hide');
+                document.getElementById("supplierAErrorField").classList.add('govuk-form-group--error');
+                document.getElementById("supplierBErrorField").classList.add('govuk-form-group--error');
+
+                document.getElementById("supplierADropDownErrorDescription").classList.remove('hide');
+                document.getElementById("supplierBDropDownErrorDescription").classList.remove('hide');
+            } else {
+                // CONTINUE
+                window.location.href="/internal/v02-5/manage-trading-obligations/manage-trading-obligations1";
+                localStorage.setItem("selectedSupplierA", selectedSupplierA);
+                localStorage.setItem("selectedSupplierB", selectedSupplierB);
+                localStorage.setItem("selectedPhase", selectedPhase);
+                localStorage.setItem("selectedCategory", selectedCategory);
+                localStorage.setItem("supplierACurrentObligation", "12345");
+                localStorage.setItem("supplierBCurrentObligation", "0");
+            }
+        }
+
+        function compareSupplierLicenceNumbers() {
+            const supplierADropDown = document.getElementById("supplierADropDown");
+            const supplierBDropDown = document.getElementById("supplierBDropDown");
+            if (supplierADropDown.value !== supplierBDropDown.value) {
+                document.getElementById("errorSummary").classList.add('hide');
+                document.getElementById("fieldError").classList.add('hide');
+                document.getElementById("supplierAErrorField").classList.remove('govuk-form-group--error');
+                document.getElementById("supplierBErrorField").classList.remove('govuk-form-group--error');
+                document.getElementById("supplierADropDownErrorDescription").classList.add('hide');
+                document.getElementById("supplierBDropDownErrorDescription").classList.add('hide');
+            } else {
+                document.getElementById("errorSummary").classList.remove('hide');
+                document.getElementById("fieldError").classList.add('hide');
+                document.getElementById("supplierAErrorField").classList.add('govuk-form-group--error');
+                document.getElementById("supplierBErrorField").classList.add('govuk-form-group--error');
+                document.getElementById("supplierADropDownErrorDescription").classList.remove('hide');
+                document.getElementById("supplierBDropDownErrorDescription").classList.remove('hide');
+            }
+        }
+
+        function checkForemptyField() {
+            /*
+                if (document.getElementById("supplierADropDown").value.length < 1) {
+                    document.getElementById("errorSummary").classList.remove('hide');
+                    document.getElementById("supplierAErrorField").classList.add('govuk-form-group--error');
+                    document.getElementById("supplierAEmptyFieldError").classList.remove('hide');
+                } else {
+                    document.getElementById("errorSummary").classList.add('hide');
+                    document.getElementById("supplierAErrorField").classList.remove('govuk-form-group--error');
+                    document.getElementById("supplierAEmptyFieldError").classList.add('hide');
+                }
+
+                if (document.getElementById("supplierBDropDown").value.length < 1) {
+                    document.getElementById("errorSummary").classList.remove('hide');
+                    document.getElementById("supplierBErrorField").classList.add('govuk-form-group--error');
+                    document.getElementById("supplierBEmptyFieldError").classList.remove('hide');
+                } else {
+                    document.getElementById("errorSummary").classList.add('hide');
+                    document.getElementById("supplierBErrorField").classList.remove('govuk-form-group--error');
+                    document.getElementById("supplierBEmptyFieldError").classList.add('hide');
+                }
+
+                if (document.getElementById("phaseDropDown").value.length < 1) {
+                    document.getElementById("errorSummary").classList.remove('hide');
+                    document.getElementById("phaseErrorField").classList.add('govuk-form-group--error');
+                    document.getElementById("phaseEmptyFieldError").classList.remove('hide');
+                } else {
+                    document.getElementById("errorSummary").classList.add('hide');
+                    document.getElementById("phaseErrorField").classList.remove('govuk-form-group--error');
+                    document.getElementById("phaseEmptyFieldError").classList.add('hide');
+                }
+
+                if (document.getElementById("categoryDropDown").value.length < 1) {
+                    document.getElementById("errorSummary").classList.remove('hide');
+                    document.getElementById("categoryErrorField").classList.add('govuk-form-group--error');
+                    document.getElementById("categoryEmptyFieldError").classList.remove('hide');
+                } else {
+                    document.getElementById("errorSummary").classList.add('hide');
+                    document.getElementById("categoryErrorField").classList.remove('govuk-form-group--error');
+                    document.getElementById("categoryEmptyFieldError").classList.add('hide');
+                }
+            */
+
+            if ((document.getElementById("supplierADropDown").value.length > 0) &&
+                (document.getElementById("supplierBDropDown").value.length > 0) &&
+                (document.getElementById("phaseDropDown").value.length > 0) &&
+                (document.getElementById("categoryDropDown").value.length > 0)) {
+                    document.getElementById("supplierACurrentObligation").innerHTML = "12345";
+                    document.getElementById("supplierBCurrentObligation").innerHTML = "0";
+            }
+        }
+    </script>
+</div>
+
+{% endblock %}
