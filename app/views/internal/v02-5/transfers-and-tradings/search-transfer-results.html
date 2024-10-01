@@ -6,542 +6,540 @@
 
 {% block content %}
 
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
-        
-        <!--
-        <div class="govuk-error-summary hide" data-module="govuk-error-summary" id="error-MRN-summary">
-            <div role="alert">
-                <h2 class="govuk-error-summary__title">
-                    There is a problem
-                </h2>
-                <div class="govuk-error-summary__body">
-                    <ul class="govuk-list govuk-error-summary__list">
-                        <li id="errorWithMRN" class="hide">
-                            <p class="govuk-body"><a href="#error-with-MRN">
-                                Enter a single measure reference number to search<br />
-                                Or, search for measure reference numbers by uploading a file containing the numbers you want to search
-                                <br />
-                                <br />
-                                You cannot search using both a single measure reference number and a file containing measure reference numbers
-                            </a>
-                        </li>
-                        <li id="errorWithNothingSelected" class="hide">
-                            <p class="govuk-body"><a href="#">You must select at least one of these filters to show the measures uploaded by suppliers:</a></p>
-                            
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+            <!-- <div class="govuk-error-summary hide" data-module="govuk-error-summary" id="error-MRN-summary"> <div role="alert"> <h2 class="govuk-error-summary__title"> There is a problem </h2> <div class="govuk-error-summary__body"> <ul class="govuk-list govuk-error-summary__list"> <li id="errorWithMRN" class="hide"> <p class="govuk-body"><a href="#error-with-MRN"> Enter a single measure reference number to search<br /> Or, search for measure reference numbers by uploading a file containing the numbers you want to search <br /> <br /> You cannot search using both a single measure reference number and a file containing measure reference numbers </a> </li> <li id="errorWithNothingSelected" class="hide"> <p class="govuk-body"><a href="#">You must select at least one of these filters to show the measures uploaded by suppliers:</a></p> <ul class="govuk-list govuk-list--bullet"> <li><a href="#error-with-supplier-name">Supplier name</a></li> <li><a href="#error-with-MRN">Measure reference number</a></li> <li><a href="#error-with-status">Status</a></li> <li><a href="#error-with-notification-period">Notification period</a></li> <li><a href="#error-with-postcode">Postcode</a></li> </ul> </li> </ul> </div> </div> </div> -->
+
+            <h1 class="govuk-heading-xl">Manage GBIS measure transfer requests</h1>
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <p class="govuk-body">
+                        Search, review and manage all GBIS transfer requests between energy suppliers using the filters provided.
+                    </p>
+
+                    <!-- Different ways to search for and view GBIS transfer requests -->
+                    <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                            <span class="govuk-details__summary-text">
+                                Different ways to search for and view GBIS transfer requests
+                            </span>
+                        </summary>
+
+                        <div class="govuk-details__text">
+
+                            <p class="govuk-body">
+                                <strong>Searching for GBIS measure transfer requests</strong>
+                            </p>
+                            <p class="govuk-body">You can search for measure transfer requests using the following filters:</p>
                             <ul class="govuk-list govuk-list--bullet">
-                                <li><a href="#error-with-supplier-name">Supplier name</a></li>
-                                <li><a href="#error-with-MRN">Measure reference number</a></li>
-                                <li><a href="#error-with-status">Status</a></li>
-                                <li><a href="#error-with-notification-period">Notification period</a></li>
-                                <li><a href="#error-with-postcode">Postcode</a></li>
+                                <li>transfer request number</li>
+                                <li>supplier licence reference details</li>
+                                <li>transfer status</li>
+                                <li>measure reference number (MRN)</li>
+                                <li>transfer recommendation</li>
                             </ul>
-                        </li>
-                    </ul>
+
+                            <p class="govuk-body">Not all filters have to be set to search for measure transfer requests.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="govuk-grid-column-one-third">
+                    <h2 class="govuk-heading-l">Filters</h2>
+
+                    <form>
+                        <!-- Tabs -->
+                        <div class="tabs">
+
+                            <!-- Transfer request number -->
+                            <div class="tab">
+                                <input class="hide-accordion-checkboxes" type="checkbox" id="chck1" checked="checked">
+                                <label class="tab-label" for="chck1">Transfer request number</label>
+                                <div class="tab-content">
+
+                                    <div class="govuk-form-group" id="transferRequestNumberErrorSection">
+                                        <fieldset class="govuk-fieldset" role="group" aria-describedby="transfer-request-number-hint" id="error-with-transfer-request-number">
+                                            <legend class="govuk-fieldset__legend">
+                                                <h2 class="govuk-heading-m">What is the transfer request number?</h2>
+                                            </legend>
+                                            <!-- <div id="transfer-request-number-hint" class="govuk-hint"> Enter the transfer request number </div> -->
+
+                                            <p id="transfer-request-number-field-error" class="govuk-error-message hide">
+                                                <span class="govuk-visually-hidden">Error:</span>
+                                                Enter a transfer request number to search for transfer requests if you're not searching using other filters
+                                            </p>
+
+                                            <p id="empty-transfer-request-number-field-error" class="govuk-error-message hide">
+                                                <span class="govuk-visually-hidden">Error:</span>
+                                                Please provide the transfer request number
+                                            </p>
+                                            <input class="govuk-input" id="transfer-request-number" name="transfer-request-number" type="text">
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Supplier licence reference numbers -->
+                            <div class="tab">
+                                <input class="hide-accordion-checkboxes" type="checkbox" id="chck2" checked="checked">
+                                <label class="tab-label" for="chck2">Supplier licence reference numbers</label>
+                                <div class="tab-content">
+                                    <div class="govuk-form-group" id="transferredFromErrorSection">
+                                        <fieldset class="govuk-fieldset" role="group" aria-describedby="transferredFrom-hint" id="error-with-transferredFrom">
+                                            <legend class="govuk-fieldset__legend">
+                                                <h2 class="govuk-heading-m">What are the licence reference numbers the measures are being transferred from and to?</h2>
+                                            </legend>
+
+                                            <p id="transferredFrom-field-error" class="govuk-error-message hide">
+                                                <span class="govuk-visually-hidden">Error:</span>
+                                                Select the 'from' and 'to' licence reference transfer numbers if you're not searching using other filters
+                                            </p>
+
+                                            <p id="empty-supplier-name-field-error" class="govuk-error-message hide">
+                                                <span class="govuk-visually-hidden">Error:</span>
+                                                Select the 'from' and 'to' licence reference transfer numbers
+                                            </p>
+
+                                            <div class="govuk-form-group">
+                                                <label class="govuk-label govuk-select-field__label" for="transferred-from">
+                                                    From
+                                                </label>
+                                                <select class="govuk-select govuk-!-width-full" id="transferred-from" name="transferred-from">
+                                                    <option value="&mdash;" selected="selected">&mdash;</option>
+                                                    <option value="EON3407430E">EON3401234E</option>
+                                                    <option value="EON3407430E">EON3405678E</option>
+                                                    <option value="EON3407430E">EON3409101E</option>
+                                                    <option value="EON3407430E">EON3402345E</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="govuk-form-group">
+                                                <label class="govuk-label govuk-select-field__label" for="transferred-to">
+                                                    To
+                                                </label>
+                                                <select class="govuk-select govuk-!-width-full" id="transferred-to" name="transferred-to">
+                                                    <option value="&mdash;" selected="selected">&mdash;</option>
+                                                    <option value="EON3407430E">EON3401234E</option>
+                                                    <option value="EON3407430E">EON3405678E</option>
+                                                    <option value="EON3407430E">EON3409101E</option>
+                                                    <option value="EON3407430E">EON3402345E</option>
+                                                </select>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Transfer status -->
+                            <div class="tab">
+                                <input class="hide-accordion-checkboxes" type="checkbox" id="chck3" checked="checked">
+                                <label class="tab-label" for="chck3">Transfer status</label>
+                                <div class="tab-content">
+                                    <div class="govuk-form-group" id="transferStatusErrorSection">
+                                        <fieldset class="govuk-fieldset" role="group" aria-describedby="transferStatus-hint" id="error-with-transferStatus">
+                                            <legend class="govuk-fieldset__legend">
+                                                <h2 class="govuk-heading-m">What is the transfer status?</h2>
+                                            </legend>
+
+                                            <p id="transferStatus-field-error" class="govuk-error-message hide">
+                                                <span class="govuk-visually-hidden">Error:</span>
+                                                Select the 'from' and 'to' licence reference transfer numbers if you're not searching using other filters
+                                            </p>
+
+                                            <!-- <div id="transferStatus-hint" class="govuk-hint"> Select the 'from' and 'to' licence reference transfer numbers </div> -->
+                                            <p id="empty-transfer-status-field-error" class="govuk-error-message hide">
+                                                <span class="govuk-visually-hidden">Error:</span>
+                                                Select the transfer status
+                                            </p>
+
+                                            <div class="govuk-form-group">
+                                                <!-- <label class="govuk-label govuk-select-field__label" for="transfer-status"> transfer status </label> -->
+                                                <select class="govuk-select" id="transfer-status" name="transfer-status">
+                                                    <option value="&mdash;" selected="selected">&mdash;</option>
+                                                    <option value="Request for approval being assessed">Request for approval being assessed</option>
+                                                    <option value="Approval of transfer requested">Approval of transfer requested</option>
+                                                    <option value="Requested for approval withdrawn">Requested for approval withdrawn</option>
+                                                    <option value="Request not supported">Request not supported</option>
+                                                    <option value="Transfer approved">Transfer approved</option>
+                                                    <option value="Transfer not approved">Transfer not approved</option>
+                                                </select>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Measure reference number -->
+                            <div class="tab">
+                                <input class="hide-accordion-checkboxes" type="checkbox" id="chck4" checked="checked">
+                                <label class="tab-label" for="chck4">Measure reference number</label>
+                                <div class="tab-content">
+
+                                    <div class="govuk-form-group" id="measureReferenceNumberErrorSection">
+                                        <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-reference-number-hint" id="error-with-measure-reference-number">
+                                            <legend class="govuk-fieldset__legend">
+                                                <h2 class="govuk-heading-m">What is the measure reference number?</h2>
+                                            </legend>
+                                            <!-- <div id="measure-reference-number-hint" class="govuk-hint"> Enter the measure reference number </div> -->
+
+                                            <p id="measure-reference-number-field-error" class="govuk-error-message hide">
+                                                <span class="govuk-visually-hidden">Error:</span>
+                                                Enter a measure referenc number to search for transfer requests if you're not searching using other filters
+                                            </p>
+
+                                            <p id="empty-measure-reference-number-field-error" class="govuk-error-message hide">
+                                                <span class="govuk-visually-hidden">Error:</span>
+                                                Please provide the measure reference number
+                                            </p>
+                                            <input class="govuk-input" id="measure-reference-number" name="measure-reference-number" type="text">
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Transfer recommendation -->
+                            <div class="tab">
+                                <input class="hide-accordion-checkboxes" type="checkbox" id="chck5" checked="checked">
+                                <label class="tab-label" for="chck5">Transfer recommendation</label>
+                                <div class="tab-content">
+                                    <div class="govuk-form-group" id="transferRecommendationErrorSection">
+                                        <fieldset class="govuk-fieldset" role="group" aria-describedby="transferRecommendation-hint" id="error-with-transferRecommendation">
+                                            <legend class="govuk-fieldset__legend">
+                                                <h2 class="govuk-heading-m">What is the transfer request number?</h2>
+                                            </legend>
+
+                                            <p id="transferRecommendation-field-error" class="govuk-error-message hide">
+                                                <span class="govuk-visually-hidden">Error:</span>
+                                                Select the transfer recommendation if you're not searching using other filters
+                                            </p>
+
+                                            <!-- <div id="transferRecommendation-hint" class="govuk-hint"> Select the 'from' and 'to' licence reference transfer numbers </div> -->
+                                            <p id="empty-transfer-recommendation-field-error" class="govuk-error-message hide">
+                                                <span class="govuk-visually-hidden">Error:</span>
+                                                Select the transfer recommendation
+                                            </p>
+
+                                            <div class="govuk-form-group">
+                                                <!-- <label class="govuk-label govuk-select-field__label" for="transfer-recommendation"> transfer status </label> -->
+                                                <select class="govuk-select" id="transfer-recommendation" name="transfer-recommendation">
+                                                    <option value="&mdash;" selected="selected">&mdash;</option>
+                                                    <option value="No recommendation">No recommendation</option>
+                                                    <option value="Transfer not reommended for approval">Transfer not reommended for approval</option>
+                                                    <option value="Transfer reommended for approval">Transfer reommended for approval</option>
+                                                </select>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Search -->
+                        <div class="govuk-button-group">
+                            <a id="performSearch" href="search-transfer-results" class="govuk-button" data-module="govuk-button">
+                                Search
+                            </a>
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <div class="govuk-grid-column-two-thirds">
+                    <h2 class="govuk-heading-l">Results</h2>
+
+                    <p class="govuk-body">Showing
+                        <strong>
+                            <span id="resultsLength">3</span></strong>
+                        request transfers<span id="singularPlural"></span>.</p>
+
+                    {# <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-one-third">
+                            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                                Download results
+                            </button>
+                        </div>
+                    </div> #}
+
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-full">
+                            <div class="govuk-grid-row">
+                                <div class="govuk-grid-column-three-quarters">
+
+                                    <div class="govuk-grid-row">
+                                        <!-- <div class="govuk-grid-column-one-half"> <label class="govuk-label slider-label-main" for="sliding-switch"> <strong>Ownership</strong> </label> <div class="slide-switch"> <div class="switch-label all">All</div> <label class="switch"> <input id="sliding-switch" type="checkbox" onchange="changeOwnership()"> <span class="slider round"></span> </label> <div class="switch-label mine">Mine</div> </div> </div> -->
+                                        <div class="govuk-grid-column-one-half">
+                                            <div class="govuk-form-group">
+                                                <label class="govuk-label" for="event-name">
+                                                    <strong>Select an action</strong>
+                                                </label>
+
+                                                <select class="govuk-select" name="statusSelect" id="statusSelect" onchange="otherSelected(this.value)">
+                                                    <option value="none" selected="selected">Select an option</option>
+                                                    <optgroup class="optgroup" label="Choose transfer recommendation">
+                                                        <option>No recommendation</option>
+                                                        <option>Transfer recommended for approval</option>
+                                                        <option>Transfer not recommended for approval</option>
+                                                    </optgroup>
+                                                    <optgroup class="optgroup" label="Choose transfer status">
+                                                        <option>Transfer approved</option>
+                                                        <option>Transfer not approved</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="govuk-grid-column-one-half">
+                                            <label class="govuk-label" for="">
+                                                <div>&nbsp;</div>
+                                            </label>
+                                            <a href="bulk-action-confirmation" class="govuk-button margin-left-30" data-module="govuk-button">
+                                                Action
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+                    <p class="govuk-body">
+                        <a href="javascript:void(0)" onclick="selectAll()" class="govuk-link">Select all</a>
+                    </p>
+
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-full">
+
+                            <!-- 1 -->
+                            <div class="govuk-summary-card">
+                                <div class="govuk-summary-card__title-wrapper">
+                                    <div class="govuk-checkboxes plain-cb" data-module="govuk-checkboxes">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="cbTransferRequest1" name="cb-transfer-request" type="checkbox" value="GBIS_TR000060">
+                                            <label class="govuk-label govuk-checkboxes__label" for="cb-transfer-request">
+                                                <span class="govuk-summary-card__title">GBIS_TR000060</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <ul class="govuk-summary-card__actions">
+                                        <li class="govuk-summary-card__action">
+                                            <span class="govuk-tag govuk-tag--turquoise tag-text">Request for approval<br/>being assessed</span>
+                                        </li>
+                                        <li class="govuk-summary-card__action">
+                                            3 measures
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="govuk-summary-card__content">
+                                    <table class="govuk-table embedded-table">
+                                        <caption class="govuk-table__caption govuk-table__caption--m sr-only">Transfer request detailss</caption>
+                                        <thead class="govuk-table__head sr-only">
+                                            <tr class="govuk-table__row">
+                                                <th scope="col" class="govuk-table__header">Type</th>
+                                                <th scope="col" class="govuk-table__header">Value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="govuk-table__body">
+                                            <tr class="govuk-table__row">
+                                                <th scope="row" class="govuk-table__header">Supplier licence transferred from</th>
+                                                <td class="govuk-table__cell">OCT3401234E</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                                <th scope="row" class="govuk-table__header">Supplier licence transferred to</th>
+                                                <td class="govuk-table__cell">EON0307811E</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                                <th scope="row" class="govuk-table__header">GBIS obligation amount</th>
+                                                <td class="govuk-table__cell">£203.40</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                                <th scope="row" class="govuk-table__header">LIMR sub-obligation amount</th>
+                                                <td class="govuk-table__cell">£203.40</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                                <th scope="row" class="govuk-table__header">Transfer recommendation</th>
+                                                <td class="govuk-table__cell"></td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell"></td>
+                                                <th scope="row" class="govuk-table__header">
+                                                    <button class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0" data-module="govuk-button">
+                                                        Download results
+                                                    </button>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- 2 -->
+                            <div class="govuk-summary-card">
+                                <div class="govuk-summary-card__title-wrapper">
+                                    <div class="govuk-checkboxes plain-cb" data-module="govuk-checkboxes">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="cbTransferRequest2" name="cb-transfer-request" type="checkbox" value="GBIS_TR000060">
+                                            <label class="govuk-label govuk-checkboxes__label" for="cb-transfer-request">
+                                                <span class="govuk-summary-card__title">GBIS_TR000031</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <ul class="govuk-summary-card__actions">
+                                        <li class="govuk-summary-card__action">
+                                            <span class="govuk-tag govuk-tag--turquoise tag-text">Request for approval<br/>being assessed</span>
+                                        </li>
+                                        <li class="govuk-summary-card__action">
+                                            5 measures
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="govuk-summary-card__content">
+                                    <table class="govuk-table embedded-table">
+                                        <caption class="govuk-table__caption govuk-table__caption--m sr-only">Transfer request detailss</caption>
+                                        <thead class="govuk-table__head sr-only">
+                                            <tr class="govuk-table__row">
+                                                <th scope="col" class="govuk-table__header">Type</th>
+                                                <th scope="col" class="govuk-table__header">Value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="govuk-table__body">
+                                            <tr class="govuk-table__row">
+                                                <th scope="row" class="govuk-table__header">Supplier licence transferred from</th>
+                                                <td class="govuk-table__cell">OCT3405699E</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                                <th scope="row" class="govuk-table__header">Supplier licence transferred to</th>
+                                                <td class="govuk-table__cell">XYZ0307822E</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                                <th scope="row" class="govuk-table__header">GBIS obligation amount</th>
+                                                <td class="govuk-table__cell">£223.10</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                                <th scope="row" class="govuk-table__header">LIMR sub-obligation amount</th>
+                                                <td class="govuk-table__cell">£223.10</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                                <th scope="row" class="govuk-table__header">Transfer recommendation</th>
+                                                <td class="govuk-table__cell"></td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell"></td>
+                                                <th scope="row" class="govuk-table__header">
+                                                    <button class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0" data-module="govuk-button">
+                                                        Download results
+                                                    </button>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- 3 -->
+                            <div class="govuk-summary-card">
+                                <div class="govuk-summary-card__title-wrapper">
+                                    <div class="govuk-checkboxes plain-cb" data-module="govuk-checkboxes">
+                                        <div class="govuk-checkboxes__item">
+                                            <input class="govuk-checkboxes__input" id="cbTransferRequest3" name="cb-transfer-request" type="checkbox" value="GBIS_TR000060">
+                                            <label class="govuk-label govuk-checkboxes__label" for="cb-transfer-request">
+                                                <span class="govuk-summary-card__title">GBIS_TR000034</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <ul class="govuk-summary-card__actions">
+                                        <li class="govuk-summary-card__action">
+                                            <span class="govuk-tag govuk-tag--turquoise tag-text">Request for approval<br/>being assessed</span>
+                                        </li>
+                                        <li class="govuk-summary-card__action">
+                                            2 measures
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="govuk-summary-card__content">
+                                    <table class="govuk-table embedded-table">
+                                        <caption class="govuk-table__caption govuk-table__caption--m sr-only">Transfer request detailss</caption>
+                                        <thead class="govuk-table__head sr-only">
+                                            <tr class="govuk-table__row">
+                                                <th scope="col" class="govuk-table__header">Type</th>
+                                                <th scope="col" class="govuk-table__header">Value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="govuk-table__body">
+                                            <tr class="govuk-table__row">
+                                                <th scope="row" class="govuk-table__header">Supplier licence transferred from</th>
+                                                <td class="govuk-table__cell">OCT3405699E</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                                <th scope="row" class="govuk-table__header">Supplier licence transferred to</th>
+                                                <td class="govuk-table__cell">ABC0307822E</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                                <th scope="row" class="govuk-table__header">GBIS obligation amount</th>
+                                                <td class="govuk-table__cell">£211.50</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                                <th scope="row" class="govuk-table__header">LIMR sub-obligation amount</th>
+                                                <td class="govuk-table__cell">£211.50</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                                <th scope="row" class="govuk-table__header">Transfer recommendation</th>
+                                                <td class="govuk-table__cell"></td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                                <td class="govuk-table__cell"></td>
+                                                <th scope="row" class="govuk-table__header">
+                                                    <button class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0" data-module="govuk-button">
+                                                        Download results
+                                                    </button>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible"/>
+
+            <p class="govuk-body">
+                <a href="/internal/v02-5/">Return to homepage</a>
+            </p>
         </div>
-        -->
-
-        <h1 class="govuk-heading-xl">Manage GBIS measure transfer requests</h1>
-
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full">
-                <p class="govuk-body">
-                    Search, review and manage all GBIS transfer requests between energy suppliers using the filters provided. 
-                </p>
-
-                <!-- Different ways to search for and view GBIS transfer requests -->
-                <details class="govuk-details" data-module="govuk-details">
-                    <summary class="govuk-details__summary">
-                        <span class="govuk-details__summary-text">
-                            Different ways to search for and view GBIS transfer requests
-                        </span>
-                    </summary>
-
-                    <div class="govuk-details__text">
-
-                        <p class="govuk-body"><strong>Searching for GBIS measure transfer requests</strong></p>
-                        <p class="govuk-body">You can search for measure transfer requests using the following filters:</p>
-                        <ul class="govuk-list govuk-list--bullet">
-                            <li>transfer request number</li>
-                            <li>supplier licence reference details</li>
-                            <li>transfer status</li>
-                            <li>measure reference number (MRN)</li>
-                            <li>transfer recommendation</li>
-                        </ul>
-
-                        <p class="govuk-body">Not all filters have to be set to search for measure transfer requests.</p>
-                    </div>
-                </details>
-            </div>
-
-            <div class="govuk-grid-column-one-third">
-                <h2 class="govuk-heading-l">Filters</h2>
-
-                <form>
-                    <!-- Tabs -->
-                    <div class="tabs">
-
-                        <!-- Transfer request number -->
-                        <div class="tab">
-                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck1" checked="checked">
-                            <label class="tab-label" for="chck1">Transfer request number</label>
-                            <div class="tab-content">
-                                
-                                <div class="govuk-form-group" id="transferRequestNumberErrorSection">
-                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="transfer-request-number-hint" id="error-with-transfer-request-number">
-                                        <legend class="govuk-fieldset__legend">
-                                            <h2 class="govuk-heading-m">What is the transfer request number?</h2>
-                                        </legend>
-                                        <!-- <div id="transfer-request-number-hint" class="govuk-hint">
-                                            Enter the transfer request number
-                                        </div> -->
-                                        
-                                        <p id="transfer-request-number-field-error" class="govuk-error-message hide">
-                                            <span class="govuk-visually-hidden">Error:</span> Enter a transfer request number to search for transfer requests if you're not searching using other filters
-                                        </p>
-
-                                        <p id="empty-transfer-request-number-field-error" class="govuk-error-message hide">
-                                            <span class="govuk-visually-hidden">Error:</span> Please provide the transfer request number
-                                        </p>
-                                        <input class="govuk-input" id="transfer-request-number" name="transfer-request-number" type="text">
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Supplier licence reference numbers -->
-                        <div class="tab">
-                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck2" checked="checked">
-                            <label class="tab-label" for="chck2">Supplier licence reference numbers</label>
-                            <div class="tab-content">
-                                <div class="govuk-form-group" id="transferredFromErrorSection">
-                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="transferredFrom-hint" id="error-with-transferredFrom">
-                                        <legend class="govuk-fieldset__legend">
-                                            <h2 class="govuk-heading-m">What are the licence reference numbers the measures are being transferred from and to?</h2>
-                                        </legend>
-                                        
-                                        <p id="transferredFrom-field-error" class="govuk-error-message hide">
-                                            <span class="govuk-visually-hidden">Error:</span> Select the 'from' and 'to' licence reference transfer numbers if you're not searching using other filters
-                                        </p>
-                                        
-                                        <p id="empty-supplier-name-field-error" class="govuk-error-message hide">
-                                            <span class="govuk-visually-hidden">Error:</span> Select the 'from' and 'to' licence reference transfer numbers
-                                        </p>
-
-                                        <div class="govuk-form-group">
-                                            <label class="govuk-label govuk-select-field__label" for="transferred-from">
-                                                From
-                                            </label>
-                                            <select class="govuk-select govuk-!-width-full" id="transferred-from" name="transferred-from">
-                                                <option value="&mdash;" selected>&mdash;</option>
-                                                <option value="EON3407430E">EON3401234E</option>
-                                                <option value="EON3407430E">EON3405678E</option>
-                                                <option value="EON3407430E">EON3409101E</option>
-                                                <option value="EON3407430E">EON3402345E</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="govuk-form-group">
-                                            <label class="govuk-label govuk-select-field__label" for="transferred-to">
-                                                To
-                                            </label>
-                                            <select class="govuk-select govuk-!-width-full" id="transferred-to" name="transferred-to">
-                                                <option value="&mdash;" selected>&mdash;</option>
-                                                <option value="EON3407430E">EON3401234E</option>
-                                                <option value="EON3407430E">EON3405678E</option>
-                                                <option value="EON3407430E">EON3409101E</option>
-                                                <option value="EON3407430E">EON3402345E</option>
-                                            </select>
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Transfer status -->
-                        <div class="tab">
-                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck3" checked="checked">
-                            <label class="tab-label" for="chck3">Transfer status</label>
-                            <div class="tab-content">
-                                <div class="govuk-form-group" id="transferStatusErrorSection">
-                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="transferStatus-hint" id="error-with-transferStatus">
-                                        <legend class="govuk-fieldset__legend">
-                                            <h2 class="govuk-heading-m">What is the transfer status?</h2>
-                                        </legend>
-                                        
-                                        <p id="transferStatus-field-error" class="govuk-error-message hide">
-                                            <span class="govuk-visually-hidden">Error:</span> Select the 'from' and 'to' licence reference transfer numbers if you're not searching using other filters
-                                        </p>
-                                        
-                                        <!-- <div id="transferStatus-hint" class="govuk-hint">
-                                            Select the 'from' and 'to' licence reference transfer numbers
-                                        </div> -->
-                                        <p id="empty-transfer-status-field-error" class="govuk-error-message hide">
-                                            <span class="govuk-visually-hidden">Error:</span> Select the transfer status
-                                        </p>
-                                        
-                                        <div class="govuk-form-group">
-                                            <!-- <label class="govuk-label govuk-select-field__label" for="transfer-status">
-                                                transfer status
-                                            </label> -->
-                                            <select class="govuk-select" id="transfer-status" name="transfer-status">
-                                                <option value="&mdash;" selected>&mdash;</option>
-                                                <option value="Request for approval being assessed">Request for approval being assessed</option>
-                                                <option value="Approval of transfer requested">Approval of transfer requested</option>
-                                                <option value="Requested for approval withdrawn">Requested for approval withdrawn</option>
-                                                <option value="Request not supported">Request not supported</option>
-                                                <option value="Transfer approved">Transfer approved</option>
-                                                <option value="Transfer not approved">Transfer not approved</option>
-                                            </select>
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Measure reference number -->
-                        <div class="tab">
-                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck4" checked="checked">
-                            <label class="tab-label" for="chck4">Measure reference number</label>
-                            <div class="tab-content">
-                                
-                                <div class="govuk-form-group" id="measureReferenceNumberErrorSection">
-                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-reference-number-hint" id="error-with-measure-reference-number">
-                                        <legend class="govuk-fieldset__legend">
-                                            <h2 class="govuk-heading-m">What is the measure reference number?</h2>
-                                        </legend>
-                                        <!-- <div id="measure-reference-number-hint" class="govuk-hint">
-                                            Enter the measure reference number
-                                        </div> -->
-                                        
-                                        <p id="measure-reference-number-field-error" class="govuk-error-message hide">
-                                            <span class="govuk-visually-hidden">Error:</span> Enter a measure referenc number to search for transfer requests if you're not searching using other filters
-                                        </p>
-
-                                        <p id="empty-measure-reference-number-field-error" class="govuk-error-message hide">
-                                            <span class="govuk-visually-hidden">Error:</span> Please provide the measure reference number
-                                        </p>
-                                        <input class="govuk-input" id="measure-reference-number" name="measure-reference-number" type="text">
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Transfer recommendation -->
-                        <div class="tab">
-                            <input class="hide-accordion-checkboxes" type="checkbox" id="chck5" checked="checked">
-                            <label class="tab-label" for="chck5">Transfer recommendation</label>
-                            <div class="tab-content">
-                                <div class="govuk-form-group" id="transferRecommendationErrorSection">
-                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="transferRecommendation-hint" id="error-with-transferRecommendation">
-                                        <legend class="govuk-fieldset__legend">
-                                            <h2 class="govuk-heading-m">What is the transfer request number?</h2>
-                                        </legend>
-                                        
-                                        <p id="transferRecommendation-field-error" class="govuk-error-message hide">
-                                            <span class="govuk-visually-hidden">Error:</span> Select the transfer recommendation if you're not searching using other filters
-                                        </p>
-                                        
-                                        <!-- <div id="transferRecommendation-hint" class="govuk-hint">
-                                            Select the 'from' and 'to' licence reference transfer numbers
-                                        </div> -->
-                                        <p id="empty-transfer-recommendation-field-error" class="govuk-error-message hide">
-                                            <span class="govuk-visually-hidden">Error:</span> Select the transfer recommendation
-                                        </p>
-                                        
-                                        <div class="govuk-form-group">
-                                            <!-- <label class="govuk-label govuk-select-field__label" for="transfer-recommendation">
-                                                transfer status
-                                            </label> -->
-                                            <select class="govuk-select" id="transfer-recommendation" name="transfer-recommendation">
-                                                <option value="&mdash;" selected>&mdash;</option>
-                                                <option value="No recommendation">No recommendation</option>
-                                                <option value="Transfer not reommended for approval">Transfer not reommended for approval</option>
-                                                <option value="Transfer reommended for approval">Transfer reommended for approval</option>
-                                            </select>
-                                        </div>
-                                    </fieldset>
-                                </div>
-                            </div>
-                        </div>
-                    
-                    </div>
-                    
-                    <!-- Search -->
-                    <div class="govuk-button-group">
-                        <a id="performSearch" href="search-transfer-results" class="govuk-button" data-module="govuk-button">
-                            Search
-                        </a>
-                    </div>
-
-                </form>
-
-            </div>
-
-            <div class="govuk-grid-column-two-thirds">
-                <h2 class="govuk-heading-l">Results</h2>
-                
-                <p class="govuk-body">Showing <strong><span id="resultsLength">3</span></strong> request transfers<span id="singularPlural"></span>.</p>
-
-                <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-one-third">
-                        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                            Download results
-                        </button>
-                    </div>
-                </div>
-                
-                
-                <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-full">
-                        <div class="govuk-grid-row">
-                            <div class="govuk-grid-column-three-quarters">
-                                                
-                                <div class="govuk-grid-row">
-                                    <!-- <div class="govuk-grid-column-one-half">
-                                        <label class="govuk-label slider-label-main" for="sliding-switch">
-                                            <strong>Ownership</strong>
-                                        </label>
-                                        <div class="slide-switch">
-                                            <div class="switch-label all">All</div>
-                                            <label class="switch">
-                                                <input id="sliding-switch" type="checkbox" onchange="changeOwnership()">
-                                                <span class="slider round"></span>
-                                            </label>
-                                            <div class="switch-label mine">Mine</div>
-                                        </div>
-                                    </div> -->
-                                    <div class="govuk-grid-column-one-half">
-                                        <div class="govuk-form-group">
-                                            <label class="govuk-label" for="event-name">
-                                                <strong>Select an action</strong>
-                                            </label>
-
-                                            <select class="govuk-select" name="statusSelect" id="statusSelect" onchange="otherSelected(this.value)">
-                                                <option value="none" selected>Select an option</option>
-                                                <optgroup class="optgroup" label="Choose transfer recommendation">
-                                                    <option>No recommendation</option>
-                                                    <option>Transfer recommended for approval</option>
-                                                    <option>Transfer not recommended for approval</option>
-                                                </optgroup>
-                                                <optgroup class="optgroup" label="Choose transfer status">
-                                                    <option>Transfer approved</option>
-                                                    <option>Transfer not approved</option>
-                                                </optgroup>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="govuk-grid-column-one-half">
-                                      <label class="govuk-label" for=""><div>&nbsp;</div></label>
-                                      <a href="bulk-action-confirmation" class="govuk-button margin-left-30" data-module="govuk-button">
-                                          Action
-                                      </a>
-                                  </div>
-
-                                </div>
-                            </div>
-
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
-                <p class="govuk-body"><a href="javascript:void(0)" onclick="selectAll()" class="govuk-link">Select all</a></p>
-
-                
-                <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-full">
-
-                        <!-- 1 -->
-                        <div class="govuk-summary-card">
-                            <div class="govuk-summary-card__title-wrapper">
-                                <div class="govuk-checkboxes plain-cb" data-module="govuk-checkboxes">
-                                    <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="cbTransferRequest1" name="cb-transfer-request" type="checkbox" value="GBIS_TR000060">
-                                        <label class="govuk-label govuk-checkboxes__label" for="cb-transfer-request">
-                                            <span class="govuk-summary-card__title">GBIS_TR000060</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <ul class="govuk-summary-card__actions">
-                                    <li class="govuk-summary-card__action">
-                                        <span class="govuk-tag govuk-tag--turquoise tag-text">Request for approval<br/>being assessed</span>
-                                    </li>
-                                    <li class="govuk-summary-card__action">
-                                        3 measures
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="govuk-summary-card__content">
-                                <table class="govuk-table embedded-table">
-                                    <caption class="govuk-table__caption govuk-table__caption--m sr-only">Transfer request detailss</caption>
-                                    <thead class="govuk-table__head sr-only">
-                                        <tr class="govuk-table__row">
-                                            <th scope="col" class="govuk-table__header">Type</th>
-                                            <th scope="col" class="govuk-table__header">Value</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="govuk-table__body">
-                                        <tr class="govuk-table__row">
-                                            <th scope="row" class="govuk-table__header">Supplier licence transferred from</th>
-                                            <td class="govuk-table__cell">OCT3401234E</td>
-                                        </tr>
-                                        <tr class="govuk-table__row">
-                                            <th scope="row" class="govuk-table__header">Supplier licence transferred to</th>
-                                            <td class="govuk-table__cell">EON0307811E</td>
-                                        </tr>
-                                        <tr class="govuk-table__row">
-                                            <th scope="row" class="govuk-table__header">GBIS obligation amount</th>
-                                            <td class="govuk-table__cell">£203.40</td>
-                                        </tr>
-                                        <tr class="govuk-table__row">
-                                            <th scope="row" class="govuk-table__header">LIMR sub-obligation amount</th>
-                                            <td class="govuk-table__cell">£203.40</td>
-                                        </tr>
-                                        <tr class="govuk-table__row">
-                                            <th scope="row" class="govuk-table__header">Transfer recommendation</th>
-                                            <td class="govuk-table__cell"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <!-- 2 -->
-                        <div class="govuk-summary-card">
-                            <div class="govuk-summary-card__title-wrapper">
-                                <div class="govuk-checkboxes plain-cb" data-module="govuk-checkboxes">
-                                    <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="cbTransferRequest2" name="cb-transfer-request" type="checkbox" value="GBIS_TR000060">
-                                        <label class="govuk-label govuk-checkboxes__label" for="cb-transfer-request">
-                                            <span class="govuk-summary-card__title">GBIS_TR000031</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <ul class="govuk-summary-card__actions">
-                                    <li class="govuk-summary-card__action">
-                                        <span class="govuk-tag govuk-tag--turquoise tag-text">Request for approval<br/>being assessed</span>
-                                    </li>
-                                    <li class="govuk-summary-card__action">
-                                        5 measures
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="govuk-summary-card__content">
-                                <table class="govuk-table embedded-table">
-                                    <caption class="govuk-table__caption govuk-table__caption--m sr-only">Transfer request detailss</caption>
-                                    <thead class="govuk-table__head sr-only">
-                                        <tr class="govuk-table__row">
-                                            <th scope="col" class="govuk-table__header">Type</th>
-                                            <th scope="col" class="govuk-table__header">Value</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="govuk-table__body">
-                                        <tr class="govuk-table__row">
-                                            <th scope="row" class="govuk-table__header">Supplier licence transferred from</th>
-                                            <td class="govuk-table__cell">OCT3405699E</td>
-                                        </tr>
-                                        <tr class="govuk-table__row">
-                                            <th scope="row" class="govuk-table__header">Supplier licence transferred to</th>
-                                            <td class="govuk-table__cell">XYZ0307822E</td>
-                                        </tr>
-                                        <tr class="govuk-table__row">
-                                            <th scope="row" class="govuk-table__header">GBIS obligation amount</th>
-                                            <td class="govuk-table__cell">£223.10</td>
-                                        </tr>
-                                        <tr class="govuk-table__row">
-                                            <th scope="row" class="govuk-table__header">LIMR sub-obligation amount</th>
-                                            <td class="govuk-table__cell">£223.10</td>
-                                        </tr>
-                                        <tr class="govuk-table__row">
-                                            <th scope="row" class="govuk-table__header">Transfer recommendation</th>
-                                            <td class="govuk-table__cell"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <!-- 3 -->
-                        <div class="govuk-summary-card">
-                            <div class="govuk-summary-card__title-wrapper">
-                                <div class="govuk-checkboxes plain-cb" data-module="govuk-checkboxes">
-                                    <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="cbTransferRequest3" name="cb-transfer-request" type="checkbox" value="GBIS_TR000060">
-                                        <label class="govuk-label govuk-checkboxes__label" for="cb-transfer-request">
-                                            <span class="govuk-summary-card__title">GBIS_TR000034</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <ul class="govuk-summary-card__actions">
-                                    <li class="govuk-summary-card__action">
-                                        <span class="govuk-tag govuk-tag--turquoise tag-text">Request for approval<br/>being assessed</span>
-                                    </li>
-                                    <li class="govuk-summary-card__action">
-                                        2 measures
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="govuk-summary-card__content">
-                                <table class="govuk-table embedded-table">
-                                    <caption class="govuk-table__caption govuk-table__caption--m sr-only">Transfer request detailss</caption>
-                                    <thead class="govuk-table__head sr-only">
-                                        <tr class="govuk-table__row">
-                                            <th scope="col" class="govuk-table__header">Type</th>
-                                            <th scope="col" class="govuk-table__header">Value</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="govuk-table__body">
-                                        <tr class="govuk-table__row">
-                                            <th scope="row" class="govuk-table__header">Supplier licence transferred from</th>
-                                            <td class="govuk-table__cell">OCT3405699E</td>
-                                        </tr>
-                                        <tr class="govuk-table__row">
-                                            <th scope="row" class="govuk-table__header">Supplier licence transferred to</th>
-                                            <td class="govuk-table__cell">ABC0307822E</td>
-                                        </tr>
-                                        <tr class="govuk-table__row">
-                                            <th scope="row" class="govuk-table__header">GBIS obligation amount</th>
-                                            <td class="govuk-table__cell">£211.50</td>
-                                        </tr>
-                                        <tr class="govuk-table__row">
-                                            <th scope="row" class="govuk-table__header">LIMR sub-obligation amount</th>
-                                            <td class="govuk-table__cell">£211.50</td>
-                                        </tr>
-                                        <tr class="govuk-table__row">
-                                            <th scope="row" class="govuk-table__header">Transfer recommendation</th>
-                                            <td class="govuk-table__cell"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-                
-        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
-           
-        <p class="govuk-body"><a href="/internal/v02-5/">Return to homepage</a></p>
+        <script>
+            function selectAll() {
+                console.log('select all');
+                document
+                    .getElementById("cbTransferRequest1")
+                    .checked = !document
+                    .getElementById("cbTransferRequest1")
+                    .checked;
+                document
+                    .getElementById("cbTransferRequest2")
+                    .checked = !document
+                    .getElementById("cbTransferRequest2")
+                    .checked;
+                document
+                    .getElementById("cbTransferRequest3")
+                    .checked = !document
+                    .getElementById("cbTransferRequest3")
+                    .checked;
+            }
+        </script>
     </div>
-    <script>
-        function selectAll() {
-            console.log('select all');
-            document.getElementById("cbTransferRequest1").checked = !document.getElementById("cbTransferRequest1").checked;
-            document.getElementById("cbTransferRequest2").checked = !document.getElementById("cbTransferRequest2").checked;
-            document.getElementById("cbTransferRequest3").checked = !document.getElementById("cbTransferRequest3").checked;
-        }
-    </script>
-</div>
 {% endblock %}

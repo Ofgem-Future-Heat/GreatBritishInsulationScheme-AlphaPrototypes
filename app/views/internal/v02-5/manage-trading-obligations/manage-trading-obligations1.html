@@ -6,182 +6,231 @@
 
 {% block content %}
 
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-        
-        <!-- <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a> -->
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
 
-        <h1 class="govuk-heading-xl">
-            Manage trading obligations
-        </h1>
+            <!-- <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a> -->
 
-        <p class="govuk-body">[A description of this feature goes here].</p>
+            <h1 class="govuk-heading-xl">
+                Manage trading obligations
+            </h1>
 
-        
-        <!-- <form id="" method="post" action="/internal/v02-5/manage-trading-obligations/confirm-trading-obligations"> -->
-        <form id="" method="post" onsubmit="event.preventDefault();">
-            <!-- Trading obligation data from previous page -->
-            <div class="govuk-grid-row">
-                <!-- Left half -->
-                <div class="govuk-grid-column-one-half">
-                    <dl class="govuk-summary-list">
-                        <div class="govuk-summary-list__row list-row" style="margin-bottom: 0;">
-                            <dt class="govuk-summary-list__key list-key">Supplier licence A (trading from)</dt>
-                            <dd class="govuk-summary-list__value list-value"><span id="selectedSupplierA"></span></dd>
-                        </div>
-                    </dl>
-                </div>
-          
-                <!-- Right half -->
-                <div class="govuk-grid-column-one-half">
-                    <dl class="govuk-summary-list">
-            
-                        <div class="govuk-summary-list__row list-row" style="margin-bottom: 0;">
-                            <dt class="govuk-summary-list__key list-key">Supplier licence B (trading to)</dt>
-                            <dd class="govuk-summary-list__value list-value"><span id="selectedSupplierB"></span></dd>
-                        </div>
-                    </dl>
-                </div>
-            </div>
+            <p class="govuk-body">[A description of this feature goes here].</p>
 
-            <div class="govuk-grid-row">
-                <!-- Left half -->
-                <div class="govuk-grid-column-one-half">
-                    <dl class="govuk-summary-list">
-                        <div class="govuk-summary-list__row list-row" style="margin-bottom: 0;">
-                            <dt class="govuk-summary-list__key list-key">GBIS phase to be traded</dt>
-                            <dd class="govuk-summary-list__value list-value"><span id="selectedPhase"></span></dd>
-                        </div>
-                    </dl>
-                </div>
-          
-                <!-- Right half -->
-                <div class="govuk-grid-column-one-half">
-                    <dl class="govuk-summary-list">
-                        <div class="govuk-summary-list__row list-row" style="margin-bottom: 0;">
-                            <dt class="govuk-summary-list__key list-key">Obligation category to be traded</dt>
-                            <dd class="govuk-summary-list__value list-value"><span id="selectedCategory"></span></dd>
-                        </div>
-                    </dl>
-                </div>
-            </div>
+            <!--Error page -->
+            <div id="errorSummary" class="govuk-error-summary hide" data-module="govuk-error-summary">
+                <div role="alert">
+                    <h2 class="govuk-error-summary__title">
+                        There is a problem
+                    </h2>
+                    <div class="govuk-error-summary__body">
+                        <ul class="govuk-list govuk-error-summary__list">
+                            <li id="supplierError">
+                                <a href="">Invalid Entry, Entry should be in this format N.NNNNNNN</a>
+                            </li>
 
-            <div class="govuk-grid-row">
-                <!-- Left half -->
-                <div class="govuk-grid-column-one-half">
-                    <dl class="govuk-summary-list">
-                        <div class="govuk-summary-list__row list-row" style="margin-bottom: 0;">
-                            <dt class="govuk-summary-list__key list-key">Supplier A current obligation value (£ or household)</dt>
-                            <dd class="govuk-summary-list__value list-value"><span id="supplierACurrentObligation"></span></dd>
-                        </div>
-                    </dl>
-                </div>
-          
-                <!-- Right half -->
-                <div class="govuk-grid-column-one-half">
-                    <dl class="govuk-summary-list">
-                        <div class="govuk-summary-list__row list-row" style="margin-bottom: 0;">
-                            <dt class="govuk-summary-list__key list-key">Supplier B current obligation value (£ or household)</dt>
-                            <dd class="govuk-summary-list__value list-value"><span id="supplierBCurrentObligation"></span></dd>
-                        </div>
-                    </dl>
-                </div>
-            </div>
-            
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <div class="govuk-form-group">
-                        <label class="govuk-label govuk-label--s" for="event-name">
-                            Obligation amount to be traded from A to B
-                        </label>
-                        <div id="event-name-hint" class="govuk-hint">
-                            Enter the obligation amount to be traded from supplier A to supplier B.
-                        </div>
-                        <input class="govuk-input" id="obligationAmountFromAtoB" name="eventName" type="number" inputmode="numeric" onkeyup="getObligationAmount()">
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- 
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-one-half">
-                    <div class="dashboard-module">
-                        <h3 class="govuk-heading-m"><span class="module-heading">Supplier A</span></h3>
-                        <p class="govuk-body">New obligation value (£ or household):</p>
-                        <div class="stat">
-                            <p class="single-stat-headline impact-number">
-                                <strong>
-                                    <abbr aria-label="0" title="0">
-                                        <span>£</span><span id="supplierANewObligationValue"></span>
-                                    </abbr>
-                                </strong>
+            <!-- <form id="" method="post" action="/internal/v02-5/manage-trading-obligations/confirm-trading-obligations"> -->
+            <form id="" method="post" onsubmit="event.preventDefault();">
+                <!-- Trading obligation data from previous page -->
+                <div class="govuk-grid-row">
+                    <!-- Left half -->
+                    <div class="govuk-grid-column-one-half">
+                        <dl class="govuk-summary-list">
+                            <div class="govuk-summary-list__row list-row" style="margin-bottom: 0;">
+                                <dt class="govuk-summary-list__key list-key">Supplier licence A (trading from)</dt>
+                                <dd class="govuk-summary-list__value list-value">
+                                    <span id="selectedSupplierA"></span></dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <!-- Right half -->
+                    <div class="govuk-grid-column-one-half">
+                        <dl class="govuk-summary-list">
+
+                            <div class="govuk-summary-list__row list-row" style="margin-bottom: 0;">
+                                <dt class="govuk-summary-list__key list-key">Supplier licence B (trading to)</dt>
+                                <dd class="govuk-summary-list__value list-value">
+                                    <span id="selectedSupplierB"></span></dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="govuk-grid-row">
+                    <!-- Left half -->
+                    <div class="govuk-grid-column-one-half">
+                        <dl class="govuk-summary-list">
+                            <div class="govuk-summary-list__row list-row" style="margin-bottom: 0;">
+                                <dt class="govuk-summary-list__key list-key">GBIS phase to be traded</dt>
+                                <dd class="govuk-summary-list__value list-value">
+                                    <span id="selectedPhase"></span></dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <!-- Right half -->
+                    <div class="govuk-grid-column-one-half">
+                        <dl class="govuk-summary-list">
+                            <div class="govuk-summary-list__row list-row" style="margin-bottom: 0;">
+                                <dt class="govuk-summary-list__key list-key">Obligation category to be traded</dt>
+                                <dd class="govuk-summary-list__value list-value">
+                                    <span id="selectedCategory"></span></dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="govuk-grid-row">
+                    <!-- Left half -->
+                    <div class="govuk-grid-column-one-half">
+                        <dl class="govuk-summary-list">
+                            <div class="govuk-summary-list__row list-row" style="margin-bottom: 0;">
+                                <dt class="govuk-summary-list__key list-key">Supplier A current obligation value (£ or household)</dt>
+                                <dd class="govuk-summary-list__value list-value">
+                                    <span id="supplierACurrentObligation"></span></dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <!-- Right half -->
+                    <div class="govuk-grid-column-one-half">
+                        <dl class="govuk-summary-list">
+                            <div class="govuk-summary-list__row list-row" style="margin-bottom: 0;">
+                                <dt class="govuk-summary-list__key list-key">Supplier B current obligation value (£ or household)</dt>
+                                <dd class="govuk-summary-list__value list-value">
+                                    <span id="supplierBCurrentObligation"></span></dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                        <div id="obligation-group" class="govuk-form-group">
+                            <label class="govuk-label govuk-label--s" for="event-name">
+                                Obligation amount to be traded from A to B
+                            </label>
+                            <div id="event-name-hint" class="govuk-hint">
+                                Enter the obligation amount to be traded from supplier A to supplier B.
+                            </div>
+                            <p id="obligationEmptyFieldError" class="govuk-error-message hide">
+                                <span class="govuk-visually-hidden">Error:</span>
+                                Obligation amount field cannot be empty
                             </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="govuk-grid-column-one-half">
-                    <div class="dashboard-module">
-                        <h3 class="govuk-heading-m"><span class="module-heading">Supplier B</span></h3>
-                        <p class="govuk-body">New obligation value (£ or household):</p>
-                        <div class="stat">
-                            <p class="single-stat-headline impact-number">
-                                <strong>
-                                    <abbr aria-label="0" title="0">
-                                        <span>£</span><span id="supplierBNewObligationValue"></span>
-                                    </abbr>
-                                </strong>
+                            <p id="obligationInvalidFieldError" class="govuk-error-message hide">
+                                <span class="govuk-visually-hidden">Error:</span>
+                                Invalid Entry, Entry should be in this format N.NNNNNNN
                             </p>
+                            <input class="govuk-input" id="obligationAmountFromAtoB" name="eventName" min="0" type="number" inputmode="numeric" onkeyup="getObligationAmount()">
                         </div>
                     </div>
                 </div>
-            </div> -->
 
-            <!-- Calculate -->
-            <div class="govuk-button-group">
-                <button type="submit" class="govuk-button" data-module="govuk-button" onclick="calculateNewObligationAmounts()">
-                    Calculate
-                </button>
-                <!-- <a class="govuk-link" href="/internal/v02-5/manage-trading-obligations">Edit</a> -->
-                 
-                <a class="govuk-button govuk-button--secondary" href="#" onclick="history.go(-1)">Edit</a>
-            </div>
+                <!-- <div class="govuk-grid-row"> <div class="govuk-grid-column-one-half"> <div class="dashboard-module"> <h3 class="govuk-heading-m"><span class="module-heading">Supplier A</span></h3> <p class="govuk-body">New obligation value (£ or household):</p> <div class="stat"> <p class="single-stat-headline impact-number"> <strong> <abbr aria-label="0" title="0"> <span>£</span><span id="supplierANewObligationValue"></span> </abbr> </strong> </p> </div> </div> </div> <div class="govuk-grid-column-one-half"> <div class="dashboard-module"> <h3 class="govuk-heading-m"><span class="module-heading">Supplier B</span></h3> <p class="govuk-body">New obligation value (£ or household):</p> <div class="stat"> <p class="single-stat-headline impact-number"> <strong> <abbr aria-label="0" title="0"> <span>£</span><span id="supplierBNewObligationValue"></span> </abbr> </strong> </p> </div> </div> </div> </div> -->
 
+                <!-- Calculate -->
+                <div class="govuk-button-group">
+                    <button type="submit" class="govuk-button" data-module="govuk-button" onclick="calculateNewObligationAmounts()">
+                        Calculate
+                    </button>
+                    <!-- <a class="govuk-link" href="/internal/v02-5/manage-trading-obligations">Edit</a> -->
 
-        </form>
+                    <a class="govuk-button govuk-button--secondary" href="#" onclick="history.go(-1)">Edit</a>
+                </div>
 
-        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-        
-        <p class="govuk-body"><a href="/internal/v02-5/">Return to homepage</a></p>
+            </form>
+
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+            <p class="govuk-body">
+                <a href="/internal/v02-5/">Return to homepage</a>
+            </p>
+        </div>
+        <script>
+            document
+                .getElementById("selectedSupplierA")
+                .innerHTML = localStorage.getItem("selectedSupplierA");
+            document
+                .getElementById("selectedSupplierB")
+                .innerHTML = localStorage.getItem("selectedSupplierB");
+            document
+                .getElementById("selectedPhase")
+                .innerHTML = localStorage.getItem("selectedPhase");
+            document
+                .getElementById("selectedCategory")
+                .innerHTML = localStorage.getItem("selectedCategory");
+            document
+                .getElementById("supplierACurrentObligation")
+                .innerHTML = localStorage.getItem("supplierACurrentObligation");
+            document
+                .getElementById("supplierBCurrentObligation")
+                .innerHTML = localStorage.getItem("supplierBCurrentObligation");
+
+            let obligationAmountFromAtoB;
+            let supplierACurrentObligation = localStorage.getItem('supplierACurrentObligation');
+            let supplierANewObligation = 0;
+            let supplierBNewObligation = 0;
+
+            function getObligationAmount() {
+                console.log('calculate obligation amount');
+                obligationAmountFromAtoB = document
+                    .getElementById('obligationAmountFromAtoB')
+                    .value;
+                if (obligationAmountFromAtoB) {
+                    validateObligation()
+                }
+            }
+
+            function validateObligation() {
+                //alert('this function to validate obligation')
+                if (parseFloat(obligationAmountFromAtoB) < 0) {
+                    document
+                        .getElementById('obligationInvalidFieldError')
+                        .classList
+                        .remove('hide')
+                    document
+                        .getElementById('obligation-group')
+                        .classList
+                        .add('govuk-form-group--error')
+
+                    document
+                        .getElementById('errorSummary')
+                        .classList
+                        .remove('hide')
+                } else {
+                    document
+                        .getElementById('obligationInvalidFieldError')
+                        .classList
+                        .add('hide')
+                    document
+                        .getElementById('obligation-group')
+                        .classList
+                        .remove('govuk-form-group--error')
+                    document
+                        .getElementById('errorSummary')
+                        .classList
+                        .add('hide')
+                }
+            }
+
+            function calculateNewObligationAmounts() {
+                // document.getElementById('supplierANewObligationValue').innerHTML = supplierACurrentObligation - obligationAmountFromAtoB;
+                // document.getElementById('supplierBNewObligationValue').innerHTML = obligationAmountFromAtoB;
+
+                if (parseFloat(obligationAmountFromAtoB) > 0) {
+                    localStorage.setItem("supplierANewObligationValue", supplierACurrentObligation - obligationAmountFromAtoB);
+                    localStorage.setItem("obligationAmountFromAtoB", obligationAmountFromAtoB);
+                    window.location.href = "/internal/v02-5/manage-trading-obligations/manage-trading-obligations2";
+                }
+
+            }
+        </script>
     </div>
-    <script>
-        document.getElementById("selectedSupplierA").innerHTML = localStorage.getItem("selectedSupplierA");
-        document.getElementById("selectedSupplierB").innerHTML = localStorage.getItem("selectedSupplierB");
-        document.getElementById("selectedPhase").innerHTML = localStorage.getItem("selectedPhase");
-        document.getElementById("selectedCategory").innerHTML = localStorage.getItem("selectedCategory");
-        document.getElementById("supplierACurrentObligation").innerHTML = localStorage.getItem("supplierACurrentObligation");
-        document.getElementById("supplierBCurrentObligation").innerHTML = localStorage.getItem("supplierBCurrentObligation");
-
-        let obligationAmountFromAtoB;
-        let supplierACurrentObligation = localStorage.getItem('supplierACurrentObligation');
-        let supplierANewObligation = 0;
-        let supplierBNewObligation = 0;
-
-        function getObligationAmount() {
-            console.log('calculate obligation amount');
-            obligationAmountFromAtoB = document.getElementById('obligationAmountFromAtoB').value;          
-        }
-
-        function calculateNewObligationAmounts() {
-            // document.getElementById('supplierANewObligationValue').innerHTML = supplierACurrentObligation - obligationAmountFromAtoB;
-            // document.getElementById('supplierBNewObligationValue').innerHTML = obligationAmountFromAtoB;
-
-            localStorage.setItem("supplierANewObligationValue", supplierACurrentObligation - obligationAmountFromAtoB);
-            localStorage.setItem("obligationAmountFromAtoB", obligationAmountFromAtoB);
-
-            window.location.href="/internal/v02-5/manage-trading-obligations/manage-trading-obligations2";
-        }
-    </script>
-</div>
 
 {% endblock %}
