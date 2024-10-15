@@ -1,0 +1,69 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+  View approval requests received
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+      <h1 class="govuk-heading-xl">Approved transfer requests</h1>
+
+      <p class="govuk-body">View all the approval requests your organisation/you has received. You can choose to accept or decline this transfer request.</p>
+
+      <p>
+        <a class="govuk-link" href="view-approval-requests-received">Requests received</a>
+        | Approved requests</p>
+
+      <table class="govuk-table" id="BGT">
+        <caption class="govuk-table__caption govuk-table__caption--m">Transfer requests approved</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Request number</th>
+            <th scope="col" class="govuk-table__header">Status</th>
+            <th scope="col" class="govuk-table__header">Transfer from</th>
+            <th scope="col" class="govuk-table__header">Transfer to</th>
+            <th scope="col" class="govuk-table__header">Date sent</th>
+            <th scope="col" class="govuk-table__header">Action</th>
+          </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">GBIS_TR000021</td>
+            <td class="govuk-table__cell">
+              <span class="govuk-tag govuk-tag--green">Transfer approved</span></td>
+            <td class="govuk-table__cell">OCT3405678E</td>
+            <td class="govuk-table__cell">BGT0307622E</td>
+            <td class="govuk-table__cell">28/07/2024</td>
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="view-approval-requests-details-received1">View detail</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">GBIS_TR000017</td>
+            <td class="govuk-table__cell">
+              <span class="govuk-tag govuk-tag--green">Transfer approved</span></td>
+            <td class="govuk-table__cell">XYZ3401378E</td>
+            <td class="govuk-table__cell">BGT0307532E</td>
+            <td class="govuk-table__cell">18/10/2023</td>
+            <td class="govuk-table__cell">
+              <a class="govuk-link" href="view-approval-requests-details-received1">View detail</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- <table class="govuk-table" id="BGT"> <caption class="govuk-table__caption govuk-table__caption--m">Pending approval requests received</caption> <thead class="govuk-table__head"> <tr class="govuk-table__row"> <th scope="col" class="govuk-table__header">Tansfer request number</th> <th scope="col" class="govuk-table__header">Transfer status</th> <th scope="col" class="govuk-table__header">Transfer from</th> <th scope="col" class="govuk-table__header">Transfer to</th> <th scope="col" class="govuk-table__header">Raised date</th> <th scope="col" class="govuk-table__header">Action</th> </tr> </thead> <tbody class="govuk-table__body"> <tr class="govuk-table__row"> <td class="govuk-table__cell">GBIS_TR000060</td> <td class="govuk-table__cell">Approval of transfer requested</td> <td class="govuk-table__cell">EON3401234E</td> <td class="govuk-table__cell">BGT0307811E</td> <td class="govuk-table__cell">01/08/2024</td> <td class="govuk-table__cell"><a class="govuk-link" href="view-approval-requests-details-received">View detail</a></td> </tr> </tbody> </table> <div class="sr-only">End of the received approval requests</div> <table class="govuk-table" id="BGT"> <caption class="govuk-table__caption govuk-table__caption--m">Accepted approval requests received</caption> <thead class="govuk-table__head"> <tr class="govuk-table__row"> <th scope="col" class="govuk-table__header">Tansfer request number</th> <th scope="col" class="govuk-table__header">Transfer status</th> <th scope="col" class="govuk-table__header">Transfer from</th> <th scope="col" class="govuk-table__header">Transfer to</th> <th scope="col" class="govuk-table__header">Raised date</th> <th scope="col" class="govuk-table__header">Action</th> </tr> </thead> <tbody class="govuk-table__body"> <tr class="govuk-table__row"> <td class="govuk-table__cell">GBIS_TR000061</td> <td class="govuk-table__cell">Approval of transfer requested</td> <td class="govuk-table__cell">EON3405678E</td> <td class="govuk-table__cell">BGT0307822E</td> <td class="govuk-table__cell">24/07/2024</td> <td class="govuk-table__cell"><a class="govuk-link" href="view-approval-requests-details-received1">View detail</a></td> </tr> </tbody> </table> -->
+      <div class="sr-only">End of the accepted received approval requests</div>
+
+      <p class="govuk-body">
+        <a href="/v13-3/home">Return to homepage</a>
+      </p>
+    </div>
+  </div>
+{% endblock %}

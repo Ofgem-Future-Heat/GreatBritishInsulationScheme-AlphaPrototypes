@@ -6,66 +6,69 @@
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <style> 
+  <div class="govuk-grid-row">
+    <style>
       .govuk-width-container {
-          margin-left: auto;
-          margin-right: auto;
-          padding-left: 3.75rem;
-          padding-right: 3.75rem;
-          max-width: calc(1280px + 7.5rem);
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 3.75rem;
+        padding-right: 3.75rem;
+        max-width: calc(1280px + 7.5rem);
       }
       h2 {
-          font-size: 1.8rem;
+        font-size: 1.8rem;
       }
       h3 {
-          font-size: 1.625rem;
-          margin-top: 1rem;
+        font-size: 1.625rem;
+        margin-top: 1rem;
       }
       h4 {
-          font-size: 1.125rem;
-          margin-top: 1rem;
+        font-size: 1.125rem;
+        margin-top: 1rem;
       }
       /* h2, h3 {
           margin-bottom: 3rem;
       } */
       p {
-          margin-bottom: 1.25rem;
-          color: rgba(29,43,57,var(--text-opacity));
-          font-size: 1.1rem !important;
-          line-height: 1.8rem !important;
+        margin-bottom: 1.25rem;
+        color: rgba(29,43,57,var(--text-opacity));
+        font-size: 1.1rem !important;
+        line-height: 1.8rem !important;
       }
 
       .custom-font-style {
-          font-family: Arial, sans-serif !important;
-          color: rgba(29,43,57,var(--text-opacity)) !important;
+        font-family: Arial, sans-serif !important;
+        color: rgba(29,43,57,var(--text-opacity)) !important;
       }
 
       /* Button */
       .govuk-button--start {
-          font-weight: 700;
-          font-size: 18px;
-          font-size: 1.125rem;
-          line-height: 1;
-          display: inline-flex;
-          min-height: auto;
-          justify-content: center;
+        font-weight: 700;
+        font-size: 18px;
+        font-size: 1.125rem;
+        line-height: 1;
+        display: inline-flex;
+        min-height: auto;
+        justify-content: center;
       }
-      .govuk-button:link, .govuk-button:visited, .govuk-button:active, .govuk-button:hover {
-          color: #fff;
-          text-decoration: none;
+      .govuk-button:active,
+      .govuk-button:hover,
+      .govuk-button:link,
+      .govuk-button:visited {
+        color: #fff;
+        text-decoration: none;
       }
       @media (min-width: 40.0625em) {
-          .govuk-button--start {
-              font-size: 1.5rem !important;
-              line-height: 1;
-          }
+        .govuk-button--start {
+          font-size: 1.5rem !important;
+          line-height: 1;
+        }
       }
 
       ul.custom-ofgem-bullets {
-          list-style-type: disc;
-          margin-bottom: 1.25rem;
-          padding-left: 2.25rem;
+        list-style-type: disc;
+        margin-bottom: 1.25rem;
+        padding-left: 2.25rem;
       }
 
       /* a  {
@@ -86,20 +89,20 @@
           color: rgba(255,255,255,var(--text-opacity));
       } */
       .c-button--cta {
-          display: inline-flex;
-          align-items: center;
-          padding: .5rem 1.5rem;
-          border-radius: 9999px;
-          text-decoration: none;
-          transition-property: background-color,border-color,color,fill,stroke;
-          transition-duration: .2s;
-          color: #fff!important;
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 1.5rem;
+        border-radius: 9999px;
+        text-decoration: none;
+        transition-property: background-color,border-color,color,fill,stroke;
+        transition-duration: 0.2s;
+        color: #fff!important;
       }
 
       .c-button--cta:visited {
-          color: #fff!important;
+        color: #fff!important;
       }
-      
+
       /*
       .text-color-yellow {
           --text-opacity: 1;
@@ -107,102 +110,135 @@
           color: rgba(251,181,21,var(--text-opacity));
       }
       */
+    </style>
+    <div class="govuk-grid-column-full">
 
-  </style>
-  <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">Internal users prototypes</h1>
 
-    <h1 class="govuk-heading-xl">Internal users prototypes</h1>
-    
-    <!-- #################### -->
-    <!-- Private Beta --> 
-    <!-- #################### -->
-    <h2 class="govuk-heading-l">Private Beta</h2>
-    
-    <!-- Active prototypes -->
-    <h3 class="govuk-heading-m">Active prototypes</h3>
-    
-    <!-- V2 - Internal user management -->
-    <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">V2 &mdash; Internal user management</caption>
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Prototype</th>
-          <th scope="col" class="govuk-table__header">Details</th>
-          <th scope="col" class="govuk-table__header">User</th>
-          <th scope="col" class="govuk-table__header">Action</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell" scope="row">V02.5</th>
-          <td class="govuk-table__cell">same as V02.4 - with updates to Trading obligations</td>
-          <td class="govuk-table__cell">All internal users</td>
-          <td class="govuk-table__cell"><a class="govuk-link" target="_blank" href="v02-5/">Open prototype</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell" scope="row">V02.4</th>
-          <td class="govuk-table__cell">same as V02.3 - with minor copy updates</td>
-          <td class="govuk-table__cell">All internal users</td>
-          <td class="govuk-table__cell"><a class="govuk-link" target="_blank" href="v02-4/">Open prototype</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell" scope="row">V02.3 - with annoucements</th>
-          <td class="govuk-table__cell">same as V02.1 - Announcements display and announcement creation</td>
-          <td class="govuk-table__cell">All internal users</td>
-          <td class="govuk-table__cell"><a class="govuk-link" target="_blank" href="v02-3/">Open prototype</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell" scope="row">V02.2 - includes improvement to card tiles</th>
-          <td class="govuk-table__cell">same as V02.1 - contains updated tile/cards</td>
-          <td class="govuk-table__cell">All internal users</td>
-          <td class="govuk-table__cell"><a class="govuk-link" target="_blank" href="v02-2/">Open prototype</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell" scope="row">V02.1 - includes improvement to ownership</th>
-          <td class="govuk-table__cell">Search measures &mdash; Displaying the <strong>user's home page</strong>, <strong>external user's list</strong>; view existing external users and detail, edit external user, remove external user; view <strong>supplier upload measures</strong>; view <strong>automatic late extension report</strong>; trigger and vide  <strong>and stage 3 measure validation</strong></td>
-          <td class="govuk-table__cell">All internal users</td>
-          <td class="govuk-table__cell"><a class="govuk-link" target="_blank" href="v02-1/">Open prototype</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell" scope="row">V02.0 - external users, search measures</th>
-          <td class="govuk-table__cell">Search measures &mdash; Displaying the <strong>user's home page</strong>, <strong>external user's list</strong>; view existing external users and detail, edit external user, remove external user</td>
-          <td class="govuk-table__cell">All internal users</td>
-          <td class="govuk-table__cell"><a class="govuk-link" target="_blank" href="v02-0/">Open prototype</a></td>
-        </tr>
-      </tbody>
-    </table>
-    
-    <!-- Other prototypes -->
-    <h3 class="govuk-heading-m">Other prototypes</h3>
-    
-    <!-- V1 &mdash; Internal user management -->
-    <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">V1 &mdash; Internal user management</caption>
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Prototype</th>
-          <th scope="col" class="govuk-table__header">Details</th>
-          <th scope="col" class="govuk-table__header">User</th>
-          <th scope="col" class="govuk-table__header">Action</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell" scope="row">V01.1 - external users</th>
-          <td class="govuk-table__cell">Displaying the <strong>user's home page</strong>, <strong>external user's list</strong>; view existing external users and detail, edit external user, remove external user</td>
-          <td class="govuk-table__cell">All internal users</td>
-          <td class="govuk-table__cell"><a class="govuk-link" target="_blank" href="v01-1/">Open prototype</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th class="govuk-table__cell" scope="row">V01.2 - request-failed</th>
-          <td class="govuk-table__cell">There is a problem with the service.</td>
-          <td class="govuk-table__cell">All internal users</td>
-          <td class="govuk-table__cell"><a class="govuk-link" target="_blank" href="v01-2/request-failed">Open prototype</a></td>
-        </tr>
-      </tbody>
-    </table>
+      <!-- #################### -->
+      <!-- Private Beta -->
+      <!-- #################### -->
+      <h2 class="govuk-heading-l">Private Beta</h2>
 
+      <!-- Active prototypes -->
+      <h3 class="govuk-heading-m">Active prototypes</h3>
+
+      <!-- V2 - Internal user management -->
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">V2 &mdash; Internal user management</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Prototype</th>
+            <th scope="col" class="govuk-table__header">Details</th>
+            <th scope="col" class="govuk-table__header">User</th>
+            <th scope="col" class="govuk-table__header">Action</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell" scope="row">V02.6</th>
+            <td class="govuk-table__cell">same as V02.5 - with content updates to Trading obligations</td>
+            <td class="govuk-table__cell">All internal users</td>
+            <td class="govuk-table__cell">
+              <a class="govuk-link" target="_blank" href="v02-6/">Open prototype</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell" scope="row">V02.5</th>
+            <td class="govuk-table__cell">same as V02.4 - with updates to Trading obligations</td>
+            <td class="govuk-table__cell">All internal users</td>
+            <td class="govuk-table__cell">
+              <a class="govuk-link" target="_blank" href="v02-5/">Open prototype</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell" scope="row">V02.4</th>
+            <td class="govuk-table__cell">same as V02.3 - with minor copy updates</td>
+            <td class="govuk-table__cell">All internal users</td>
+            <td class="govuk-table__cell">
+              <a class="govuk-link" target="_blank" href="v02-4/">Open prototype</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell" scope="row">V02.3 - with annoucements</th>
+            <td class="govuk-table__cell">same as V02.1 - Announcements display and announcement creation</td>
+            <td class="govuk-table__cell">All internal users</td>
+            <td class="govuk-table__cell">
+              <a class="govuk-link" target="_blank" href="v02-3/">Open prototype</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell" scope="row">V02.2 - includes improvement to card tiles</th>
+            <td class="govuk-table__cell">same as V02.1 - contains updated tile/cards</td>
+            <td class="govuk-table__cell">All internal users</td>
+            <td class="govuk-table__cell">
+              <a class="govuk-link" target="_blank" href="v02-2/">Open prototype</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell" scope="row">V02.1 - includes improvement to ownership</th>
+            <td class="govuk-table__cell">Search measures &mdash; Displaying the
+              <strong>user's home page</strong>,
+              <strong>external user's list</strong>; view existing external users and detail, edit external user, remove external user; view
+              <strong>supplier upload measures</strong>; view
+              <strong>automatic late extension report</strong>; trigger and vide
+              <strong>and stage 3 measure validation</strong>
+            </td>
+            <td class="govuk-table__cell">All internal users</td>
+            <td class="govuk-table__cell">
+              <a class="govuk-link" target="_blank" href="v02-1/">Open prototype</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell" scope="row">V02.0 - external users, search measures</th>
+            <td class="govuk-table__cell">Search measures &mdash; Displaying the
+              <strong>user's home page</strong>,
+              <strong>external user's list</strong>; view existing external users and detail, edit external user, remove external user</td>
+            <td class="govuk-table__cell">All internal users</td>
+            <td class="govuk-table__cell">
+              <a class="govuk-link" target="_blank" href="v02-0/">Open prototype</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Other prototypes -->
+      <h3 class="govuk-heading-m">Other prototypes</h3>
+
+      <!-- V1 &mdash; Internal user management -->
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">V1 &mdash; Internal user management</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Prototype</th>
+            <th scope="col" class="govuk-table__header">Details</th>
+            <th scope="col" class="govuk-table__header">User</th>
+            <th scope="col" class="govuk-table__header">Action</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell" scope="row">V01.1 - external users</th>
+            <td class="govuk-table__cell">Displaying the
+              <strong>user's home page</strong>,
+              <strong>external user's list</strong>; view existing external users and detail, edit external user, remove external user</td>
+            <td class="govuk-table__cell">All internal users</td>
+            <td class="govuk-table__cell">
+              <a class="govuk-link" target="_blank" href="v01-1/">Open prototype</a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th class="govuk-table__cell" scope="row">V01.2 - request-failed</th>
+            <td class="govuk-table__cell">There is a problem with the service.</td>
+            <td class="govuk-table__cell">All internal users</td>
+            <td class="govuk-table__cell">
+              <a class="govuk-link" target="_blank" href="v01-2/request-failed">Open prototype</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
   </div>
-</div>
 
 {% endblock %}

@@ -1,0 +1,371 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+{{serviceName}} Cookie Policy 
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <p class="govuk-body"><a href="../home" class="govuk-back-link">Back</a></p>
+        <!-- <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a> -->
+        <h1 class="govuk-heading-xl">{{serviceName}} Cookie Policy</h1>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+        <p class="gov-body">Cookies are small files saved on your phone, tablet or computer when you visit a website.</p>
+        <p class="gov-body">We use cookies to make {{serviceName}} work and collect information about how you use our service.</p>
+
+        <h2 class="govuk-heading-l">Essential cookies</h2>
+        <p class="gov-body">Essential cookies keep your information secure while you use {{serviceName}}. We do not need to ask permission to use them.</p>
+
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Name</th>
+                    <th scope="col" class="govuk-table__header left-aligned">Purpose</th>
+                    <th scope="col" class="govuk-table__header left-aligned">Expires</th>
+                </tr>
+            </thead>
+
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">AspNetCore.Antiforgery.VyLW6ORzMgk</th>
+                    <td class="govuk-table__cell left-aligned">Cross-Site Request Forgery token used for CSRF protection</td>
+                    <td class="govuk-table__cell left-aligned">Session: when you close your browser</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">GBIS.AuthCookieC2</th>
+                    <td class="govuk-table__cell left-aligned">Stores technical and session-specific information, including user security roles</td>
+                    <td class="govuk-table__cell left-aligned">Session: when you close your browser</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">GBIS.AuthCookie</th>
+                    <td class="govuk-table__cell left-aligned">Stores technical and session-specific information, including user security roles</td>
+                    <td class="govuk-table__cell left-aligned">Session: when you close your browser</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">GBIS.AuthCookieC1</th>
+                    <td class="govuk-table__cell left-aligned">Stores technical and session-specific information, including user security roles</td>
+                    <td class="govuk-table__cell left-aligned">Session: when you close your browser</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">CookieControl</th>
+                    <td class="govuk-table__cell left-aligned">Removes the cookie banner from appearing on all pages once a user has given permission to use cookies</td>
+                    <td class="govuk-table__cell left-aligned">3 months</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">_hjSessionUser_2183731</th>
+                    <!-- <td class="govuk-table__cell left-aligned">This period shows the length of the period at which a service can store and/or read certain data from your computer by using a cookie, a pixel,  an API, cookieless tracking, or other resources.</td> -->
+                    <td class="govuk-table__cell left-aligned">Stores a unique user ID</td>
+                    <td class="govuk-table__cell left-aligned">1 year</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="govuk-heading-l">Analytics cookies (optional)</h2>
+        <p class="gov-body">With your permission, we use Google Analytics to collect data about how you use {{serviceName}}. This information helps us to improve our service.</p>
+        <p class="gov-body">Google is not allowed to use or share our analytics data with anyone.</p>
+        <p class="gov-body">Google Analytics stores anonymised information about:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>how you got to {{serviceName}}</li>
+            <li>the pages you visit on {{serviceName}} and how long you spend on them</li>
+            <li>any errors you see while using {{serviceName}}</li>
+        </ul>
+
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Name</th>
+                    <th scope="col" class="govuk-table__header left-aligned">Purpose</th>
+                    <th scope="col" class="govuk-table__header left-aligned">Expires</th>
+                </tr>
+            </thead>
+
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">_ga</th>
+                    <td class="govuk-table__cell left-aligned">Set by Google Analytics and used to distinguish users.</td>
+                    <td class="govuk-table__cell left-aligned">1 year</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">_ga_*</th>
+                    <td class="govuk-table__cell left-aligned">Set by Google Analytics and used to store and count pageviews</td>
+                    <td class="govuk-table__cell left-aligned">1 year</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="analyticsCookie-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h4 class="govuk-fieldset__heading">
+                    Do you want to accept analytics cookies?
+                </h4>
+              </legend>
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="analyticsCookieYes" name="analyticsCookie" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="analyticsCookieYes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="analyticsCookieNo" name="analyticsCookie" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="analyticsCookieNo">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+            Save cookie settings
+        </button>
+
+
+    </div>
+    
+    <!--
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Cookies on Ofgem.gov.uk</h2>
+        <p class="govuk-body">Cookies are small text files placed on your computer or mobile phone when you browse a website. Almost all websites use them.</p>
+        <p class="govuk-body">Our website uses cookies. They help us to provide, protect and improve your online experience with us.</p>
+        <p class="govuk-body">For example, we use cookies to remember:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>your search settings</li>
+            <li>if you have accepted our terms and conditions</li>
+        </ul>
+
+        <h2 class="govuk-heading-l">Types of cookies we use</h2>
+
+        <h3 class="govuk-heading-m">Necessary cookies</h3>
+        <p class="gov-body">These are cookies that enable our website's core functionality. You can disable these by changing your browser settings, but this could affect your experience of particular website functions.</p>
+        <p class="gov-body">Should you wish to remove or not use necessary cookies from our website, you can learn how to do this in 'Turning Cookies Off' below.</p>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Name</th>
+                    <th scope="col" class="govuk-table__header left-aligned">Purpose</th>
+                    <th scope="col" class="govuk-table__header left-aligned">Expires</th>
+                </tr>
+            </thead>
+
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">CookieControl</th>
+                    <td class="govuk-table__cell left-aligned">Removes the cookie banner from appearing on all pages once a user has given permission to use cookies.</td>
+                    <td class="govuk-table__cell left-aligned">1 year</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">has_js</th>
+                    <td class="govuk-table__cell left-aligned">Tells the browser that JavaScript is enabled and can be run on the website.</td>
+                    <td class="govuk-table__cell left-aligned">?</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">alert_</th>
+                    <td class="govuk-table__cell left-aligned">Saves which banners have been closed by the user and stops them from reappearing.</td>
+                    <td class="govuk-table__cell left-aligned">?</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">SSESS%ID%</th>
+                    <td class="govuk-table__cell left-aligned">Drupal session identification cookie.</td>
+                    <td class="govuk-table__cell left-aligned">?</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">cfduid</th>
+                    <td class="govuk-table__cell left-aligned">Set by CloudFlare on behalf of Piktochart. According to CloudFlare it is used to override any security.</td>
+                    <td class="govuk-table__cell left-aligned">2 years</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="govuk-heading-m">Analytics cookies</h3>
+        <p class="gov-body">These cookies help us understand how people use our website, which helps us improve your experience. The data we collect using analytical cookies is anonymised. *</p>
+        <p class="gov-body">The tool we use is Google Analytics. To find out more about the cookies Google uses visit <a class="govuk-link" href="https://www.google.com/policies/technologies/cookies/" target="_blank">Google's Cookie Privacy and Terms</a>. You can opt out of Google Analytics tracking by <a class="govuk-link" href="https://tools.google.com/dlpage/gaoptout" target="_blank">installing this add-on (opens in new window)</a>.</p>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Name</th>
+                    <th scope="col" class="govuk-table__header left-aligned">Purpose</th>
+                    <th scope="col" class="govuk-table__header left-aligned">Expires</th>
+                </tr>
+            </thead>
+
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">_ga</th>
+                    <td class="govuk-table__cell left-aligned">Set by Google Analytics and used to distinguish users.</td>
+                    <td class="govuk-table__cell left-aligned">2 years</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">_gid</th>
+                    <td class="govuk-table__cell left-aligned">Set by Google Analytics and used to distinguish users.</td>
+                    <td class="govuk-table__cell left-aligned">1 day</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">_gat </th>
+                    <td class="govuk-table__cell left-aligned">Used to throttle request rate.</td>
+                    <td class="govuk-table__cell left-aligned">1 minute</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">SIDCC </th>
+                    <td class="govuk-table__cell left-aligned">Security cookie from Google to protect users' data from unauthorised access.</td>
+                    <td class="govuk-table__cell left-aligned">?</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">SID, SAPISID, APISID, SSID</th>
+                    <td class="govuk-table__cell left-aligned">Unique identifiers and login information relate.</td>
+                    <td class="govuk-table__cell left-aligned">?</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">_gat_piktov3 </th>
+                    <td class="govuk-table__cell left-aligned">Temporary cookie deleted once Piktochart is loaded.</td>
+                    <td class="govuk-table__cell left-aligned">?</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">cf_use_ob </th>
+                    <td class="govuk-table__cell left-aligned">Set by Cloudflare on behalf of Piktochart.</td>
+                    <td class="govuk-table__cell left-aligned">?</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">HSID, NID, PREF, VISITOR_INFO1_L IVE, CAL, CONSENT, GAPS, GEUP, LOGIN_INFO, T </th>
+                    <td class="govuk-table__cell left-aligned">Used by Google for YouTube videos, Google Maps, and other related Google products.</td>
+                    <td class="govuk-table__cell left-aligned">30 Days</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="analyticsCookie-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h4 class="govuk-fieldset__heading">
+                    Do you want to accept analytics cookies?
+                </h4>
+              </legend>
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="analyticsCookieYes" name="analyticsCookie" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="analyticsCookieYes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="analyticsCookieNo" name="analyticsCookie" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="analyticsCookieNo">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Save cookie settings
+        </button>
+
+        <h3 class="govuk-heading-m">User research cookies</h3>
+        <p class="gov-body">These cookies help us to gather feedback from you to improve the website. This includes surveys, heat maps and occasionally recorded sessions, which help us to understand how you use the website.</p>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Name</th>
+                    <th scope="col" class="govuk-table__header left-aligned">Purpose</th>
+                    <th scope="col" class="govuk-table__header left-aligned">Expires</th>
+                </tr>
+            </thead>
+
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">_hjid</th>
+                    <td class="govuk-table__cell left-aligned">Set by Hotjar so subsequent visits to the site, or to other pages will be recorded as the same random, unique user.</td>
+                    <td class="govuk-table__cell left-aligned">?</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">_hjIncludedInSam ple</th>
+                    <td class="govuk-table__cell left-aligned">Whether to include the current user ID in the sample to generate funnels.</td>
+                    <td class="govuk-table__cell left-aligned">?</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">IDE</th>
+                    <td class="govuk-table__cell left-aligned">Advertising cookie set by Google.</td>
+                    <td class="govuk-table__cell left-aligned">?</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="govuk-heading-l">Managing cookies</h2>
+        <p class="gov-body">All major browsers allow you to switch off and manage the cookies they accept and store. To find out how to use these options, please follow the appropriate link for your browser:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a class="govuk-link" href="https://support.microsoft.com/en-gb/windows/delete-and-manage-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank">Microsoft Edge (opens in new window)</a></li>
+            <li><a class="govuk-link" href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank">Mozilla Firefox (opens in new window)</a></li>
+            <li><a class="govuk-link" href="https://support.google.com/chrome/answer/95647?hl=en-GB" target="_blank">Google Chrome (opens in new window)</a></li>
+            <li><a class="govuk-link" href="https://support.apple.com/en-gb/HT201265" target="_blank">Apple Safari (opens in new window)</a></li>
+        </ul>
+        <p class="gov-body">We regularly review our cookie policy. We last updated our cookie policy on Friday 18 August 2023.</p>
+        <p class="gov-body">When you visit our website, a cookie message will appear on the left-hand side of the page asking you to accept or reject our recommended settings. In keeping with <a class="govuk-link" href="https://ico.org.uk/for-organisations/guide-to-pecr/cookies-and-similar-technologies/" target="_blank">ICO requirements (opens in new window)</a>, you will not be able to browse the website until you have made a decision.</p>
+        <p class="gov-body">The table below provides a summary of cookies that turn on or off when you accept or reject our settings.</p>
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Cookie category</th>
+                    <th scope="col" class="govuk-table__header left-aligned">Accept recommended settings</th>
+                    <th scope="col" class="govuk-table__header left-aligned">Reject all</th>
+                </tr>
+            </thead>
+
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">Necessary</th>
+                    <td class="govuk-table__cell">Y</td>
+                    <td class="govuk-table__cell left-aligned">Y</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">Analytics</th>
+                    <td class="govuk-table__cell">Y</td>
+                    <td class="govuk-table__cell left-aligned">N</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell">User research </th>
+                    <td class="govuk-table__cell">Y</td>
+                    <td class="govuk-table__cell left-aligned">N</td>
+                </tr>                
+            </tbody>
+        </table>
+
+        <h2 class="govuk-heading-l">Your rights</h2>
+        <p class="gov-body">If you would like to exercise any of your privacy or data protection rights in relation to our cookie use and/or request information about <a class="govuk-link" class="govuk-link" href="https://www.ofgem.gov.uk/node/167262" target="_blank">Ofgem's privacy policies (opens in new window)</a>, please contact our Data Protection Officer at <a class="govuk-link" href="mailto:dpo@ofgem.gov.uk">dpo@ofgem.gov.uk</a>.</p>
+        <p class="gov-body">Alternatively write to us at:</p>
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row no-border">
+                <dd class="govuk-summary-list__value">
+                    The Data Protection Officer<br>
+                    Ofgem<br>
+                    10 South Colonnade<br>
+                    Canary Wharf<br>
+                    London <br>
+                    E14 4PU
+                </dd>
+            </div>
+        </dl>
+        <p class="gov-body">You have a right to complain to the Information Commissioner about how we have handled your information. You can contact them at:</p>
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row no-border">
+                <dd class="govuk-summary-list__value">
+                    Information Commissioner's Office<br>
+                    Wycliffe House<br>
+                    Water Lane<br>
+                    Wilmslow<br>
+                    Cheshire<br>
+                    SK9 5AF<br>
+                    Telephone: <a class="govuk-link" href="tel:0303 123 1113">0303 123 1113</a><br>
+                    Online: <a class="govuk-link" href="https://ico.org.uk/global/contact-us/live-chat/" target="_blank">Live chat (opens in new tab)</a>
+                </dd>
+            </div>
+        </dl>
+    </div>
+    -->
+</div>
+
+{% endblock %}

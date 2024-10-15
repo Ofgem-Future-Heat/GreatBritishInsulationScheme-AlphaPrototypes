@@ -1,0 +1,38 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+    Confirm trading obligations
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+            <h1 class="govuk-heading-xl">Confirm trading obligations</h1>
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+
+                    <div class="govuk-warning-text">
+                        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                        <strong class="govuk-warning-text__text">
+                            <span class="govuk-visually-hidden">Warning</span>
+                            Are you sure you want want to trade this obligation?
+                        </strong>
+                    </div>
+
+                    <div class="govuk-button-group">
+                        <a class="govuk-button margin-top-30" href="confirm-trading-obligations-complete">Confirm</a>
+                        <a class="govuk-link" href="/internal/v02-6/manage-trading-obligations">Cancel</a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible"/>
+            <p class="govuk-body">
+                <a href="/internal/v02-6/">Return to homepage</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}

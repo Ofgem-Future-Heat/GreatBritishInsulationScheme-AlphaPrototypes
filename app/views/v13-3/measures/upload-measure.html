@@ -1,0 +1,72 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+  Upload Measure
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+      <h1 class="govuk-heading-xl">
+        Upload measures file
+      </h1>
+
+      <div class="govuk-inset-text">
+        <!-- Files should be named using a <strong>3-letter organisation acronym</strong>, <strong>ddmmyyyy</strong> date format - <strong>0000</strong> 24-hour time format - your first name and surname <strong>initials</strong>. -->
+
+        Files should be named using:<br/>
+        <ul>
+          <li>a
+            <strong>3-letter organisation acronym</strong>
+          </li>
+          <li>
+            <strong>ddmmyyyy</strong>
+            date format</li>
+          <li>
+            <strong>0000</strong>
+            24-hour time format</li>
+          <li>your first name and surname
+            <strong>initials</strong>
+          </li>
+        </ul>
+        For example:
+        <strong>OFG-26042024-1705-AA.csv</strong>
+      </div>
+
+      <p class="govuk-body">Any file containing measures you upload must be a CSV file.</p>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form>
+            <div class="govuk-form-group">
+              <div class="upload-container">
+                <label for="file-upload" class="custom-file-upload">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                    <path d="M11 14.9861C11 15.5384 11.4477 15.9861 12 15.9861C12.5523 15.9861 13 15.5384 13 14.9861V7.82831L16.2428 11.0711L17.657 9.65685L12.0001 4L6.34326 9.65685L7.75748 11.0711L11 7.82854V14.9861Z" fill="currentColor"/>
+                    <path d="M4 14H6V18H18V14H20V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V14Z" fill="currentColor"/>
+                  </svg>
+                  Choose file
+                </label>
+                <input class="" id="file-upload" name="file-upload" type="file" accept=".csv" tabindex="0" title="file-upload" onchange="fileSelection()"/>
+              </div>
+            </div>
+
+            <button id="uploadBtn" disabled="disabled" aria-disabled="true" class="govuk-button" onclick="updaloadFile()" type="button">Upload a measure file</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      function updaloadFile() {
+        window.location.pathname = "/v13-3/measures/success-file-upload-core-check-errors";
+      }
+    </script>
+  </div>
+
+{% endblock %}

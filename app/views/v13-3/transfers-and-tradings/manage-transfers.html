@@ -1,0 +1,51 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+  Manage measure approval requests
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <script></script>
+
+    <div class="govuk-grid-column-full">
+
+      <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+      <h1 class="govuk-heading-xl">Manage measure approval requests</h1>
+
+      <p class="govuk-body">View all GBIS measure transfer approval requests sent to and received from other energy suppliers.</p>
+
+      <div class="grid-list">
+
+        <!-- Approval requests sent to other energy suppliers -->
+        <div class="card govuk-!-padding-5">
+          <h3 class="govuk-heading-m">Approval requests sent to other energy suppliers</h3>
+          <p class="govuk-body card-description">All approval requests your organisation has sent.</p>
+          <p class="govuk-body">
+            <a data-test-id="view-approval-requests-raised-link" class="govuk-link " href="./view-approval-requests-raised" aria-describedby="view-approval-requests-raised-description">View requests sent</a>
+          </p>
+        </div>
+
+        <!-- Approval requests received from other energy suppliers -->
+        <div class="card govuk-!-padding-5">
+          <h3 class="govuk-heading-m">Approval requests received from other energy suppliers</h3>
+          <p class="govuk-body card-description">All approval requests your organisation has received.</p>
+          <p class="govuk-body">
+            <a data-test-id="view-approval-requests-received-link" class="govuk-link " href="./view-approval-requests-received" aria-describedby="view-approval-requests-received-description">View requests received</a>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- HOME -->
+      <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible"/>
+      <p class="govuk-body">
+        <a href="/v13-3/home">Return to homepage</a>
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}

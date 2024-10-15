@@ -1,0 +1,69 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+  Transfer request confirmed
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <!-- <div class="govuk-panel govuk-panel--confirmation"> <h1 class="govuk-panel__title"> Transfer request confirmed for<br/> <strong>GBIS_TR000060</strong> </h1> </div> -->
+      <div class="govuk-notification-banner govuk-notification-banner--error" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h1 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Request unsuccessful
+          </h1>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <h2 class="govuk-notification-banner__heading">
+            <!-- <strong>[GBIS_TR000060]</strong> measure transfer request not sent -->
+            Measure transfer request not sent
+          </h2>
+          <!-- <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">example@department.gov.uk</a> if you think there’s a problem.</p> -->
+        </div>
+      </div>
+
+      <h3 class="govuk-heading-m">Why was this transfer not sent?</h3>
+
+      <p class="govuk-body">Measures within the transfer request may not have met the correct criteria. Measures in the transfer request must:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>exist in the GBIS register</li>
+        <li>be set to 'Approved' or 'Rejected'</li>
+        <li>not already be part of an existing transfer request</li>
+        <li>belong to your organisation</li>
+        <li>include all associated measure reference numbers</li>
+      </ul>
+
+      <h3 class="govuk-heading-m">What to do next</h3>
+      <h4 class="govuk-heading-s">To do this, you must:</h4>
+      <ol class="govuk-list govuk-list--number">
+        <li>Download the error report.</li>
+        <li>Follow the instructions in the error report to fix the errors in the transfer request.</li>
+        <li>Submit a new transfer request.</li>
+      </ol>
+
+      <h3 class="govuk-heading-m">Download the transfer error report</h3>
+
+      <p class="govuk-body">For further information about the failed measure transfer request, download the error report.</p>
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Download transfer error report
+      </button>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <p class="govuk-body">
+        <a class="govuk-link" href="/v13-3/transfers-and-tradings/">Back to transfers</a>
+      </p>
+    </div>
+
+    <div class="govuk-grid-column-one-thirds">
+      <p class="govuk-body">EXAMPLE: REMOVE LATER<br/>
+        <a class="govuk-link" href="success-transfer-requested">View a successful transfer request for approval</a>
+      </p>
+    </div>
+  </div>
+
+{% endblock %}

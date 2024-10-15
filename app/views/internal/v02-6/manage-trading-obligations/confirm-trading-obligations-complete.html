@@ -1,0 +1,38 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+    Transfer request accepted
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <!-- <div class="govuk-panel govuk-panel--confirmation"> <h1 class="govuk-panel__title"> Transfer request <strong>GBIS_TR000060</strong><br /> has been accepted </h1> </div> -->
+
+            <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+                <div class="govuk-notification-banner__header">
+                    <h1 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                        Complete
+                    </h1>
+                </div>
+                <div class="govuk-notification-banner__content">
+                    <h2 class="govuk-notification-banner__heading">
+                        Obligation trade
+                        <!-- <strong>GBIS_TR000060</strong> -->
+                        is complete
+                    </h2>
+                </div>
+            </div>
+
+            <p class="govuk-body">
+                <a class="govuk-button govuk-button--secondary" href="/internal/v02-6/manage-trading-obligations">Return to manage trading obligation</a>
+            </p>
+
+            <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible"/>
+            <p class="govuk-body">
+                <a href="/internal/v02-6/">Return to homepage</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}

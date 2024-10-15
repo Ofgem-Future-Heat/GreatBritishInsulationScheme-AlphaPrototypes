@@ -1,0 +1,42 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+  Withdraw transfer request
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <!-- <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a> -->
+
+      <h1 class="govuk-heading-xl">Withdraw transfer request</h1>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-visually-hidden">Warning</span>
+              Are you sure you want want to withdraw this transfer request?
+            </strong>
+          </div>
+
+          <!-- <div class="govuk-form-group"> <label class="govuk-label" for="transfer-decline-reason-notes-detail"> Reasons for declining the transfer request </label> <textarea class="govuk-textarea" id="transfer-decline-reason-notes-detail" name="transferDeclineReasonNotesDetail" rows="5"></textarea> </div> -->
+
+          <div class="govuk-button-group">
+            <a class="govuk-button margin-top-30" href="withdraw-transfer-request-complete">Confirm</a>
+            <a class="govuk-link" href="#" onclick="history.go(-1)">Cancel</a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible"/>
+      <p class="govuk-body">
+        <a href="/v13-3/home">Return to homepage</a>
+      </p>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layouts/internal-main2-4.html" %}
+
+{% block pageTitle %}
+    Searching the measure register
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+            <h1 class="govuk-heading-xl">Stage 3 validation started</h1>
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+
+                    <!-- <p class="govuk-body">Blurb reharding triggering stage 3 validation.</p> -->
+
+                    <!-- Notification banner -->
+                    <div class="govuk-notification-banner govuk-notification-banner--important" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+                        <div class="govuk-notification-banner__header">
+                            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">In progress</h2>
+                        </div>
+                        <div class="govuk-notification-banner__content">
+                            <h3 class="govuk-notification-banner__heading">
+                                Stage 3 measure validation checks are currently processing. This can take up to 60 minutes.
+                                <br/>
+                                <br/>
+
+                                <!-- You can revert validation checks while they are still processing. Reverting measures back to their original status cannot be undone. -->
+                                You can revert validation checks while they are still processing. If you revert now, measures will be returned to their original state.
+                                <br/>
+                                <br/>
+
+                                After the checks have finished, view the summary page to check the results.
+                            </h3>
+                        </div>
+                    </div>
+                    <!-- <p class="govuk-body"><a class="govuk-link" href="summary-automatic">View summary</a></p> -->
+
+                    <div class="govuk-button-group">
+                        <a class="govuk-button" href="summary-empty">View stage 3 measure validation summary</a>
+                        <a class="govuk-button govuk-button--secondary" href="reverted-process">Revert validation</a>
+                    </div>
+
+                    <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible"/>
+
+                    <p class="govuk-body">
+                        <a href="/internal/v02-6/">Return to homepage</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script></script>
+    </div>
+{% endblock %}
