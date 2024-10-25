@@ -172,16 +172,31 @@
                           </div>
                         </fieldset>
                       </div>
+
+                      <div class="govuk-!-margin-top-3">
+                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                          Clear
+                        </button>
+                      </div>
+
                     </div>
                   </div>
 
                   <!-- Status -->
                   <div class="tab">
+                    <style>
+                    .tab-content {
+                        overflow-y: scroll;
+                        overflow-x: hidden;
+                       
+                      
+                      }
+                    </style>
                     <input class="hide-accordion-checkboxes" type="checkbox" id="chck2" checked="checked">
                     <label class="tab-label" for="chck2">Status</label>
                     <div class="tab-content">
                       <div class="govuk-form-group" id="statusErrorSection">
-                        <fieldset class="govuk-fieldset" role="group" aria-describedby="measure-status-hint" id="error-with-status">
+                        <fieldset class="govuk-fieldset govuk-!-margin-bottom-0" role="group" aria-describedby="measure-status-hint" id="error-with-status">
                           <legend class="govuk-fieldset__legend">
                             <h2 class="govuk-heading-m">What is the measure status?</h2>
                           </legend>
@@ -199,6 +214,13 @@
                           <!-- <div id="measure-status-radio" class="govuk-radios" data-module="govuk-radios"></div> -->
                         </fieldset>
                       </div>
+                      
+                      <div>
+                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                          Clear
+                        </button>
+                      </div>
+
                     </div>
                   </div>
 
