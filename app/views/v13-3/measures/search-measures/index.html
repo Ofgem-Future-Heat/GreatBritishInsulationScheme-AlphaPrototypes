@@ -5,6 +5,12 @@
 {% endblock %}
 
 {% block content %}
+<style>
+  .click-link{
+    cursor: pointer;
+    color: 	#1d70b8;
+  }
+</style>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
@@ -153,6 +159,9 @@
                               <span class="govuk-visually-hidden">Error:</span>
                               Or, search for measure reference numbers by uploading a file containing the numbers you want to search
                             </p>
+                            <style>
+                              
+                            </style>
 
                             <label for="file-upload" class="custom-file-upload">
                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
@@ -161,7 +170,8 @@
                               </svg>
                               Choose file
                             </label>
-                            <input class="" id="file-upload" name="file-upload" type="file" accept=".csv" tabindex="-1" title="file-upload" onchange="fileSelection()"/>
+                            <a class="govuk-link govuk-!-margin-left-6 click-link hide" id="remove-button" onclick="removeFile()">Remove</a>
+                            <input class="" id="file-upload" name="file-upload" type="file" accept=".csv" tabindex="-1" title="file-upload" onchange="fileSelection2()"/>
 
                             <p id="invalidFileUploaded" class="govuk-error-message hide">
                               <span class="govuk-visually-hidden">Error:</span>The selected file is invalid</p>
@@ -173,11 +183,6 @@
                         </fieldset>
                       </div>
 
-                      <div class="govuk-!-margin-top-3">
-                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                          Clear
-                        </button>
-                      </div>
 
                     </div>
                   </div>
@@ -215,11 +220,6 @@
                         </fieldset>
                       </div>
                       
-                      <div>
-                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                          Clear
-                        </button>
-                      </div>
 
                     </div>
                   </div>
@@ -260,4 +260,22 @@
           </p>
         </div>
       </div>
+
+      <script>
+        let file_name = "";
+        let remove_button = document.getElementById("remove-button")
+        function fileSelection2() {
+         file_input =  document.getElementById("file-upload").files.length
+         if(file_input > 0) {
+          remove_button.classList.remove('hide');
+         }else{
+          remove_button.classList.add('hide');
+         }
+        }
+        
+        function removeFile(){
+          document.getElementById("file-upload").value=""
+          remove_button.classList.add('hide');
+        }
+      </script>
     {% endblock %}

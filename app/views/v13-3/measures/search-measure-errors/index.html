@@ -5,6 +5,12 @@
 {% endblock %}
 
 {% block content %}
+<style>
+  .click-link{
+    cursor: pointer;
+    color: 	#1d70b8;
+  }
+</style>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
@@ -155,9 +161,9 @@
                               </svg>
                               Choose file
                             </label>
-                            <input class="" id="file-upload" name="file-upload" type="file" accept=".csv" tabindex="-1" title="file-upload" onchange="fileSelection()"/>
-
-                            <p id="invalidFileUploaded" class="govuk-error-message hide">
+                            <a class="govuk-link govuk-!-margin-left-6 hide click-link" id="remove-button" onclick="removeFile()">Remove</a>
+                            <input class="" id="file-upload" name="file-upload" type="file" accept=".csv" tabindex="-1" title="file-upload" onchange="fileSelection2()"/>
+                           <p id="invalidFileUploaded" class="govuk-error-message hide">
                               <span class="govuk-visually-hidden">Error:</span>The selected file is invalid</p>
                             <p id="validFileUploaded" class="govuk-success-message hide">
                               <span class="govuk-visually-hidden"></span>File uploaded</p>
@@ -166,12 +172,6 @@
 
                         </fieldset>
                         
-                      </div>
-
-                      <div class="govuk-!-margin-top-3">
-                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                          Clear
-                        </button>
                       </div>
                     </div>
                   </div>
@@ -376,11 +376,6 @@
 
                         </fieldset>
                       </div>
-                      <div class="govuk-!-margin-top-3">
-                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                          Clear
-                        </button>
-                      </div>
                     </div>
                   </div>
 
@@ -406,11 +401,6 @@
   
 
                         </fieldset>
-                      </div>
-                      <div class="govuk-!-margin-top-3">
-                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                          Clear
-                        </button>
                       </div>
                     </div>
                   </div>
@@ -452,11 +442,6 @@
 
                         </fieldset>
                       </div>
-                      <div class="govuk-!-margin-top-3">
-                        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                          Clear
-                        </button>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -483,4 +468,22 @@
           </p>
         </div>
       </div>
+
+      <script>
+        let file_name = "";
+        let remove_button = document.getElementById("remove-button")
+        function fileSelection2() {
+         file_input =  document.getElementById("file-upload").files.length
+         if(file_input > 0) {
+          remove_button.classList.remove('hide');
+         }else{
+          remove_button.classList.add('hide');
+         }
+        }
+        
+        function removeFile(){
+          document.getElementById("file-upload").value=""
+          remove_button.classList.add('hide');
+        }
+      </script>
     {% endblock %}
