@@ -1,0 +1,364 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+    Manage trading obligations
+{% endblock %}
+
+{% block content %}
+
+<header>
+    <style>
+        .select-field{
+          width: 100%
+        }
+        .supplierADropDown{
+          border: 2px solid red;
+        }
+    </style>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/formik/dist/formik.umd.production.min.js"></script>
+    <script src="https://unpkg.com/yup/dist/yup.umd.js"  crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   
+
+   
+</header>
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">  
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+        <div id="errorSummary" class="govuk-error-summary hide" data-module="govuk-error-summary">
+            <div role="alert">
+                <h2 class="govuk-error-summary__title">
+                    There is a problem
+                </h2>
+                <div class="govuk-error-summary__body">
+                    <ul class="govuk-list govuk-error-summary__list">
+                        <li id ="supplierError">
+                            <a href="">Supplier A licence cannot be equal to Supplier B</a>
+                        </li>
+                        <li id="fieldError">
+                            <a href="">Field cannot be empty</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="govuk-heading-xl">
+            Manage trading obligations
+        </h1>
+            
+        <br>
+
+         <div id="TradingObligationsForm"></div>
+       
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        
+        <p class="govuk-body"><a href="/internal/v02-7/">Return to homepage</a></p>
+    </div>
+
+   
+</div>
+ <script type="text/babel" >
+    const { useState, useEffect } = React
+    
+   
+     function SelectField({name, label, placeholder,options, onChange,  value,  setShowSubmitError, normalErrorMessage, equalValueError, showError, setIndividualTrigerErrorBox, individualTrigerErrorBox}){
+     const [touched, setTouched] = useState(false)
+    
+     const handleOnBlur = () => {
+       setTouched(true)
+     }
+
+     useEffect(()=>{
+       if(showError && !value){
+        setTouched(true)
+       }
+      },[showError])
+
+
+      useEffect(()=>{
+       if(touched && !value){
+        setIndividualTrigerErrorBox((prev)=>([...prev, normalErrorMessage]))
+       }else{
+        let index = individualTrigerErrorBox.indexOf(normalErrorMessage)
+        if(index !=-1){
+            setIndividualTrigerErrorBox([])       
+            }
+       }
+      },[value, touched])
+
+
+
+
+
+       return (
+         <div className="govuk-grid-column-one-half">
+            <div id="supplierAErrorField" className={`govuk-form-group ${((touched && !value ) || equalValueError) && 'govuk-form-group--error'}`}>
+                   
+                    <label className="govuk-label govuk-label--s" for="supplier-licence-a-from">
+                            {label}
+                    </label>
+                        { (touched && !value ) && 
+                        <p id="categoryEmptyFieldError" class="govuk-error-message">
+                            <span class="govuk-visually-hidden">Error:</span>  {normalErrorMessage}
+                        </p> }
+
+                        { equalValueError && 
+                        <p id="categoryEmptyFieldError" class="govuk-error-message">
+                            <span class="govuk-visually-hidden">Error:</span>  {equalValueError}
+                        </p> }
+                    
+                   <select 
+                        id="supplierADropDown" 
+                        className={`govuk-select select-field ${(touched && !value) && 'supplierADropDown'}`}  
+                        name={name} 
+                        onBlur={handleOnBlur}
+                        onChange={onChange} 
+                        value={value} 
+                        >
+                            <option value="" disabled="disabled" selected>{placeholder}</option>
+                            {options.map((opt, index)=> <option value={opt} key={opt}>{opt}</option>)}                   
+                    </select>
+
+            </div>
+        </div>
+
+       )
+      }
+      
+        
+   
+    
+    function ShcemeForm() {
+
+      const [formData, setFormData] = useState({supplier_licence_a:"", supplier_licence_b:"", gbis_phase_traded:"", obligation_category_traded:""}); 
+      const [showSubmitError, setShowSubmitError] = useState(false); 
+      const [showError, setShowError] = useState(false) 
+      const [individualTrigerErrorBox, setIndividualTrigerErrorBox] = useState([]) 
+      const {supplier_licence_a, supplier_licence_b, gbis_phase_traded, obligation_category_traded} = formData
+
+      const supplierAisB = (supplier_licence_a.length > 0 && supplier_licence_b.length > 0 &&  supplier_licence_b===supplier_licence_a)
+      const theirIsError = !supplier_licence_a || !supplier_licence_b || !gbis_phase_traded || !obligation_category_traded || supplierAisB
+      
+        
+       const handleOnchange = (event)=>{
+        const {name, value} = event.target
+        setFormData((prev)=>({...prev,[name]:value,})) 
+        }
+
+        const handleSubmit = (event)=>{
+            event.preventDefault();
+            setShowError(true);
+            setShowSubmitError(true)
+            setIndividualTrigerErrorBox([])
+             if(!theirIsError){
+                localStorage.setItem("selectedSupplierA", supplier_licence_a);
+                localStorage.setItem("selectedSupplierB", supplier_licence_b);
+                localStorage.setItem("selectedPhase", gbis_phase_traded);
+                localStorage.setItem("selectedCategory", obligation_category_traded);
+                localStorage.setItem("supplierACurrentObligation", "12345");
+                localStorage.setItem("supplierBCurrentObligation", "0");
+                window.location.href="/internal/v02-7/manage-trading-obligations/manage-trading-obligations1";
+             }
+              
+        }
+
+        
+
+    
+    function SummaryErrorBox(){
+     return (<div id="errorSummary" className={`govuk-error-summary `} data-module="govuk-error-summary">
+            <div role="alert">
+         
+            <h2 className="govuk-error-summary__title">
+                    There is a problem
+            </h2>
+            </div>
+             <div className="govuk-error-summary__body">
+                    <ul className="govuk-list govuk-error-summary__list">  
+                        {supplierAisB && 
+                        <li id ="supplierError">
+                            <a href="">Supplier licence A cannot be the same as Supplier licence B</a>
+                        </li>
+                        }
+                        {!supplier_licence_a && 
+                            <li id="fieldError">
+                            <a href="">Supplier licence A number must be selected</a>
+                         </li>
+                         }
+                         {!supplier_licence_b && 
+                            <li id="fieldError">
+                            <a href="">Supplier licence B number must be selected</a>
+                         </li>
+                         }
+                         {!gbis_phase_traded && 
+                            <li id="fieldError">
+                            <a href="">GBIS phase to be traded must be selected</a>
+                         </li>
+                         }
+                         {!obligation_category_traded && 
+                            <li id="fieldError">
+                            <a href="">Obligation category to be traded must be selected</a>
+                         </li>
+                         }
+                         
+                    </ul>
+                </div>
+        </div>)
+        
+        }
+
+
+function IndividualErrorBox(){
+     return (<div id="errorSummary" className={`govuk-error-summary `} data-module="govuk-error-summary">
+            <div role="alert">
+         
+            <h2 className="govuk-error-summary__title">
+                    There is a problem
+            </h2>
+            </div>
+             <div className="govuk-error-summary__body">
+                    <ul className="govuk-list govuk-error-summary__list">
+                    {supplierAisB &&  
+                    <li id ="supplierError">
+                            <a href="">Supplier A licence cannot be equal to Supplier B</a>
+                    </li>}  
+                    {individualTrigerErrorBox.map((error, index)=> 
+                        <li id ="supplierError">
+                            <a href="">{error}</a>
+                        </li>
+                  )}           
+                    </ul>
+                </div>
+        </div>)
+        
+        }
+
+
+        return (
+        <form id="" method="post" onSubmit={handleSubmit}>
+            {
+            ((showSubmitError && theirIsError)) ?  <SummaryErrorBox /> : (individualTrigerErrorBox.length > 0 || supplierAisB ) ? <IndividualErrorBox/>: null
+            }
+             <div class="govuk-grid-row">
+                <SelectField 
+                    name="supplier_licence_a"
+                    value = {formData.supplier_licence_a}
+                    label="Supplier licence A (trading from)" 
+                    placeholder="Select supplier licence number"
+                    options={["EON3401234E", "EON3405678E", "EON3409101E", "EON3402345E" ]}
+                    onChange={handleOnchange }
+                    normalErrorMessage = {"Supplier licence A number must be selected"}
+                    equalValueError= {supplierAisB ? "Supplier licence A cannot be the same as Supplier licence B" : '' }
+                    showError= {showError}
+                    setIndividualTrigerErrorBox = {setIndividualTrigerErrorBox}
+                    individualTrigerErrorBox = {individualTrigerErrorBox}
+                    />
+                    <SelectField 
+                    name="supplier_licence_b"
+                     value = {formData.supplier_licence_b}
+                    label="Supplier licence B (trading to)" 
+                    placeholder="Select supplier licence number"
+                    options={["EON3401234E", "EON3405678E", "EON3409101E", "EON3402345E" ]}
+                    onChange={ handleOnchange}
+                    normalErrorMessage = {"Supplier licence B number must be selected"}
+                    equalValueError = {supplierAisB ?"Supplier licence B cannot be the same as Supplier licence A": ''}
+                    showError= {showError}
+                    setIndividualTrigerErrorBox = {setIndividualTrigerErrorBox}
+                    individualTrigerErrorBox = {individualTrigerErrorBox}
+                    />
+             </div>
+             <div class="govuk-grid-row">
+                <SelectField 
+                    name="gbis_phase_traded"
+                    value = {formData.gbis_phase_traded}
+                    label="GBIS phase to be traded" 
+                    placeholder="Select phase"
+                    options={["Phase A", "Phase B", "Phase C"]}
+                    onChange={handleOnchange}
+                    normalErrorMessage = {"GBIS phase to be traded must be selected"}
+                    showError= {showError}
+                    setIndividualTrigerErrorBox = {setIndividualTrigerErrorBox}
+                    individualTrigerErrorBox = {individualTrigerErrorBox}
+                    />
+
+                    <SelectField 
+                    name="obligation_category_traded"
+                    value = {formData.obligation_category_traded}
+                    label="Obligation category to be traded" 
+                    placeholder="Select obligation category traded"
+                    options={["HHCRO", "LIMR" ]}
+                    onChange={handleOnchange }
+                    normalErrorMessage = {"Obligation category to be traded must be selected"}
+                    showError= {showError}
+                    setIndividualTrigerErrorBox = {setIndividualTrigerErrorBox}
+                    individualTrigerErrorBox = {individualTrigerErrorBox}
+                     
+                    />
+             </div>
+             <div className="govuk-grid-row">
+                {/* Supplier A current obligation value (£ or household) */}
+                <div className="govuk-grid-column-one-half">
+                    <div className="dashboard-module">
+                    <h3 className="govuk-heading-m">
+                        <span className="module-heading">Supplier A</span>
+                    </h3>
+                    <p className="govuk-body">Current obligation value (£ or household):</p>
+                    <div className="stat">
+                        <p className="single-stat-headline impact-number">
+                        <strong>
+                            <abbr aria-label={0} title={0}>
+                            <span>£</span>
+                            <span id="supplierACurrentObligation" />
+                             {(supplier_licence_a && supplier_licence_b && gbis_phase_traded && obligation_category_traded) && (supplier_licence_a !== supplier_licence_b) && "12345"}
+                            </abbr>
+                        </strong>
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                {/* Supplier B current obligation value (£ or household) */}
+                <div className="govuk-grid-column-one-half">
+                    <div className="dashboard-module">
+                    <h3 className="govuk-heading-m">
+                        <span className="module-heading">Supplier B</span>
+                    </h3>
+                    <p className="govuk-body">Current obligation value (£ or household):</p>
+                    <div className="stat">
+                        <p className="single-stat-headline impact-number">
+                        <strong>
+                            <abbr aria-label={0} title={0}>
+                            <span>£</span>
+                            <span id="supplierBCurrentObligation" />
+                            {(supplier_licence_a && supplier_licence_b && gbis_phase_traded && obligation_category_traded) && (supplier_licence_a !== supplier_licence_b) && "0"}
+                            </abbr>
+                        </strong>
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+                Continue
+            </button>
+        </form>);
+      }
+
+      
+
+    
+
+      const container = document.getElementById('TradingObligationsForm');
+      const root = ReactDOM.createRoot(container);
+      root.render(<ShcemeForm />)
+
+    </script>
+
+{% endblock %}
+

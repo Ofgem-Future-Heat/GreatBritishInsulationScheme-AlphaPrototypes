@@ -1,0 +1,98 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+    Manage measure transfers
+{% endblock %}
+
+{% block content %}
+
+<style>
+    .nav-container {
+        margin-top: -30px;
+    }
+</style>
+
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-full nav-container">
+
+            <!--navigation-->
+            <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+                <ul class="moj-sub-navigation__list">
+                <li class="moj-sub-navigation__item">
+                    <a class="moj-sub-navigation__link" href="home">Home</a>
+                </li>
+            
+                <li class="moj-sub-navigation__item">
+                    <a class="moj-sub-navigation__link" href="measures">Manage measures</a>
+                </li>
+            
+                <li class="moj-sub-navigation__item">
+                    <a class="moj-sub-navigation__link" href="errors">Error reports</a>
+                </li>
+
+                <li class="moj-sub-navigation__item">
+                    <a class="moj-sub-navigation__link" aria-current="page" href="transfers-and-tradings">Measure transfer</a>
+                </li>
+
+                <li class="moj-sub-navigation__item">
+                    <a class="moj-sub-navigation__link" href="announcements">Announcements</a>
+                </li>
+
+                </ul>
+            
+            </nav>
+
+            <br> <br>
+            <!-- <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a> -->
+
+            <h1 class="govuk-heading-xl">
+                Manage measure transfers
+            </h1>
+
+            <p class="govuk-body">Request transfer of measures or manage approval requests for transferring measures in GBIS.</p>
+
+            <div class="govuk-grid-row">
+
+                <!-- Request transfer of measures -->
+                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                    <div class="card govuk-!-padding-5">
+                        <h3 class="govuk-heading-m">
+                            <a href="/v13-4/transfers-and-tradings/request-transfer" class="govuk-link">Request transfer of measures</a>
+                        </h3>
+                        <p class="govuk-body">Send information about your request to transfer measures to another energy supplier.</p>
+                    </div>
+                </div>
+
+                <!-- Requests sent to other energy suppliers -->
+                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                    <div class="card govuk-!-padding-5">
+                        <h3 class="govuk-heading-m">
+                            <a href="/v13-4/transfers-and-tradings/view-approval-requests-raised" class="govuk-link">Manage transfer request sent</a>
+                        </h3>
+                        <p class="govuk-body">View and action all transfer requests sent by your organisation.</p>
+                    </div>
+                </div>
+
+                <!-- Requests sent to other energy suppliers -->
+                <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                    <div class="card govuk-!-padding-5">
+                        <h3 class="govuk-heading-m">
+                            <a href="/v13-4/transfers-and-tradings/view-approval-requests-received" class="govuk-link">Manage transfer requests received</a>
+                        </h3>
+                        <p class="govuk-body">View and action all transfer requests received by your organisation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible"/>
+
+            <p class="govuk-body">
+                <a href="/v13-4/home">Return to homepage</a>
+            </p>
+
+        </div>
+    </div>
+
+{% endblock %}

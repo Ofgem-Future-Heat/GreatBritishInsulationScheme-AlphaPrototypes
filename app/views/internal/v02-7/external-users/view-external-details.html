@@ -1,0 +1,67 @@
+{% extends "layouts/internal-main2-4.html" %}
+
+{% block pageTitle %}
+    External user details 
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+        <h1 class="govuk-heading-xl">External user details</h1>
+
+        <dl class="govuk-summary-list">
+            <!-- Supplier name -->
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Supplier name</dt>
+                <dd class="govuk-summary-list__value">
+                    <span id="supplierName"></span>
+                </dd>
+            </div>
+
+            <!-- Name -->
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Full name</dt>
+                <dd class="govuk-summary-list__value">
+                    <span id="firstName"></span>&nbsp;
+                    <span id="lastName"></span>
+                </dd>
+            </div>
+            
+            <!-- Email address -->
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Email address</dt>
+                <dd class="govuk-summary-list__value">
+                    <span id="emailAddress"></span>
+                </dd>
+            </div>
+            
+            <!-- User type -->
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">User type</dt>
+                <dd class="govuk-summary-list__value">
+                    <span id="userType"></span>
+                </dd>
+            </div>
+            
+            <!-- User status -->
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">User status</dt>
+                <dd class="govuk-summary-list__value">
+                    <span id="userStatus">Active</span>
+                </dd>
+            </div>
+        </dl>
+
+        <div class="govuk-button-group">
+            <a href="edit-external-user" class="govuk-button" data-module="govuk-button">Edit user details</a>
+            <a href="confirm-delete-user" class="govuk-button govuk-button--warning" data-module="govuk-button">Deactivate user</a>
+            <!-- <button class="govuk-button govuk-button--warning" data-module="govuk-button" onclick="deleteUser()">Delete account</button> -->
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+    {{serviceName}}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <script>
+        function dismissNotification() {
+          window.document.getElementById('notification').remove();
+        }
+        function dismissNotification1() {
+          window.document.getElementById('notification1').remove();
+        }
+        function dismissNotification2() {
+          window.document.getElementById('notification2').remove();
+        }
+    </script>
+
+    <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-xl">
+            You do not have permission to use this service
+        </h1>
+
+        <br>
+        <p class="govuk-body">
+            This is because you do not currently have a Great British Insulation Scheme user profile.
+            And you are only logged in with your GOV.UK One Login account.
+        </p>
+
+        <br>
+        <h2 class="govuk-heading-m">
+            Accessing and using the Great British Insulation Scheme
+        </h2>        
+   
+        <p class="govuk-body">
+            Only the authorised signatory for your organisation can request Great British Insulation Scheme
+            user profiles from Ofgem.
+        </p> 
+
+        <p class="govuk-body">
+            To request a user profile, you must complete and attach the 'authorised data provider statement of
+            authorisation form'. Then, send this to by email at <a href="mailto:GBIS.enquiry@ofgem.gov.uk">GBIS.enquiry@ofgem.gov.uk</a>.
+        </p> 
+
+        <p class="govuk-body">
+            You can read more guidance on requesting Great British Insulation Scheme user profiles on the Ofgem website at
+            <a href="https://www.ofgem.gov.uk/environmental-and-social-schemes/great-british-insulation-scheme/great-british-insulation-scheme-great-british-insulation-scheme-portal">Great British Insulation Scheme - The Great British Insulation Scheme portal | Ofgem</a>.
+        </p> 
+
+
+        <div class="govuk-grid-row">
+  
+        </div>
+    </div>
+</div>
+
+{% endblock %}

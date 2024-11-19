@@ -1,0 +1,76 @@
+{% extends "layouts/internal-main2-4.html" %}
+
+{% block pageTitle %}
+    Upload manual errors
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+            <h1 class="govuk-heading-xl">Upload manual errors</h1>
+
+            <a class="govuk-button" href="add-manual-error">Add manual error</a>
+        </p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <!-- Show list of manual errors -->
+        <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Manual errors</caption>
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Test Reference Number</th>
+                    <th scope="col" class="govuk-table__header">Field containing error in notification template</th>
+                    <th scope="col" class="govuk-table__header left-aligned">Reason for error with measure</th>
+                    <!-- <th scope="col" class="govuk-table__header">Action</th> -->
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body" id="manualErrors">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">MGBIS10001</td>
+                    <td class="govuk-table__cell">Measure Type</td>
+                    <td class="govuk-table__cell left-aligned">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Que lo que manito.</td>
+                    <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="delete-manual-error">Delete</a> </td> -->
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">MGBIS10002</td>
+                    <td class="govuk-table__cell">Building Number</td>
+                    <td class="govuk-table__cell left-aligned">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Que lo que manito.</td>
+                    <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="delete-manual-error">Delete</a> </td> -->
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">MGBIS10003</td>
+                    <td class="govuk-table__cell">Measure Type</td>
+                    <td class="govuk-table__cell left-aligned">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Que lo que manito.</td>
+                    <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="delete-manual-error">Delete</a> </td> -->
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">MGBIS10004</td>
+                    <td class="govuk-table__cell">Eligibility Type</td>
+                    <td class="govuk-table__cell left-aligned">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Que lo que manito.</td>
+                    <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="delete-manual-error">Delete</a> </td> -->
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">MGBIS10005</td>
+                    <td class="govuk-table__cell">Floor Area</td>
+                    <td class="govuk-table__cell left-aligned">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Que lo que manito.</td>
+                    <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="delete-manual-error">Delete</a> </td> -->
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">MGBIS10006</td>
+                    <td class="govuk-table__cell">Building Name</td>
+                    <td class="govuk-table__cell left-aligned">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Que lo que manito.</td>
+                    <!-- <td class="govuk-table__cell"> <a class="govuk-link" href="delete-manual-error">Delete</a> </td> -->
+                </tr>
+            </tbody>
+        </table>
+        <p class="govuk-body">
+            <a href="/internal/v02-7/">Return to homepage</a>
+        </p>
+    </div>
+</div>
+
+{% endblock %}

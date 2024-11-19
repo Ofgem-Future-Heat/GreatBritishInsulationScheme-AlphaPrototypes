@@ -1,0 +1,165 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+  Request transfer of measures
+{% endblock %}
+
+{% block content %}
+
+<style>
+  .nav-container {
+      margin-top: -30px;
+  }
+</style>
+
+  <div class="govuk-grid-row">
+    <script></script>
+
+    <div class="govuk-grid-column-full nav-container">
+      <!--navigation-->
+      <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+        <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="/v13-4/home">Home</a>
+        </li>
+    
+        <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="/v13-4/measures">Manage measures</a>
+        </li>
+    
+        <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="/v13-4/errors">Error reports</a>
+        </li>
+
+        <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" aria-current="page" href="/v13-4/transfers-and-tradings">Measure transfer</a>
+        </li>
+
+        <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="/v13-4/announcements">Announcements</a>
+        </li>
+
+        </ul>
+    
+      </nav>
+      <br>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+      <div class="govuk-error-summary" data-module="govuk-error-summary">
+        <div role="alert">
+          <h2 class="govuk-error-summary__title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+              <li>
+                <a href="#error1">Transfer measures from GBIS supplier reference must be selected</a>
+              </li>
+              <li>
+                <a href="#error2">The supplier reference you selected is not recognised in the supplier reference list</a>
+              </li>
+              <li>
+                <a href="#error3">Transfer request file must be uploaded to the request</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="govuk-heading-xl">Request transfer of measures</h1>
+
+      <p class="govuk-body">Select the file you want to transfer measures from.</p>
+      <p class="govuk-body">Once you send the request, measures contained in this file are restricted from any further processing until a decision is made on the request.</p>
+
+      <form id="" method="post" action="#">
+        <!-- Transfer measures from: (GBIS supplier reference): -->
+        <div id="error1" class="govuk-form-group govuk-form-group--error">
+          <label class="govuk-label govuk-label--s" for="supplier-reference-transferring-from">
+            Transfer measures from: (GBIS supplier reference)
+          </label>
+
+          <p id="supplier-reference-transferring-from-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span>
+            Transfer measures from GBIS supplier reference must be selected
+          </p>
+
+          <select class="govuk-select" id="supplier-reference-transferring-from" name="supplier-reference-transferring-from" style="width: 100%;">
+            <option value="" disabled="disabled" selected="selected">Select supplier reference number</option>
+            <option value="EON3407430E">EON3401234E</option>
+            <option value="EON3407430E">EON3405678E</option>
+            <option value="EON3407430E">EON3409101E</option>
+            <option value="EON3407430E">EON3402345E</option>
+          </select>
+        </div>
+
+        <!-- Transfer measures to: (GBIS supplier reference): -->
+        <div id="error2" class="govuk-form-group govuk-form-group--error">
+          <label class="govuk-label govuk-label--s" for="supplier-reference-transferring-to">
+            Transfer measures to: (GBIS supplier reference)
+          </label>
+          <p id="supplier-reference-transferring-to-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span>
+            The supplier reference you selected is not recognised in the supplier reference list
+          </p>
+          <input class="govuk-input govuk-input--error" id="supplier-reference-transferring-to" name="supplier-reference-transferring-to" type="text">
+        </div>
+
+        <!-- Upload MRN -->
+        <div id="error3" class="govuk-form-group govuk-form-group--error">
+          <label class="govuk-label bold" for="transfer-request-file">
+            Upload transfer request file
+          </label>
+
+          <p id="transfer-request-file-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span>
+            Transfer request file must be uploaded to the request
+          </p>
+
+          <div class="upload-container">
+            <label for="file-upload" class="custom-file-upload">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                <path d="M11 14.9861C11 15.5384 11.4477 15.9861 12 15.9861C12.5523 15.9861 13 15.5384 13 14.9861V7.82831L16.2428 11.0711L17.657 9.65685L12.0001 4L6.34326 9.65685L7.75748 11.0711L11 7.82854V14.9861Z" fill="currentColor"/>
+                <path d="M4 14H6V18H18V14H20V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V14Z" fill="currentColor"/>
+              </svg>
+              Choose file
+            </label>
+            <input class="" id="file-upload" name="file-upload" type="file" accept=".csv" tabindex="0" title="file-upload"/>
+          </div>
+        </div>
+
+        <!-- Supplementary information -->
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="supplementary-information">
+            Additional information about transfer request (optional)
+          </label>
+          <textarea class="govuk-textarea" id="supplementary-information" name="supplementary-information" rows="5" aria-describedby="supplementary-information-hint"></textarea>
+
+        </div>
+
+        <!-- Upload -->
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Send transfer request
+        </button>
+      </form>
+
+      <!-- HOME -->
+      <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible"/>
+      <p class="govuk-body">
+        <a href="/v13-4/home">Return to homepage</a>
+      </p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <p class="govuk-body">EXAMPLE: REMOVE LATER<br/>
+        <a class="govuk-link" href="request-transfer">View this page without error states</a>
+      </p>
+    </div>
+  </div>
+
+{% endblock %}

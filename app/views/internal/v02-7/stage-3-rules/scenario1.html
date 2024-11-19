@@ -1,0 +1,54 @@
+{% extends "layouts/internal-main2-4.html" %}
+
+{% block pageTitle %}
+    Searching the measure register
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+            <h1 class="govuk-heading-xl">Start stage 3 measure validation</h1>
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+
+                    <!-- <p class="govuk-body">Blurb reharding triggering stage 3 validation.</p> -->
+
+                    <div class="govuk-inset-text">
+                        There are 1,000 measures ready to begin the stage 3 validation process.
+                    </div>
+
+                    <!-- <p class="govuk-body">Reverting stage 3 validation checks cannot be undone.</p> -->
+
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-two-thirds">
+                            <div class="govuk-grid-row">
+                                <div class="govuk-grid-column-one-half">
+                                    <button type="submit" class="govuk-button" data-module="govuk-button" onclick="gotoURL()">
+                                        Start validation
+                                    </button>
+                                </div>
+                                <!-- <div class="govuk-grid-column-one-half"> <a href="reverted-process" class="govuk-button govuk-button--secondary" > Revert validation </a> </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible"/>
+
+                    <p class="govuk-body">
+                        <a href="/internal/v02-7/">Return to homepage</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function gotoURL() {
+                window.location.pathname = "internal/v02-7/stage-3-rules/loading-screen-s3-processing";
+            }
+        </script>
+    </div>
+{% endblock %}

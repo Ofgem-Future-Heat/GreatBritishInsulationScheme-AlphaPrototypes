@@ -1,0 +1,260 @@
+{% extends "layouts/internal-main2-4.html" %}
+
+{% block pageTitle %}
+    Announcements
+{% endblock %}
+
+{% block content %}
+
+<style>
+    .nav-container {
+        margin-top: -25px;
+    }
+</style>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+            <h1 class="govuk-heading-xl">External announcements</h1>
+
+            <a type="submit" class="govuk-button nav-container" href="create-announcement" data-module="govuk-button">
+                Create announcements
+            </a>
+
+                <div>
+                    <p class="govuk-body">
+                        <a class="govuk-link" href="index">All announcements</a>
+                        |
+                        <a class="govuk-link" href="internal-announcements">Internal announcements</a>
+                        |
+                        External announcements
+                    </p>
+                </div>
+
+
+            <table class="govuk-table">
+                <caption class="govuk-table__caption govuk-table__caption--m">Existing external announcements</caption>
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Announcement text</th>
+                        <!-- <th scope="col" class="govuk-table__header small-column">Type</th> -->
+                        <th scope="col" class="govuk-table__header small-column">Start date</th>
+                        <th scope="col" class="govuk-table__header small-column">End date</th>
+                        <th scope="col" class="govuk-table__header medium-column">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header">
+                            <p class="govuk-body announcement-header">Login Issue Resolution</p>
+                            <p class="govuk-body">Please be aware that we have performed a fix for the login issue that was impacting users on 21/03/2024 and 22/03/2023/ If you know any users that are unable to login to the register please flag this asap through the regular communication channels.</p>
+                        </th>
+                        <!-- <td class="govuk-table__cell small-column">Extermal</td> -->
+                        <td class="govuk-table__cell small-column">23/03/2023</td>
+                        <td class="govuk-table__cell small-column">24/03/2023</td>
+                        <td class="govuk-table__cell medium-column">
+                            <a class="govuk-link" href="edit-announcement">Edit</a>
+                            |
+                            <a class="govuk-link" href="delete-announcement">Delete</a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header">
+                            <p class="govuk-body announcement-header">Investigating issues with project and measure uploads</p>
+                            <p class="govuk-body">We are investigating an incident affecting project and measure uploads casuing uploads to fail to progress to core checks. We will provide updates via email and through the Register announcements here soon.</p>
+                            <p class="govuk-body">
+                                <strong>Updates:</strong>
+                                Please be advised that this issue has been fixed and uploads are working as expected.</p>
+                        </th>
+                        <!-- <td class="govuk-table__cell small-column">Extermal</td> -->
+                        <td class="govuk-table__cell small-column">01/12/2022</td>
+                        <td class="govuk-table__cell small-column">05/12/2022</td>
+                        <td class="govuk-table__cell medium-column">
+                            <a class="govuk-link" href="edit-announcement">Edit</a>
+                            |
+                            <a class="govuk-link" href="delete-announcement">Delete</a>
+                        </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header">
+                            <p class="govuk-body announcement-header">Announcement title 1</p>
+                            <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </th>
+                        <!-- <td class="govuk-table__cell small-column">Intermal</td> -->
+                        <td class="govuk-table__cell small-column">12/10/2023</td>
+                        <td class="govuk-table__cell small-column">22/10/2023</td>
+                        <td class="govuk-table__cell medium-column">
+                            <a class="govuk-link" href="edit-announcement">Edit</a>
+                            |
+                            <a class="govuk-link" href="delete-announcement">Delete</a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header">
+                            <p class="govuk-body announcement-header">Announcement title 2</p>
+                            <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </th>
+                        <!-- <td class="govuk-table__cell small-column">Intermal</td> -->
+                        <td class="govuk-table__cell small-column">12/10/2023</td>
+                        <td class="govuk-table__cell small-column">22/10/2023</td>
+                        <td class="govuk-table__cell medium-column">
+                            <a class="govuk-link" href="edit-announcement">Edit</a>
+                            |
+                            <a class="govuk-link" href="delete-announcement">Delete</a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header">
+                            <p class="govuk-body announcement-header">Announcement title 3</p>
+                            <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </th>
+                        <!-- <td class="govuk-table__cell small-column">Intermal</td> -->
+                        <td class="govuk-table__cell small-column">12/10/2023</td>
+                        <td class="govuk-table__cell small-column">22/10/2023</td>
+                        <td class="govuk-table__cell medium-column">
+                            <a class="govuk-link" href="edit-announcement">Edit</a>
+                            |
+                            <a class="govuk-link" href="delete-announcement">Delete</a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header">
+                            <p class="govuk-body announcement-header">Announcement title 4</p>
+                            <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </th>
+                        <!-- <td class="govuk-table__cell small-column">Intermal</td> -->
+                        <td class="govuk-table__cell small-column">12/10/2023</td>
+                        <td class="govuk-table__cell small-column">22/10/2023</td>
+                        <td class="govuk-table__cell medium-column">
+                            <a class="govuk-link" href="edit-announcement">Edit</a>
+                            |
+                            <a class="govuk-link" href="delete-announcement">Delete</a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header">
+                            <p class="govuk-body announcement-header">Announcement title 5</p>
+                            <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </th>
+                        <!-- <td class="govuk-table__cell small-column">Intermal</td> -->
+                        <td class="govuk-table__cell small-column">12/10/2023</td>
+                        <td class="govuk-table__cell small-column">22/10/2023</td>
+                        <td class="govuk-table__cell medium-column">
+                            <a class="govuk-link" href="edit-announcement">Edit</a>
+                            |
+                            <a class="govuk-link" href="delete-announcement">Delete</a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header">
+                            <p class="govuk-body announcement-header">Announcement title 6</p>
+                            <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </th>
+                        <!-- <td class="govuk-table__cell small-column">Intermal</td> -->
+                        <td class="govuk-table__cell small-column">12/10/2023</td>
+                        <td class="govuk-table__cell small-column">22/10/2023</td>
+                        <td class="govuk-table__cell medium-column">
+                            <a class="govuk-link" href="edit-announcement">Edit</a>
+                            |
+                            <a class="govuk-link" href="delete-announcement">Delete</a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header">
+                            <p class="govuk-body announcement-header">Announcement title 7</p>
+                            <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </th>
+                        <!-- <td class="govuk-table__cell small-column">Intermal</td> -->
+                        <td class="govuk-table__cell small-column">12/10/2023</td>
+                        <td class="govuk-table__cell small-column">22/10/2023</td>
+                        <td class="govuk-table__cell medium-column">
+                            <a class="govuk-link" href="edit-announcement">Edit</a>
+                            |
+                            <a class="govuk-link" href="delete-announcement">Delete</a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th class="govuk-table__header">
+                            <p class="govuk-body announcement-header">Announcement title 8</p>
+                            <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </th>
+                        <!-- <td class="govuk-table__cell small-column">Intermal</td> -->
+                        <td class="govuk-table__cell small-column">12/10/2023</td>
+                        <td class="govuk-table__cell small-column">22/10/2023</td>
+                        <td class="govuk-table__cell medium-column">
+                            <a class="govuk-link" href="edit-announcement">Edit</a>
+                            |
+                            <a class="govuk-link" href="delete-announcement">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <nav class="govuk-pagination" aria-label="Pagination">
+                <div class="govuk-pagination__prev">
+                    <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+                        <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewbox="0 0 15 13">
+                            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                        </svg>
+                        <span class="govuk-pagination__link-title">
+                            Previous<span class="govuk-visually-hidden">
+                                page</span>
+                        </span>
+                    </a>
+                </div>
+                <ul class="govuk-pagination__list">
+                    <li class="govuk-pagination__item">
+                        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+                            1
+                        </a>
+                    </li>
+                    <li class="govuk-pagination__item govuk-pagination__item--ellipses">
+                        &ctdot;
+                    </li>
+                    <li class="govuk-pagination__item">
+                        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 6">
+                            6
+                        </a>
+                    </li>
+                    <li class="govuk-pagination__item govuk-pagination__item--current">
+                        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 7" aria-current="page">
+                            7
+                        </a>
+                    </li>
+                    <li class="govuk-pagination__item">
+                        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 8">
+                            8
+                        </a>
+                    </li>
+                    <li class="govuk-pagination__item govuk-pagination__item--ellipses">
+                        &ctdot;
+                    </li>
+                    <li class="govuk-pagination__item">
+                        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 42">
+                            42
+                        </a>
+                    </li>
+                </ul>
+                <div class="govuk-pagination__next">
+                    <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+                        <span class="govuk-pagination__link-title">
+                            Next<span class="govuk-visually-hidden">
+                                page</span>
+                        </span>
+                        <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewbox="0 0 15 13">
+                            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+
+            <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible"/>
+
+            <p class="govuk-body">
+                <a href="/internal/v02-7/">Return to homepage</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}

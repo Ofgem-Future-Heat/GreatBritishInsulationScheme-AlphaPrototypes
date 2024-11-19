@@ -1,0 +1,51 @@
+{% extends "layouts/internal-main2-4.html" %}
+
+{% block pageTitle %}
+External users
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
+
+    <h1 class="govuk-heading-xl">External users</h1>
+
+    <p class="govuk-body"><a class="govuk-link govuk-button" href="create-new-external-user">Add new user</a></p>
+    
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    
+    <!-- Search -->
+    <!--
+    <div class="govuk-form-group">
+        <label class="govuk-label" for="searchUsers">
+            Search external users
+        </label>
+        <div class="flex">
+          <input placeholder="Search users..." name="searchUsers" type="text" class="govuk-input" value="" />
+          <button type="submit" class="magnifying-glass">&#x1F50E;&#xFE0E;</button>
+        </div>
+    </div>
+    -->
+    
+    <!-- Show list of existing external users here -->
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Existing external users</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Supplier name</th>
+          <th scope="col" class="govuk-table__header">First name</th>
+          <th scope="col" class="govuk-table__header">Last name</th>
+          <th scope="col" class="govuk-table__header">Email address</th>
+          <!-- <th scope="col" class="govuk-table__header">User type</th> -->
+          <th scope="col" class="govuk-table__header">User status</th>
+          <th scope="col" class="govuk-table__header">Action</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body" id="extUsers"></tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}
