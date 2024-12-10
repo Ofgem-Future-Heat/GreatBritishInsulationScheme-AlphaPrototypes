@@ -14,15 +14,19 @@
 
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
+
             <a href="#" class="govuk-back-link" onclick="history.go(-1)">Back</a>
 
-            <h1 class="govuk-heading-xl">All announcements</h1>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h1 class="govuk-heading-xl">All announcements</h1>
+                <a class="govuk-link govuk-body" href="index-non-digital" style="align-self: center;">Click here for non-digital users</a>
+            </div>
 
             <a type="submit" class="govuk-button nav-container" href="create-announcement" data-module="govuk-button">
                 Create announcements
             </a>
 
-                <div>
+                <div style="display: flex; justify-content: space-between;">
                     <p class="govuk-body">
                         All announcements |
                         <a class="govuk-link" href="internal-announcements">Internal announcements</a>
