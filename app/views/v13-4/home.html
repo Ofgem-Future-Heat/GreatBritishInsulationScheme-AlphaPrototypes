@@ -125,6 +125,7 @@
             {{serviceName}}
         </h1>
 
+
         <a role="button" draggable="false" class="govuk-button govuk-button" data-module="govuk-button" href="measures/upload-measure.html">Upload a measure file</a>
         
         <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
@@ -200,6 +201,7 @@
         <table class="govuk-table">
             <caption class="govuk-table__caption govuk-table__caption--m sr-only">List of latest error reports</caption>
             <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
                     <th scope="col" class="govuk-table__header app-custom-class">Date</th>
                     <th scope="col" class="govuk-table__header app-custom-class">Time</th>
                     <th scope="col" class="govuk-table__header app-custom-class">File name</th>
@@ -207,31 +209,30 @@
                     <th scope="col" class="govuk-table__header app-custom-class">Action</th>
                 </tr>
             </thead>
-            <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">11/12/2023</td>
-                    <td class="govuk-table__cell">17:18pm</td>
-                    <td class="govuk-table__cell">TrustMarkErrorReport_supplierName_dateTime.csv</td>
-                    <td class="govuk-table__cell">TrustMark</td>
-                    <td class="govuk-table__cell"><a href="#">Download error report</a></td>
-                </tr>
-                    <td class="govuk-table__cell">12/03/2023</td>
-                    <td class="govuk-table__cell">2:35pm</td>
-                    <td class="govuk-table__cell">measure-12345678.csv</td>
-                    <td class="govuk-table__cell">Stage 2</td>
-                    <td class="govuk-table__cell"><a href="#">Download error report</a></td>
-                </tr>
-                <tr class="govuk-table__row">
-                    <td scope="row" class="govuk-table__cell">23/02/2023</td>
-                    <td scope="row" class="govuk-table__cell">09:29</td>
-                    <td class="govuk-table__cell">measure-09876543.csv</td>
-                    <td class="govuk-table__cell">Stage 1</td>
-                    <td class="govuk-table__cell"><a href="#">Download error report</a></td>
-                </tr>
-                <!-- <tr class="sr-only-text">
-                    <td>Latest error reports end</td>
-                </tr> -->
-            </tbody>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">11/12/2023</td>
+                            <td class="govuk-table__cell">17:18pm</td>
+                            <td class="govuk-table__cell">TrustMarkErrorReport_supplierName_dateTime.csv</td>
+                            <td class="govuk-table__cell">TrustMark</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">12/03/2023</td>
+                            <td class="govuk-table__cell">2:35pm</td>
+                            <td class="govuk-table__cell">measure-12345678.csv</td>
+                            <td class="govuk-table__cell">Stage 2</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td scope="row" class="govuk-table__cell">23/02/2023</td>
+                            <td scope="row" class="govuk-table__cell">09:29</td>
+                            <td class="govuk-table__cell">measure-09876543.csv</td>
+                            <td class="govuk-table__cell">Stage 1</td>
+                            <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                        </tr>
+
+                    </tbody>
         </table>
 
         <!-- <div class="sr-only-text">Latest error reports end 1</div> -->

@@ -1,0 +1,166 @@
+{% extends "layouts/v09-external-custom-main.html" %}
+
+{% block pageTitle %}
+{{serviceName}}
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+    .nav-container {
+        margin-top: -30px;
+    }
+</style>
+
+<div class="govuk-grid-row">
+    <script>
+        /**
+         * Dismisses the notification banner by removing the element with the given ID.
+         * @param {string} notificationId - The ID of the notification element to remove.
+         */
+        function dismissNotification(notificationId) {
+            document.getElementById(notificationId).remove();
+        }
+    </script>
+
+    <div class="govuk-grid-column-full nav-container">
+
+        <!-- Navigation menu -->
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+            <ul class="moj-sub-navigation__list">
+                <li class="moj-sub-navigation__item">
+                    <a class="moj-sub-navigation__link" aria-current="page" href="home">Home</a>
+                </li>
+                <li class="moj-sub-navigation__item">
+                    <a class="moj-sub-navigation__link" href="measures">Manage measures</a>
+                </li>
+                <li class="moj-sub-navigation__item">
+                    <a class="moj-sub-navigation__link" href="errors">Error reports</a>
+                </li>
+                <li class="moj-sub-navigation__item">
+                    <a class="moj-sub-navigation__link" href="transfers-and-tradings">Measure transfer</a>
+                </li>
+                <li class="moj-sub-navigation__item">
+                    <a class="moj-sub-navigation__link" href="announcements">Announcements</a>
+                </li>
+            </ul>
+        </nav>
+
+        <br><br>
+
+        <!-- Notification banner -->
+        <div id="notification">
+            <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+                <div class="govuk-notification-banner__header">
+                    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                        <span>Latest announcement</span>
+                        <span class="announcement-date">20/06/2024</span>
+                    </h2>
+                </div>
+                <div class="govuk-notification-banner__content">
+                    <p class="govuk-notification-banner__heading">Login Issue Resolution</p>
+                    <p class="govuk-body">Please be aware that we have performed a fix for the login issue that was impacting users on 21/03/2024 and 22/03/2023. If you know any users that are unable to login to the register please flag this asap through the regular communication channels.</p>
+                    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" onclick="dismissNotification('notification')">Close</button>
+                </div>
+            </div>
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        </div>
+
+        <h1 class="govuk-heading-xl">{{serviceName}}</h1>
+
+        <!-- Upload measure file button -->
+        <a role="button" draggable="false" class="govuk-button govuk-button" data-module="govuk-button" href="measures/upload-measure.html">Upload a measure file</a>
+
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+        <h2 class="govuk-heading-l">Latest error reports</h2>
+
+        <!-- Inset text for error reports -->
+        <div class="govuk-inset-text">
+            Error reports can contain up to 15,000 errors. Where reports have this many errors, it shows there is possibly an issue with the data uploaded originally. You should review the measure notification file uploaded originally and ensure the data is accurate. If the problem persists, email Ofgem at <a href="mailto:GBIS.enquiry@ofgem.gov.uk" class="govuk-link">GBIS.enquiry@ofgem.gov.uk</a>.
+        </div>
+
+        <!-- Table of latest error reports -->
+        <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m sr-only">List of latest error reports</caption>
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header app-custom-class">Date</th>
+                    <th scope="col" class="govuk-table__header app-custom-class">Time</th>
+                    <th scope="col" class="govuk-table__header app-custom-class">File name</th>
+                    <th scope="col" class="govuk-table__header app-custom-class">Error stage</th>
+                    <th scope="col" class="govuk-table__header app-custom-class">Action</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">11/12/2023</td>
+                    <td class="govuk-table__cell">17:18pm</td>
+                    <td class="govuk-table__cell">TrustMarkErrorReport_supplierName_dateTime.csv</td>
+                    <td class="govuk-table__cell">TrustMark</td>
+                    <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">12/03/2023</td>
+                    <td class="govuk-table__cell">2:35pm</td>
+                    <td class="govuk-table__cell">measure-12345678.csv</td>
+                    <td class="govuk-table__cell">Stage 2</td>
+                    <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">23/02/2023</td>
+                    <td class="govuk-table__cell">09:29</td>
+                    <td class="govuk-table__cell">measure-09876543.csv</td>
+                    <td class="govuk-table__cell">Stage 1</td>
+                    <td class="govuk-table__cell"><a href="#">Download error report</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="sr-only">Latest error reports end</div>
+
+        <p class="govuk-body"><a class="govuk-link" href="errors">View all error reports</a></p>
+
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+        <div class="grid-list">
+            <!-- Manage measures card -->
+            <div class="card govuk-!-padding-5">
+                <h3 class="govuk-heading-m">Manage measures</h3>
+                <p class="govuk-body card-description">Upload new measure files, view status on previously uploaded files, <strong>search measures</strong> and view file extensions.</p>
+                <p class="govuk-body"><a data-test-id="home-manage-measures-card-link" class="govuk-link card-link" href="measures" aria-describedby="manage-measures-description">Click to manage measures</a></p>
+            </div>
+
+            <!-- View all error reports card -->
+            <div class="card govuk-!-padding-5">
+                <h3 class="govuk-heading-m">View all error reports</h3>
+                <p class="govuk-body card-description">View and download all existing error reports.</p>
+                <p class="govuk-body"><a data-test-id="home-errors-card-link" class="govuk-link card-link" href="errors" aria-describedby="errors-description">Click to view errors</a></p>
+            </div>
+
+            <!-- Measure transfer card -->
+            <div class="card govuk-!-padding-5">
+                <h3 class="govuk-heading-m">Measure transfer</h3>
+                <p class="govuk-body card-description">Request GBIS measure transfers and manage measure approval requests.</p>
+                <p class="govuk-body"><a data-test-id="home-transfers-and-tradings-card-link" class="govuk-link card-link" href="transfers-and-tradings" aria-describedby="transfers-and-tradings-description">Manage measure transfers</a></p>
+            </div>
+        </div>
+
+        <hr class="govuk-section-break govuk-sectio-break--l govuk-section-break--visible" />
+
+        <div class="govuk-grid-row">
+            <!-- Announcements card -->
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-5">
+                <div class="card govuk-!-padding-5">
+                    <h3 class="govuk-heading-m">Announcements</h3>
+                    <p class="govuk-body card-description">View current and previous announcements.</p>
+                    <p class="govuk-body"><a data-test-id="home-announcements-card-link" class="govuk-link card-link" href="announcements" aria-describedby="annoucements-description">Click to view announcements</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
