@@ -825,13 +825,28 @@
   </header>
 
   <!-- Phase banner -->
+   
+  
   <div class="govuk-width-container ">
-    {{ govukPhaseBanner({
+
+    <div class="govuk-phase-banner">
+        <p class="govuk-phase-banner__content">
+          <strong class="govuk-tag govuk-phase-banner__content__tag">
+            Beta
+          </strong>
+          <span class="govuk-phase-banner__text">
+            This is a new service. Help us improve it and <a class="govuk-link" href="https://submit.forms.service.gov.uk/form/6535/feedback-on-the-great-british-insulation-scheme-gbis/23627" target="_blank">give your feedback (opens in new tab)</a>.
+          </span>
+        </p>
+      </div>
+
+    <!-- {{ govukPhaseBanner({
       tag: {
         text: "Beta"
       },
-      html: 'This is a new service &ndash; your <a class="govuk-link" href="https://submit.forms.service.gov.uk/form/6535/feedback-on-the-great-british-insulation-scheme-gbis/23627">feedback</a> will help us to improve it.'
-    }) }}
+      html: 'This is a new service &ndash; your <a class="govuk-link" href="https://submit.forms.service.gov.uk/form/6535/feedback-on-the-great-british-insulation-scheme-gbis/23627">feedback (opens in new tab)</a> will help us to improve it.'
+    }) }} -->
+      
   </div>
 {% endblock %}
 
